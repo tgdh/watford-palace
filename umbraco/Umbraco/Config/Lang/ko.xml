@@ -35,6 +35,10 @@
     <key alias="toPublish">발행 항목으로 전달</key>
     <key alias="translate">번역</key>
     <key alias="update">업데이트</key>
+    <key alias="SEOCheckerSchedule">Add scheduled validation</key>
+    <key alias="SEOCheckerEditRobots">Edit robots.txt file</key>
+    <key alias="SEOCheckerImportRedirects">Import redirects</key>
+    <key alias="SEOCheckerExportRedirects">Export redirects</key>
   </area>
   <area alias="assignDomain">
     <key alias="addNew">새로운 도메인 추가</key>
@@ -613,6 +617,7 @@
     <key alias="statistics">통계</key>
     <key alias="translation">변환</key>
     <key alias="users">사용자</key>
+    <key alias="seochecker">SEO Checker</key>
   </area>
   <area alias="settings">
     <key alias="defaulttemplate">기본 템플릿</key>

@@ -35,6 +35,10 @@
     <key alias="toPublish">Zapisz do opublikowania</key>
     <key alias="translate">Przetłumacz</key>
     <key alias="update">Aktualizuj</key>
+    <key alias="SEOCheckerSchedule">Add scheduled validation</key>
+    <key alias="SEOCheckerEditRobots">Edit robots.txt file</key>
+    <key alias="SEOCheckerImportRedirects">Import redirects</key>
+    <key alias="SEOCheckerExportRedirects">Export redirects</key>
   </area>
   <area alias="assignDomain">
     <key alias="addNew">Dodaj nową domenę</key>
@@ -529,6 +533,7 @@ Miłego dnia!]]></key>
     <key alias="statistics">Statystyki</key>
     <key alias="translation">Tłumaczenie</key>
     <key alias="users">Użytkownicy</key>
+    <key alias="seochecker">SEO Checker</key>
   </area>
   <area alias="settings">
     <key alias="defaulttemplate">Domyślny szablon</key>

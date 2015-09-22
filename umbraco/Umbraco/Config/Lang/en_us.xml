@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <language alias="en_us" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
   <creator>
     <name>The Umbraco community</name>
@@ -36,6 +36,10 @@
     <key alias="translate">Translate</key>
     <key alias="update">Update</key>
     <key alias="defaultValue">Default value</key>
+    <key alias="SEOCheckerSchedule">Add scheduled validation</key>
+    <key alias="SEOCheckerEditRobots">Edit robots.txt file</key>
+    <key alias="SEOCheckerImportRedirects">Import redirects</key>
+    <key alias="SEOCheckerExportRedirects">Export redirects</key>
   </area>
   <area alias="assignDomain">
     <key alias="permissionDenied">Permission denied.</key>
@@ -66,7 +70,7 @@
   <area alias="buttons">
     <key alias="select">Select</key>
     <key alias="selectCurrentFolder">Select current folder</key>
-    <key alias="somethingElse">Do something else</key>    
+    <key alias="somethingElse">Do something else</key>
     <key alias="bold">Bold</key>
     <key alias="deindent">Cancel Paragraph Indent</key>
     <key alias="formFieldInsert">Insert form field</key>
@@ -160,7 +164,7 @@
     <key alias="uploadClear">Remove file(s)</key>
     <key alias="urls">Link to document</key>
     <key alias="memberof">Member of group(s)</key>
-    <key alias="notmemberof">Not a member of group(s)</key> 
+    <key alias="notmemberof">Not a member of group(s)</key>
     <key alias="childItems" version="7.0">Child items</key>
     <key alias="target" version="7.0">Target</key>
   </area>
@@ -247,7 +251,6 @@
     <key alias="filter">Type to filter...</key>
     <key alias="enterTags">Type to add tags (press enter after each tag)...</key>
   </area>
-
   <area alias="editcontenttype">
     <key alias="allowAtRoot" version="7.2">Allow at root</key>
     <key alias="allowAtRootDesc" version="7.2">Only Content Types with this checked can be created at the root level of Content and Media trees</key>
@@ -557,7 +560,7 @@ To manage your website, simply open the Umbraco back office and start adding con
     <key alias="greeting6">Happy Caturday</key>
     <key alias="instruction">Log in below</key>
     <key alias="timeout">Session timed out</key>
-    <key alias="bottomText"><![CDATA[<p style="text-align:right;">&copy; 2001 - %0% <br /><a href="http://umbraco.com" style="text-decoration: none" target="_blank">Umbraco.com</a></p> ]]></key>  
+    <key alias="bottomText"><![CDATA[<p style="text-align:right;">&copy; 2001 - %0% <br /><a href="http://umbraco.com" style="text-decoration: none" target="_blank">Umbraco.com</a></p> ]]></key>
   </area>
   <area alias="main">
     <key alias="dashboard">Dashboard</key>
@@ -680,11 +683,9 @@ To manage your website, simply open the Umbraco back office and start adding con
     <key alias="paSimpleHelp">If you just want to setup simple protection using a single login and password</key>
   </area>
   <area alias="publish">
-    <key alias="contentPublishedFailedAwaitingRelease">
-      <![CDATA[
+    <key alias="contentPublishedFailedAwaitingRelease"><![CDATA[
       %0% could not be published because the item is scheduled for release.
-    ]]>
-    </key>
+    ]]></key>
     <key alias="contentPublishedFailedInvalid"><![CDATA[
       %0% could not be published because these properties:  %1%  did not pass validation rules.
     ]]></key>
@@ -747,6 +748,7 @@ To manage your website, simply open the Umbraco back office and start adding con
     <key alias="help" version="7.0">Help</key>
     <key alias="forms">Forms</key>
     <key alias="analytics">Analytics</key>
+    <key alias="seochecker">SEO Checker</key>
   </area>
   <area alias="settings">
     <key alias="defaulttemplate">Default template</key>
@@ -851,7 +853,6 @@ To manage your website, simply open the Umbraco back office and start adding con
     <key alias="insertControl">Insert control</key>
     <key alias="addRows">Choose a layout for the page</key>
     <key alias="addElement"><![CDATA[To start, click the <i class="icon icon-add blue"></i> below and add your first element]]></key>
-
     <key alias="clickToEmbed">Click to embed</key>
     <key alias="clickToInsertImage">Click to insert image</key>
     <key alias="placeholderImageCaption">Image caption...</key>
@@ -860,24 +861,17 @@ To manage your website, simply open the Umbraco back office and start adding con
     <key alias="gridLayoutsDetail">Layouts are the overall work area for the grid editor, usually you only need one or two different layouts</key>
     <key alias="addGridLayout">Add grid layout</key>
     <key alias="addGridLayoutDetail">Adjust the layout by setting column widths and adding additional sections</key>
-
     <key alias="rowConfigurations">Row configurations</key>
     <key alias="rowConfigurationsDetail">Rows are predefined cells arranged horizontally</key>
     <key alias="addRowConfiguration">Add row configuration</key>
     <key alias="addRowConfigurationDetail">Adjust the row by setting cell widths and adding additional cells</key>
-
     <key alias="columns">Columns</key>
     <key alias="columnsDetails">Total combined number of columns in the grid layout</key>
-
     <key alias="settings">Settings</key>
     <key alias="settingsDetails">Configure what settings editors can change</key>
-
-
     <key alias="styles">Styles</key>
     <key alias="stylesDetails">Configure what styling editors can change</key>
-
     <key alias="settingDialogDetails">Settings will only save if the entered json configuration is valid</key>
-
     <key alias="allowAllEditors">Allow all editors</key>
     <key alias="allowAllRowConfigurations">Allow all row configurations</key>
   </area>

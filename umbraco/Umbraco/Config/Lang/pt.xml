@@ -35,6 +35,10 @@
     <key alias="toPublish">Enviar para publicação</key>
     <key alias="translate">Traduzir</key>
     <key alias="update">Atualizar</key>
+    <key alias="SEOCheckerSchedule">Add scheduled validation</key>
+    <key alias="SEOCheckerEditRobots">Edit robots.txt file</key>
+    <key alias="SEOCheckerImportRedirects">Import redirects</key>
+    <key alias="SEOCheckerExportRedirects">Export redirects</key>
   </area>
   <area alias="assignDomain">
     <key alias="addNew">Adicionar novo Domínio</key>
@@ -602,6 +606,7 @@ Você pode publicar esta página e todas suas sub-páginas ao selecionar <em>pub
     <key alias="statistics">Estatísticas</key>
     <key alias="translation">Tradução</key>
     <key alias="users">Usuários</key>
+    <key alias="seochecker">SEO Checker</key>
   </area>
   <area alias="settings">
     <key alias="defaulttemplate">Modelo padrão</key>
