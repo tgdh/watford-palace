@@ -1,7 +1,14 @@
 /* TEAM */
+# The humans responsible & colophon
+# humanstxt.org
 
     Creator: Paulius Putna
     Contact: paulius@tgdh.co.uk
     Twitter: @PauliusPutna
 
-/* THANKS */
+/* THANKS */ 
+# SITE
+	Version: 0.0.1
+	Site Url: http://watfordpalacetheatre.co.uk
+	Language: English
+	Technology: Bower, Grunt, JavaScript, SASS, Umbraco

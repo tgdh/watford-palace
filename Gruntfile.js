@@ -66,7 +66,6 @@ module.exports = function ( grunt ) {
 		'processhtml:dist',
 		'versioning',
 		'inline',
-		'favicons',
 		'rename',
 		'copy:robots'
 	]);
