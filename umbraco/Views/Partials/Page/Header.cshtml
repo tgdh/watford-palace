@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}
+
+<header class="o-page__header" role="banner">
+	<div class="o-wrap o-wrap--large">
+		<button id="menuButton" class="toggle--nav--main" data-toggle="js-nav-main"><i class="icon-menu"></i>Menu</button>
+		@Html.Partial("Page/Navigation")
+	</div>
+</header>

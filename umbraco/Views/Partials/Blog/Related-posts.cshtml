@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+	var blog = CurrentPage.Site().FirstChild("BlogFolder");
+	var author = Umbraco.Content(CurrentPage.Author);
+	var category = Umbraco.Content(CurrentPage.Category);
+
+	dynamic relatedArticles;
+	if( category.Id.ToString() != "0" ){
+		relatedArticles = blog.FirstChild("PostsFolder").Children("Post").Where("Visible && category.Contains(@0) && Id != @1", category.Id.ToString(), CurrentPage.Id  );
+	} else {
+		relatedArticles = blog.FirstChild("PostsFolder").Children("Post").Where( "Visible && Id != @0", CurrentPage.Id );
+	}
+
+
+}
+<div class="related-posts">
+	@if( category.Id.ToString() != "0" ){
+		<h2>Related Articles in <strong class="emphasis">@category.Name</strong></h2>
+	} else {
+		<h2>Other articles you might like</h2>
+	}
+	@if( relatedArticles.Any() ){
+		foreach(var article in relatedArticles.Random(2)){
+			<div class="related__post">
+				<a href="@article.Url"><h3>@article.Name</h3></a>
+			</div>
+		}
+	} else {
+		<p>No related articles found</p>
+	}
+</div>

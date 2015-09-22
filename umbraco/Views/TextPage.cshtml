@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	
+    Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+
+}
+<div class="wrap wrap--x-large">
+	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	@CurrentPage.bodyText
+</div>
+	
+@section OpenGraph{
+	@*
+
+	For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:label1" content="">
+	<meta name="twitter:data1" content="">
+	<meta name="twitter:label2" content="">
+	<meta name="twitter:data2" content="">
+
+	*@
+}
+
+	
+@section Scripts{
+
+}

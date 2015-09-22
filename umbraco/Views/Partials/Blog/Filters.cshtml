@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+	var blog = CurrentPage.Site().FirstChild("BlogFolder");
+	var categories = CurrentPage.Site().FirstChild("BlogFolder").FirstChild("CategoryFolder").Children().OrderBy("Name");
+	var everything = CurrentPage.Site().FirstChild("BlogFolder").FirstChild("PostsFolder").Children().OrderBy("ReleaseDate desc");;
+	
+	string[] dateList = new string[100];
+	var i = 0;
+	var previous = "";
+	var current = "";	
+
+	foreach( var item in everything ){
+		i = i + 1;
+		dateList[i] = (item.ReleaseDate.ToString("MMMM yyyy"));
+		
+	}
+}	
+	
+<div class="blog-filters clearfix">
+	<div class="blog-filter--category">
+		<h2>Categories</h2>
+		<select id="catFilter" class="filter filter--category filter-js" onchange="location = this.options[this.selectedIndex].value;">
+			<option value="">Choose category</option>
+			@foreach( var category in categories ){
+				<option value="@category.Url">@category.Name</option>
+			}
+		</select>
+	</div>
+	<div class="blog-filter--archive">
+		<h2>Archive</h2>
+		<select id="dateFilter" class="filter filter--date filter-js" onchange="location = this.options[this.selectedIndex].value;">
+			<option value="">Choose date</option>
+			@foreach(var date in dateList){
+				current = date;
+				if( current != previous && date != null){
+					foreach( var part in date.Split(',') ){
+						<option value="/blog/?year=@date.Split(' ')[1].ToString().ToLower()&month=@date.Split(' ')[0].ToString().ToLower()">@date</option>
+					}
+				}
+				previous = date;
+			}
+		</select>
+	</div>
+</div>
+			
+			

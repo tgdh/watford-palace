@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}
+
+@RenderLinkIfNotEmpty(settings.facebook, "facebook", "Facebook")
+@RenderLinkIfNotEmpty(settings.twitter, "twitter", "Twitter")
+@RenderLinkIfNotEmpty(settings.googleplus, "google", "Google")
+@RenderLinkIfNotEmpty(settings.linkedin, "linkedin", "LinkedIn")
+	
+@helper RenderLinkIfNotEmpty(dynamic link, string cssClass, string linkName) {
+	// A helper function is handy when you have to do the same thing over and over again
+    // So now we only have to write the "if" check and list item once, and we only need
+    // to put in the things that can vary
+
+    if (string.IsNullOrEmpty(link) == false) {
+		<a href="@link" class="social__link @cssClass" target="_blank"><i class="ico-@linkName.ToLower()"></i>@linkName</a>
+    }
+}

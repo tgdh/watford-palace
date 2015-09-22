@@ -163,6 +163,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "umbraco/connectionStrings.config",
+			"settings":
+			{
+				"buffer_size": 382,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "umbraco/Web.config",
+			"settings":
+			{
+				"buffer_size": 16606,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -241,10 +257,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/User1/Sites/Projects/watford-palace"
+		"/Users/User1/Sites/Projects/watford-palace",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco"
 	],
 	"file_history":
 	[
+		"/Users/User1/Sites/Projects/aspex/umbraco/Web.config",
+		"/Users/User1/Desktop/spambots.txt",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/humans.txt",
+		"/Users/User1/Sites/Projects/watford-palace/watford.sublime-project",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/bower.json",
@@ -368,11 +389,7 @@
 		"/Users/User1/Sites/Projects/aspex/bower.json",
 		"/Users/User1/Sites/Projects/aspex/tasks/watch.js",
 		"/Users/User1/Sites/Projects/aspex/umbraco/assets/js/main.37a8b20f9512b8d7d18a7a42850cc46f.js",
-		"/Users/User1/Sites/Projects/aspex/tasks/concurrent.js",
-		"/Users/User1/Sites/Projects/aspex/aspex.sublime-project",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Contact.cshtml",
-		"/Users/User1/Sites/Projects/aspex/assets/_components/on-media-query/css/style.css",
-		"/Users/User1/Sites/Projects/aspex/assets/js/components/onmedia.js"
+		"/Users/User1/Sites/Projects/aspex/tasks/concurrent.js"
 	],
 	"find":
 	{
@@ -420,6 +437,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"*",
 			"c-cover-block",
 			".c-cover-block",
 			"z-index: 50",
@@ -546,8 +564,7 @@
 			".hide",
 			"events",
 			"social__link",
-			"o-feature-column",
-			".o-event-tile--whats-on"
+			"o-feature-column"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -573,8 +590,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "umbraco/connectionStrings.config",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "umbraco/Web.config",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3668,
+								3668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 167.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

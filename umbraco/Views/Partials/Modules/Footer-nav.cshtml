@@ -1,0 +1,16 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}
+
+<nav class="nav--footer">
+	<ul class="nav__list">
+		@foreach( var link in settings.footerLinks.Split(',') ){
+			var page = Umbraco.Content(link);
+			<li class="nav__item">
+				<a href="@page.Url" class="mav__link">@page.Name</a>
+			</li>
+		}
+	</ul>
+</nav>

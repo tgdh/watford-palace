@@ -1,0 +1,90 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Core.Services
+@using System.Text
+@{
+    Layout = "Master.cshtml";
+}
+
+<div class="wrap wrap--x-large">
+	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	@CurrentPage.bodyText
+	@Html.Partial("Forms/Contact-form")
+</div>
+	
+@section OpenGraph{
+	@*
+
+	For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:label1" content="">
+	<meta name="twitter:data1" content="">
+	<meta name="twitter:label2" content="">
+	<meta name="twitter:data2" content="">
+
+	*@
+}
+
+	
+@section Scripts{
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js" type="text/javascript"></script>
+	@executeCode()
+}
+
+@helper executeCode(){
+	string doctype = "ContactForm";
+	IContentService contentService = ApplicationContext.Current.Services.ContentService;
+	IContentTypeService contentTypeService = ApplicationContext.Current.Services.ContentTypeService;
+	IContentType dt = contentTypeService.GetContentType(doctype);
+	IEnumerable<PropertyGroup> tabs = dt.PropertyGroups;
+	IEnumerable<PropertyType> properties = dt.CompositionPropertyTypes.OrderBy(x => x.SortOrder);
+	StringBuilder sbRules = new StringBuilder();
+	bool bNotFirst = false;
+	
+	foreach( PropertyGroup pg in tabs ){
+		foreach (PropertyType pt in pg.PropertyTypes.OrderBy(x => x.SortOrder)){
+			var fieldName = pt.Alias + pt.Id;
+			// javascript validation
+	
+			if( pt.Mandatory || !string.IsNullOrEmpty(pt.ValidationRegExp) ){
+				if (bNotFirst){
+				   sbRules.Append(",");
+				}
+				bNotFirst = true;
+	
+				sbRules.Append(fieldName + ":{"); 
+				if( pt.Mandatory ){
+				  sbRules.Append("required: true");
+				}
+				if( pt.Mandatory && !string.IsNullOrEmpty(pt.ValidationRegExp) ){
+				  sbRules.Append(", "); 
+				}
+				if( !string.IsNullOrEmpty(pt.ValidationRegExp) ){
+					if( pt.ValidationRegExp == "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$" ){
+						sbRules.Append(Html.Raw("email: true")); 
+					} else {
+						sbRules.Append(Html.Raw("regex: \"" + pt.ValidationRegExp + "\"")); 
+					}
+	
+				}
+				sbRules.Append("}");
+	
+			}
+		}  
+	}
+    <script>
+		$("#@doctype.ToLower()").validate({
+			errorElement: "div", 
+			errorPlacement: function(error, element) {
+				error.insertAfter(element.closest('.input-wrap'))
+			},
+		    onfocusout: function(element) {$(element).valid()},
+			onclick: function(element) {$(element).valid()},
+			focusInvalid: false,
+			rules: {
+				@Html.Raw(sbRules.ToString()) 
+			}
+		});
+	</script>
+}

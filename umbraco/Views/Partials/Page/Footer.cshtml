@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}		
+<footer class="o-page__footer" role="contentinfo">
+	@Html.Partial("Modules/Social-links")
+	@Html.Partial("Modules/Footer-nav")
+	
+	<p class="copyright">@DateTime.Now.Year &copy; All rights reserved</p>
+</footer>
