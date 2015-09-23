@@ -1,0 +1,47 @@
+/* ===========================================================
+
+	# ICONS
+
+=========================================================== */
+
+.c-social__link {
+	width: 3.3rem;
+	height: 3.3rem;
+	border-radius: 100%;
+	display: inline-block;
+	margin-right: 0.8rem;
+	color: $white;
+	transition: background $speed ease;
+}
+
+.c-social__link--twitter {
+	background: $twitter-blue;
+}
+
+.c-social__link--facebook {
+	background: $facebook-blue;
+}
+
+.c-social__link--youtube {
+	background: $youtube-red;
+}
+
+.c-social__link--foursquare {
+	background: $foursquare-blue;
+}
+
+.c-social__link--twitter:hover {
+	background: darken($twitter-blue, 10);
+}
+
+.c-social__link--facebook:hover {
+	background: darken($facebook-blue, 10);
+}
+
+.c-social__link--youtube:hover {
+	background: darken($youtube-red, 10);
+}
+
+.c-social__link--foursquare:hover {
+	background: darken($foursquare-blue, 10);
+}

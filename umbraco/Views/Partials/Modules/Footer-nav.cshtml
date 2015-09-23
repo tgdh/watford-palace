@@ -4,12 +4,12 @@
 	var settings = homePage.FirstChild("Settings");
 }
 
-<nav class="nav--footer">
-	<ul class="nav__list">
+<nav class="c-nav__footer">
+	<ul class="c-nav__list--footer">
 		@foreach( var link in settings.footerLinks.Split(',') ){
 			var page = Umbraco.Content(link);
-			<li class="nav__item">
-				<a href="@page.Url" class="mav__link">@page.Name</a>
+			<li class="c-nav__item--footer">
+				<a href="@page.Url" class="c-nav__link--footer">@page.Name</a>
 			</li>
 		}
 	</ul>

@@ -4,9 +4,21 @@
 	var settings = homePage.FirstChild("Settings");
 }	
 <div class="c-bottom-frame"></div>	
-<footer class="o-page__footer o-wrap o-wrap--x-large" role="contentinfo">
-	@Html.Partial("Modules/Social-links")
+<footer class="o-page__footer o-section" role="contentinfo">
+	<div class="clearfix">
+		<div class="o-page__footer__column o-page__footer__column--left">
+			<h2 class="o-page__footer__heading">@settings.sectionName</h2>
+			<p class="o-page__footer__copy"><address>@Html.Raw(Html.Encode(settings.address).Replace("\n", "<br />"))</address></p>
+			<p>
+				@Html.Partial("Modules/Social-links")
+			</p>
+			<p class="o-page__footer__copycopyright">@Html.Raw(Html.Encode(settings.copyrightDisclaimer).Replace("\n", "<br />"))</p>		
+		</div>
+		<div class="o-page__footer__column o-page__footer__column--right">
+			<h2 class="o-page__footer__heading">Newsletter</h2>
+			@Html.Partial("Modules/Newsletter")
+		</div>
+
+	</div>
 	@Html.Partial("Modules/Footer-nav")
-	
-	<p class="copyright">@DateTime.Now.Year &copy; All rights reserved</p>
 </footer>

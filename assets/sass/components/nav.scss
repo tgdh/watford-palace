@@ -8,8 +8,8 @@
 	.c-nav__list--footer {
 		list-style: none;
 		.c-nav__link--footer {
-			font-size: 1.2rem;
-			color: $black;
+			font-size: 1.4rem;
+			color: $sec;
 			font-weight: bold;
 			transition: color $speed ease;
 			&:hover,
@@ -21,9 +21,21 @@
 			display: inline-block;
 			margin: 0;
 			margin-right: 3rem;
+			position: relative;
+		}
+		.c-nav__item--footer:after {
+			content: "|";
+			color: $dark-black;
+			position: absolute;
+		    /* left: 0; */
+		    right: -2rem;
+		    top: 0.2rem;
 		}
 		.c-nav__item--footer:last-child {
 			margin-left: 0;
+		}
+		.c-nav__item--footer:last-child:after {
+			display: none;
 		}
 	}
 }

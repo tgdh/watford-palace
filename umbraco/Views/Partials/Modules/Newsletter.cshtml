@@ -1,0 +1,14 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+}
+
+<form class="c-form c-form--newsletter">
+	<div class="o-input">
+		<input type="text" placeholder="First name">
+	</div>
+	<div class="o-input">
+		<input type="text" placeholder="Email">
+	</div>
+	<button class="o-button o-button--primary">Sign up</button>
+</form>

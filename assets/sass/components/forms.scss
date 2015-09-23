@@ -1,0 +1,31 @@
+/* ===========================================================
+
+	# FORMS
+
+=========================================================== */
+
+.o-input + .o-button {
+	margin-top: $line-height;
+}
+
+
+
+.o-input {
+	input {
+		border: none;
+	}
+}
+
+
+.c-form--newsletter {
+	.o-input {
+		border: 0.1rem solid $border-colour;
+		border-bottom: 0;
+	}
+	.o-input:nth-last-child(2) {
+		border-bottom: 0.1rem solid $border-colour;
+	}
+	.o-button {
+		width: 100%;
+	}
+}
