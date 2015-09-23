@@ -4,11 +4,11 @@
 
 =========================================================== */
 
-.button {
+.o-button {
 	border-radius: $border-radius;
 	display: inline-block;
 	line-height: 1;
-	padding: 1.5rem 2rem;
+	padding: 2rem 3.5rem;
 	transition: background $speed ease,
 				box-shadow $speed ease,
 				color $speed ease;
@@ -23,7 +23,7 @@
 	}
 }
 
-.button--primary {
+.o-button--primary {
 	background: $pri;
 	color: $white;
 
@@ -33,18 +33,19 @@
 	}
 }
 
-.button--secondary {
+.o-button--secondary {
 	background: $sec;
 	color: $white;
 
 	&:hover,
 	&:focus {
 		background: $ter;
+		color: $dark-black;
 	}
 }
 
-.button--disabled {
+.o-button--disabled {
 	background: $border-colour;
-	color: $white;
+	color: darken($main-grey, 30) !important;
 	cursor: not-allowed;
 }

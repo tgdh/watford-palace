@@ -4,35 +4,333 @@
 
 =========================================================== */
 
-.c-page__header{
-	background: #ebebeb;
-}
+// .c-nav--main {
 
-.c-nav--main {
-
-	.c-nav__list {
-		list-style: none;
-	}
+// 	.c-nav__list {
+// 		list-style: none;
+// 	}
 	
-	.c-nav__item {
-		margin: 0;
-	}
+// 	.c-nav__item {
+// 		margin: 0;
+// 	}
 
+// }
+
+// @include respond-min( $mq-medium ) {
+
+// 	.c-nav--main {
+
+// 		.c-nav__item {
+// 			display: inline;
+// 		}
+
+// 		.c-nav__link {
+// 			display: inline-block;
+// 			padding: 1rem;
+// 		}
+
+// 	}
+
+// }
+
+.c-nav__footer {
+	.c-nav__list--footer {
+		list-style: none;
+		.c-nav__link--footer {
+			font-size: 1.2rem;
+			color: $black;
+			font-weight: bold;
+			transition: color $speed ease;
+			&:hover,
+			&:focus {
+				color: $pri;
+			}
+		}
+		.c-nav__item--footer {
+			display: inline-block;
+			margin: 0;
+			margin-right: 3rem;
+		}
+		.c-nav__item--footer:last-child {
+			margin-left: 0;
+		}
+	}
 }
 
-@include respond-min( $mq-medium ) {
 
-	.c-nav--main {
+@include respond-max( $mq-small + 150px ) {
+
+	.c-nav__main {
+		width: 100%;
+		display: block;
+		background: $ter;
+		z-index: 20;
+		position: absolute;
+		top: 14.2rem;
+		left: 0;
+		right: 0;
+		display: block;
+		padding-bottom: 2rem;
+		transform: translate3d(0,-100rem,0);			
+		.c-nav__list {
+			width: 100%;
+			display: block;
+		}
+		.c-nav__link {
+			text-align: center;
+			width: 100%;
+			padding: 0;
+			display: block;
+			color: $white;
+			font-weight: normal;
+			transition: color $speed ease,
+						background $speed ease;
+			position: relative;
+			padding: 1.2rem;
+		}
+		.c-nav__link:hover,
+		.c-nav__link.active,
+		.c-nav__link:focus {
+			background: $pri;
+			color: $white;
+		}
+		.c-nav__list--sub {
+			margin: 0;
+		}
+		.c-nav__item--child {
+			list-style: none;
+			width: 100%;
+			margin: 0;
+			.c-nav__link {
+				text-align: center;
+				color: $white;				
+			}	
+		}
+		.c-nav__item {
+			margin: 0;
+			width: 100%;
+			display: block;
+		}
+
+	}
+	.c-nav--super {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		.o-button {
+			display: block;
+			margin-bottom: 0.5rem;
+			span {
+				display: none;
+			}
+		}
+	}
+	.toggle--nav--main {
+		display: block;
+		position: absolute;
+		top: 3rem;
+		left: 2rem;
+		height: 3rem;
+		width: 3rem;
+		.menu-icon {
+			height: 3rem;
+		    width: 3rem;
+		    position: relative;
+		    display: block;
+			.menu-line {
+				width: 3rem;
+				height: 0.4rem;
+				background: $white;
+				position: absolute;
+				left: 0;
+			}
+
+			.menu-line--1 {
+				top: 0.2rem;
+			}
+			.menu-line--2 {
+				top: 1.3rem;
+			}		
+			.menu-line--3 {
+				bottom: 0.2rem;
+			}
+		}
+
+	}
+
+	.js-nav-main--open {
+		.c-nav__main {
+			display: block;
+			transform: translate3d(0,0,0);	
+		}
+		.toggle--nav--main {
+			.menu-icon {
+				.menu-line {
+					background: $pri;
+				}
+			}
+
+		}
+	}
+}
+
+@include respond-min-max( 500px, $mq-small + 150px ) {
+
+	.c-nav--super {
+		.o-button {
+			span {
+				display: inline-block;
+			}
+		}
+	}
+}
+@include respond-min( $mq-small + 150px ){
+
+
+	.c-nav--super {
+		position: absolute;
+		right: 1rem;
+		.ico-globe,
+		.ico-mail {
+			font-size: 2.2rem;
+			display: inline-block;
+			position: relative;
+		}
+
+		span {
+			display: inline-block;
+		    vertical-align: top;
+		    height: 2.1rem;
+		    line-height: 2.1rem;			
+		}
+	}
+	.toggle--nav--main {
+		display: none;
+	}
+	.c-nav__list--sub {
+		display: none;
+	}
+	#mainNav {
+		// position: absolute;
+		right: 1rem;
+		bottom: 0;
+	}	
+	.c-nav__main {
+		.c-nav__list {
+			list-style: none;
+		}
+		.c-nav__link {
+			color: $sec;
+			font-weight: normal;
+			transition: color $speed ease,
+						background $speed ease;
+		}
+		.c-nav__item:hover .c-nav__link,
+		.c-nav__link.active,
+		.c-nav__link:focus {
+			color: $sec;
+			background: $white;
+		}
+		.c-nav__item {
+			margin: 0;
+		}
+
+	}
+
+
+	.c-nav__main {
 
 		.c-nav__item {
 			display: inline;
+			position: relative;
 		}
 
 		.c-nav__link {
 			display: inline-block;
-			padding: 1rem;
+			padding: 1.3rem;
+			padding-bottom: 3rem;
+			color: $dark-black;
+			font-weight: bold;
 		}
 
+		.c-nav__list--sub {
+			visibility: hidden;
+			opacity: 0;
+			
+			position: absolute;
+			left: 0;
+			width: 20rem;
+			opacity: 1;
+			z-index: 50;
+			text-align: left;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: block;
+			transition: opacity $speed ease, visibility	$speed ease;
+			.c-nav__item--child {
+			    position: relative;
+			    z-index: 50;
+			    background-color: $sec;
+			    margin: 0;
+			    // padding: 1.4rem;
+			    transition: background-color $speed ease;	
+			    .c-nav__link {
+				    color: $dark-black;
+				    padding: 1.4rem;
+					width: 24rem;
+					display: block;
+					transition: color $speed ease, background $speed ease;
+					opacity: 0;
+			    }
+			}
+			.c-nav__item--child:hover {
+				.c-nav__link {
+				    color: $sec;	
+				    background-color: $ter;  	
+			    }
+			}
+			.c-nav__item--child {
+				.c-nav__link.active {
+				    color: $white;
+				    background-color: $pri;	    	
+			    }
+			}
+
+
+		}
+		.c-nav__item--parent:last-child {
+			.c-nav__list--sub {
+				right: 4rem;
+				left: initial;
+			}
+		}
+
+		.c-nav__item:hover .c-nav__list--sub {
+			opacity: 1;
+			visibility: visible;
+			
+			.c-nav__item--child {
+			    .c-nav__link {
+					opacity: 1;
+			    }
+			}
+		}
 	}
+
+
+}
+
+@include respond-min( $mq-medium ){
+
+
+	.c-nav--super {
+		right: 3rem;
+	}
+
+	#mainNav {
+		right: 3rem;
+	}	
+
 
 }

@@ -16,16 +16,20 @@
 	margin-right: auto;
 }
 
-.o-wrap--medium {
-	max-width: 75rem;
+.o-wrap--small {
+	max-width: 72rem;
+}
+
+.o-wrap--small {
+	max-width: 72rem;
 }
 
 .o-wrap--large {
-	max-width: 92rem;
+	max-width: 105rem;
 }
 
 .o-wrap--x-large {
-	max-width: 140rem;
+	max-width: 138rem;
 }
 
 @include respond-min-max( $mq-small, $mq-medium ) {

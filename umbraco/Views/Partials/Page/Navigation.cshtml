@@ -4,18 +4,19 @@
 	var menuItems = homePage.Children.Where("UmbracoNaviHide == false && TemplateId > 0");
 }
 
-<nav id="mainNav" class="c-nav--main js-nav-main" role="navigation">
+<nav id="mainNav" class="c-nav__main js-nav-main" role="navigation">
 	<ul class="c-nav__list clearfix">
 	
-		<li class="c-nav__item nav__item--parent">
+@* 		<li class="c-nav__item nav__item--parent">
 			<a href="@homePage.Url" class="nav__link @homePage.IsEqual(CurrentPage, "active", "")">@homePage.Name</a>
-		</li>
+		</li> *@
 		
 		@foreach (var item in menuItems){
-			<li class="c-nav__item nav__item--parent">
+			<li class="c-nav__item c-nav__item--parent">
 				<a href="@item.Url" class="c-nav__link  @(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
 					@item.Name
 				</a>
+				@Traverse(item)
 			</li>
 		}
 		
@@ -27,10 +28,10 @@
     var maxLevelForNav = 6;
     var items = node.Children.Where("Visible").Where("Level <= " + maxLevelForNav);
     if (items.Any()) {
-	        <ul class="nav__list--sub">
+	        <ul class="c-nav__list--sub">
     	        @foreach (var item in items) {
-					<li class="nav__item nav__item--child">
-						<a href="@item.Url" class="nav__link @(CurrentPage.Id == item.Id ? "active" : null)">@item.Name</a>
+					<li class="c-nav__item c-nav__item--child">
+						<a href="@item.Url" class="c-nav__link @(CurrentPage.Id == item.Id ? "active" : null)">@item.Name</a>
 						@Traverse(item)
 	                </li>
     	        }

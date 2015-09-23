@@ -1,14 +1,22 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	
     Layout = "Master.cshtml";
-	var homePage = CurrentPage.Site();
-	var settings = homePage.FirstChild("Settings");
+
+	var homePage = CurrentPage.AncestorsOrSelf(1).First();
+	var settings = homePage.Settingses.First();
 
 }
-<div class="wrap wrap--large">
-	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+<div class="o-section o-wrap o-wrap--large">
+	<h1 style="background: pink;">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
 	@CurrentPage.bodyText
+	<ul>
+		@foreach( var child in CurrentPage.Children() )
+		{
+			<li><a href="@child.Url">@child.Name</a></li>
+		}
+	</ul>
+@* 	<h2>Share this</h2>
+	@Html.Partial("Modules/Social-share") *@
 </div>
 	
 @section OpenGraph{

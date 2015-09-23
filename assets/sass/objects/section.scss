@@ -9,6 +9,18 @@
 	padding-top: $padding--small;
 }
 
+.o-section--grey {
+	background: $main-grey;
+}
+
+.o-section--red {
+	background $main-red;
+}
+
+.o-section--black {
+	background: $main-black;
+}
+
 @include respond-min( $mq-small ) {
 
 	.o-section {
