@@ -4,35 +4,6 @@
 
 =========================================================== */
 
-// .c-nav--main {
-
-// 	.c-nav__list {
-// 		list-style: none;
-// 	}
-	
-// 	.c-nav__item {
-// 		margin: 0;
-// 	}
-
-// }
-
-// @include respond-min( $mq-medium ) {
-
-// 	.c-nav--main {
-
-// 		.c-nav__item {
-// 			display: inline;
-// 		}
-
-// 		.c-nav__link {
-// 			display: inline-block;
-// 			padding: 1rem;
-// 		}
-
-// 	}
-
-// }
-
 .c-nav__footer {
 	.c-nav__list--footer {
 		list-style: none;
@@ -212,8 +183,9 @@
 	}
 	#mainNav {
 		// position: absolute;
-		right: 1rem;
-		bottom: 0;
+		// right: 1rem;
+		// bottom: 0;
+		float: right;
 	}	
 	.c-nav__main {
 		.c-nav__list {

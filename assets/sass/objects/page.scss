@@ -6,4 +6,32 @@
 
 .o-page {
 	background: $background-colour;
+	padding-left: $frame-size--small;
+	padding-bottom: $frame-size--small;
+	padding-right: $frame-size--small;
+	.o-page__content {
+		margin-top: 10.6rem;
+	}
+}
+
+
+@include respond-min( $mq-small ) {
+
+	.o-page {
+		padding-left: $frame-size--medium;
+		padding-bottom: $frame-size--medium;
+		padding-right: $frame-size--medium;
+	}
+
+}
+
+
+@include respond-min( $mq-medium ) {
+
+	.o-page {
+		padding-left: $frame-size--large;
+		padding-bottom: $frame-size--large;
+		padding-right: $frame-size--large;
+	}
+
 }

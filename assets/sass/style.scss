@@ -27,6 +27,7 @@
 		'base/forms.scss';
 
 @import 'objects/page.scss',
+		'objects/header.scss',
 		'objects/wrap.scss',
 		'objects/section.scss',
 		'objects/buttons.scss',
@@ -37,6 +38,7 @@
 @import 'components/nav.scss',
 		'components/cover.scss',
 		'components/aspect-ratio.scss',
-		'components/sitemap.scss';
+		'components/sitemap.scss',
+		'components/frame.scss';
 
 @import 'trumps/overrides.scss';

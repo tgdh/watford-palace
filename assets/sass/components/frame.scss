@@ -1,0 +1,50 @@
+/* ===========================================================
+
+	# FRAME
+
+=========================================================== */
+
+.c-top-corner {
+	position: fixed;
+    top: 10.6rem;
+    right: $frame-size--small;
+    height: $frame-size--small * 2;
+    width: $frame-size--small * 2;
+}
+
+.c-bottom-frame {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: $white;
+	height: $frame-size--small;
+}
+
+@include respond-min( $mq-small ) {
+
+	.c-top-corner {
+	    right: $frame-size--medium;
+	    height: $frame-size--small * 3;
+	    width: $frame-size--small * 3;
+	}
+
+	.c-bottom-frame {
+		height: $frame-size--medium;
+	}
+
+}
+
+@include respond-min( $mq-medium ) {
+
+	.c-top-corner {
+	    right: $frame-size--large;
+	    height: $frame-size--small * 4.5;
+	    width: $frame-size--small * 4.5;
+	}
+
+	.c-bottom-frame {
+		height: $frame-size--large;
+	}
+
+}

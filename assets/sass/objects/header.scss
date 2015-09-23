@@ -1,0 +1,21 @@
+/* ===========================================================
+
+	# HEADER
+
+=========================================================== */
+
+.o-page__header {
+	padding-top: 1.8rem;
+	background: white;
+	position: fixed;
+	height: 10.6rem;
+	left: 0;
+	right: 0;
+	top: 0;
+	.o-site-logo {
+	    width: 26.8rem;
+	    display: block;
+	    float: left;
+	    margin-left: 1rem;
+	}
+}

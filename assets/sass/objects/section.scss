@@ -14,11 +14,18 @@
 }
 
 .o-section--red {
-	background $main-red;
+	background: $main-red;
+	color: $white !important;
+}
+
+.o-section--blue {
+	background: $main-blue;
+	color: $white !important;
 }
 
 .o-section--black {
-	background: $main-black;
+	background: $dark-black;
+	color: $white !important;
 }
 
 @include respond-min( $mq-small ) {
