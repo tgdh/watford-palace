@@ -1,14 +1,13 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	
-    Layout = "Master.cshtml";
+	Layout = "Master.cshtml";
 	var homePage = CurrentPage.Site();
 	var settings = homePage.FirstChild("Settings");
 
 }
-<div class="o-wrap o-wrap--large">
+<div class="o-section o-wrap o-wrap--large">
 	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-	@CurrentPage.bodyText
+	@Umbraco.RenderMacro("ezSearch", new {rootContentNodeId="1094", rootMediaNodeId="", indexType="CONTENT", searchFields="nodeName, pageTitle, metaTitle, metaDescription, metaKeywords, seo, bodyText", previewFields="nodeName, pageTitle, bodyText", previewLength="250", pageSize="10", hideFromSearchField="null", searchFormLocation="Top"})
 </div>
 	
 @section OpenGraph{
