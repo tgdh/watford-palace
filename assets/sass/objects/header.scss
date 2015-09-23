@@ -9,13 +9,32 @@
 	background: white;
 	position: fixed;
 	height: 10.6rem;
-	left: 0;
-	right: 0;
+	left: $frame-size--small;
+	right: $frame-size--small;
 	top: 0;
+	z-index: 2;
 	.o-site-logo {
 	    width: 26.8rem;
 	    display: block;
 	    float: left;
-	    margin-left: 1rem;
 	}
+}
+
+@include respond-min( $mq-small ) {
+
+	.o-page__header {
+		left: $frame-size--medium;
+		right: $frame-size--medium;
+	}
+
+}
+
+
+@include respond-min( $mq-medium ) {
+
+	.o-page__header {
+		left: $frame-size--large;
+		right: $frame-size--large;
+	}
+
 }

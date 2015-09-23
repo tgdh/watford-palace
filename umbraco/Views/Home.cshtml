@@ -14,7 +14,7 @@
 </div>
 
 
-<section class="o-section o-section--grey">
+@* <section class="o-section o-section--grey">
 	<div class="o-wrap o-wrap--x-large">
 		<h1 class="mega">Section</h1>
 		<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis.
@@ -60,6 +60,43 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo 
 Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.
 
 Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+	</div>
+</section> *@
+
+<section>
+	<h2 class="hide-text">What's new</h2>
+	<div class="o-card-block clearfix">
+		@for( var ii = 0; ii < 8; ii++)
+		{
+			if( ii == 2 || ii == 5 )
+			{
+				<article class="o-card o-card--news">
+					<div class="o-card__image--wrap">
+						<img class="o-tile__image" src="" alt=""/>
+					</div>
+					<div class="o-card__content">
+						<span class="o-news-info--category">Comedy</span>
+						<h3 class="o-news-tile__heading">Article @ii</h3>
+						<span class="o-news-info--date">@ii Sep</span>
+					</div>
+					
+				</article>	
+			} 
+			else 
+			{
+				<article class="o-card o-card--event">
+					<div class="o-card__image--wrap">
+						<img class="o-tile__image" src="" alt=""/>
+					</div>
+					<div class="o-card__content">
+						<span class="o-event-info--category">Comedy</span>
+						<h3 class="o-event-tile__heading">Article @ii</h3>
+						<span class="o-event-info--date">@ii Sep</span>
+					</div>
+					
+				</article>			
+			}
+		}
 	</div>
 </section>
 

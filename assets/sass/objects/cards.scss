@@ -1,0 +1,134 @@
+/* ===========================================================
+
+	# CARDS
+
+=========================================================== */
+
+.o-card:nth-child(8n + 1){
+	border-bottom-left-radius: $card-radius--small;
+}
+
+.o-card:nth-child(8n + 2){
+	border-top-left-radius: $card-radius--small;
+}
+
+.o-card:nth-child(8n + 3){
+	border-top-right-radius: $card-radius--small;
+}
+
+.o-card:nth-child(8n + 4){
+	border-bottom-right-radius: $card-radius--small;
+}
+
+.o-card:nth-child(8n + 5){
+	border-top-left-radius: $card-radius--small;
+}
+
+.o-card:nth-child(8n + 6){
+	border-top-right-radius: $card-radius--small;
+}
+
+.o-card:nth-child(8n + 7){
+	border-bottom-left-radius: $card-radius--small;
+}
+
+.o-card:nth-child(8n + 8){
+	border-bottom-right-radius: $card-radius--small;
+}
+
+
+
+.o-card {
+	position: relative;
+	overflow: hidden;
+	.o-card__image--wrap {
+		background: $main-grey;
+		display: block;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.o-card__image--wrap:before {
+		content: "";
+		display: block;
+		padding-top: 100%;
+		
+	}
+
+	.o-card__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	.o-card__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+}
+
+.o-card--news:nth-child(odd) {
+	.o-card__image--wrap {
+		background: $pri;
+	}
+}
+
+.o-card--news:nth-child(even) {
+	.o-card__image--wrap {
+		background: $sec;
+	}
+}
+
+@include respond-min( $mq-small ){
+	.o-card {
+		@include column(1/2, $gutter:2, $cycle: 2);
+		margin-bottom: 3rem;
+
+	}
+}
+
+@include respond-min( $mq-large ){
+	.o-card:nth-child(8n + 1){
+		border-bottom-left-radius: $card-radius--medium;
+	}
+
+	.o-card:nth-child(8n + 2){
+		border-top-left-radius: $card-radius--medium;
+	}
+
+	.o-card:nth-child(8n + 3){
+		border-top-right-radius: $card-radius--medium;
+	}
+
+	.o-card:nth-child(8n + 4){
+		border-bottom-right-radius: $card-radius--medium;
+	}
+
+	.o-card:nth-child(8n + 5){
+		border-top-left-radius: $card-radius--medium;
+	}
+
+	.o-card:nth-child(8n + 6){
+		border-top-right-radius: $card-radius--medium;
+	}
+
+	.o-card:nth-child(8n + 7){
+		border-bottom-left-radius: $card-radius--medium;
+	}
+
+	.o-card:nth-child(8n + 8){
+		border-bottom-right-radius: $card-radius--medium;
+	}
+	.o-card {
+		@include column(1/4, $gutter:2, $uncycle: 2, $cycle: 4);
+		margin-bottom: 3rem;
+
+	}
+}
