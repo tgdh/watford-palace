@@ -4,10 +4,10 @@
 	var settings = homePage.FirstChild("Settings");
 }
 
-@RenderLinkIfNotEmpty(settings.facebook, "facebook", "Facebook")
 @RenderLinkIfNotEmpty(settings.twitter, "twitter", "Twitter")
-@RenderLinkIfNotEmpty(settings.googleplus, "google", "Google")
-@RenderLinkIfNotEmpty(settings.linkedin, "linkedin", "LinkedIn")
+@RenderLinkIfNotEmpty(settings.facebook, "facebook", "Facebook")
+@RenderLinkIfNotEmpty(settings.youtube, "youtube", "YouTube")
+@RenderLinkIfNotEmpty(settings.foursquare, "foursquare", "Foursquare")
 	
 @helper RenderLinkIfNotEmpty(dynamic link, string cssClass, string linkName) {
 	// A helper function is handy when you have to do the same thing over and over again

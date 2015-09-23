@@ -3,6 +3,10 @@
 @using System.Text
 @{
     Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+	var link = settings.directionsLink;
+	var zoomLevel = settings.map.Zoom;
 }
 
 <div class="wrap wrap--x-large">
@@ -28,6 +32,62 @@
 
 	
 @section Scripts{
+	@* 
+
+		Update map both on home and contact pages!
+
+	*@
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+	<script type="text/javascript">
+		
+		function initialize() {
+			var mapOptions = {
+				center: new google.maps.LatLng(@settings.map),
+	   			panControl: true,
+	    		zoomControl: true,
+	    		scaleControl: true,
+				zoom: @zoomLevel,
+				disableDefaultUI: true,
+				scrollwheel: false,
+				draggable: false
+			};
+				
+			var map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
+			var contentString = '<h4>Watford Palace Theatre</h4><a href="@link" target="_blank">Click here direction</a>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+			
+			var image = '/assets/img/map-marker.png';
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(@settings.map),
+				map: map,
+				title: 'Pompey Centre',
+				icon: image
+			});	
+			
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map,marker);
+			});
+			
+				
+			google.maps.event.addDomListener(window, "resize", function() {
+				var center = map.getCenter();
+				google.maps.event.trigger(map, "resize");
+				map.setCenter(center); 
+			});
+		}
+				
+		//Google maps listener
+		google.maps.event.addDomListener(window, 'load', initialize);
+				
+		
+	</script>
+
+
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js" type="text/javascript"></script>
 	@executeCode()
 }

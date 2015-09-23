@@ -1,6 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+	var link = settings.directionsLink;
+	var zoomLevel = settings.map.Zoom;
 }
 
 <div class="o-section o-wrap o-wrap--small">
@@ -58,4 +62,60 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo r
 Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
 	</div>
 </section>
-@Html.Partial("Component/tile")
+
+@section Scripts{
+	@* 
+
+		Update map both on home and contact pages!
+
+	*@
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+	<script type="text/javascript">
+		
+		function initialize() {
+			var mapOptions = {
+				center: new google.maps.LatLng(@settings.map),
+	   			panControl: true,
+	    		zoomControl: true,
+	    		scaleControl: true,
+				zoom: @zoomLevel,
+				disableDefaultUI: true,
+				scrollwheel: false,
+				draggable: false
+			};
+				
+			var map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
+			var contentString = '<h4>Watford Palace Theatre</h4><a href="@link" target="_blank">Click here to see full map</a>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+			
+			var image = '/assets/img/map-marker.png';
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(@settings.map),
+				map: map,
+				title: 'Pompey Centre',
+				icon: image
+			});	
+			
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map,marker);
+			});
+			
+				
+			google.maps.event.addDomListener(window, "resize", function() {
+				var center = map.getCenter();
+				google.maps.event.trigger(map, "resize");
+				map.setCenter(center); 
+			});
+		}
+				
+		//Google maps listener
+		google.maps.event.addDomListener(window, 'load', initialize);
+				
+		
+	</script>
+}
