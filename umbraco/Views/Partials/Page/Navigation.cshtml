@@ -16,7 +16,10 @@
 				<a href="@item.Url" class="c-nav__link  @(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
 					@item.Name
 				</a>
-				@Traverse(item)
+				@if( item.DocumentTypeAlias != "News" )
+				{
+					@Traverse(item)
+				}
 			</li>
 		}
 		

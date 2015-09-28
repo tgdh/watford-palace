@@ -157,36 +157,22 @@
 	}
 }
 
-@include respond-min-max( 500px, $mq-small + 150px ) {
 
-	.c-nav--super {
-		.o-button {
-			span {
-				display: inline-block;
-			}
-		}
-	}
-}
 @include respond-min( $mq-small + 150px ){
 
 
 	.c-nav--super {
-		position: absolute;
-		right: 1rem;
-		.ico-globe,
-		.ico-mail {
-			font-size: 2.2rem;
+		.c-nav__item--super{
+			list-style: none;
 			display: inline-block;
-			position: relative;
-		}
-
-		span {
-			display: inline-block;
-		    vertical-align: top;
-		    height: 2.1rem;
-		    line-height: 2.1rem;			
+			margin: 0;
+			.c-nav__link--super {
+				color: $dark-black; 
+			}
+			
 		}
 	}
+
 	.toggle--nav--main {
 		display: none;
 	}
@@ -198,6 +184,7 @@
 		// right: 1rem;
 		// bottom: 0;
 		float: right;
+		clear: both;
 	}	
 	.c-nav__main {
 		.c-nav__list {
@@ -209,12 +196,22 @@
 			transition: color $speed ease,
 						background $speed ease;
 		}
-		.c-nav__item:hover .c-nav__link,
-		.c-nav__link.active,
-		.c-nav__link:focus {
-			color: $sec;
-			background: $white;
+		.c-nav__item--parent {
+			.c-nav__link.active  {
+				color: $sec;					
+			}
+
 		}
+			.c-nav__item:hover .c-nav__link {
+				background: $sec;
+				color: $white;
+			}	
+		// .c-nav__item:hover .c-nav__link,
+		// .c-nav__link.active,
+		// .c-nav__link:focus {
+
+		// 	// background: $white;
+		// }
 		.c-nav__item {
 			margin: 0;
 		}
@@ -231,8 +228,8 @@
 
 		.c-nav__link {
 			display: inline-block;
-			padding: 1.3rem;
-			padding-bottom: 3rem;
+			padding: 1rem;
+			padding-bottom: 2.6rem;
 			color: $dark-black;
 			font-weight: bold;
 		}
@@ -263,6 +260,7 @@
 				    color: $dark-black;
 				    padding: 1.4rem;
 					width: 24rem;
+					font-size: 1.4rem;
 					display: block;
 					transition: color $speed ease, background $speed ease;
 					opacity: 0;
@@ -270,14 +268,15 @@
 			}
 			.c-nav__item--child:hover {
 				.c-nav__link {
-				    color: $sec;	
-				    background-color: $ter;  	
+				    color: $white;	
+				    background: lighten($sec, 10); 
+				    transition: background $speed ease, opacity $speed ease, visibility	$speed ease; 	
 			    }
 			}
 			.c-nav__item--child {
 				.c-nav__link.active {
 				    color: $white;
-				    background-color: $pri;	    	
+				    background: lighten($sec, 10);     	
 			    }
 			}
 
@@ -293,28 +292,15 @@
 		.c-nav__item:hover .c-nav__list--sub {
 			opacity: 1;
 			visibility: visible;
-			
+			transition: opacity $speed ease, visibility	$speed ease;
 			.c-nav__item--child {
 			    .c-nav__link {
 					opacity: 1;
+					transition: background $speed ease, opacity $speed ease, visibility	$speed ease;
 			    }
 			}
 		}
 	}
-
-
-}
-
-@include respond-min( $mq-medium ){
-
-
-	.c-nav--super {
-		right: 3rem;
-	}
-
-	#mainNav {
-		right: 3rem;
-	}	
 
 
 }
