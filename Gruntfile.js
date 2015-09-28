@@ -81,7 +81,7 @@ module.exports = function ( grunt ) {
 
 	grunt.registerTask( 'jsBuild', [
 		'modernizr',
-		'jshint',
+		// 'jshint',
 		'concat',
 		'uglify'
 	]);

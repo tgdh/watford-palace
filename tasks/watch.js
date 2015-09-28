@@ -18,7 +18,6 @@ module.exports = {
 			'<%= assetsFolder %>/js/**/*.js'
 		],
 		tasks: [
-			'jshint',
 			'concat',
 			'uglify'
 		]

@@ -6,8 +6,7 @@ module.exports = {
 		'modernizr'
 	],
 	dev2: [
-		'autoprefixer',
-		'jshint'
+		'autoprefixer'
 	],
 	dev3: [
 		'css_mqpacker',

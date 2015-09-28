@@ -4,16 +4,31 @@
 
 =========================================================== */
 
+body,
+html {
+	position: relative;
+	height: 100%;
+
+}
+
 .o-page {
 	background: $background-colour;
 	padding-left: $frame-size--small;
 	padding-bottom: $frame-size--small;
 	padding-right: $frame-size--small;
-	.o-page__content {
-		margin-top: 10.6rem;
-	}
 }
 
+.o-page__content {
+	margin-top: 10.6rem;
+}
+
+.c-cover-wrap + .o-page__content {
+		margin-top: 0;
+}
+
+.c-cover-wrap {
+	margin-top: 10.6rem;
+}
 
 @include respond-min( $mq-small ) {
 

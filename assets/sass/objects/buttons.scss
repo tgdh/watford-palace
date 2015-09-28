@@ -23,6 +23,19 @@
 	}
 }
 
+.o-button--small {
+	padding: 1.4rem 2.2rem;
+}
+.o-button--transparent {
+	background: transparent;
+	color: $white;
+	border: 0.1rem solid $white;
+	&:hover,
+	&:focus {
+		background: $pri;
+	}
+}
+
 .o-button--primary {
 	background: $pri;
 	color: $white;
