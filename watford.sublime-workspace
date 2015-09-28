@@ -4,20 +4,40 @@
 		"selected_items":
 		[
 			[
+				"border-bot",
+				"border-bottom-left-radius: "
+			],
+			[
+				"margin-",
+				"margin-top: "
+			],
+			[
 				"mar",
 				"margin-bottom: "
 			],
 			[
-				"m",
-				"margin-bottom: "
+				"font",
+				"font-size: "
+			],
+			[
+				"zoom",
+				"zoomLevel"
+			],
+			[
+				"ma",
+				"margin-top: "
 			],
 			[
 				"pad",
-				"padding-left: "
+				"padding-right: "
 			],
 			[
-				"font",
-				"font-weight: "
+				"fon",
+				"font-family: "
+			],
+			[
+				"m",
+				"margin-bottom: "
 			],
 			[
 				"te",
@@ -26,10 +46,6 @@
 			[
 				"li",
 				"list-style: "
-			],
-			[
-				"ma",
-				"margin: "
 			],
 			[
 				"tran",
@@ -163,22 +179,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "umbraco/connectionStrings.config",
-			"settings":
-			{
-				"buffer_size": 382,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "umbraco/Web.config",
-			"settings":
-			{
-				"buffer_size": 16606,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -258,16 +258,58 @@
 	"expanded_folders":
 	[
 		"/Users/User1/Sites/Projects/watford-palace",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco"
+		"/Users/User1/Sites/Projects/watford-palace/assets",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects"
 	],
 	"file_history":
 	[
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/footer.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/icons.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Social-links.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Newsletter.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/forms.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Home.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings/global.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cards.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Social-share.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Google-map.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Footer-nav.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/map.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/nav.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
+		"/Volumes/Web Design/Paulius Putna/Paulius Putna archive/268799 - Sellar Property website/assets/sass/modules/map.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/headings.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/buttons.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/forms.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/ezSearch.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/MacroPartials/ezSearch.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/LandingPage.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/anchor.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Navigation.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/text.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/News-filter.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/MasterNews.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Web.config",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/connectionStrings.config",
 		"/Users/User1/Sites/Projects/aspex/umbraco/Web.config",
 		"/Users/User1/Desktop/spambots.txt",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/humans.txt",
 		"/Users/User1/Sites/Projects/watford-palace/watford.sublime-project",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/bower.json",
 		"/Users/User1/Sites/Projects/watford-palace/Gruntfile.js",
 		"/Users/User1/Sites/Projects/watford-palace/readme.MD",
@@ -350,46 +392,7 @@
 		"/Users/User1/Sites/Projects/eric-robinson/eric-robinson.sublime-project",
 		"/Users/User1/Sites/Projects/aspex/aspex.sublime-project",
 		"/Users/User1/Sites/Projects/thespring/umbraco/Views/Master.cshtml",
-		"/Users/User1/Sites/Projects/thespring/umbraco/web.config",
-		"/Users/User1/Sites/Projects/eric-robinson/README.md",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Partials/Page/Header.cshtml",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Partials/Page/Navigation.cshtml",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/_slidemenu.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/_components/jquery-sliding-menu-master/js/jquery-sliding-menu.js",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Partials/Component/cover.cshtml",
-		"/Users/User1/Sites/Projects/aspex/assets/js/main.js",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/objects/header.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/nav.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/shopmenu.scss",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Master.cshtml",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/base/icons.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/generic/js-breakpoints.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/style.scss",
-		"/Users/User1/Sites/Projects/aspex/tasks/concat.js",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Home.cshtml",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Master.tpl.html",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/cover.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/blocks.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/objects/icons.scss",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Partials/Page/Footer.cshtml",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Partials/Component/Featured-Content.cshtml",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/_bxslider.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/objects/cards.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/objects/footer.scss",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/trumps/overrides.scss",
-		"/Users/User1/Sites/Projects/aspex/umbraco/assets/fonts/style.css",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/Partials/Component/Latest-Content.cshtml",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/icons.scss",
-		"/Users/User1/Sites/Projects/aspex/umbraco/Views/LandingPage.cshtml",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/base/headings.scss",
-		"/Users/User1/Sites/Projects/aspex/Gruntfile.js",
-		"/Users/User1/Sites/Projects/aspex/umbraco/assets/js/main.js",
-		"/Users/User1/Sites/Projects/aspex/assets/sass/components/owl.scss",
-		"/Users/User1/Sites/Projects/aspex/.bowerrc",
-		"/Users/User1/Sites/Projects/aspex/bower.json",
-		"/Users/User1/Sites/Projects/aspex/tasks/watch.js",
-		"/Users/User1/Sites/Projects/aspex/umbraco/assets/js/main.37a8b20f9512b8d7d18a7a42850cc46f.js",
-		"/Users/User1/Sites/Projects/aspex/tasks/concurrent.js"
+		"/Users/User1/Sites/Projects/thespring/umbraco/web.config"
 	],
 	"find":
 	{
@@ -437,6 +440,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"--large",
+			"giga",
+			"alpha",
+			".button",
 			"*",
 			"c-cover-block",
 			".c-cover-block",
@@ -560,11 +567,7 @@
 			".o-section--filter .sod_select",
 			".o-section-heading",
 			"console",
-			".o-event-tile--month",
-			".hide",
-			"events",
-			"social__link",
-			"o-feature-column"
+			".o-event-tile--month"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -590,67 +593,13 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "umbraco/connectionStrings.config",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								22,
-								234
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "umbraco/Web.config",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 16606,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3668,
-								3668
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 167.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -671,11 +620,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.550374794633,
 			1.0
 		],
 		"rows":
@@ -703,12 +659,120 @@
 		"selected_items":
 		[
 			[
-				"pab",
-				"umbraco/Views/Partials/Component/Page-Blocks.cshtml"
+				"main",
+				"assets/js/main.js"
+			],
+			[
+				"page",
+				"assets/sass/objects/page.scss"
+			],
+			[
+				"header",
+				"umbraco/Views/Partials/Page/Header.cshtml"
+			],
+			[
+				"heade",
+				"assets/sass/objects/header.scss"
+			],
+			[
+				"wrap",
+				"assets/sass/objects/wrap.scss"
+			],
+			[
+				"home",
+				"umbraco/Views/Home.cshtml"
+			],
+			[
+				"footer",
+				"assets/sass/objects/footer.scss"
+			],
+			[
+				"foot",
+				"umbraco/Views/Partials/Page/Footer.cshtml"
+			],
+			[
+				"glo",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"social",
+				"umbraco/Views/Partials/Modules/Social-links.cshtml"
+			],
+			[
+				"nav",
+				"assets/sass/components/nav.scss"
+			],
+			[
+				"foo",
+				"umbraco/Views/Partials/Page/Footer.cshtml"
+			],
+			[
+				"conta",
+				"umbraco/Views/Contact.cshtml"
 			],
 			[
 				"text",
 				"umbraco/Views/TextPage.cshtml"
+			],
+			[
+				"mas",
+				"umbraco/Views/Master.tpl.html"
+			],
+			[
+				"socia",
+				"umbraco/Views/Partials/Modules/Social-links.cshtml"
+			],
+			[
+				"but",
+				"assets/sass/objects/buttons.scss"
+			],
+			[
+				"form",
+				"assets/sass/base/forms.scss"
+			],
+			[
+				"glob",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"land",
+				"umbraco/Views/LandingPage.cshtml"
+			],
+			[
+				"head",
+				"assets/sass/base/headings.scss"
+			],
+			[
+				"section",
+				"assets/sass/objects/section.scss"
+			],
+			[
+				"lan",
+				"umbraco/Views/LandingPage.cshtml"
+			],
+			[
+				"navi",
+				"umbraco/Views/Partials/Page/Navigation.cshtml"
+			],
+			[
+				"anchor",
+				"assets/sass/base/anchor.scss"
+			],
+			[
+				"hea",
+				"assets/sass/base/headings.scss"
+			],
+			[
+				"global",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"master",
+				"umbraco/Views/Master.tpl.html"
+			],
+			[
+				"pab",
+				"umbraco/Views/Partials/Component/Page-Blocks.cshtml"
 			],
 			[
 				"grunt",
@@ -735,14 +799,6 @@
 				"umbraco/Views/Partials/Component/Home-grid.cshtml"
 			],
 			[
-				"page",
-				"umbraco/Views/Partials/Component/Page-Blocks.cshtml"
-			],
-			[
-				"footer",
-				"umbraco/Views/Partials/Page/Footer.cshtml"
-			],
-			[
 				"butto",
 				"assets/sass/objects/buttons.scss"
 			],
@@ -751,20 +807,8 @@
 				"assets/sass/components/branch.scss"
 			],
 			[
-				"nav",
-				"umbraco/Views/Partials/Page/Navigation.cshtml"
-			],
-			[
-				"wrap",
-				"assets/sass/objects/wrap.scss"
-			],
-			[
 				"fami",
 				"umbraco/Views/FamilyTree.cshtml"
-			],
-			[
-				"head",
-				"assets/sass/base/headings.scss"
 			],
 			[
 				"had",
@@ -773,18 +817,6 @@
 			[
 				"con",
 				"tasks/concat.js"
-			],
-			[
-				"main",
-				"assets/js/main.js"
-			],
-			[
-				"home",
-				"umbraco/Views/Partials/Component/Home-grid.cshtml"
-			],
-			[
-				"navi",
-				"umbraco/Views/Partials/Page/Navigation.cshtml"
 			],
 			[
 				"button",
@@ -811,20 +843,12 @@
 				"umbraco/Views/MacroPartials/LatestTweet.cshtml"
 			],
 			[
-				"glo",
-				"assets/sass/settings/global.scss"
-			],
-			[
 				"selec",
 				"umbraco/assets/fonts/selection.json"
 			],
 			[
 				"cards",
 				"assets/sass/components/cards.scss"
-			],
-			[
-				"lan",
-				"umbraco/Views/LandingPage.cshtml"
 			],
 			[
 				"new",
@@ -837,10 +861,6 @@
 			[
 				"icons",
 				"assets/sass/base/icons.scss"
-			],
-			[
-				"header",
-				"umbraco/Views/Partials/Page/Header.cshtml"
 			],
 			[
 				"js",
@@ -871,28 +891,12 @@
 				"assets/sass/components/suggestionbox.scss"
 			],
 			[
-				"heade",
-				"umbraco/Views/Partials/Page/Header.cshtml"
-			],
-			[
-				"foot",
-				"assets/sass/objects/footer.scss"
-			],
-			[
 				"butt",
 				"assets/sass/objects/buttons.scss"
 			],
 			[
 				"forms",
 				"assets/sass/base/forms.scss"
-			],
-			[
-				"global",
-				"assets/sass/settings/global.scss"
-			],
-			[
-				"glob",
-				"assets/sass/settings/global.scss"
 			],
 			[
 				"ancho",
@@ -909,14 +913,6 @@
 			[
 				"concat",
 				"tasks/concat.js"
-			],
-			[
-				"master",
-				"umbraco/Views/Master.cshtml"
-			],
-			[
-				"mas",
-				"umbraco/Views/MasterPage.tpl.html"
 			],
 			[
 				"suer",
@@ -951,10 +947,6 @@
 				"umbraco/Views/Master.tpl.html"
 			],
 			[
-				"foo",
-				"umbraco/Views/Partials/Page/Footer.cshtml"
-			],
-			[
 				"block",
 				"assets/sass/components/blocks.scss"
 			],
@@ -987,10 +979,6 @@
 				"umbraco/Views/Contact.cshtml"
 			],
 			[
-				"hea",
-				"assets/sass/base/headings.scss"
-			],
-			[
 				"fea",
 				"umbraco/Views/Partials/Component/Featured-Content.cshtml"
 			],
@@ -999,20 +987,8 @@
 				"assets/sass/objects/buttons.scss"
 			],
 			[
-				"but",
-				"assets/sass/objects/buttons.scss"
-			],
-			[
 				"partn",
 				"umbraco/Views/Partials/Modules/Partners.cshtml"
-			],
-			[
-				"social",
-				"umbraco/Views/Partials/Modules/Social-links.cshtml"
-			],
-			[
-				"section",
-				"assets/sass/objects/section.scss"
 			],
 			[
 				"tile",
@@ -1037,10 +1013,6 @@
 			[
 				"layou",
 				"umbraco/Views/Layout.cshtml"
-			],
-			[
-				"form",
-				"umbraco/Views/Partials/Forms/Form.cshtml"
 			],
 			[
 				"contactfor",
@@ -1197,22 +1169,6 @@
 			[
 				"contact",
 				"umbraco/Views/Contact.cshtml"
-			],
-			[
-				"secto",
-				"umbraco/Views/SectorsAndServices.cshtml"
-			],
-			[
-				"heading",
-				"assets/sass/base/headings.scss"
-			],
-			[
-				"resour",
-				"umbraco/Views/ResourcesPage.cshtml"
-			],
-			[
-				"sec",
-				"umbraco/Views/SectorsAndServices.cshtml"
 			]
 		],
 		"width": 0.0
@@ -1235,7 +1191,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

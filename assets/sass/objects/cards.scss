@@ -39,6 +39,7 @@
 
 
 .o-card {
+	margin-bottom: 3rem;
 	position: relative;
 	overflow: hidden;
 	.o-card__image--wrap {
@@ -89,8 +90,6 @@
 @include respond-min( $mq-small ){
 	.o-card {
 		@include column(1/2, $gutter:2, $cycle: 2);
-		margin-bottom: 3rem;
-
 	}
 }
 
