@@ -1,0 +1,73 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	
+    Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+
+}
+<div class="o-wrap o-wrap--large o-section">
+	<span>
+		@Html.Raw(Html.Encode(CurrentPage.theatreCompany).Replace("\n", "<br />"))
+	</span>	
+	<p><strong>@CurrentPage.subTitle</strong></p>
+	<h1 class="giga">@(CurrentPage.HasValue("title") ? CurrentPage.title : CurrentPage.Name)</h1>
+	<p><strong>By</strong> Rebecca Lenkiewicz <strong>Director</strong> Ria Parry <strong>Designer</strong> James Button <strong>Lighting designer</strong> Richard Howell</p>
+	<div class="clearfix">
+		<div class="o-event-copy__column">@CurrentPage.description</div>
+		<div class="o-event-copy__column">
+			
+		</div>
+	</div>
+</div>
+
+<div class="o-section o-section--black">
+	<div class="o-wrap o-wrap--large">
+		<h2>Cast</h2>
+		<div class="o-cards-wrap o-cards-cast">
+			@for( var ii = 0; ii < 8; ii++ )
+			{
+				<div class="o-card-person">
+					<img src="">
+					<h3>Name</h3>
+					<p>Title</p>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<div class="o-section">
+	<h1>Image</h2>
+</div>	
+<div class="o-section o-section--red ">
+	<div class="o-wrap o-wrap--large">
+		<h2>Reviews</h2>
+	</div>
+</div>
+<div class="o-section">
+	<h2>Video</h2>
+</div>
+<div class="o-section">
+	<div class="o-wrap o-wrap--large">
+		<h2>Tickets</h2>
+	</div>
+</div>
+@section OpenGraph{
+	@*
+
+	For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:label1" content="">
+	<meta name="twitter:data1" content="">
+	<meta name="twitter:label2" content="">
+	<meta name="twitter:data2" content="">
+
+	*@
+}
+
+	
+@section Scripts{
+
+}
