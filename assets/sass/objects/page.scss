@@ -30,7 +30,7 @@ html {
 	margin-top: 10.6rem;
 }
 
-@include respond-min( $mq-small ) {
+@include respond-min( $mq-x-large  ) {
 
 	.o-page {
 		padding-left: $frame-size--medium;
@@ -41,7 +41,7 @@ html {
 }
 
 
-@include respond-min( $mq-medium ) {
+@include respond-min( $mq-xx-large ) {
 
 	.o-page {
 		padding-left: $frame-size--large;

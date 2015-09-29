@@ -20,7 +20,7 @@
 	}
 }
 
-@include respond-min( $mq-small ) {
+@include respond-min( $mq-x-large ) {
 
 	.o-page__header {
 		left: $frame-size--medium;
@@ -30,7 +30,7 @@
 }
 
 
-@include respond-min( $mq-medium ) {
+@include respond-min( $mq-xx-large ) {
 
 	.o-page__header {
 		left: $frame-size--large;

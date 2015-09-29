@@ -6,17 +6,22 @@
 	var settings = homePage.FirstChild("Settings");
 
 }
-<div class="o-wrap o-wrap--large o-section">
-	<span>
+<div class="c-show o-wrap o-wrap--large o-section">
+	<span class="c-show__production-house">
 		@Html.Raw(Html.Encode(CurrentPage.theatreCompany).Replace("\n", "<br />"))
 	</span>	
-	<p><strong>@CurrentPage.subTitle</strong></p>
-	<h1 class="giga">@(CurrentPage.HasValue("title") ? CurrentPage.title : CurrentPage.Name)</h1>
+	<p class="c-show__subtitle delta"><strong>@CurrentPage.subTitle</strong></p>
+	<h1 class="c-show__title giga">@(CurrentPage.HasValue("title") ? CurrentPage.title : CurrentPage.Name)</h1>
+
 	<p><strong>By</strong> Rebecca Lenkiewicz <strong>Director</strong> Ria Parry <strong>Designer</strong> James Button <strong>Lighting designer</strong> Richard Howell</p>
+
 	<div class="clearfix">
-		<div class="o-event-copy__column">@CurrentPage.description</div>
 		<div class="o-event-copy__column">
-			
+			@* Insert layout break points *@
+			@CurrentPage.description
+		</div>
+		<div class="o-event-copy__column">
+			@* Gallery *@
 		</div>
 	</div>
 </div>

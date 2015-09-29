@@ -21,7 +21,7 @@
 	height: $frame-size--small;
 }
 
-@include respond-min( $mq-small ) {
+@include respond-min( $mq-x-large ) {
 
 	.c-top-corner {
 	    right: $frame-size--medium;
@@ -35,7 +35,7 @@
 
 }
 
-@include respond-min( $mq-medium ) {
+@include respond-min( $mq-xx-large ) {
 
 	.c-top-corner {
 	    right: $frame-size--large;
