@@ -9,6 +9,10 @@
 	padding-top: $padding--small;
 }
 
+.o-section--window {
+	height: 100%;
+}
+
 .o-section--grey {
 	background: $main-grey;
 }
@@ -26,6 +30,10 @@
 .o-section--black {
 	background: $dark-black;
 	color: $white !important;
+}
+
+.o-section--image {
+	background-size: cover;
 }
 
 @include respond-min( $mq-small ) {

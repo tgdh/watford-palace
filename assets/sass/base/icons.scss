@@ -23,6 +23,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.ico-star:before {
+	content: "\e60b";
+}
 .ico-arrow--down:before {
 	content: "\e600";
 }

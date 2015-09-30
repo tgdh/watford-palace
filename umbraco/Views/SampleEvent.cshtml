@@ -7,7 +7,7 @@
 
 }
 
-<div class="o-section o-section--grey">
+<div class="o-section o-section--grey o-section--window">
 	<div class="c-show o-wrap o-wrap--large">
 		<span class="c-show__production-house">
 			@Html.Raw(Html.Encode(CurrentPage.theatreCompany).Replace("\n", "<br />"))
@@ -28,23 +28,46 @@
 		@Html.Partial("Component/Show-Navigation")
 
 		<div class="clearfix c-show__content">
-			<div class="o-event__column o-event__column--copy">
-				@CurrentPage.description
-			</div>
-			<div class="o-event__column o-event__column--gallery">
-				<div class="o-event__gallery js-single__galery owl-carousel">
-					@if( CurrentPage.HasValue("gallery") )
-					{
-						foreach( var id in CurrentPage.gallery.Split(',') )
+			@if( CurrentPage.HasValue("gallery") )
+			{
+				var count = 0;
+
+				foreach( var id in CurrentPage.gallery.Split(',') )
+				{
+					count = count + 1;
+				}
+
+				<div class="o-event__column o-event__column--copy">
+					@CurrentPage.description
+				</div>	
+
+				if( count > 1)
+				{
+					<div class="o-event__column o-event__gallery js-single__galery owl-carousel">
+						@foreach( var id in CurrentPage.gallery.Split(',') )
 						{
 							var image = Umbraco.Media(id);
 							var imageUrl = image.Url;
 							<img src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
 						}
-					}
+					</div>
+				} else {
+					<div class="o-event__column o-event__gallery owl-carousel">
+						@foreach( var id in CurrentPage.gallery.Split(',') )
+						{
+							var image = Umbraco.Media(id);
+							var imageUrl = image.Url;
+							<img src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
+						}
+					</div>					
+				}
 
+			} else {
+				<div class="o-event__column--copy">
+					@CurrentPage.description
 				</div>
-			</div>
+			}		
+
 		</div>
 	</div>
 </div>

@@ -60,7 +60,42 @@
 	border-bottom-right-radius: $card-radius--small;
 }
 
+.o-cards-cast {
+	.o-card-person {
+		margin-bottom: 1.4rem;
+		.o-card-person__image {
+			@include column(1/4, $gutter: 4);
+		}
 
+		.o-card-person__info {
+			@include column(3/4, $gutter: 4, $cycle: 2);
+		}
+
+		.o-card-person__title {
+			text-align: left;
+			display: block;
+		}
+
+		.o-card-person__subtitle {
+			font-size: 1.4rem;
+		}
+
+	}
+}
+
+.o-card-review {
+	margin-bottom: 6rem;
+	.o-card-review__rating {
+		text-align: left;
+		padding-bottom: 1rem;
+	}
+
+	.o-card-review__review {
+		text-align: left;
+		padding-bottom: 2rem;
+		display: block;
+	}
+}
 
 .o-card {
 	color: $white !important;
@@ -207,6 +242,11 @@
 
 @include respond-min( $mq-medium ){
 
+	.o-cards-cast {
+		.o-card-person {
+			@include column(1/2, $gutter: 5, $cycle: 2);
+		}
+	}
 	.o-card__content {
 		padding: 2rem;
 	}

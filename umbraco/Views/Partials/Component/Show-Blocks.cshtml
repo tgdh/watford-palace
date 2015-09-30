@@ -34,18 +34,32 @@
 @helper CastBlock(IPublishedContent item, int count)
 {
 	var title = item.GetPropertyValue("title");
+	var cast = item.GetPropertyValue<IEnumerable<IPublishedContent>>("cast");
 
-	<div class="o-section o-section--black">
+	<div class="o-section o-section--black o-section--window">
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
-		<div class="o-wrap o-wrap--large">
-			<h2>Cast</h2>
-			<div class="o-cards-wrap o-cards-cast">
-				@for( var ii = 0; ii < 8; ii++ )
+		<div class="o-wrap o-wrap--medium">
+			<h2 class="mega">@title</h2>
+			<div class="o-cards-wrap o-cards-cast clearfix">
+				@foreach( var person in cast )
 				{
-					<div class="o-card-person">
-						<img src="">
-						<h3>Name</h3>
-						<p>Title</p>
+					var name = person.GetPropertyValue("title");
+					var subtitle = person.GetPropertyValue("subtitle");
+
+					var picture = person.GetPropertyValue("picture");
+					var imageUrl = "";
+					if( person.HasValue("picture") && person.GetPropertyValue("picture").ToString() != "" )
+					{
+						imageUrl = Umbraco.Media(picture.ToString()).Url;
+					}
+					<div class="o-card-person clearfix">
+						<div class="o-card-person__image">
+							<img src="@imageUrl" alt="@name">
+						</div>
+						<div class="o-card-person__info">
+							<span class="o-card-person__title delta">@name</span>
+							<span class="o-card-person__subtitle clearfix">@subtitle</span>
+						</div>
 					</div>
 				}
 			</div>
@@ -56,21 +70,45 @@
 @helper ImageBlock(IPublishedContent item, int count)
 {
 	var title = item.GetPropertyValue("title");
-
-	<div class="o-section">
+	var background = item.GetPropertyValue("image");
+	var backgroundUrl = "";
+	if( item.HasValue("image") && item.GetPropertyValue("image").ToString() != "" )
+	{
+		backgroundUrl = Umbraco.Media(background.ToString()).Url;
+	}
+	<div class="o-section o-section--window o-section--image" style="background: url(@backgroundUrl) no-repeat center center;">
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
-		<h2>Image</h2>
+		<h2 class="hide-text">@title</h2>
 	</div>	
 }
 
 @helper ReviewsBlock(IPublishedContent item, int count)
 {
 	var title = item.GetPropertyValue("title");
+	var reviews = item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews");
 
-	<div class="o-section o-section--red ">
+	<div class="o-section o-section--red o-section--window">
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
-		<div class="o-wrap o-wrap--large">
-			<h2>Reviews</h2>
+		<div class="o-wrap o-wrap--small">
+			<h2 class="mega">@title</h2>
+			<div class="o-card-reviews-wrap">
+				@foreach( var review in reviews )
+				{
+					int starRating = Convert.ToInt32(review.GetPropertyValue("starRating"));
+					var comment = review.GetPropertyValue("review");
+					var source = review.GetPropertyValue("source");
+					<div class="o-card-review">
+						<div class="o-card-review__rating gamma">
+							@for( var ii = 0; ii < starRating; ii++ )
+							{
+								<i class="ico-star"></i>
+							}
+						</div>
+						<span class="o-card-review__review beta">@comment</span>
+						<p class="o-card-review__source">@source</p>
+					</div>
+				}
+			</div>
 		</div>
 	</div>
 }
@@ -79,7 +117,7 @@
 {
 	var title = item.GetPropertyValue("title");
 
-	<div class="o-section">
+	<div class="o-section o-section--window">
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<h2>Video</h2>
 	</div>
