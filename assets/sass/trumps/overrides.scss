@@ -40,7 +40,26 @@
 }
 
 .anchor-offset {
-  padding-top: 10.6rem;
-  margin-top: -10.6rem;
-  display: inline-block; /* required for webkit browsers */	
+	padding-top: 10.6rem;
+	margin-top: -10.6rem;
+	display: inline-block; /* required for webkit browsers */	
+}
+
+
+@include respond-min( $mq-small ) {
+
+	.anchor-offset {
+		padding-top: 10.6rem + $padding--medium !important;
+		margin-top: -10.6rem - $padding--medium;
+	}
+
+}
+
+@include respond-min( $mq-medium ) {
+
+	.anchor-offset {
+		padding-top: 10.6rem + $padding--large !important;
+		margin-top: -10.6rem - $padding--large;
+	}
+
 }

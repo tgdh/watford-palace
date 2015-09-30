@@ -37,6 +37,9 @@
 	var cast = item.GetPropertyValue<IEnumerable<IPublishedContent>>("cast");
 
 	<div class="o-section o-section--black o-section--window">
+		<a href="#@title.ToString().ToLower()" class="link-next">
+			<i class="ico-arrow ico-arrow--down"></i>
+		</a>
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--medium">
 			<h2 class="mega">@title</h2>
@@ -64,6 +67,7 @@
 				}
 			</div>
 		</div>
+
 	</div>
 }
 
@@ -77,6 +81,9 @@
 		backgroundUrl = Umbraco.Media(background.ToString()).Url;
 	}
 	<div class="o-section o-section--window o-section--image" style="background: url(@backgroundUrl) no-repeat center center;">
+		<a href="#@title.ToString().ToLower()" class="link-next">
+			<i class="ico-arrow ico-arrow--down"></i>
+		</a>
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<h2 class="hide-text">@title</h2>
 	</div>	
@@ -88,6 +95,9 @@
 	var reviews = item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews");
 
 	<div class="o-section o-section--red o-section--window">
+		<a href="#@title.ToString().ToLower()" class="link-next">
+			<i class="ico-arrow ico-arrow--down"></i>
+		</a>
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--small">
 			<h2 class="mega">@title</h2>
@@ -105,7 +115,7 @@
 							}
 						</div>
 						<span class="o-card-review__review beta">@comment</span>
-						<p class="o-card-review__source">@source</p>
+						@source
 					</div>
 				}
 			</div>
@@ -115,11 +125,17 @@
 
 @helper VideoBlock(IPublishedContent item, int count)
 {
-	var title = item.GetPropertyValue("title");
 
-	<div class="o-section o-section--window">
+	var title = item.GetPropertyValue("title");
+	var video = item.GetPropertyValue<MvcHtmlString>("video");
+
+	<div class="o-section o-section--video o-section--window">
+		<a href="#@title.ToString().ToLower()" class="link-next">
+			<i class="ico-arrow ico-arrow--down"></i>
+		</a>
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
-		<h2>Video</h2>
+		<h2 class="hide-text">Video</h2>
+		@video
 	</div>
 }
 

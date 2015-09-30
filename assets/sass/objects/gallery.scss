@@ -3,6 +3,28 @@
 	# GALLERY
 
 =========================================================== */
+.link-next {
+	position: absolute;
+	left: 50%;
+	top: -2.5rem;
+	font-size: 3rem;
+	margin-left: -2.5rem;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 100%;
+	background: $white;
+	z-index: 2;
+	cursor: pointer;
+	color: $dark-black;
+	.ico-arrow {
+	    height: 5rem;
+	    width: 5rem;
+	    text-align: center;
+	    font-size: 3rem;
+	    display: block;
+	    line-height: 5rem;
+	}
+}
 
 .o-event__gallery {
 	position: relative;
