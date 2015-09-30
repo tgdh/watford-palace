@@ -20,10 +20,21 @@
 	text-transform: uppercase;
 }
 
+.t-block {
+	display: block;
+}
+
 .t-strong {
 	font-weight: 700;
 }
 
+.t-center {
+	text-align: center;
+}
+
+.t-padding {
+	margin-bottom: 2rem;
+}
 .t-small {
 	font-size: 75%;
 }

@@ -6,8 +6,25 @@
 
 <div class="o-section o-section--window">
 	<span id="tickets" class="anchor-offset"></span>
-	<div class="o-wrap o-wrap--small">
+	<div class="o-wrap o-wrap--small clearfix">
 		<h2 class="mega">Tickets</h2>
-		<span class="alpha">@settings.boxOfficeNumber</span>
+		<span class="t-center t-padding t-block beta">@settings.boxOfficeNumber</span>
+		@if( CurrentPage.HasValue("content") )
+		{
+			<div class="c-copy t-padding">
+				@CurrentPage.content
+			</div>		
+		}
+
+		<div class="c-list-dates">
+			@for( var ii = 0; ii < 12; ii++ )
+			{
+				<div class="c-list-dates__date clearfix">
+					<span class="c-list-date__date">Sep Wed 23</span>
+					<span class="c-list-date__time">7.30pm - 9:45pm ish</span>
+					<a href="" class="o-button o-button--small o-button--primary">Buy tickets</a>			
+				</div>			
+			}
+		</div>
 	</div>
 </div>

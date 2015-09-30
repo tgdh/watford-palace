@@ -98,7 +98,7 @@
 		@Html.Partial("Component/Cover")
 	}
 
-	<main id="main" class="o-page__content">
+	<main id="main" class="o-page__content clearfix">
 		@RenderBody()
 	</main>
 	@if( CurrentPage.DocumentTypeAlias == "HomePage" || CurrentPage.DocumentTypeAlias == "Contact" ){
