@@ -15,8 +15,28 @@
 	.c-show__subtitle {
 
 	}
-
 	.c-show__title {
 		padding-top: 0;
+		padding-bottom: 3rem;
+	}
+	.c-show__credits {
+		text-align: center;
+		font-size: 1.4rem;
+		margin-bottom: $line-height;
+	}
+	.c-show__credit {
+		margin-right: 2rem;
+	}
+	.c-show__credit:last-child {
+		margin-right: 0rem;
+	}
+	.c-show__navigation {
+		text-align: center;
+		margin-bottom: $line-height * 2;
+	}
+
+	.o-event__column {
+		@include column(3/6, $gutter: 4, $cycle: 2);
 	}
 }
+

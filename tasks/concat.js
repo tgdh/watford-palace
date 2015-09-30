@@ -18,6 +18,7 @@ module.exports = {
 	},
 	fulljs: {
 		src: [
+			'<%= assetsFolder %>/_components/OwlCarousel2/dist/owl.carousel.js',
 			'<%= assetsFolder %>/js/utils/*js',
 			'<%= assetsFolder %>/js/components/*js',
 			'<%= assetsFolder %>/js/main.js'

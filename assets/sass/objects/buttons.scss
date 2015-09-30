@@ -26,6 +26,17 @@
 .o-button--small {
 	padding: 1.4rem 2.2rem;
 }
+.o-button--blue-transparent {
+	background: transparent;
+	color: $pri;
+	border: 0.1rem solid $pri;
+	&:hover,
+	&:focus {
+		background: $pri;
+		color: $white;
+	}
+}
+
 .o-button--transparent {
 	background: transparent;
 	color: $white;

@@ -1,0 +1,56 @@
+/* ===========================================================
+
+	# GALLERY
+
+=========================================================== */
+
+.o-event__gallery {
+	position: relative;
+
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		margin-top: -2.5rem;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 100%;
+		background: $white;
+		z-index: 2;
+		cursor: pointer;
+	}
+
+	.ico-arrow {
+	    height: 5rem;
+	    width: 5rem;
+	    text-align: center;
+	    font-size: 3rem;
+	    display: block;
+	    line-height: 5rem;
+	}
+
+	.owl-prev.disabled,
+	.owl-next.disabled {
+		cursor: not-allowed;
+	}
+	.owl-prev {
+		left: -2.5rem;
+	}
+
+	.owl-next {
+		right: -2.5rem;
+	}
+
+	.owl-dots {
+	    position: absolute;
+	    height: 4rem;
+	    width: 100%;
+	    bottom: 0;
+	    text-align: center;
+	    vertical-align: middle;
+	}
+
+	.owl-dot {
+		cursor: pointer;
+	}
+}

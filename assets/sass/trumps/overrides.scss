@@ -16,10 +16,20 @@
 	@include hide-text;
 }
 
+.t-upper {
+	text-transform: uppercase;
+}
+
 .t-strong {
 	font-weight: 700;
 }
 
 .t-small {
 	font-size: 75%;
+}
+
+.anchor-offset {
+  padding-top: 10.6rem;
+  margin-top: -10.6rem;
+  display: inline-block; /* required for webkit browsers */	
 }

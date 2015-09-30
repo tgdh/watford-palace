@@ -1,0 +1,12 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}
+
+<div class="o-section">
+	<span id="tickets" class="anchor-offset"></span>
+	<div class="o-wrap o-wrap--large">
+		<h2>Tickets</h2>
+	</div>
+</div>

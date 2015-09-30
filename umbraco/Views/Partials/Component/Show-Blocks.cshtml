@@ -1,0 +1,91 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+	var selection = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("pageBlocks");
+	var count = 1;
+}
+
+
+@foreach( var item in selection )
+{
+	string docType = item.DocumentTypeAlias;
+
+	switch(docType)
+	{
+		case "CastBlock":
+			@CastBlock(item, count)
+		break;
+		case "ImageBlock":
+			@ImageBlock(item, count)
+		break;
+		case "ReviewsBlock":
+			@ReviewsBlock(item, count)
+		break;
+		case "VideoBlock":
+			@VideoBlock(item, count)
+		break;
+		default:
+			@Default(item, count)
+		break;
+	}
+	count = count + 1;
+}
+
+@helper CastBlock(IPublishedContent item, int count)
+{
+	var title = item.GetPropertyValue("title");
+
+	<div class="o-section o-section--black">
+		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<div class="o-wrap o-wrap--large">
+			<h2>Cast</h2>
+			<div class="o-cards-wrap o-cards-cast">
+				@for( var ii = 0; ii < 8; ii++ )
+				{
+					<div class="o-card-person">
+						<img src="">
+						<h3>Name</h3>
+						<p>Title</p>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+}
+
+@helper ImageBlock(IPublishedContent item, int count)
+{
+	var title = item.GetPropertyValue("title");
+
+	<div class="o-section">
+		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<h2>Image</h2>
+	</div>	
+}
+
+@helper ReviewsBlock(IPublishedContent item, int count)
+{
+	var title = item.GetPropertyValue("title");
+
+	<div class="o-section o-section--red ">
+		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<div class="o-wrap o-wrap--large">
+			<h2>Reviews</h2>
+		</div>
+	</div>
+}
+
+@helper VideoBlock(IPublishedContent item, int count)
+{
+	var title = item.GetPropertyValue("title");
+
+	<div class="o-section">
+		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<h2>Video</h2>
+	</div>
+}
+
+@helper Default(IPublishedContent item, int count)
+{
+
+}

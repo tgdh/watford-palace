@@ -36,9 +36,11 @@
 		'objects/buttons.scss',
 		'objects/table.scss',
 		'objects/forms.scss',
-		'objects/media.scss';
+		'objects/media.scss',
+		'objects/gallery';
 
-@import 'components/nav.scss',
+@import 'components/_owl.scss',
+		'components/nav.scss',
 		'components/forms.scss',
 		'components/icons.scss',
 		'components/cover.scss',
