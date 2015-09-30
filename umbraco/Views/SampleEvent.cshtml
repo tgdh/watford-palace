@@ -43,12 +43,16 @@
 
 				if( count > 1)
 				{
+					@* 
+						ADD IMAGE CROPS
+					*@
 					<div class="o-event__column o-event__gallery js-single__galery owl-carousel">
 						@foreach( var id in CurrentPage.gallery.Split(',') )
 						{
+
 							var image = Umbraco.Media(id);
 							var imageUrl = image.Url;
-							<img src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
+							<img @image src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
 						}
 					</div>
 				} else {
