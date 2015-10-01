@@ -9,30 +9,21 @@
 		@if( CurrentPage.HasValue("coverPicker") && CurrentPage.coverPicker.ToString() != "" && Umbraco.Content(CurrentPage.coverPicker).Name.ToString() != "" )
 		{
 			var slide = Umbraco.Content(CurrentPage.coverPicker);
-			<div class="c-cover__image--wrap">
-				<img class="c-cover__image" src="/assets/img/_temp/cover.jpg" alt=""/>
-			</div>
-			<div class="c-cover__content-wrap">
-				<div class="c-cover__content">
-					@if( slide.HasValue("mainLabel") )
-					{
-						<span class="c-cover-info--category">@slide.mainLabel</span>
-					}
-					@if( slide.HasValue("title") )
-					{
-						<h3 class="c-cover__heading c-cover__heading--news giga">@slide.title</h3>
-					}
-					@if( slide.HasValue("secondaryLabel") )
-					{
-						<span class="c-cover-info--date">@slide.secondaryLabel</span>
-					}
-					@if( slide.HasValue("buttonText") )
-					{
-						<button class="o-button o-button--primary">@slide.buttonText</button>		
-					}
-				</div>
+			string docType = slide.DocumentTypeAlias;
 
-			</div>		
+			switch(docType)
+			{
+				case "CoverAnnouncement":
+					@CoverAnnouncement(slide)
+				break;
+				case "SampleEvent":
+					@SampleEvent(slide)
+				break;
+				default:
+					@Default(slide)
+				break;
+			}
+	
 		} else {
 			<div class="c-cover__image--wrap">
 				<img class="c-cover__image" src="/assets/img/_temp/cover.jpg" alt=""/>
@@ -50,46 +41,82 @@
 
 	</section>
 	<section class="c-cover__aside">
-		<article class="o-card o-card--news">
-			<div class="o-card__image--wrap">
-				@* <img class="o-card__image" src="" alt=""/> *@
-			</div>
-			<div class="o-card__content">
-				<span class="o-card-info--category o-card-info--category--news">Comedy</span>
-				<h3 class="o-card__heading o-card__heading--news delta">Nibh Fermentum Ullamcorper</h3>
-				<span class="o-card-info--date o-card-info--date--news">23 Sep</span>
-				<button class="o-button o-button--small o-button--transparent">Read more</button>
-			</div>
-			
-		</article>	
-
-		<article class="o-card o-card--event">
-			<div class="o-card__image--wrap">
-				<img class="o-card__image" src="/assets/img/_temp/4.jpg" alt=""/>
-			</div>
-			<div class="o-card__content">
-				<span class="o-card-info--category o-card-info--category--event">Comedy</span>
-				<h3 class="o-card__heading o-card__heading--event delta">Nibh Fermentum Ullamcorper</h3>
-				<span class="o-card-info--date o-card-info--date--event">23 Sep</span>
-				<button class="o-button o-button--small o-button--transparent">Buy tickets</button>
-				<button class="o-button o-button--small o-button--transparent">More info</button>
-			</div>
-			
-		</article>	
-
-		<article class="o-card o-card--news">
-			<div class="o-card__image--wrap">
-				@* <img class="o-card__image" src="" alt=""/> *@
-			</div>
-			<div class="o-card__content">
-				<span class="o-card-info--category o-card-info--category--news">Comedy</span>
-				<h3 class="o-card__heading o-card__heading--news">Nibh Fermentum</h3>
-				<span class="o-card-info--date o-card-info--date--news">23 Sep</span>
-				<button class="o-button o-button--small o-button--transparent">Read more</button>
-			</div>
-			
-		</article>	
+		@Html.Partial("Component/Cover-Aside")
 	</section>
 </div>
 
 
+@helper CoverAnnouncement(dynamic node)
+{
+	var slide = node;
+	<div class="c-cover__image--wrap">
+		@if( slide.HasValue("backgroundImage") )
+		{
+			<img class="c-cover__image" src="@Umbraco.Media(slide.backgroundImage).Url" alt=""/>				
+		}
+
+	</div>
+	<div class="c-cover__content-wrap">
+		<div class="c-cover__content">
+			@if( slide.HasValue("mainLabel") )
+			{
+				<span class="c-cover-info--category">@slide.mainLabel</span>
+			}
+			@if( slide.HasValue("title") )
+			{
+				<h3 class="c-cover__heading c-cover__heading--news giga">@slide.title</h3>
+			}
+			@if( slide.HasValue("secondaryLabel") )
+			{
+				<span class="c-cover-info--date">@slide.secondaryLabel</span>
+			}
+			@if( slide.HasValue("link") )
+			{
+				<a href="@slide.link.url" class="o-button o-button--primary" target="@slide.link.target">
+					@if( slide.HasValue("buttonText") )
+					{
+						<span>@slide.buttonText</span>
+					}
+					else
+					{
+						<span>@slide.link.name</span>
+					}
+
+				</a>		
+			}
+		</div>
+
+	</div>	
+}
+
+@helper SampleEvent(dynamic node)
+{
+	var slide = node;
+	var category = slide.Parent().Name;
+	var title = slide.title;
+	var date = "23 Sep - 3 Oct";
+	<div class="c-cover__image--wrap">
+		@if( slide.HasValue("coverImage") )
+		{
+			<img class="c-cover__image" src="@Umbraco.Media(slide.coverImage).Url" alt=""/>				
+		}
+
+	</div>
+	<div class="c-cover__content-wrap">
+		<div class="c-cover__content">
+			<span class="c-cover-info--category">@category</span>
+			<h3 class="c-cover__heading c-cover__heading--news giga">@title</h3>
+			<span class="c-cover-info--date">@date</span>
+			<a href="@slide.Url#tickets" class="o-button o-button--primary">
+				Buy tickets 
+			</a>		
+	
+		</div>
+
+	</div>	
+}
+
+@helper Default(dynamic node)
+{
+
+}

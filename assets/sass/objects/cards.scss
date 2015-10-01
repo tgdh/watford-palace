@@ -218,7 +218,7 @@
 }
 
 .no-touch {
-	.o-card:hover {
+	.o-card--event:hover {
 			.o-card-info--category {
 				background: rgba(34, 34, 34, 0);
 			}
@@ -237,14 +237,16 @@
 
 
 .o-card--news:nth-child(odd) {
+	background: $pri !important;
 	.o-card__image--wrap {
-		background: $pri;
+		background: none;
 	}
 }
 
 .o-card--news:nth-child(even) {
+	background: $sec !important;
 	.o-card__image--wrap {
-		background: $sec;
+		background: none;
 	}
 }
 

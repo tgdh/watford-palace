@@ -1,0 +1,90 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+	int count = 0;
+	var list = CurrentPage.secondaryCover;
+}
+
+@foreach( var id in list.Split(',') )
+{
+	var item = Umbraco.Content(id);
+	string docType = item.DocumentTypeAlias;
+
+	switch(docType)
+	{
+		case "LatestNews":
+			@LatestNews(item, count)
+		break;
+		default:
+			@Default(item)
+		break;
+	}
+	if( docType == "LatestNews" ){
+		count = count + 1;
+	}
+}
+
+@* <article class="o-card o-card--news">
+	<div class="o-card__image--wrap">
+		<img class="o-card__image" src="" alt=""/>
+	</div>
+	<div class="o-card__content">
+		<span class="o-card-info--category o-card-info--category--news">Comedy</span>
+		<h3 class="o-card__heading o-card__heading--news delta">Nibh Fermentum Ullamcorper</h3>
+		<span class="o-card-info--date o-card-info--date--news">23 Sep</span>
+		<button class="o-button o-button--small o-button--transparent">Read more</button>
+	</div>
+	
+</article>	
+
+<article class="o-card o-card--event">
+	<div class="o-card__image--wrap">
+		<img class="o-card__image" src="/assets/img/_temp/4.jpg" alt=""/>
+	</div>
+	<div class="o-card__content">
+		<span class="o-card-info--category o-card-info--category--event">Comedy</span>
+		<h3 class="o-card__heading o-card__heading--event delta">Nibh Fermentum Ullamcorper</h3>
+		<span class="o-card-info--date o-card-info--date--event">23 Sep</span>
+		<button class="o-button o-button--small o-button--transparent">Buy tickets</button>
+		<button class="o-button o-button--small o-button--transparent">More info</button>
+	</div>
+	
+</article>	
+
+<article class="o-card o-card--news">
+	<div class="o-card__image--wrap">
+		<img class="o-card__image" src="" alt=""/>
+	</div>
+	<div class="o-card__content">
+		<span class="o-card-info--category o-card-info--category--news">Comedy</span>
+		<h3 class="o-card__heading o-card__heading--news">Nibh Fermentum</h3>
+		<span class="o-card-info--date o-card-info--date--news">23 Sep</span>
+		<button class="o-button o-button--small o-button--transparent">Read more</button>
+	</div>
+	
+</article>	 *@
+
+@helper LatestNews(dynamic item, int count)
+{
+	var homePage = item.Site();
+	var news = homePage.FirstChild("News");
+	var article = news.Children().OrderBy("ReleaseDate desc").Skip(count).Take(1);
+	var color = article[0].color;
+	<article class="o-card o-card--news">
+		<div class="o-card__image--wrap">
+		</div>
+		<div class="o-card__content">
+			<span class="o-card-info--category o-card-info--category--news">News</span>
+			<h3 class="o-card__heading o-card__heading--news delta">@article[0].Name</h3>
+			<span class="o-card-info--date o-card-info--date--news">@article[0].releaseDate.ToString("dd MMM")</span>
+			<button class="o-button o-button--small o-button--transparent">Read more</button>
+		</div>
+		
+	</article>	
+}
+
+@helper Default(dynamic item)
+{
+
+}

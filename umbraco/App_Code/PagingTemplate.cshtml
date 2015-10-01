@@ -7,21 +7,20 @@ var tags = ( Request.QueryString["tags"] != null ? "&tags=" + Request.QueryStrin
 
 
 	if (paging.CurrentPage > 1) {
-		<a href="@library.NiceUrl(currentId)?page=@paging.PreviousPage@year@month@tags" rel="prev" class="pagination__link pagination__link--prev"><i class="ico-arrow-left"></i> Previous</a>
+		<a href="@library.NiceUrl(currentId)?page=@paging.PreviousPage@year@month@tags" rel="prev" class="o-pagination__link o-pagination__link--prev"><i class="ico-arrow-left"></i> Previous</a>
 	}
 
 	for (var i = 1; i <= paging.TotalPages; i++) {
 		if (paging.CurrentPage == i) {
-			<span class="pagination__active">@i</span>
+			<span class="o-pagination__active">@i</span>
 		}
 		
 		else {
-			<a href="@library.NiceUrl(currentId)?page=@i@year@month@tags" class="pagination__page">@i</a>
+			<a href="@library.NiceUrl(currentId)?page=@i@year@month@tags" class="o-pagination__page">@i</a>
 		}
 	}
 
 	if (paging.CurrentPage < paging.TotalPages) {
-		<a href="@library.NiceUrl(currentId)?page=@paging.NextPage@year@month@tags" rel="next" class="pagination__link pagination__link--next">Next <i class="ico-arrow-right"></i></a>
+		<a href="@library.NiceUrl(currentId)?page=@paging.NextPage@year@month@tags" rel="next" class="o-pagination__link o-pagination__link--next">Next <i class="ico-arrow-right"></i></a>
 	}
 }
-

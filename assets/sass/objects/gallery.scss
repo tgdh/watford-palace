@@ -16,6 +16,11 @@
 	z-index: 2;
 	cursor: pointer;
 	color: $dark-black;
+	transition: color $speed ease, background $speed ease;
+	&:hover {
+		background: $pri;
+		color: $white;
+	}
 	.ico-arrow {
 	    height: 5rem;
 	    width: 5rem;
@@ -40,6 +45,11 @@
 		background: $white;
 		z-index: 2;
 		cursor: pointer;
+		transition: background $speed ease, color $speed ease;
+		&:hover {
+			background: $pri;
+			color: $white;
+		}
 	}
 
 	.ico-arrow {
@@ -54,6 +64,10 @@
 	.owl-prev.disabled,
 	.owl-next.disabled {
 		cursor: not-allowed;
+		&:hover {
+			background: $white;
+			color: $dark-black;			
+		}
 	}
 	.owl-prev {
 		left: -2.5rem;
@@ -74,5 +88,10 @@
 
 	.owl-dot {
 		cursor: pointer;
+		background: transparent;
+		transition: background $speed ease;
+		&:hover {
+			background: $white;
+		}
 	}
 }
