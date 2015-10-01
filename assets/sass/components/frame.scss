@@ -10,6 +10,7 @@
     right: $frame-size--small;
     height: $frame-size--small * 2;
     width: $frame-size--small * 2;
+    z-index: 20;
 }
 
 .c-bottom-frame {

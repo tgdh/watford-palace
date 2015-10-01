@@ -8,10 +8,11 @@
 
 }
 <div class="o-section c-events-list">
-	<h1 class="hide-text">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	<h1 class="">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	<span class="t-center t-block t-normal gamma">Filter by</span>
 	<div class="clearfix">
 	<div class="o-card o-card--month-block gamma">October</div>
-		@for( var ii = 0; ii < 60; ii++ )
+		@for( var ii = 0; ii < 32; ii++ )
 		{
 			var imageCount = count;
 			if( count > 8)

@@ -6,18 +6,48 @@
 
 <div class="c-cover-wrap clearfix">
 	<section class="c-cover__main c-cover">
-		<div class="c-cover__image--wrap">
-			<img class="c-cover__image" src="/assets/img/_temp/cover.jpg" alt=""/>
-		</div>
-		<div class="c-cover__content-wrap">
-			<div class="c-cover__content">
-				<span class="c-cover-info--category">Theatre</span>
-				<h3 class="c-cover__heading c-cover__heading--news giga">The Witch of Walkern</h3>
-				<span class="c-cover-info--date">23 Sep - 3 Oct</span>
-				<button class="o-button o-button--primary">Buy tickets</button>				
+		@if( CurrentPage.HasValue("coverPicker") && CurrentPage.coverPicker.ToString() != "" && Umbraco.Content(CurrentPage.coverPicker).Name.ToString() != "" )
+		{
+			var slide = Umbraco.Content(CurrentPage.coverPicker);
+			<div class="c-cover__image--wrap">
+				<img class="c-cover__image" src="/assets/img/_temp/cover.jpg" alt=""/>
 			</div>
+			<div class="c-cover__content-wrap">
+				<div class="c-cover__content">
+					@if( slide.HasValue("mainLabel") )
+					{
+						<span class="c-cover-info--category">@slide.mainLabel</span>
+					}
+					@if( slide.HasValue("title") )
+					{
+						<h3 class="c-cover__heading c-cover__heading--news giga">@slide.title</h3>
+					}
+					@if( slide.HasValue("secondaryLabel") )
+					{
+						<span class="c-cover-info--date">@slide.secondaryLabel</span>
+					}
+					@if( slide.HasValue("buttonText") )
+					{
+						<button class="o-button o-button--primary">@slide.buttonText</button>		
+					}
+				</div>
 
-		</div>
+			</div>		
+		} else {
+			<div class="c-cover__image--wrap">
+				<img class="c-cover__image" src="/assets/img/_temp/cover.jpg" alt=""/>
+			</div>
+			<div class="c-cover__content-wrap">
+				<div class="c-cover__content">
+					<span class="c-cover-info--category">Fallback</span>
+					<h3 class="c-cover__heading c-cover__heading--news giga">Fallback</h3>
+					<span class="c-cover-info--date">Fallback</span>
+					<button class="o-button o-button--primary">Fallback</button>				
+				</div>
+
+			</div>		
+		}
+
 	</section>
 	<section class="c-cover__aside">
 		<article class="o-card o-card--news">
