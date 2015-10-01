@@ -1,0 +1,103 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	
+    Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+	var count = 0;
+
+}
+<div class="o-section c-events-list">
+	<h1 class="hide-text">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	<div class="clearfix">
+	<div class="o-card o-card--month-block gamma">October</div>
+		@for( var ii = 0; ii < 60; ii++ )
+		{
+			var imageCount = count;
+			if( count > 8)
+			{
+				imageCount = 1;
+			}
+			var image = "/assets/img/_temp/" + imageCount + ".jpg";
+
+			<article class="o-card o-card--event">
+				<div class="o-card__image--wrap">
+					<img class="o-card__image" src="@image" alt=""/>
+				</div>
+				<div class="o-card__content">
+					<span class="o-card-info--category o-card-info--category--event">Comedy</span>
+					<h3 class="o-card__heading o-card__heading--event">Bibendum Malesuada Dapibus</h3>
+					<span class="o-card-info--date o-card-info--date--event">@ii  Sep</span>
+					<button class="o-button o-button--small o-button--transparent">Buy tickets</button>
+					<button class="o-button o-button--small o-button--transparent">More info</button>
+				</div>
+				
+			</article>		
+			count++;
+		}
+		@{
+			count = 0;
+		}
+		<div class="o-card o-card--month-block gamma">November</div>
+		@for( var ii = 0; ii < 13; ii++ )
+		{
+			var image = "/assets/img/_temp/" + count + ".jpg";
+			<article class="o-card o-card--event">
+				<div class="o-card__image--wrap">
+					<img class="o-card__image" src="@image" alt=""/>
+				</div>
+				<div class="o-card__content">
+					<span class="o-card-info--category o-card-info--category--event">Comedy</span>
+					<h3 class="o-card__heading o-card__heading--event">Lorem</h3>
+					<span class="o-card-info--date o-card-info--date--event">@ii  Sep</span>
+					<button class="o-button o-button--small o-button--transparent">Buy tickets</button>
+					<button class="o-button o-button--small o-button--transparent">More info</button>
+				</div>
+				
+			</article>		
+			count++;
+		}
+		@{
+			count = 0;
+		}
+		<div class="o-card o-card--month-block gamma">December</div>
+		@for( var ii = 0; ii < 12; ii++ )
+		{
+			var image = "/assets/img/_temp/" + count + ".jpg";
+			<article class="o-card o-card--event">
+				<div class="o-card__image--wrap">
+					<img class="o-card__image" src="@image" alt=""/>
+				</div>
+				<div class="o-card__content">
+					<span class="o-card-info--category o-card-info--category--event">Comedy</span>
+					<h3 class="o-card__heading o-card__heading--event">Lorem</h3>
+					<span class="o-card-info--date o-card-info--date--event">@ii  Sep</span>
+					<button class="o-button o-button--small o-button--transparent">Buy tickets</button>
+					<button class="o-button o-button--small o-button--transparent">More info</button>
+				</div>
+				
+			</article>		
+			count++;
+		}
+	</div>
+</div>
+	
+@section OpenGraph{
+	@*
+
+	For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:label1" content="">
+	<meta name="twitter:data1" content="">
+	<meta name="twitter:label2" content="">
+	<meta name="twitter:data2" content="">
+
+	*@
+}
+
+	
+@section Scripts{
+
+}
