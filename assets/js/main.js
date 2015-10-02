@@ -37,10 +37,34 @@
                 navText: ["<i class='ico-arrow ico-arrow--left'></i>","<i class='ico-arrow ico-arrow--right'></i>"]
             })
         };
+        var magnificGallery = function(){
+            $('.js-magnific-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                }
+            });            
+        };
+        var selectStyle = function(){
+            $('.js-select').selectOrDie();
+            $('#whatCat').selectOrDie({
+
+            });
+            $('#whatDate').selectOrDie({
+
+            });
+        };
 
 		$(window).ready(function(){ 
             singleGallery();
        		setHeight();
+            selectStyle();
+            magnificGallery();
 		});
 		$(window).resize(function(){ 
        		setHeight();

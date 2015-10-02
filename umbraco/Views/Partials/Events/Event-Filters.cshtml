@@ -1,0 +1,33 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}	
+
+<div class="o-section--highlight o-section--filter">
+	<div class="o-wrap o-wrap--x-large">
+@* 		<button class="o-button o-button--primary o-button--large">Choose a category<i class="ico-arrow ico-arrow--down"></i></button>
+		<button class="o-button o-button--primary o-button--large">Choose a Date<i class="ico-arrow ico-arrow--down"></i></button> *@
+
+		<select id="whatCat" class="filter filter--category filter-js js-select" onchange="location = this.options[this.selectedIndex].value;">
+			<option value="">Category</option>
+			<option value="Cinema">Cinema</option>
+			<option value="Music">Music</option>
+			<option value="Theatre">Theatre</option>
+			<option value="Comedy">Comedy</option>
+			<option value="Family">Family</option>
+			<option value="Heritage">Heritage</option>
+			<option value="Literature">Literature</option>
+			<option value="Free events">Free events</option>
+		</select>
+
+		<select id="whatDate" class="filter filter--date filter-js js-select" onchange="location = this.options[this.selectedIndex].value;">
+			<option value="">Date</option>
+			<option value="Today">Today</option>
+			<option value="This week">This week</option>
+			<option value="Next week">Next week</option>
+			<option value="This month">This month</option>
+			<option value="Next month">Next month</option>
+		</select>		
+	</div>
+</div>

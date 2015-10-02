@@ -46,22 +46,26 @@
 					@* 
 						ADD IMAGE CROPS
 					*@
-					<div class="o-event__column o-event__gallery js-single__galery owl-carousel">
+					<div class="o-event__column o-event__gallery js-single__galery js-magnific-gallery owl-carousel">
 						@foreach( var id in CurrentPage.gallery.Split(',') )
 						{
 
 							var image = Umbraco.Media(id);
 							var imageUrl = image.Url;
-							<img @image src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
+							<a href="@imageUrl?width=1200">
+								<img @image src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
+							</a>
 						}
 					</div>
 				} else {
-					<div class="o-event__column o-event__gallery owl-carousel">
+					<div class="o-event__column o-event__gallery owl-carousel js-magnific-gallery">
 						@foreach( var id in CurrentPage.gallery.Split(',') )
 						{
 							var image = Umbraco.Media(id);
 							var imageUrl = image.Url;
-							<img src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
+							<a href="@imageUrl?width=1200">
+								<img src="@imageUrl?width=650&height=536&mode=crop" alt="@CurrentPage.Name"/>
+							</a>
 						}
 					</div>					
 				}

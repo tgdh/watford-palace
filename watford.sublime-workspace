@@ -4,12 +4,36 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-bottom: "
+			],
+			[
+				"font",
+				"font-weight: "
+			],
+			[
+				"margi",
+				"margin-right: "
+			],
+			[
+				"border",
+				"border-left: "
+			],
+			[
 				"pad",
 				"padding: "
 			],
 			[
-				"mar",
-				"margin-bottom: "
+				"p",
+				"padding: "
+			],
+			[
+				"no",
+				"not-allowed"
+			],
+			[
+				"te",
+				"text-transform: "
 			],
 			[
 				"o-card__image",
@@ -18,10 +42,6 @@
 			[
 				"margin",
 				"margin: "
-			],
-			[
-				"font",
-				"font-size: "
 			],
 			[
 				"border-bot",
@@ -46,10 +66,6 @@
 			[
 				"m",
 				"margin-bottom: "
-			],
-			[
-				"te",
-				"text-align: "
 			],
 			[
 				"li",
@@ -92,10 +108,6 @@
 				"font-size: "
 			],
 			[
-				"border",
-				"border-radius: "
-			],
-			[
 				"ov",
 				"overflow: "
 			],
@@ -114,10 +126,6 @@
 			[
 				"tab",
 				"table-header-group"
-			],
-			[
-				"p",
-				"padding-bottom: "
 			],
 			[
 				"mq-",
@@ -183,38 +191,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "umbraco/Views/SampleEvent.cshtml",
-			"settings":
-			{
-				"buffer_size": 1768,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/settings/global.scss",
-			"settings":
-			{
-				"buffer_size": 2048,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/objects/section.scss",
-			"settings":
-			{
-				"buffer_size": 741,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "umbraco/Views/Partials/Page/Footer.cshtml",
-			"settings":
-			{
-				"buffer_size": 935,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -223,10 +199,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 147.0,
-		"last_filter": "wap",
+		"height": 247.0,
+		"last_filter": "package ins",
 		"selected_items":
 		[
+			[
+				"package ins",
+				"Package Control: Install Package"
+			],
 			[
 				"wap",
 				"Word Wrap: Toggle"
@@ -291,62 +271,80 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/User1/Sites/Projects/watford-palace",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/generic",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/js",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component"
-	],
 	"file_history":
 	[
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/js/main.js",
-		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleWhatsOn.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Events/Event-Filters.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/headings.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/cover.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Cover-Aside.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Home.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Featured-Content.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/overrides.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/Paging.cs",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings/global.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/BlogFolder.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/News.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/NewsCounter.cs",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Blocks.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/pagination.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/NewsArticle.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/PagingTemplate.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/gallery.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/web.config",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/headings.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/show.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleEvent.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/lists.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/cardfix.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/card-fix.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/video.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/buttons.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/_owl.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Super-Navigation.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/OwlCarousel2/dist/assets/owl.carousel.css",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Plugins/NestedContent/Css/nestedcontent.css",
+		"/Users/User1/Sites/Projects/watford-palace/tasks/concat.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Navigation.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/OwlCarousel2/dist/assets/owl.theme.default.css",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/generic/js-breakpoints.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/js/main.js",
 		"/Users/User1/Sites/Projects/watford-palace/Gruntfile.js",
 		"/Users/User1/Sites/Projects/watford-palace/tasks/watch.js",
 		"/Users/User1/Sites/Projects/watford-palace/tasks/concurrent.js",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Super-Navigation.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Navigation.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/buttons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/topbar.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings/global.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Footer-nav.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/nav.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Social-links.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/icons.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/footer.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Newsletter.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/forms.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cards.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Social-share.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Google-map.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/map.scss",
 		"/Volumes/Web Design/Paulius Putna/Paulius Putna archive/268799 - Sellar Property website/assets/sass/modules/map.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/forms.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/ezSearch.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/MacroPartials/ezSearch.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/LandingPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/anchor.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/text.scss",
@@ -402,36 +400,7 @@
 		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/suggestionbox.scss",
 		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/_slidingmenu.scss",
 		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/objects/header.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/navgoco.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/generic/js-breakpoints.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/icons.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/App_Plugins/NestedContent/Css/nestedcontent.css",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/base/text.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/pageblocks.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/objects/footer.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/trumps/overrides.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/base/forms.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Forms/Suggestion-Form.cshtml",
-		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Forms/Contact-form.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/base/anchor.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/tasks/concurrent.js",
-		"/Users/User1/Sites/Projects/eric-robinson/tasks/watch.js",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/js/components/jquery.tweet-linkify.js",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/MacroPartials/LatestTweets.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Component/Twitter.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Page/Cover.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/MasterPage.tpl.html",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/MasterPage.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Master.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Sitemap.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Page/Sitemap.cshtml",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/objects/section.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/tasks/rename.js",
-		"/Users/User1/Sites/Projects/eric-robinson/tasks/favicons.js",
-		"/Users/User1/Sites/Projects/eric-robinson/tasks/inline.js",
-		"/Users/User1/Sites/Projects/eric-robinson/tasks/processhtml.js",
-		"/Users/User1/Sites/Projects/eric-robinson/tasks/versioning.js"
+		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/navgoco.scss"
 	],
 	"find":
 	{
@@ -442,6 +411,9 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/User1/Sites/Projects/watford-palace/assets/sass",
+			"/Users/User1/Sites/Projects/watford-palace/assets",
+			"/Users/User1/Sites/Projects/watford-palace/umbraco",
 			"/Users/User1/Sites/Projects/watford-palace/tasks",
 			"/Users/User1/Sites/Projects/eric-robinson/assets/sass",
 			"/Users/User1/Sites/Projects/eric-robinson/umbraco",
@@ -480,6 +452,43 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<a href=\"\" class=\"o-button",
+			"c-card-link",
+			"<button class=\"o-button o-button--small o-button--transparent\">Buy tickets</button>",
+			"<button class=\"o-button o-button--small o-button--transparent\">Buy tickets</button>\n					<button class=\"o-button o-button--small o-button--transparent\">More info</button>",
+			"       ",
+			"                            ",
+			"small",
+			"bottom-left",
+			"o-card:nth",
+			"o-card__actions",
+			"--news",
+			".o-event__gallery",
+			".link-next ",
+			" .link-next",
+			".link-next .",
+			", count",
+			".c-cover__content",
+			"c",
+			"o-card o-card--month-block",
+			".o-card--event:nth-of-type",
+			".o-card--event {",
+			".o-card--event",
+			"menu__entry",
+			".o-card--month-block  +",
+			"+",
+			"menu__heading",
+			"o-card--month-block",
+			"page__header",
+			"anchor",
+			"<span id=\"@title.ToString().ToLower()\" class=\"anchor-offset\"></span>",
+			"date__time",
+			".owl-carousel",
+			".form-horizontal .nested-content .controls-row",
+			"image",
+			" id=\"@title.ToString().ToLower()\"",
+			"2015-09-30",
+			"CurrentPage.",
 			"@ii",
 			"Fermentumh3",
 			" </",
@@ -570,44 +579,7 @@
 			"secondary__link",
 			"body:after",
 			"body",
-			".c-site-logo",
-			"ico-twitter",
-			"/assets/img/brand-icons/the-spring",
-			"send",
-			"sendmailt",
-			"send",
-			"<p> </p>",
-			".o-feature-tile__heading",
-			"--text",
-			"show--text",
-			".ico-arrow--left:before",
-			".o-show-column--text",
-			".c-nav__lin",
-			"theEnd",
-			"timeout",
-			"<p> </p>",
-			"max",
-			"brochure",
-			"console.log",
-			".c-cover__slide__content--normal",
-			"getActive",
-			"activePage",
-			"|",
-			"christmas",
-			".c-nav__link:hover",
-			"setup",
-			"o-site-logo",
-			".o-event-tile--whats-on",
-			"transparent",
-			"o-event-block--whats-on",
-			"c-cover__slide__inner",
-			"now",
-			"getproperty",
-			"opacity",
-			"0.5rem",
-			"c-cover__slide__content--table",
-			"c-nav--sub__list",
-			"<p> </p>"
+			".c-site-logo"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -633,136 +605,19 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "umbraco/Views/SampleEvent.cshtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1768,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								257,
-								257
-							]
-						],
-						"settings":
-						{
-							"history_list_is_closing": true,
-							"syntax": "Packages/Razor/Razor.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 96.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 1,
-					"file": "assets/sass/settings/global.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2048,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								396,
-								396
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "assets/sass/objects/section.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 741,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								139,
-								139
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "umbraco/Views/Partials/Page/Footer.cshtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 935,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								692,
-								616
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Razor/Razor.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -788,7 +643,7 @@
 		"cols":
 		[
 			0.0,
-			0.766724759752,
+			0.767767311692,
 			1.0
 		],
 		"rows":
@@ -802,11 +657,15 @@
 	{
 		"height": 0.0
 	},
+	"output.unsaved_changes":
+	{
+		"height": 70.0
+	},
 	"pinned_build_system": "",
 	"project": "watford.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -816,6 +675,202 @@
 		"selected_items":
 		[
 			[
+				"samp",
+				"umbraco/Views/SampleWhatsOn.cshtml"
+			],
+			[
+				"home",
+				"umbraco/Views/Home.cshtml"
+			],
+			[
+				"te",
+				"umbraco/Views/TextPage.cshtml"
+			],
+			[
+				"card",
+				"assets/sass/objects/cards.scss"
+			],
+			[
+				"cover-as",
+				"umbraco/Views/Partials/Component/Cover-Aside.cshtml"
+			],
+			[
+				"cover",
+				"assets/sass/components/cover.scss"
+			],
+			[
+				"ove",
+				"assets/sass/trumps/overrides.scss"
+			],
+			[
+				"global",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"sampl",
+				"umbraco/Views/SampleWhatsOn.cshtml"
+			],
+			[
+				"news",
+				"umbraco/Views/News.cshtml"
+			],
+			[
+				"blog",
+				"umbraco/Views/BlogFolder.cshtml"
+			],
+			[
+				"paging",
+				"umbraco/App_Code/Paging.cs"
+			],
+			[
+				"covet-as",
+				"umbraco/Views/Partials/Component/Cover-Aside.cshtml"
+			],
+			[
+				"show-",
+				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
+			],
+			[
+				"cover-",
+				"umbraco/Views/Partials/Component/Cover-Aside.cshtml"
+			],
+			[
+				"master",
+				"umbraco/Views/Master.tpl.html"
+			],
+			[
+				"block",
+				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
+			],
+			[
+				"web",
+				"umbraco/web.config"
+			],
+			[
+				"mas",
+				"umbraco/Views/Master.tpl.html"
+			],
+			[
+				"cardf",
+				"assets/sass/trumps/cardfix.scss"
+			],
+			[
+				"frame",
+				"assets/sass/components/frame.scss"
+			],
+			[
+				"head",
+				"assets/sass/base/headings.scss"
+			],
+			[
+				"header",
+				"assets/sass/objects/header.scss"
+			],
+			[
+				"over",
+				"assets/sass/trumps/overrides.scss"
+			],
+			[
+				"sam",
+				"umbraco/Views/SampleEvent.cshtml"
+			],
+			[
+				"lists",
+				"assets/sass/components/lists.scss"
+			],
+			[
+				"text",
+				"umbraco/Views/TextPage.cshtml"
+			],
+			[
+				"show",
+				"assets/sass/components/show.scss"
+			],
+			[
+				"showblock",
+				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
+			],
+			[
+				"globa",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"galler",
+				"assets/sass/objects/gallery.scss"
+			],
+			[
+				"ovr",
+				"assets/sass/trumps/overrides.scss"
+			],
+			[
+				"main",
+				"assets/js/main.js"
+			],
+			[
+				"sec",
+				"assets/sass/objects/section.scss"
+			],
+			[
+				"tick",
+				"umbraco/Views/Partials/Component/Tickets.cshtml"
+			],
+			[
+				"glo",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"fram",
+				"assets/sass/components/frame.scss"
+			],
+			[
+				"page",
+				"assets/sass/objects/page.scss"
+			],
+			[
+				"butt",
+				"assets/sass/objects/buttons.scss"
+			],
+			[
+				"tic",
+				"umbraco/Views/Partials/Component/Tickets.cshtml"
+			],
+			[
+				"super",
+				"umbraco/Views/Partials/Page/Super-Navigation.cshtml"
+			],
+			[
+				"icon",
+				"assets/sass/base/icons.scss"
+			],
+			[
+				"ticke",
+				"umbraco/Views/Partials/Component/Tickets.cshtml"
+			],
+			[
+				"wrap",
+				"assets/sass/objects/wrap.scss"
+			],
+			[
+				"concat",
+				"tasks/concat.js"
+			],
+			[
+				"hea",
+				"assets/sass/objects/header.scss"
+			],
+			[
+				"butto",
+				"assets/sass/objects/buttons.scss"
+			],
+			[
+				"heade",
+				"assets/sass/objects/header.scss"
+			],
+			[
+				"js",
+				"assets/sass/generic/js-breakpoints.scss"
+			],
+			[
 				"footer",
 				"umbraco/Views/Partials/Page/Footer.cshtml"
 			],
@@ -824,80 +879,24 @@
 				"assets/sass/objects/section.scss"
 			],
 			[
-				"global",
-				"assets/sass/settings/global.scss"
-			],
-			[
-				"text",
-				"umbraco/Views/TextPage.cshtml"
-			],
-			[
-				"sam",
-				"umbraco/Views/SampleEvent.cshtml"
-			],
-			[
-				"cover",
-				"assets/sass/components/cover.scss"
-			],
-			[
 				"cards",
 				"assets/sass/objects/cards.scss"
-			],
-			[
-				"head",
-				"assets/sass/base/headings.scss"
-			],
-			[
-				"home",
-				"umbraco/Views/Home.cshtml"
-			],
-			[
-				"page",
-				"assets/sass/objects/page.scss"
-			],
-			[
-				"mas",
-				"umbraco/Views/Master.cshtml"
 			],
 			[
 				"grunt",
 				"Gruntfile.js"
 			],
 			[
-				"main",
-				"assets/js/main.js"
-			],
-			[
 				"nav",
 				"assets/sass/components/nav.scss"
-			],
-			[
-				"master",
-				"umbraco/Views/Master.tpl.html"
-			],
-			[
-				"globa",
-				"assets/sass/settings/global.scss"
 			],
 			[
 				"button",
 				"assets/sass/objects/buttons.scss"
 			],
 			[
-				"card",
-				"assets/sass/objects/cards.scss"
-			],
-			[
-				"super",
-				"umbraco/Views/Partials/Page/Super-Navigation.cshtml"
-			],
-			[
 				"top",
 				"assets/sass/components/topbar.scss"
-			],
-			[
-				"header",
-				"umbraco/Views/Partials/Page/Header.cshtml"
 			],
 			[
 				"icons",
@@ -908,20 +907,8 @@
 				"umbraco/Views/Partials/Modules/Social-links.cshtml"
 			],
 			[
-				"heade",
-				"assets/sass/objects/header.scss"
-			],
-			[
-				"wrap",
-				"assets/sass/objects/wrap.scss"
-			],
-			[
 				"foot",
 				"umbraco/Views/Partials/Page/Footer.cshtml"
-			],
-			[
-				"glo",
-				"assets/sass/settings/global.scss"
 			],
 			[
 				"foo",
@@ -968,10 +955,6 @@
 				"assets/sass/base/anchor.scss"
 			],
 			[
-				"hea",
-				"assets/sass/base/headings.scss"
-			],
-			[
 				"pab",
 				"umbraco/Views/Partials/Component/Page-Blocks.cshtml"
 			],
@@ -984,20 +967,12 @@
 				"umbraco/App_Code/PagingTemplate.cshtml"
 			],
 			[
-				"news",
-				"umbraco/Views/News.cshtml"
-			],
-			[
 				"filt",
 				"umbraco/Views/Partials/Component/News-filter.cshtml"
 			],
 			[
 				"home-",
 				"umbraco/Views/Partials/Component/Home-grid.cshtml"
-			],
-			[
-				"butto",
-				"assets/sass/objects/buttons.scss"
 			],
 			[
 				"branc",
@@ -1020,10 +995,6 @@
 				"assets/sass/components/branch.scss"
 			],
 			[
-				"te",
-				"umbraco/Views/TextPage.cshtml"
-			],
-			[
 				"hom",
 				"umbraco/Views/HomePage.cshtml"
 			],
@@ -1040,16 +1011,8 @@
 				"umbraco/Views/News.cshtml"
 			],
 			[
-				"js",
-				"assets/sass/generic/js-breakpoints.scss"
-			],
-			[
 				"car",
 				"assets/sass/components/cards.scss"
-			],
-			[
-				"over",
-				"assets/sass/trumps/overrides.scss"
 			],
 			[
 				"home-gri",
@@ -1060,16 +1023,8 @@
 				"assets/sass/objects/wrap.scss"
 			],
 			[
-				"web",
-				"umbraco/Web.config"
-			],
-			[
 				"sugg",
 				"assets/sass/components/suggestionbox.scss"
-			],
-			[
-				"butt",
-				"assets/sass/objects/buttons.scss"
 			],
 			[
 				"forms",
@@ -1078,14 +1033,6 @@
 			[
 				"ancho",
 				"assets/sass/base/anchor.scss"
-			],
-			[
-				"icon",
-				"assets/sass/base/icons.scss"
-			],
-			[
-				"concat",
-				"tasks/concat.js"
 			],
 			[
 				"suer",
@@ -1114,10 +1061,6 @@
 			[
 				"tpl",
 				"umbraco/Views/Master.tpl.html"
-			],
-			[
-				"block",
-				"assets/sass/components/blocks.scss"
 			],
 			[
 				"feat",
@@ -1162,10 +1105,6 @@
 			[
 				"tile",
 				"umbraco/Views/Partials/Component/tile.cshtml"
-			],
-			[
-				"blog",
-				"umbraco/Views/BlogListing.cshtml"
 			],
 			[
 				"what",
@@ -1246,86 +1185,6 @@
 			[
 				"_owl",
 				"assets/sass/components/_owl.scss"
-			],
-			[
-				"eventblock",
-				"umbraco/Views/Partials/EventBlock.cshtml"
-			],
-			[
-				"side",
-				"umbraco/Views/Partials/Page/Sidebar-Nav.cshtml"
-			],
-			[
-				"gall",
-				"umbraco/Views/MacroPartials/Gallery.cshtml"
-			],
-			[
-				"headn",
-				"assets/sass/base/headings.scss"
-			],
-			[
-				"tiles",
-				"assets/sass/objects/tiles.scss"
-			],
-			[
-				"eventb",
-				"umbraco/Views/Partials/EventBlock.cshtml"
-			],
-			[
-				"even",
-				"umbraco/Views/Event.cshtml"
-			],
-			[
-				"owl",
-				"assets/_components/OwlCarousel2/dist/assets/owl.carousel.css"
-			],
-			[
-				"ie.",
-				"assets/sass/ie.scss"
-			],
-			[
-				"partners",
-				"umbraco/Views/Partials/Modules/Partners.cshtml"
-			],
-			[
-				"gallery",
-				"umbraco/Views/MacroPartials/Gallery.cshtml"
-			],
-			[
-				"show",
-				"assets/sass/objects/show.scss"
-			],
-			[
-				"secti",
-				"assets/sass/objects/section.scss"
-			],
-			[
-				"covers",
-				"umbraco/Views/Partials/Component/Cover.cshtml"
-			],
-			[
-				"newest",
-				"umbraco/Views/Partials/NewestEvents.cshtml"
-			],
-			[
-				"eventbl",
-				"umbraco/Views/Partials/EventBlock.cshtml"
-			],
-			[
-				"sidebar",
-				"umbraco/Views/Partials/Page/Sidebar-Nav.cshtml"
-			],
-			[
-				"landing",
-				"umbraco/Views/LandingPage.cshtml"
-			],
-			[
-				"sidea",
-				"umbraco/Views/Partials/Page/Sidebar-Nav.cshtml"
-			],
-			[
-				"glaler",
-				"umbraco/Umbraco/PartialViewMacros/Templates/Gallery.cshtml"
 			]
 		],
 		"width": 0.0
@@ -1348,7 +1207,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
