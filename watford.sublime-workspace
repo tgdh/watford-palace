@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pad",
+				"padding-bottom: "
+			],
+			[
 				"mar",
 				"margin-bottom: "
 			],
@@ -18,10 +22,6 @@
 			[
 				"border",
 				"border-left: "
-			],
-			[
-				"pad",
-				"padding: "
 			],
 			[
 				"p",
@@ -191,6 +191,64 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "assets/sass/components/news.scss",
+			"settings":
+			{
+				"buffer_size": 597,
+				"line_ending": "Unix",
+				"name": "news.scss"
+			}
+		},
+		{
+			"file": "assets/sass/objects/pagination.scss",
+			"settings":
+			{
+				"buffer_size": 782,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "umbraco/Views/News.cshtml",
+			"settings":
+			{
+				"buffer_size": 3856,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/style.scss",
+			"settings":
+			{
+				"buffer_size": 1446,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "umbraco/Views/NewsArticle.cshtml",
+			"settings":
+			{
+				"buffer_size": 1029,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "umbraco/Views/Partials/Component/News-filter.cshtml",
+			"settings":
+			{
+				"buffer_size": 2371,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/components/filters.scss",
+			"settings":
+			{
+				"buffer_size": 414,
+				"line_ending": "Unix",
+				"name": "filters.scss"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -271,10 +329,31 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/User1/Sites/Projects/watford-palace",
+		"/Users/User1/Sites/Projects/watford-palace/assets",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/magnific-popup",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/magnific-popup/dist",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/SelectOrDie/_src",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views"
+	],
 	"file_history":
 	[
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleWhatsOn.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/web.config",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/_selectordie.scss",
+		"/Users/User1/Sites/Projects/watford-palace/tasks/concat.js",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/_magnific.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Events/Event-Filters.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleEvent.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleWhatsOn.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/cover.cshtml",
@@ -289,35 +368,28 @@
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/News.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/NewsCounter.cs",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Blocks.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/pagination.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/NewsArticle.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/PagingTemplate.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/gallery.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/web.config",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/headings.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/show.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleEvent.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/lists.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/cardfix.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/card-fix.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/video.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/buttons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/_owl.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Super-Navigation.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/OwlCarousel2/dist/assets/owl.carousel.css",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Plugins/NestedContent/Css/nestedcontent.css",
-		"/Users/User1/Sites/Projects/watford-palace/tasks/concat.js",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Navigation.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/OwlCarousel2/dist/assets/owl.theme.default.css",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
@@ -398,9 +470,7 @@
 		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/base/icons.scss",
 		"/Users/User1/Sites/Projects/eric-robinson/bower.json",
 		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/suggestionbox.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/_slidingmenu.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/objects/header.scss",
-		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/navgoco.scss"
+		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/_slidingmenu.scss"
 	],
 	"find":
 	{
@@ -411,6 +481,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/User1/Sites/Projects/watford-palace/umbraco/views",
 			"/Users/User1/Sites/Projects/watford-palace/assets/sass",
 			"/Users/User1/Sites/Projects/watford-palace/assets",
 			"/Users/User1/Sites/Projects/watford-palace/umbraco",
@@ -452,6 +523,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"GetCrop",
+			"getcrop",
+			"arrow",
 			"<a href=\"\" class=\"o-button",
 			"c-card-link",
 			"<button class=\"o-button o-button--small o-button--transparent\">Buy tickets</button>",
@@ -576,10 +650,7 @@
 			"rename",
 			"connection",
 			"/assets/img/brand-icons/the-spring.",
-			"secondary__link",
-			"body:after",
-			"body",
-			".c-site-logo"
+			"secondary__link"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -605,13 +676,251 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "assets/sass/components/news.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"auto_name": "news.scss",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/sass/objects/pagination.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								390,
+								390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "umbraco/Views/News.cshtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/sass/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1386,
+								1386
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 2,
+					"file": "umbraco/Views/News.cshtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3471,
+								3437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1167.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "umbraco/Views/NewsArticle.cshtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								444,
+								296
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "umbraco/Views/Partials/Component/News-filter.cshtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2371,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								548,
+								548
+							],
+							[
+								1773,
+								1773
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 318.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/sass/components/filters.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"auto_name": "filters.scss",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -643,7 +952,7 @@
 		"cols":
 		[
 			0.0,
-			0.767767311692,
+			0.396440004143,
 			1.0
 		],
 		"rows":
@@ -674,6 +983,58 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"web",
+				"umbraco/web.config"
+			],
+			[
+				"news",
+				"assets/sass/components/news.scss"
+			],
+			[
+				"arti",
+				"umbraco/Views/NewsArticle.cshtml"
+			],
+			[
+				"news-",
+				"umbraco/Views/Partials/Component/News-filter.cshtml"
+			],
+			[
+				"pagi",
+				"assets/sass/objects/pagination.scss"
+			],
+			[
+				"sample",
+				"umbraco/Views/SampleEvent.cshtml"
+			],
+			[
+				"main",
+				"assets/js/main.js"
+			],
+			[
+				"conca",
+				"tasks/concat.js"
+			],
+			[
+				"_selc",
+				"assets/sass/components/_selectordie.scss"
+			],
+			[
+				"sec",
+				"assets/sass/objects/section.scss"
+			],
+			[
+				"icons",
+				"assets/sass/base/icons.scss"
+			],
+			[
+				"vent",
+				"umbraco/Views/Partials/Events/Event-Filters.cshtml"
+			],
+			[
+				"concat",
+				"tasks/concat.js"
+			],
 			[
 				"samp",
 				"umbraco/Views/SampleWhatsOn.cshtml"
@@ -711,10 +1072,6 @@
 				"umbraco/Views/SampleWhatsOn.cshtml"
 			],
 			[
-				"news",
-				"umbraco/Views/News.cshtml"
-			],
-			[
 				"blog",
 				"umbraco/Views/BlogFolder.cshtml"
 			],
@@ -741,10 +1098,6 @@
 			[
 				"block",
 				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
-			],
-			[
-				"web",
-				"umbraco/web.config"
 			],
 			[
 				"mas",
@@ -803,14 +1156,6 @@
 				"assets/sass/trumps/overrides.scss"
 			],
 			[
-				"main",
-				"assets/js/main.js"
-			],
-			[
-				"sec",
-				"assets/sass/objects/section.scss"
-			],
-			[
 				"tick",
 				"umbraco/Views/Partials/Component/Tickets.cshtml"
 			],
@@ -849,10 +1194,6 @@
 			[
 				"wrap",
 				"assets/sass/objects/wrap.scss"
-			],
-			[
-				"concat",
-				"tasks/concat.js"
 			],
 			[
 				"hea",
@@ -897,10 +1238,6 @@
 			[
 				"top",
 				"assets/sass/components/topbar.scss"
-			],
-			[
-				"icons",
-				"assets/sass/components/icons.scss"
 			],
 			[
 				"social",
@@ -961,10 +1298,6 @@
 			[
 				"ar",
 				"umbraco/Views/NewsArticle.cshtml"
-			],
-			[
-				"pagi",
-				"umbraco/App_Code/PagingTemplate.cshtml"
 			],
 			[
 				"filt",
@@ -1087,10 +1420,6 @@
 				"umbraco/Views/Partials/Page/Navigation.cshtml"
 			],
 			[
-				"conca",
-				"umbraco/Views/Contact.cshtml"
-			],
-			[
 				"fea",
 				"umbraco/Views/Partials/Component/Featured-Content.cshtml"
 			],
@@ -1165,26 +1494,6 @@
 			[
 				"eventblok",
 				"umbraco/Views/Partials/EventBlock.cshtml"
-			],
-			[
-				"buttons",
-				"assets/sass/objects/buttons.scss"
-			],
-			[
-				"icos",
-				"assets/sass/objects/icons.scss"
-			],
-			[
-				"filter",
-				"umbraco/Views/Partials/Events/Filters.cshtml"
-			],
-			[
-				"web.",
-				"umbraco/web.config"
-			],
-			[
-				"_owl",
-				"assets/sass/components/_owl.scss"
 			]
 		],
 		"width": 0.0

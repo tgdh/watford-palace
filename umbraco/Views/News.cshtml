@@ -97,19 +97,35 @@
 
 
 @helper FullArticle( dynamic node ) {
-	<article class="c-news__article">
-		<h3>@node.Name</h3>
-		<p>@node.releaseDate.ToString("d MMMM yyyy")</p>
-		<p>@node.postExcerpt</p>
-		<a href="@node.Url">@node.Url</a>			
+	<article class="c-news__article clearfix">
+		<div class="o-news-thumbnail">
+			@if( node.HasValue("thumbnail") )
+			{
+				<img class="o-news-thumbnail__image" src="@Umbraco.Media(node.thumbnail.ToString()).Url" alt="@CurrentPage.Name"/>
+			}
+		</div>
+		<div class="o-news-details">
+			<h2 class="c-news__article__heading delta">
+				<a href="@node.Url">
+					@node.Name
+				</a>
+			</h2>
+			<p>@node.releaseDate.ToString("d MMMM yyyy")</p>
+			<p>@node.postExcerpt</p>
+			<p><a href="@node.Url">Read more</a></p>				
+		</div>		
 	</article> 
 }
 
 @helper ShortArticle( dynamic node ) {
 	<article class="c-news__article">
-		<h3>@node.Name</h3>
+		<h2 class="c-news__article__heading delta">
+			<a href="@node.articleUrl" target="_blank">
+				@node.Name
+			</a>
+		</h2>
 		<p>@node.releaseDate.ToString("d MMMM yyyy")</p>
 		<p>@node.postExcerpt</p>
-		<a href="@node.articleUrl" target="_blank">@node.articleUrl</a>		
+		<p><a href="@node.articleUrl" target="_blank">Read article</a></p>		
 	</article> 
 }

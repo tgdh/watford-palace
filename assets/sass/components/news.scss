@@ -1,0 +1,38 @@
+/* ===========================================================
+
+	# NEWS
+
+=========================================================== */
+
+.c-news__article {
+	margin-bottom: 4rem;
+	.c-news__article__heading {
+		text-align: left;
+		a {
+			color: $dark-black;	
+			&:hover {
+				color: $pri;
+			}		
+		}
+	}
+}
+
+.o-news-header {
+	margin-bottom: 2rem;
+}
+
+.o-news-date {
+	margin-bottom: 1rem;
+	display: block;
+}
+
+@include respond-min( $mq-small ){
+	.c-news__article {
+		.o-news-thumbnail {
+			@include column(1/5, $gutter: 3);
+		}
+		.o-news-details {
+			@include column(4/5, $gutter: 3, $cycle: 2);
+		}
+	}
+}

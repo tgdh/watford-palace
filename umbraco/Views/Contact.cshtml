@@ -9,10 +9,16 @@
 	var zoomLevel = settings.map.Zoom;
 }
 
-<div class="wrap wrap--x-large">
+<div class="o-section o-wrap o-wrap--x-large">
 	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-	@CurrentPage.bodyText
-	@Html.Partial("Forms/Contact-form")
+	<div class="">
+		<div class="">
+			@CurrentPage.bodyText
+		</div>
+		<div class="">
+			@Html.Partial("Forms/Contact-form")
+		</div>
+	</div>
 </div>
 	
 @section OpenGraph{
