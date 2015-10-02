@@ -42,16 +42,16 @@
 		right: 0;
 		bottom: 0;
 		width: 100%;
-		display: table;
+		display: block;
 	}
 
 	.c-cover__content {
 		display: block;
 		margin: 0 auto;
-		max-width: 42rem;
+		max-width: 68rem;
 		color: $white !important;
 		padding-top: 25%;
-		text-transform: center;
+		text-align: center;
 	}
 	.c-cover-info--category {
 		background: rgba(34, 34, 34, 0.5);
@@ -78,9 +78,19 @@
 		padding: 0.6rem;
 		background: rgba(34, 34, 34, 0.5);
 	}
+	.c-cover-link {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    display: block;
+	}
 	.o-button {
 	    margin: 0 auto;
-	    display: table;		
+	    display: inline-block;
+	    position: relative;
+	    z-index: 2;	
 	}	
 }
 

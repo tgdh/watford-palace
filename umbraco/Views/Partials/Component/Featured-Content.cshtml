@@ -3,7 +3,7 @@
 	var homePage = CurrentPage.Site();
 	var settings = homePage.FirstChild("Settings");
 	int count = 0;
-	var list = CurrentPage.secondaryCover;
+	var list = CurrentPage.featuredContent;
 }
 
 @foreach( var id in list.Split(',') )
@@ -39,46 +39,6 @@
 		count = count + 1;
 	}
 }
-
-@* <article class="o-card o-card--news">
-	<div class="o-card__image--wrap">
-		<img class="o-card__image" src="" alt=""/>
-	</div>
-	<div class="o-card__content">
-		<span class="o-card-info--category o-card-info--category--news">Comedy</span>
-		<h3 class="o-card__heading o-card__heading--news delta">Nibh Fermentum Ullamcorper</h3>
-		<span class="o-card-info--date o-card-info--date--news">23 Sep</span>
-		<button class="o-button o-button--small o-button--transparent">Read more</button>
-	</div>
-	
-</article>	
-
-<article class="o-card o-card--event">
-	<div class="o-card__image--wrap">
-		<img class="o-card__image" src="/assets/img/_temp/4.jpg" alt=""/>
-	</div>
-	<div class="o-card__content">
-		<span class="o-card-info--category o-card-info--category--event">Comedy</span>
-		<h3 class="o-card__heading o-card__heading--event delta">Nibh Fermentum Ullamcorper</h3>
-		<span class="o-card-info--date o-card-info--date--event">23 Sep</span>
-		<button class="o-button o-button--small o-button--transparent">Buy tickets</button>
-		<button class="o-button o-button--small o-button--transparent">More info</button>
-	</div>
-	
-</article>	
-
-<article class="o-card o-card--news">
-	<div class="o-card__image--wrap">
-		<img class="o-card__image" src="" alt=""/>
-	</div>
-	<div class="o-card__content">
-		<span class="o-card-info--category o-card-info--category--news">Comedy</span>
-		<h3 class="o-card__heading o-card__heading--news">Nibh Fermentum</h3>
-		<span class="o-card-info--date o-card-info--date--news">23 Sep</span>
-		<button class="o-button o-button--small o-button--transparent">Read more</button>
-	</div>
-	
-</article>	 *@
 
 @helper LatestNews(dynamic item, int count)
 {
@@ -151,6 +111,26 @@
 @helper SampleEvent(dynamic item)
 {
 
+	<article class="o-card o-card--event o-card--image">
+		<div class="o-card__image--wrap">
+			@if( item.HasValue("cardImage") )
+			{
+				<img class="o-card__image" src="@Umbraco.Media(item.cardImage).Url" alt="@item.Name"/>
+			}
+			
+		</div>
+		<div class="o-card__content">
+			<span class="o-card-info o-card-info--category o-card-info--category--event">@item.Parent().Name</span>
+			<h3 class="o-card__heading o-card__heading--event">@item.Name</h3>
+			<span class="o-card-info o-card-info--date o-card-info--date--event">23 Oct - 15 Sep</span>
+		</div>
+		<a href="@item.url" class="o-card-link"></a>
+		<div class="o-card__actions o-card__actions--event">
+			<a href="@item.Url#tickets" class="o-button o-button--small o-button--transparent">Buy tickets</a>
+			<a href="@item.Url" class="o-button o-button--small o-button--transparent">More info</a>
+		</div>					
+		
+	</article>			
 }
 
 @helper NewsArticle(dynamic item)
@@ -193,4 +173,15 @@
 @helper Default(dynamic item)
 {
 
+}
+
+@helper Truncate (string input, int length)
+{
+    if( input.Length<=length )
+    {
+        @Html.Raw(input)
+    }
+    else{
+        @Html.Raw( input.Substring( 0,length ) )<text>...</text>
+    }
 }

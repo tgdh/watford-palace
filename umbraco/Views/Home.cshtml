@@ -10,46 +10,7 @@
 <section>
 	<h2 class="hide-text">What's new</h2>
 	<div class="o-card-block clearfix">
-		@for( var ii = 0; ii < 8; ii++)
-		{
-			var imageLink = "/assets/img/_temp/" + ii + ".jpg";
-			var title = "Condimentum Cras";
-			if( ii == 2 || ii == 5 || ii == 1 )
-			{
-				title = "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.";
-			}
-			if( ii == 2 || ii == 5 )
-			{
-				<article class="o-card o-card--news">
-					<div class="o-card__image--wrap">
-						@* <img class="o-card__image" src="" alt=""/> *@
-					</div>
-					<div class="o-card__content">
-						<span class="o-card-info--category o-card-info--category--news">Comedy</span>
-						<h3 class="o-card__heading o-card__heading--news">@Truncate(title, 45)</h3>
-						<span class="o-card-info--date o-card-info--date--news">@ii Sep</span>
-						<button class="o-button o-button--small o-button--transparent">Read more</button>
-					</div>
-					
-				</article>	
-			} 
-			else 
-			{
-				<article class="o-card o-card--event">
-					<div class="o-card__image--wrap">
-						<img class="o-card__image" src="@imageLink" alt=""/>
-					</div>
-					<div class="o-card__content">
-						<span class="o-card-info--category o-card-info--category--event">Comedy</span>
-						<h3 class="o-card__heading o-card__heading--event">@Truncate(title, 30)</h3>
-						<span class="o-card-info--date o-card-info--date--event">@ii Sep</span>
-						<button class="o-button o-button--small o-button--transparent">Buy tickets</button>
-						<button class="o-button o-button--small o-button--transparent">More info</button>
-					</div>
-					
-				</article>			
-			}
-		}
+		@Html.Partial("Component/Featured-Content")
 	</div>
 </section>
 
