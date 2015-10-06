@@ -25,6 +25,9 @@
 	&:hover {
 		color: $white !important;
 	}
+	&:focus {
+		color: $white !important;
+	}
 }
 
 .c-social__link--twitter {
