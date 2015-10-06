@@ -67,7 +67,7 @@
 	var selectedArticles = allArticles.Skip(paging.Skip).Take(paging.Take).ToList();
 }
 
-<section class="o-wrap o-section o-wrap--medium">
+<section class="o-wrap o-section o-wrap--small">
 	<h1>@CurrentPage.Name</h1>
 
 	@if( selectedArticles.Any() ){
@@ -84,7 +84,7 @@
 			}
 		}
 	} else {
-		<div class="o-listing o-wrap o-wrap--large cleafix">
+		<div class="o-listing o-wrap o-wrap--small cleafix">
 			<p class="delta" style="text-align: center;">Sorry, there are no posts available</p>
 		</div>
 	}
@@ -110,8 +110,8 @@
 					@node.Name
 				</a>
 			</h2>
-			<p>@node.releaseDate.ToString("d MMMM yyyy")</p>
-			<p>@node.postExcerpt</p>
+			<p class="c-news__release-date">@node.releaseDate.ToString("d MMMM yyyy")</p>
+			<p class="c-news__summary">@node.postExcerpt</p>
 			<p><a href="@node.Url">Read more</a></p>				
 		</div>		
 	</article> 
@@ -124,8 +124,8 @@
 				@node.Name
 			</a>
 		</h2>
-		<p>@node.releaseDate.ToString("d MMMM yyyy")</p>
-		<p>@node.postExcerpt</p>
+		<p class="c-news__release-date">@node.releaseDate.ToString("d MMMM yyyy")</p>
+		<p class="c-news__summary">@node.postExcerpt</p>
 		<p><a href="@node.articleUrl" target="_blank">Read article</a></p>		
 	</article> 
 }

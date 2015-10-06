@@ -9,6 +9,13 @@ img {
   	vertical-align: top;
 }
 
+img + figcaption {
+	font-style: italic;
+	text-align: right;
+	padding-top: 0.2rem;
+	font-size: 1.4rem;
+}
+
 .o-media {
 	img {
 		width: 100%;

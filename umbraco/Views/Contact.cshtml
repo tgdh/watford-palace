@@ -9,13 +9,13 @@
 	var zoomLevel = settings.map.Zoom;
 }
 
-<div class="o-section o-wrap o-wrap--x-large">
+<div class="o-section">
 	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-	<div class="">
-		<div class="">
+	<div class="clearfix">
+		<div class="o-page-column o-page-column-1-2">
 			@CurrentPage.bodyText
 		</div>
-		<div class="">
+		<div class="o-page-column o-page-column-1-2">
 			@Html.Partial("Forms/Contact-form")
 		</div>
 	</div>
@@ -60,7 +60,7 @@
 			};
 				
 			var map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
-			var contentString = '<h4>Watford Palace Theatre</h4><a href="@link" target="_blank">Click here direction</a>';
+			var contentString = '<p><strong>Watford Palace Theatre</strong><br/>20 Clarendon Road,<br/>Watford,<br/>WD17 1JZ</p><p><a href="@link" target="_blank">Click here direction</a></p>';
 
 			var infowindow = new google.maps.InfoWindow({
 				content: contentString

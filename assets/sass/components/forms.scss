@@ -8,6 +8,9 @@
 	margin-top: $line-height;
 }
 
+.c-form-thank-you {
+	text-align: center;
+}
 
 
 .o-input {
@@ -17,7 +20,11 @@
 }
 
 
-.c-form--newsletter {
+.c-form--newsletter,
+.form--contactform {
+	label {
+		display: none;
+	}
 	.o-input {
 		border: 0.1rem solid $border-colour;
 		border-bottom: 0;
@@ -27,5 +34,25 @@
 	}
 	.o-button {
 		width: 100%;
+	}
+}
+
+.form--contactform {
+	.sod_select {
+		background: $white;
+		color: $placeholder-colour;
+		font-size: 1.6rem;
+		font-weight: normal;
+		padding-left: 1.5rem;
+	}
+	.sod_select:before {
+		background: $white;
+	}
+	.sod_select:after {
+		color: $dark-black;
+		top: 1.2rem;
+	}
+	.sod_select .sod_list {
+	    outline: 0.1rem solid $dark-black;
 	}
 }

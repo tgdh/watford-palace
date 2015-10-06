@@ -7,8 +7,8 @@
 .o-wrap {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	// padding-left: 1.5rem;
+	// padding-right: 1.5rem;
 }
 
 
@@ -39,18 +39,18 @@
 
 @include respond-min-max( $mq-small, $mq-medium ) {
 
-	.o-wrap {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
+	// .o-wrap {
+	// 	padding-left: 2rem;
+	// 	padding-right: 2rem;
+	// }
 
 }
 
 @include respond-min( $mq-medium ) {
 
-	.o-wrap {
-		padding-left: 4rem;
-		padding-right: 4rem;
-	}
+	// .o-wrap {
+	// 	padding-left: 4rem;
+	// 	padding-right: 4rem;
+	// }
 
 }

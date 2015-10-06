@@ -15,14 +15,17 @@
 	Layout = null;
 
 	@*  Set the ID of the Form folder  *@
-	var form = Umbraco.Content(1105);
+	var form = Umbraco.Content(1104);
 	string contactEmail = (string)form.contactEmail;
 	string title = form.Name;
 	
 	@* Set the DocType of the form we are using to build and store this form *@
 	string doctype = "ContactForm";
-	string thankYouMessage = "Thank you! You're message was received.";
-	string thankYouPage = Umbraco.Content(form.ThankYouPage.ToString()).Url;
+	string submissionMessage = form.submissionMessage;
+	string redirectPage = "";
+	if( redirectPage != null ){
+		redirectPage = Umbraco.Content(form.redirectPage.ToString()).Url;
+	}
 	@* Form submission storage folder *@
 	var folderId = form.Id;
 	
@@ -115,13 +118,18 @@
 				
 				@* send an email *@
 				if( !string.IsNullOrEmpty(contactEmail) ){
-					@SendEmail(contactEmail, doctype, title, sbFormData.ToString())
+					@* @SendEmail(contactEmail, doctype, title, sbFormData.ToString()) *@
 				}
 				@* redirect or show thank you message as fallback *@
-				if( !string.IsNullOrEmpty(thankYouPage) ){
-					Response.Redirect(thankYouPage);
+				if( !string.IsNullOrEmpty(redirectPage) ){
+					Response.Redirect(redirectPage);
 				} else {
-					<p>@thankYouMessage</p>
+					<div class="c-form-thank-you">
+						<h3>Thank you!</h3>
+						<p>
+							@Html.Raw(@umbraco.library.ReplaceLineBreaks(submissionMessage))
+						</p>
+					</div>
 				}
 
 				@*  ALL DONE, get out of here without rebuilding the form *@
@@ -150,7 +158,7 @@
 					var fieldName = pt.Alias + pt.Id;
 
 					// form fields
-					<div class="input-wrap">
+					<div class="o-input">
 						@if (pt.PropertyEditorAlias == "Umbraco.TrueFalse") {
 							@CheckBox(pt.Name, fieldName)
 						} else {
@@ -208,9 +216,9 @@
 			}
 
 		}
-		<div class="input-wrap">
-			<button type="submit" class="button button--primary button--submit">Submit</button>
-		</div>
+		
+			<button type="submit" class="o-button o-button--primary o-button--submit">Submit</button>
+		
 	
 	</form>
 }
@@ -219,11 +227,11 @@
 @* HELPER FUNCTIONS *@
 
 @helper TextBox( string propName, string fieldName, string fieldType ){
-	<input type="@fieldType" class="input" id="@fieldName" name="@fieldName" placeholder="@propName" value="@Request.Form[fieldName]" />
+	<input type="@fieldType" class="" id="@fieldName" name="@fieldName" placeholder="@propName" value="@Request.Form[fieldName]" />
 }
 
 @helper TextArea( string propName, string fieldName ){
-	<textarea rows="4" class="input" id="@fieldName" name="@fieldName" placeholder="@propName">@Request.Form[fieldName]</textarea>
+	<textarea rows="4" class="" id="@fieldName" name="@fieldName" placeholder="@propName">@Request.Form[fieldName]</textarea>
 }
 
 @helper CheckBox( string propName, string fieldName ){

@@ -6,13 +6,19 @@
 
 }
 
-<section class="o-wrap o-section o-wrap--medium">
+<section class="o-wrap o-section o-wrap--small">
 	<h1>@CurrentPage.Name</h1>
 	@if( CurrentPage.HasValue("coverImage") ){
-		<img class="o-news-header" src="@Umbraco.Media(CurrentPage.coverImage.ToString()).GetCropUrl("umbracoFile", "open-graph")" alt="@CurrentPage.Name"/>
+		<figure class="o-news-header">
+			<img src="@Umbraco.Media(CurrentPage.coverImage.ToString()).GetCropUrl("umbracoFile", "open-graph")" alt="@CurrentPage.Name"/>
+			@if( Umbraco.Media(CurrentPage.coverImage).HasValue("caption") )
+			{
+				<figcaption>@Umbraco.Media(CurrentPage.coverImage).caption</figcaption>
+			}
+		</figure>
 	}
 	
-	<span class="o-news-date">@CurrentPage.releaseDate.ToString("d MMMM yyyy")</span>
+	<p class="c-news__release-date">@CurrentPage.releaseDate.ToString("d MMMM yyyy")</p>
 	<p class="o-news=excerpt"><strong>@CurrentPage.postExcerpt</strong></p>
 	@CurrentPage.bodyText
 </section>
