@@ -1,33 +1,41 @@
+@using Logic.Controllers
+@using Logic.ExtensionMethods
+@using Logic.Model
+@using umbraco.cms.helpers
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	var homePage = CurrentPage.Site();
-	var settings = homePage.FirstChild("Settings");
-}	
+
+    var ci = new System.Globalization.CultureInfo("en-GB");
+    System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+    System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Today;
+}
 
 <div class="o-section--highlight o-section--filter">
 	<div class="o-wrap o-wrap--x-large">
-@* 		<button class="o-button o-button--primary o-button--large">Choose a category<i class="ico-arrow ico-arrow--down"></i></button>
-		<button class="o-button o-button--primary o-button--large">Choose a Date<i class="ico-arrow ico-arrow--down"></i></button> *@
 
-		<select id="whatCat" class="filter filter--category filter-js js-select" onchange="location = this.options[this.selectedIndex].value;">
-			<option value="">Category</option>
-			<option value="Cinema">Cinema</option>
-			<option value="Music">Music</option>
-			<option value="Theatre">Theatre</option>
-			<option value="Comedy">Comedy</option>
-			<option value="Family">Family</option>
-			<option value="Heritage">Heritage</option>
-			<option value="Literature">Literature</option>
-			<option value="Free events">Free events</option>
+		<select name="filter-category" class="filter filter--category filter-js js-select" id="filter-category">
+			<option value="">Choose a category</option>
+			
+			@foreach (var category in Events.EventsRoot(Umbraco).Categories) {
+				<option value="@category.Name">@category.Name</option>
+			}
 		</select>
 
-		<select id="whatDate" class="filter filter--date filter-js js-select" onchange="location = this.options[this.selectedIndex].value;">
-			<option value="">Date</option>
-			<option value="Today">Today</option>
-			<option value="This week">This week</option>
-			<option value="Next week">Next week</option>
-			<option value="This month">This month</option>
-			<option value="Next month">Next month</option>
-		</select>		
+		<select name="filter-time" class="filter filter--category filter-js js-select" id="filter-time">
+			<option value="">Choose a date</option>
+			<option value="@now~@now">Today</option>
+			<option value="@now.AddDays(1)~@now.AddDays(1)">Tomorrow</option>
+			<option value="@now~@now.LastDayOfWeek()">This week</option>
+			<option value="@now.AddDays(7).FirstDayOfWeek()~@now.AddDays(7).LastDayOfWeek()">Next week</option>
+			<option value="@now.FirstDayOfMonth()~@now.LastDayOfMonth()">This month</option>
+			<option value="@now.AddMonths(1).FirstDayOfMonth()~@now.AddMonths(1).LastDayOfMonth()">@now.AddMonths(1).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(2).FirstDayOfMonth()~@now.AddMonths(2).LastDayOfMonth()">@now.AddMonths(2).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(3).FirstDayOfMonth()~@now.AddMonths(3).LastDayOfMonth()">@now.AddMonths(3).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(4).FirstDayOfMonth()~@now.AddMonths(4).LastDayOfMonth()">@now.AddMonths(4).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(5).FirstDayOfMonth()~@now.AddMonths(5).LastDayOfMonth()">@now.AddMonths(5).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(6).FirstDayOfMonth()~@now.AddMonths(6).LastDayOfMonth()">@now.AddMonths(6).ToString("MMMM yyyy")</option>
+            <option value="@now.AddMonths(7).FirstDayOfMonth()~-1">Further ahead</option>
+		</select>
 	</div>
 </div>

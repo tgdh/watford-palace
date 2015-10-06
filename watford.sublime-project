@@ -13,7 +13,7 @@
 			    "umbraco/Css",
 			    "umbraco/Masterpages",
 			    "umbraco/media",
-			    "umbraco/Scripts",
+			    // "umbraco/Scripts",
 			    "umbraco/Umbraco",
 			    "umbraco/Umbraco_Client",
 			    "umbraco/UserControls",

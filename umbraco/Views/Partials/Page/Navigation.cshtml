@@ -11,12 +11,13 @@
 			<a href="@homePage.Url" class="nav__link @homePage.IsEqual(CurrentPage, "active", "")">@homePage.Name</a>
 		</li> *@
 		
-		@foreach (var item in menuItems){
+		@foreach ( var item in menuItems )
+		{
 			<li class="c-nav__item c-nav__item--parent">
 				<a href="@item.Url" class="c-nav__link  @(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
 					@item.Name
 				</a>
-				@if( item.DocumentTypeAlias != "News" )
+				@if( item.DocumentTypeAlias != "News" || item.DocumentTypeAlias != "Events" )
 				{
 					@Traverse(item)
 				}
@@ -27,10 +28,12 @@
 </nav>
 
 @* Helper method to travers through all descendants *@
-@helper Traverse(dynamic node) {
+@helper Traverse(dynamic node)
+{
     var maxLevelForNav = 6;
     var items = node.Children.Where("Visible").Where("Level <= " + maxLevelForNav);
-    if (items.Any()) {
+    if ( items.Any() )
+    {
 	        <ul class="c-nav__list--sub">
     	        @foreach (var item in items) {
 					<li class="c-nav__item c-nav__item--child">

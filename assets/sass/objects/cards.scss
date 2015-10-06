@@ -257,6 +257,8 @@
 		bottom: 2rem;
 		right: 2rem;
 		display: block;
+		opacity: 0;
+		transition: opacity $speed ease;
 	}
 	.o-card__actions--event {
 		text-align: center;
@@ -268,14 +270,18 @@
 	}
 }
 
+.o-card--event:hover .o-card__actions  {
+	opacity: 1;
+}
 .o-card--fill {
 
 }
 
-.o-card--image {
+.o-card__content {
 	.o-card-info,
 	.o-card__heading,
-	.o-card-info--date{
+	.o-card-info--date,
+	.o-card-info--category--event {
 		background: $dark-black;
 		background: rgba(34, 34, 34, 0.5);
 	}	
@@ -290,6 +296,10 @@
 	color: $dark-grey !important;
 	text-align: left;
 	border-radius: 0 !important;
+	h2 {
+		padding: 0 !important;
+		text-align: left;
+	}
 }
 
 .o-card--event {

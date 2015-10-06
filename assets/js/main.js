@@ -53,12 +53,6 @@
 
         var selectStyle = function(){
             $('.js-select').selectOrDie();
-            $('#whatCat').selectOrDie({
-
-            });
-            $('#whatDate').selectOrDie({
-
-            });
 
             $('#whoIsYourMessageFor1129').selectOrDie({
                 placeholder: "Who is your message for?"

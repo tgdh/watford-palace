@@ -16,8 +16,8 @@
 			case "CoverAnnouncement":
 				@CoverAnnouncement(slide)
 			break;
-			case "SampleEvent":
-				@SampleEvent(slide)
+			case "Event":
+				@Event(slide)
 			break;
 			default:
 				@Default(slide)
@@ -91,7 +91,7 @@
 	</section>	
 }
 
-@helper SampleEvent(dynamic node)
+@helper Event(dynamic node)
 {
 	var slide = node;
 	var category = slide.Parent().Name;

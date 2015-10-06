@@ -19,8 +19,8 @@
 		case "Announcement":
 			@Announcement(item)
 		break;
-		case "SampleEvent":
-			@SampleEvent(item)
+		case "Event":
+			@Event(item)
 		break;
 		case "GeneralNews":
 			@NewsArticle(item)
@@ -108,7 +108,7 @@
 	}
 }
 
-@helper SampleEvent(dynamic item)
+@helper Event(dynamic item)
 {
 
 	<article class="o-card o-card--event o-card--image">
