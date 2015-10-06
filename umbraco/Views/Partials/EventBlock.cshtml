@@ -1,0 +1,40 @@
+﻿@using Umbraco.Web.UI.Umbraco
+@model Logic.Model.Interfaces.IEvent
+@{
+    var type = "";
+    var image = Model.TileImage;
+    if (string.IsNullOrEmpty(Model.TileImage))
+    {
+        image = Model.FeatureTileImage;
+    }
+}
+
+@if (!string.IsNullOrEmpty(Model.MonthBreaker))
+{
+		
+	<article class="tile tile--highlight">
+		<div class="tile--highlight__copy">
+			<h3 class="feature-heading">@Model.MonthBreaker</h3>
+		</div>
+	</article>
+}
+else
+{
+    var category = @Model.Category.ToLower();
+    var catClass = category.Replace(" ", "-") + "-category";
+	<article class="tile tile--event @type @catClass @Model.Class">
+	<a href="@Model.Url">		
+		<div class="banner tile__banner">
+				<span>@Model.Date.ToString("dd") @Model.Date.ToString("MMM")</span>
+		</div>
+		<img src="@image?width=385&height=480&mode=crop" class="tile__image" />
+		<div class="tile__copy">
+			<span class="tile__date">@Model.Date.ToString("ddd h:mm tt")</span> &#124; <a href="tile__category">@Model.Category</a>
+			<h3 class="tile__title">@Model.Title</h3>
+		</div>
+		</a>
+	</article>
+}
+
+	
+	

@@ -1,0 +1,35 @@
+﻿<div class="umb-editor umb-multiple-datepicker" ng-controller="Thamesconsulting.MultidateController" ng-app="umbraco">
+    <div class="control-group" ng-repeat="item in model.value track by $index">
+        <b>Instance Id: </b>
+        <i>{{item.InstanceId}}</i>
+        <br/>
+        <b>Date</b>
+        <br/>
+        <input type="text" jqdatepicker name="item_{{$index}}" ng-model="item.date.value" class="dp" id="dp-{{model.alias}}-{{$index}}" />
+        <input type="text" timemask name="time_{{$index}}" ng-model="item.time.value" id="dp-time-{{model.alias}}-{{$index}}" placeholder="Time eg: 19:30" ng-required="true" />
+        <a prevent-default href="" title="Remove this date"
+           ng-show="model.value.length > 0"
+           ng-click="remove($index)">
+            <i class="icon icon-remove"></i>
+        </a>
+        <br/>
+        <b>Ticket Prices</b>
+        <br />
+
+        <div style="display: inline-block;margin: 2px;padding: 2px; background-color: #e2e2e2;" ng-repeat="price in item.TicketPrice">
+            <div ng-show="price.Name">
+                {{price.Name}} - £{{price.Price}}
+            </div>
+            <div ng-show="!price.Name">
+                £{{price.Price}}
+            </div>
+        </div>
+      
+    </div>
+    <div class="control-group">
+        <p><a prevent-default href="" title="Add another date"
+            ng-click="add()">Add another date 
+            <i class="icon icon-add"></i>
+        </a></p>
+    </div>
+</div>

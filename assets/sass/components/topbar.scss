@@ -17,8 +17,16 @@
 		.o-input,
 		.o-search-button {
 			display: inline-block;
-		}
 
+		}
+		.ezsearch-form:hover input {
+			background: $main-grey;
+		}
+		.ezsearch-form {
+			input:focus {
+				background: $main-grey;
+			}
+		}
 		.o-input {
 			vertical-align: top;
 			input {

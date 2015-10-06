@@ -182,8 +182,10 @@
 
 @helper RenderForm(SearchViewModel model)
 {
-    <form action="" method="GET" class="ezsearch-form">
-        <input type="text" name="q" placeholder="@(GetDictionaryValue("[ezSearch] Search", "Search"))" value="@(model.SearchTerm)" />
+    <form action="" method="GET" class="ezsearch-form ezsearch-form--search">
+        <div class="o-input">
+            <input type="text" name="q" placeholder="@(GetDictionaryValue("[ezSearch] Search", "Search"))" value="@(model.SearchTerm)" />
+        </div>
         <input class="o-button o-button--primary" type="submit" value="@(GetDictionaryValue("[ezSearch] Search", "Search"))" />
     </form>
 }
@@ -228,7 +230,7 @@
 @helper RenderContentResult(SearchViewModel model, IPublishedContent result)
 {
     <div class="ezsearch-result">
-        <h2><a href="@result.Url">@result.Name</a></h2>
+        <h2 class="gamma"><a href="@result.Url">@result.Name</a></h2>
         @foreach (var field in model.PreviewFields.Where(field => result.HasValue(field)))
         {
             <p>@Highlight(Truncate(Umbraco.StripHtml(result.GetPropertyValue(field).ToString()), model.PreviewLength), model.SearchTerms)</p>
@@ -254,25 +256,27 @@
     <div class="ezsearch-pager">
         <p>
             @if (model.CurrentPage > 1) {
-                <a class="prev" href="?q=@(model.SearchTerm)&p=@(model.CurrentPage-1)">@(GetDictionaryValue("[ezSearch] Previous", "Previous"))</a>
-            } else {
-                <span class="prev">@(GetDictionaryValue("[ezSearch] Previous", "Previous"))</span>
-            }
+                <a class="o-pagination__link o-pagination__link--prev prev" href="?q=@(model.SearchTerm)&p=@(model.CurrentPage-1)">@(GetDictionaryValue("[ezSearch] Previous", "Previous"))</a>
+            } 
+@*             else {
+                <span class="o-pagination__link o-pagination__link--prev prev">@(GetDictionaryValue("[ezSearch] Previous", "Previous"))</span>
+            } *@
             
             @for (var i = 1; i <= model.TotalPages; i++)
             {
                 if(i == model.CurrentPage) {
-                    <span class="page">@i</span>
+                    <span class="o-pagination__active page">@i</span>
                 } else {
-                    <a class="page" href="?q=@(model.SearchTerm)&p=@(i)">@i</a>
+                    <a class="o-pagination__page page" href="?q=@(model.SearchTerm)&p=@(i)">@i</a>
                 }
             }
 
             @if (model.CurrentPage < model.TotalPages) {
-                <a class="next" href="?q=@(model.SearchTerm)&p=@(model.CurrentPage + 1)">@(GetDictionaryValue("[ezSearch] Next", "Next"))</a>
-            } else {
-                <span class="next">@(GetDictionaryValue("[ezSearch] Next", "Next"))</span>
-            }
+                <a class="o-pagination__link o-pagination__link--next next" href="?q=@(model.SearchTerm)&p=@(model.CurrentPage + 1)">@(GetDictionaryValue("[ezSearch] Next", "Next"))</a>
+            } 
+@*             else {
+                <span class="o-pagination__link o-pagination__link--next next">@(GetDictionaryValue("[ezSearch] Next", "Next"))</span>
+            } *@
         </p>
     </div>
 }

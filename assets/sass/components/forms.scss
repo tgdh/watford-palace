@@ -19,9 +19,29 @@
 	}
 }
 
+.ezsearch-form,
+.ezsearch-result-count {
+	margin-bottom: 2rem;
+}
+
+.ezsearch-result {
+	margin-bottom: 4rem;
+	strong {
+		background: lighten($sec, 25);
+		padding-left: 0.2rem;
+		padding-right: 0.2rem;
+	}
+}
+
+.ezsearch-results {
+	h2 {
+		text-align: left;
+	}
+}
 
 .c-form--newsletter,
-.form--contactform {
+.form--contactform,
+.ezsearch-form--search {
 	label {
 		display: none;
 	}
