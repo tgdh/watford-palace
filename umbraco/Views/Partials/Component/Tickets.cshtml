@@ -1,9 +1,6 @@
-@using Logic.ExtensionMethods
-@using Logic.Model
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
 
-    var eventPage = Model.Content.As<Event>();
     var homePage = CurrentPage.Site();
     var bookingPage = homePage.FirstChild("Book");
     var settings = homePage.FirstChild("Settings");
@@ -11,15 +8,10 @@
     var ci = new System.Globalization.CultureInfo("en-GB");
     System.Threading.Thread.CurrentThread.CurrentCulture = ci;
     System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Now;
+    var category = CurrentPage.Parent().Name().ToLower();
 
-    var category = eventPage.Category.ToLower();
-    var count = 0;
-    var dash = " - ";
 
-    foreach (var dateTime in eventPage.Dates)
-    {
-        count = count + 1;
-    }
 }
 
 <div class="o-section o-section--window">
@@ -38,14 +30,27 @@
 		}
 
 		<div class="c-list-dates">
-			@for( var ii = 0; ii < 12; ii++ )
-			{
-				<div class="c-list-dates__date clearfix">
-					<span class="c-list-date__date">Sep Wed 23</span>
-					<span class="c-list-date__time">7.30pm - 9:45pm ish</span>
-					<a href="" class="o-button o-button--small o-button--primary">Buy tickets</a>			
-				</div>			
-			}
+			<table class="o-table o-table--stacked">
+				@foreach( var item in CurrentPage.multidate ) {
+					DateTime dateValue;
+					string bookingUrl = bookingPage.Url + "?id=" + item.InstanceId;
+					if( DateTime.TryParse(item.date.value.ToString(), out dateValue) > now )
+					{
+						<tr class="o-table__date-row">
+							<td class="o-table__date">
+								@if (DateTime.TryParse(item.date.value.ToString(), out dateValue) == true) {
+									@dateValue.ToString("dddd dd MMM yyyy")
+								}
+							</td>
+							<td class="o-table__time">@item.time.value</td>
+							<td class="o-table__col-button">
+								<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
+							</td>
+						</tr>					
+					}
+
+				}
+			</table>
 		</div>
 	</div> 
 </div>

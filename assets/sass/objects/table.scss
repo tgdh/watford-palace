@@ -6,6 +6,28 @@
 
 .o-table {
 	width: 100%;
+
+	.o-button {
+		font-size: 1.4rem;
+	}
+
+	.o-table__date,
+	.o-table__time {
+		padding: 1rem;
+		padding-left: 0;
+		font-size: 1.4rem;
+	}
+	.o-table__col-button {
+		text-align: center;
+		padding-right: 0;
+	}
+	.o-table__date-row {
+		border-bottom: 0.1rem solid $main-grey;
+		padding-left: 1rem;
+	}
+	.o-table__date-row:last-child {
+		border-bottom: none;
+	}
 }
 
 .o-table--scroll {
@@ -16,22 +38,36 @@
 	-webkit-overflow-scrolling: touch;
 }
 
-@include respond-max( $mq-medium ) {
+table .o-button {
+	display: block !important;
+}
 
-	.o-table--stacked {
-		thead {
-			display: none;
+@include respond-min( $mq-small ) {
+
+	.o-table {
+
+		.o-table__date,
+		.o-table__time {
+			font-size: 1.8rem;
 		}
 
-		td {
-			display: block;
+	}	
 
-			&:before {
-				content: attr( data-label ) ': ';
-				display: block;
-				width: 100%;
-			}
+}
+
+@include respond-min( $mq-medium ) {
+
+	.o-table {
+
+		.o-table__col-button {
+			width: 14.5rem;
+			background-color: $white;
+			padding-right: 0;
+			padding-left: 0;
 		}
+
 	}
+
+	
 
 }
