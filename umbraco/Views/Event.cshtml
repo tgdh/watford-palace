@@ -25,7 +25,7 @@
 			}
 			
 		</p>
-		@if( CurrentPage.HasValie("pageBlocks") )
+		@if( CurrentPage.HasValue("pageBlocks") )
 		{
 			@Html.Partial("Component/Show-Navigation")
 		}
@@ -82,7 +82,7 @@
 		</div>
 	</div>
 </div>
-@if( CurrentPage.HasValie("pageBlocks") )
+@if( CurrentPage.HasValue("pageBlocks") )
 {
 	@Html.Partial("Component/Show-Blocks")	
 }

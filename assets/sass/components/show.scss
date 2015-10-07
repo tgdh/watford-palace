@@ -36,7 +36,19 @@
 	}
 
 	.o-event__column {
-		@include column(3/6, $gutter: 4, $cycle: 2);
+		margin-bottom: 2rem;
+	}
+
+	.o-event__column:last-child {
+		margin-bottom: 0rem;
 	}
 }
 
+@include respond-min( $mq-small + 100px ){
+
+	.o-event__column {
+		@include column(3/6, $gutter: 4, $cycle: 2);
+		margin-bottom: 0;
+	}
+	
+}

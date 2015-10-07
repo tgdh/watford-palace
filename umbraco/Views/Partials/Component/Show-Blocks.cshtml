@@ -36,7 +36,7 @@
 	var title = item.GetPropertyValue("title");
 	var cast = item.GetPropertyValue<IEnumerable<IPublishedContent>>("cast");
 
-	<div class="o-section o-section--black o-section--window">
+	<div class="o-section o-section--black o-section--window o-wrap">
 		<a href="#@title.ToString().ToLower()" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
@@ -57,7 +57,7 @@
 					}
 					<div class="o-card-person clearfix">
 						<div class="o-card-person__image">
-							<img src="@imageUrl" alt="@name">
+							<img src="@imageUrl?width=150" alt="@name">
 						</div>
 						<div class="o-card-person__info">
 							<span class="o-card-person__title delta">@name</span>
@@ -78,14 +78,15 @@
 	var backgroundUrl = "";
 	if( item.HasValue("image") && item.GetPropertyValue("image").ToString() != "" )
 	{
-		backgroundUrl = Umbraco.Media(background.ToString()).Url;
+		backgroundUrl = Umbraco.Media(background.ToString()).GetCropUrl("umbracoFile", "image-cover");
 	}
-	<div class="o-section o-section--window o-section--image" style="background: url(@backgroundUrl) no-repeat center center;">
+	<div class="o-section o-section--window o-section--image" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
 		<a href="#@title.ToString().ToLower()" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<h2 class="hide-text">@title</h2>
+
 	</div>	
 }
 
@@ -101,24 +102,28 @@
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--small">
 			<h2 class="mega">@title</h2>
-			<div class="o-card-reviews-wrap">
-				@foreach( var review in reviews )
-				{
-					int starRating = Convert.ToInt32(review.GetPropertyValue("starRating"));
-					var comment = review.GetPropertyValue("review");
-					var source = review.GetPropertyValue("source");
-					<div class="o-card-review">
-						<div class="o-card-review__rating gamma">
-							@for( var ii = 0; ii < starRating; ii++ )
-							{
-								<i class="ico-star"></i>
-							}
+			@if( item.HasValue("reviews") && item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews").ToString() != "" )
+			{
+				<div class="o-card-reviews-wrap">
+					@foreach( var review in reviews )
+					{
+						int starRating = Convert.ToInt32(review.GetPropertyValue("starRating"));
+						var comment = review.GetPropertyValue("review");
+						var source = review.GetPropertyValue("source");
+						<div class="o-card-review">
+							<div class="o-card-review__rating gamma">
+								@for( var ii = 0; ii < starRating; ii++ )
+								{
+									<i class="ico-star"></i>
+								}
+							</div>
+							<span class="o-card-review__review beta">@comment</span>
+							@source
 						</div>
-						<span class="o-card-review__review beta">@comment</span>
-						@source
-					</div>
-				}
-			</div>
+					}
+				</div>			
+			}
+
 		</div>
 	</div>
 }

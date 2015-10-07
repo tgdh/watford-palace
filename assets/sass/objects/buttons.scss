@@ -6,12 +6,14 @@
 
 .o-button {
 	border-radius: $border-radius;
+	border: 0.1rem solid transparent;
 	display: inline-block;
 	line-height: 1;
 	cursor: pointer;
 	font-weight: normal;
 	padding: 2rem 3.5rem;
 	transition: background $speed ease,
+				border $speed ease, 
 				box-shadow $speed ease,
 				color $speed ease;
 
@@ -56,21 +58,23 @@
 .o-button--primary {
 	background: $pri;
 	color: $white;
-
+	border: 0.1rem solid $pri;
 	&:hover,
 	&:focus {
 		background: $sec;
+		border: 0.1rem solid $sec;
 	}
 }
 
 .o-button--secondary {
 	background: $sec;
 	color: $white;
-
+	border: 0.1rem solid $pri;
 	&:hover,
 	&:focus {
 		background: $ter;
 		color: $dark-black;
+		border: 0.1rem solid $ter;
 	}
 }
 
