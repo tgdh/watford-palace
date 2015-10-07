@@ -257,8 +257,6 @@
 		bottom: 2rem;
 		right: 2rem;
 		display: block;
-		opacity: 0;
-		transition: opacity $speed ease;
 	}
 	.o-card__actions--event {
 		text-align: center;
@@ -269,8 +267,13 @@
 		}
 	}
 }
-
-.o-card--event:hover .o-card__actions  {
+.o-card--event {
+	.o-card__actions--event {
+		opacity: 0;
+		transition: opacity $speed ease;
+	}
+}
+.o-card--event:hover .o-card__actions--event {
 	opacity: 1;
 }
 .o-card--fill {
@@ -307,7 +310,11 @@
 }
 .o-card--news {
 	.o-card__heading--news {
-		text-align: left;	
+		text-align: left;
+		background: none;	
+	}
+	.o-card-info--date--news {
+		background: none;
 	}
 	.o-button {
 		float: left;
