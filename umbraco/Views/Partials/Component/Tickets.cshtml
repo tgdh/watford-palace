@@ -34,7 +34,8 @@
 				@foreach( var item in CurrentPage.multidate ) {
 					DateTime dateValue;
 					string bookingUrl = bookingPage.Url + "?id=" + item.InstanceId;
-					if( DateTime.TryParse(item.date.value.ToString(), out dateValue) > now )
+					string dateAndTime =  item.date.value.ToString() + " " + item.time.value.ToString() + ":00 ";
+					if( DateTime.Parse( dateAndTime ) > now )
 					{
 						<tr class="o-table__date-row">
 							<td class="o-table__date">

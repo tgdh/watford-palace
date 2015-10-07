@@ -1,4 +1,25 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = "Master.cshtml";
+    Layout = "MasterSpektrix.cshtml";
+
+    string instanceId = Request.QueryString["id"];
+    string eventId = Request.QueryString["eventId"];
+}
+
+@*
+	secure url:
+	https://system.spektrix.com/hulltruck/website/secure/myaccount.aspx
+*@
+
+@if( instanceId != null ) {
+	<iframe
+	  name="SpektrixIFrame"
+	  id="SpektrixIFrame"
+	  frameborder="0"
+	  src="http://system.spektrix.com/hulltruck/website/chooseseats.aspx?EventInstanceId=@instanceId&resize=true"
+	  style="width: 100%; height: 1000px;">
+	</iframe>
+}
+@if( eventId != null ) {
+	@Html.Partial("Component/book-tickets")
 }
