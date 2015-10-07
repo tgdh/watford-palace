@@ -1,4 +1,56 @@
+@using Logic.ExtensionMethods
+@using Logic.Model
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+    var eventPage = Model.Content.As<Event>();
+    var homePage = CurrentPage.Site();
+    var bookingPage = homePage.FirstChild("Book");
+    var settings = homePage.FirstChild("Settings");
+
+    var ci = new System.Globalization.CultureInfo("en-GB");
+    System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+    System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+
+    var category = eventPage.Category.ToLower();
+    var count = 0;
+    var dash = " - ";
+
+    foreach (var dateTime in eventPage.Dates)
+    {
+        count = count + 1;
+    }
+}
+
+<div class="o-section o-section--window">
+	<a href="#tickets" class="link-next">
+		<i class="ico-arrow ico-arrow--down"></i>
+	</a>
+	<span id="tickets" class="anchor-offset"></span>
+	<div class="o-wrap o-wrap--small clearfix">
+		<h2 class="mega">Tickets</h2>
+		<span class="t-center t-padding t-block beta">@settings.boxOfficeNumber</span>
+		@if( CurrentPage.HasValue("content") )
+		{
+			<div class="c-copy t-padding">
+				@CurrentPage.content
+			</div>		
+		}
+
+		<div class="c-list-dates">
+			@for( var ii = 0; ii < 12; ii++ )
+			{
+				<div class="c-list-dates__date clearfix">
+					<span class="c-list-date__date">Sep Wed 23</span>
+					<span class="c-list-date__time">7.30pm - 9:45pm ish</span>
+					<a href="" class="o-button o-button--small o-button--primary">Buy tickets</a>			
+				</div>			
+			}
+		</div>
+	</div> 
+</div>
+
+@* @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
 	var homePage = CurrentPage.Site();
 	var settings = homePage.FirstChild("Settings");
@@ -30,4 +82,4 @@
 			}
 		</div>
 	</div>
-</div>
+</div> *@
