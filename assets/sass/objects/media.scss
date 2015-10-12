@@ -5,91 +5,89 @@
 =========================================================== */
 
 img {
-  	max-width: 100%;
-  	vertical-align: top;
+    max-width: 100%;
+    vertical-align: top;
 }
 
-img + figcaption {
-	font-style: italic;
-	text-align: right;
-	padding-top: 0.2rem;
-	font-size: 1.4rem;
+figure figcaption {
+    font-size: 1.4rem;
+    font-style: italic;
+    padding-top: .4rem;
+    text-align: right;
 }
 
 .o-media {
-	img {
-		width: 100%;
-	}
+
+    img {
+        width: 100%;
+    }
 }
 
 .o-media--video {
-	position: relative;
+    position: relative;
 
-	&:before {
-		content: '';
-		display: block;
-		padding-top: 56.25%;
-	}
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 56.25%;
+    }
 
-	iframe,
-	object,
-	embed {
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
+    iframe,
+    object,
+    embed {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 }
 
 .o-media--large {
-	margin: $padding--small 0;
-	position: relative;
+    margin: $padding--small 0;
+    position: relative;
 }
 
 @include respond-min( $mq-medium ) {
 
-	.o-media--large {
-		margin: $padding--medium 0;
-	}
+    .o-media--large {
+        margin: $padding--medium 0;
+    }
 
-	.o-media--left,
-	.o-media--right {
-		margin-bottom: $line-height;
-		margin-top: $line-height;
-		width: 40%;
+    .o-media--left,
+    .o-media--right {
+        margin-bottom: $line-height;
+        margin-top: $line-height;
+        width: 40%;
 
-		+ * {
-			margin-top: $line-height;
-		}
-	}
+        + * {
+            margin-top: $line-height;
+        }
+    }
 
-	.o-media--left {
-		float: left;
-		margin-right: $line-height;
-	}
+    .o-media--left {
+        float: left;
+        margin-right: $line-height;
+    }
 
-	.o-media--right {
-		float: right;
-		margin-left: $line-height;
-	}
-
+    .o-media--right {
+        float: right;
+        margin-left: $line-height;
+    }
 }
 
 @include respond-min( $mq-large ) {
 
-	.o-media--large {
-		margin-left: -7.5%;
-		width: 115%;
-	}
-
+    .o-media--large {
+        margin-left: -7.5%;
+        width: 115%;
+    }
 }
 
 @include respond-min( $mq-x-large ) {
 
-	.o-media--large {
-		margin-left: -15%;
-		width: 130%;
-	}
-
+    .o-media--large {
+        margin-left: -15%;
+        width: 130%;
+    }
 }

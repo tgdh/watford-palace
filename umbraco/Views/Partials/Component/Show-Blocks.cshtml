@@ -1,5 +1,4 @@
 @inherits Umbraco.Web.Mvc.UmbracoViewPage
-
 @{
 	var selection = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("pageBlocks");
 	var count = 1;
@@ -87,7 +86,7 @@
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<h2 class="hide-text">@title</h2>
 
-	</div>	
+	</div>
 }
 
 @helper ReviewsBlock(IPublishedContent item, int count)
@@ -121,7 +120,7 @@
 							@source
 						</div>
 					}
-				</div>			
+				</div>
 			}
 
 		</div>

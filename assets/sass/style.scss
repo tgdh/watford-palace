@@ -8,57 +8,58 @@
 *
 =========================================================== */
 
-@import 'settings/global.scss';
+@import 'settings/global';
 
-@import 'tools/mixins.scss',
-		'tools/jeet/_functions',
-		'tools/jeet/_grid';
+@import 'tools/mixins',
+		'tools/jeet/functions',
+		'tools/jeet/grid';
 
 
-@import 'generic/reset.scss',
-		'generic/js-breakpoints.scss';
+@import 'generic/reset',
+		'generic/js-breakpoints';
 
-@import 'base/text.scss',
-		'base/headings.scss',
-		'base/anchor.scss',
-		'base/button.scss',
-		'base/lists.scss',
-		'base/table.scss',
-		'base/forms.scss',
-		'base/icons.scss';
+@import 'base/text',
+		'base/headings',
+		'base/anchor',
+		'base/button',
+		'base/lists',
+		'base/table',
+		'base/forms',
+		'base/icons';
 
-@import 'objects/page.scss',
-		'objects/header.scss',
-		'objects/footer.scss',
-		'objects/cards.scss',
-		'objects/wrap.scss',
-		'objects/section.scss',
-		'objects/buttons.scss',
-		'objects/table.scss',
-		'objects/forms.scss',
-		'objects/media.scss',
-		'objects/gallery.scss',
-		'objects/pagination.scss',
-		'objects/search.scss',
-		'objects/video.scss';
+@import 'objects/page',
+		'objects/header',
+		'objects/footer',
+		'objects/cards',
+		'objects/wrap',
+		'objects/section',
+		'objects/buttons',
+		'objects/table',
+		'objects/forms',
+		'objects/media',
+		'objects/gallery',
+		'objects/pagination',
+		'objects/search',
+		'objects/video';
 
-@import 'components/_owl.scss',
-		'components/_selectordie.scss',
-		'components/_magnific.scss',
-		'components/nav.scss',
-		'components/forms.scss',
-		'components/icons.scss',
-		'components/cover.scss',
-		'components/aspect-ratio.scss',
-		'components/sitemap.scss',
-		'components/frame.scss',
-		'components/map.scss',
-		'components/topbar.scss',
-		'components/show.scss',
-		'components/lists.scss',
-		'components/news.scss',
-		'components/video.scss',
-		'components/filters.scss';
+@import 'components/owl',
+		'components/selectordie',
+		'components/magnific',
+		'components/elements',
+		'components/nav',
+		'components/forms',
+		'components/icons',
+		'components/cover',
+		'components/aspect-ratio',
+		'components/sitemap',
+		'components/frame',
+		'components/map',
+		'components/topbar',
+		'components/show',
+		'components/lists',
+		'components/news',
+		'components/video',
+		'components/filters';
 
-@import 'trumps/overrides.scss',
-		'trumps/cardfix.scss';
+@import 'trumps/overrides',
+		'trumps/cardfix';

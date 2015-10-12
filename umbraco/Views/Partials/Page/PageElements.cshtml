@@ -1,0 +1,173 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	var selection = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("mainContent");
+	}
+
+@foreach( var item in selection )
+{
+	string docType = item.DocumentTypeAlias;
+
+	switch(docType)
+	{
+		case "Quote":
+			@Quote(item)
+		break;
+		case "Textarea":
+			@Textarea(item)
+		break;
+		case "WideImage":
+			@WideImage(item)
+		break;
+		case "Gallery":
+			@Gallery(item)
+		break;
+		case "ImageWithText":
+			@ImageWithText(item)
+		break;
+		default:
+			@Default(item)
+		break;
+	}
+}
+
+@helper Quote(IPublishedContent item)
+{
+	var quote = item.GetPropertyValue("quote");
+	var source = item.GetPropertyValue("source");
+
+	if( quote != null )
+	{
+		<div class="c-page-block c-page-block--quote">
+			<blockquote>
+				@quote
+				<footer>
+					<cite>
+						<span>&mdash;</span> @source
+					</cite>
+				</footer>
+			</blockquote>
+		</div>
+	}
+
+}
+
+@helper WideImage(IPublishedContent item)
+{
+    var image = item.GetPropertyValue("image");
+    var content = item.GetPropertyValue("content");
+
+	if( image != null || content != null )
+	{
+		<div class="c-page-block c-page-block--wide-image">
+			@if( image != null )
+			{
+				var cropUrl = Umbraco.Media(image.ToString()).GetCropUrl("umbracoFile", "image-cover");
+				var caption = Umbraco.Media(image.ToString()).caption;
+				var altText = Umbraco.Media(image.ToString()).altText;
+
+			    <figure>
+			        <img src="@cropUrl" alt="@altText">
+			        @if ( caption != "" )
+			        {
+			            <figcaption>@caption</figcaption>
+			        }
+
+			    </figure>
+			}
+			@if( content != null )
+			{
+				<div>
+					@content
+				</div>
+			}
+		</div>
+	}
+
+}
+
+@helper Gallery(IPublishedContent item)
+{
+	var gallery = item.GetPropertyValue("gallery");
+	var galleryCaption = item.GetPropertyValue("caption");
+
+	if ( gallery != null )
+	{
+		<div class="c-page-block c-page-block--gallery js-magnific-gallery">
+			<figure class="clearfix">
+				@foreach( var id in gallery.ToString().Split(',') )
+			    {
+			    	var imageUrl = Umbraco.Media(id.ToString()).Url;
+			    	var cropUrl = Umbraco.Media(id.ToString()).GetCropUrl("umbracoFile", "gallery");
+					var caption = Umbraco.Media(id.ToString()).caption;
+					var altText = Umbraco.Media(id.ToString()).altText;
+
+			        <a class="c-gallery__thumbnail" href="@imageUrl?width=1200" title="@altText">
+			        	<img src="@cropUrl" alt="@altText">
+			        </a>
+			    }
+		        @if ( galleryCaption != "" )
+		        {
+		            <figcaption>@galleryCaption</figcaption>
+		        }
+		    </figure>
+		</div>
+	}
+}
+
+@helper Textarea(IPublishedContent item)
+{
+	var title = item.GetPropertyValue("title");
+	var content = item.GetPropertyValue("content");
+
+	<div class="c-page-block c-page-block--textarea">
+		@content
+	</div>
+}
+
+@helper ImageWithText(IPublishedContent item)
+{
+    var image = item.GetPropertyValue("image");
+    var content = item.GetPropertyValue("content");
+    var alignment = item.GetPropertyValue("alignment");
+
+    if( alignment != null)
+    {
+    	alignment = alignment.ToString().Replace(" ", "-").ToLower();
+    }
+
+	if( image != null || content != null )
+	{
+		<div class="c-page-block c-page-block--image-text c-page-block--@alignment">
+			<div class="c-page-block__column c-page-block__column--image js-magnific-gallery">
+				@if( image != null )
+				{
+					var imageUrl = Umbraco.Media(image.ToString()).Url;
+					var caption = Umbraco.Media(image.ToString()).caption;
+					var altText = Umbraco.Media(image.ToString()).altText;
+
+				    <figure>
+				    	<a href="@imageUrl?width=1200" title="@altText">
+				        	<img src="@imageUrl?width=500" alt="@altText">
+				        </a>
+				        @if ( caption != "" )
+				        {
+				            <figcaption>@caption</figcaption>
+				        }
+
+				    </figure>
+				}
+			</div>
+			<div class="c-page-block__column c-page-block__column--content">
+				@if( content != null )
+				{
+					@content
+				}
+			</div>
+		</div>
+	}
+}
+@helper Default(IPublishedContent item)
+{
+
+}
+
