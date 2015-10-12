@@ -6,14 +6,35 @@
 	var settings = homePage.FirstChild("Settings");
 
 }
-<div class="o-wrap o-wrap--medium o-section">
-	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-	@if( CurrentPage.HasValue("mainContent") )
-	{
-		@Html.Partial("Page/PageElements")
-	}
+@if ( CurrentPage.Level == 2)
+{
+	<div class="o-section">
+		<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+		@if( CurrentPage.HasValue("mainContent") )
+		{
+			@Html.Partial("Page/PageElements")
+		}
 
-</div>
+	</div>
+}
+else
+{
+	<div class="o-wrap o-wrap--large o-section clearfix">
+		<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+		<aside class="o-sidebar">
+			@Html.Partial("Page/Sidebar")
+		</aside>
+		<div class="o-content">
+			@if( CurrentPage.HasValue("mainContent") )
+			{
+				@Html.Partial("Page/PageElements")
+			}
+		</div>
+
+
+	</div>
+}
+
 
 @section OpenGraph{
 	@*

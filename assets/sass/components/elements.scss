@@ -9,15 +9,17 @@
 
     + .c-page-block {
         margin-top: 2.5rem;
-    }
-}
 
-.c-page-block--image-text {
+        h2 {
+            padding-top: 2rem;
+        }
 
-    .c-page-block__column {
+        h3 {
+            padding-top: 1.5rem;
+        }
 
-        + .c-page-block__column {
-            margin-top: 2rem;
+        h4 {
+            padding-top: 1rem;
         }
     }
 }
@@ -30,6 +32,13 @@
 
     .c-gallery__thumbnail:nth-child(n + 3) {
         margin-top: 1rem;
+    }
+}
+
+.c-page-block--image-text {
+
+    .c-float--image {
+        margin-bottom: 1rem;
     }
 }
 
@@ -49,20 +58,25 @@
             margin-top: 1.5rem;
         }
     }
-}
-
-@include respond-min($mq-medium) {
 
     .c-page-block--image-text {
 
-        .c-page-block__column {
-            @include column(1 / 2, $gutter: 3 , $cycle: 2);
+        .c-float--image {
+            @include column(2 / 5, $gutter: 0);
 
-            + .c-page-block__column {
-                margin-top: 0;
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+
+            &.c-image-right {
+                float: right;
+                margin-left: 2rem;
+                margin-right: 0;
             }
         }
     }
+}
+
+@include respond-min($mq-medium) {
 
     .c-page-block--image-text.c-page-block--image-right {
 

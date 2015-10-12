@@ -216,42 +216,26 @@
 	"buffers":
 	[
 		{
-			"file": "umbraco/Views/Event.cshtml",
-			"settings":
-			{
-				"buffer_size": 2742,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "umbraco/Views/NewsArticle.cshtml",
-			"settings":
-			{
-				"buffer_size": 1209,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "umbraco/Views/Partials/Component/Show-Navigation.cshtml",
-			"settings":
-			{
-				"buffer_size": 501,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "umbraco/Views/Partials/Component/Show-Blocks.cshtml",
-			"settings":
-			{
-				"buffer_size": 5060,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "umbraco/Views/TextPage.cshtml",
 			"settings":
 			{
-				"buffer_size": 786,
+				"buffer_size": 1164,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "umbraco/Views/Partials/Page/Sidebar.cshtml",
+			"settings":
+			{
+				"buffer_size": 992,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "umbraco/Views/Partials/Page/Sitemap.cshtml",
+			"settings":
+			{
+				"buffer_size": 1404,
 				"line_ending": "Unix"
 			}
 		},
@@ -259,18 +243,47 @@
 			"file": "umbraco/Views/Partials/Page/PageElements.cshtml",
 			"settings":
 			{
-				"buffer_size": 3587,
+				"buffer_size": 5978,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "/* ===========================================================\n\n    # PAGE ELEMENTS\n\n=========================================================== */\n\n.c-page-block {\n    margin-top: 0;\n\n    + .c-page-block {\n        margin-top: 2.5rem;\n    }\n}\n\n.c-page-block--image-text {\n\n    .c-page-block__column {\n\n        + .c-page-block__column {\n            margin-top: 2rem;\n        }\n    }\n}\n\n@include respond-min($mq-medium) {\n\n    .c-page-block--image-text {\n\n        .c-page-block__column {\n            @include column(1 / 2, $gutter: 3 , $cycle: 2);\n\n            + .c-page-block__column {\n                margin-top: 0;\n            }\n        }\n\n        .c-page-block__column--image {\n\n        }\n\n        .c-page-block__column--content {\n            \n        }\n    }\n}\n",
-			"file": "assets/sass/components/elements.scss",
-			"file_size": 647,
-			"file_write_time": 130891216870000000,
+			"file": "umbraco/Views/Partials/Page/Navigation.cshtml",
 			"settings":
 			{
-				"buffer_size": 764,
+				"buffer_size": 1372,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/objects/page.scss",
+			"settings":
+			{
+				"buffer_size": 1479,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/components/elements.scss",
+			"settings":
+			{
+				"buffer_size": 2116,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tasks/concat.js",
+			"settings":
+			{
+				"buffer_size": 1024,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/objects/buttons.scss",
+			"settings":
+			{
+				"buffer_size": 1658,
 				"line_ending": "Unix"
 			}
 		},
@@ -278,33 +291,23 @@
 			"file": "assets/sass/style.scss",
 			"settings":
 			{
-				"buffer_size": 1291,
+				"buffer_size": 1312,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "Searching 65 files for \"js-magnific-gallery\"\n\n/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml:\n   50  						ADD IMAGE CROPS\n   51  					*@\n   52: 					<div class=\"o-event__column o-event__gallery js-single__galery js-magnific-gallery owl-carousel\">\n   53  						@foreach( var id in CurrentPage.gallery.Split(',') )\n   54  						{\n   ..\n   62  					</div>\n   63  				} else {\n   64: 					<div class=\"o-event__column o-event__gallery owl-carousel js-magnific-gallery\">\n   65  						@foreach( var id in CurrentPage.gallery.Split(',') )\n   66  						{\n\n/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElements.cshtml:\n   82  	if ( gallery != null )\n   83  	{\n   84: 		<div class=\"js-magnific-gallery\">\n   85  			@foreach( var id in gallery.ToString().Split(',') )\n   86  		    {\n\n3 matches across 2 files\n\n\nSearching 65 files for \"js-magnific-gallery\"\n\n/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml:\n   50  						ADD IMAGE CROPS\n   51  					*@\n   52: 					<div class=\"o-event__column o-event__gallery js-single__galery js-magnific-gallery owl-carousel\">\n   53  						@foreach( var id in CurrentPage.gallery.Split(',') )\n   54  						{\n   ..\n   62  					</div>\n   63  				} else {\n   64: 					<div class=\"o-event__column o-event__gallery owl-carousel js-magnific-gallery\">\n   65  						@foreach( var id in CurrentPage.gallery.Split(',') )\n   66  						{\n\n/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElements.cshtml:\n   82  	if ( gallery != null )\n   83  	{\n   84: 		<div class=\"js-magnific-gallery\">\n   85  			@foreach( var id in gallery.ToString().Split(',') )\n   86  		    {\n\n3 matches across 2 files\n\n\nSearching 65 files for \"figcaption\"\n\n/Users/User1/Sites/Projects/watford-palace/umbraco/Views/NewsArticle.cshtml:\n   14  			@if( Umbraco.Media(CurrentPage.coverImage).HasValue(\"caption\") )\n   15  			{\n   16: 				<figcaption>@Umbraco.Media(CurrentPage.coverImage).caption</figcaption>\n   17  			}\n   18  		</figure>\n\n/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElements.cshtml:\n   70  			        @if ( caption != \"\" )\n   71  			        {\n   72: 			            <figcaption>@caption</figcaption>\n   73  			        }\n   74  \n   ..\n  140  				        @if ( caption != \"\" )\n  141  				        {\n  142: 				            <figcaption>@caption</figcaption>\n  143  				        }\n  144  \n\n6 matches across 2 files\n\n\nSearching 60 files for \"figcaption\"\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/generic/reset.scss:\n   19  table, caption, tbody, tfoot, thead, tr, th, td,\n   20  article, aside, canvas, details, embed,\n   21: figure, figcaption, footer, header, hgroup,\n   22  menu, nav, output, ruby, section, summary,\n   23  time, mark, audio, video, button {\n   ..\n   30  }\n   31  \n   32: article, aside, details, figcaption, figure, main,\n   33  footer, header, hgroup, menu, nav, section {\n   34  	display: block;\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/media.scss:\n   10  }\n   11  \n   12: img + figcaption {\n   13  	font-style: italic;\n   14  	text-align: right;\n\n3 matches across 2 files\n",
+			"file": "umbraco/Web.config",
 			"settings":
 			{
-				"buffer_size": 3153,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "assets/sass/objects/media.scss",
-			"settings":
-			{
-				"buffer_size": 1439,
-				"line_ending": "Unix"
+				"buffer_size": 16130,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "assets/js/main.js",
 			"settings":
 			{
-				"buffer_size": 3526,
+				"buffer_size": 3647,
 				"line_ending": "Unix"
 			}
 		}
@@ -397,34 +400,44 @@
 		"/Users/User1/Sites/Projects/watford-palace",
 		"/Users/User1/Sites/Projects/watford-palace/assets",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/tools",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/tools/jeet"
+		"/Users/User1/Sites/Projects/watford-palace/umbraco",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page"
 	],
 	"file_history":
 	[
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/tabs.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/tabby/dist/css/tabby.css",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElements.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/elements.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/media.scss",
+		"/Users/User1/Sites/Projects/watford-palace/watford.sublime-workspace",
+		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/NewsArticle.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Navigation.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Blocks.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Web.config",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Component/Page-Blocks.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/AppSettings.config",
 		"/Users/User1/Desktop/error-codes.txt",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/table.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/EventBlock.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Book.cshtml",
 		"/Users/User1/Sites/Projects/thespring/umbraco/Views/Show.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/video.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/buttons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/nav.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Navigation.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/show.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/news.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
@@ -455,11 +468,9 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/search.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/icons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Forms/Contact-form.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/NewsArticle.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings/global.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/SelectOrDie/_src/selectordie.css",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/overrides.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/media.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Google-map.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/Paging.cs",
@@ -510,7 +521,20 @@
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/humans.txt",
 		"/Users/User1/Sites/Projects/watford-palace/bower.json",
 		"/Users/User1/Sites/Projects/watford-palace/readme.MD",
-		"/Users/User1/Desktop/{HTTP_REFERER}"
+		"/Users/User1/Desktop/{HTTP_REFERER}",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/TextPage.cshtml",
+		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/nav.scss",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/News.cshtml",
+		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/pagination.scss",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/NewsArticle.cshtml",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/App_Code/PagingTemplate.cshtml",
+		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/news.scss",
+		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/style.scss",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Component/News-filter.cshtml",
+		"/Users/User1/Sites/Projects/eric-robinson/Gruntfile.js",
+		"/Users/User1/Sites/Projects/eric-robinson/assets/sass/components/tabs.scss",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Page/Navigation.cshtml",
+		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Page/Footer.cshtml"
 	],
 	"find":
 	{
@@ -532,7 +556,37 @@
 			"/Users/User1/Sites/Projects/watford-palace/assets/sass",
 			"/Users/User1/Sites/Projects/watford-palace/assets",
 			"/Users/User1/Sites/Projects/watford-palace/umbraco",
-			"/Users/User1/Sites/Projects/watford-palace/tasks"
+			"/Users/User1/Sites/Projects/watford-palace/tasks",
+			"/Users/User1/Sites/Projects/eric-robinson/assets/sass",
+			"/Users/User1/Sites/Projects/eric-robinson/umbraco",
+			"/Users/User1/Sites/Projects/eric-robinson/tasks",
+			"/Users/User1/Sites/Projects/aspex/assets/sass/base",
+			"/Users/User1/Sites/Projects/aspex/assets/sass",
+			"/Users/User1/Sites/Projects/aspex/umbraco/Views",
+			"/Users/User1/Sites/Projects/aspex/assets/sass",
+			"/Users/User1/Sites/Projects/aspex",
+			"/Users/User1/Sites/Projects/aspex/assets/sass",
+			"/Users/User1/Sites/Projects/aspex/umbraco/Views",
+			"/Users/User1/Sites/Projects/aspex/tasks",
+			"/Users/User1/Sites/Projects/clearlead/assets/sass",
+			"/Users/User1/Sites/Projects/thespring/assets/sass",
+			"/Users/User1/Sites/Projects/thespring/umbraco/Views",
+			"/Users/User1/Sites/Projects/thespring/assets/sass",
+			"/Users/User1/Sites/Projects/thespring/umbraco/Views",
+			"/Users/User1/Sites/Projects/thespring/assets/sass",
+			"/Users/User1/Sites/Projects/thespring/umbraco/Views",
+			"/Users/User1/Sites/Projects/thespring/assets/sass",
+			"/Users/User1/Sites/Projects/thespring/umbraco/Views",
+			"/Users/User1/Sites/Projects/thespring/assets/sass",
+			"/Users/User1/Sites/Projects/thespring/umbraco/Views",
+			"/Users/User1/Sites/Projects/thespring/assets/sass",
+			"/Users/User1/Sites/Projects/thespring/umbraco",
+			"/Users/User1/Sites/Projects/thespring/umbraco/Views/Partials",
+			"/Users/User1/Sites/Projects/clearlead/assets",
+			"/Users/User1/Sites/Projects/clearlead/umbraco/Views",
+			"/Users/User1/Sites/Projects/clearlead",
+			"/Users/User1/Sites/Projects/thespring/assets/sass",
+			"/Users/User1/Sites/Projects/clearlead/assets/sass"
 		]
 	},
 	"find_state":
@@ -540,6 +594,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"title.ToString() != \"\"",
+			"title.ToString() != \"\" ",
+			"title.ToString() != \"\"",
+			"h2",
+			"class=\"c-page-block",
+			"branch",
+			"tab",
+			"eric",
 			"figcaption",
 			"_",
 			".scss",
@@ -659,15 +721,7 @@
 			"eric",
 			"ico-file",
 			"c-page-block__list__field--2",
-			"c-page-block__list__field--3\"",
-			"o-card__item o-card__item--file",
-			".form-horizontal .nested-content .control-label",
-			".form-horizontal .nested-content .controls-row",
-			"Textarea",
-			"button",
-			"NewsCard",
-			"jshint",
-			"lint"
+			"c-page-block__list__field--3\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -698,19 +752,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "umbraco/Views/Event.cshtml",
+					"file": "umbraco/Views/TextPage.cshtml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2742,
+						"buffer_size": 1164,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1294,
-								1294
+								586,
+								578
 							]
 						],
 						"settings":
@@ -778,27 +832,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 425.0,
+						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "umbraco/Views/NewsArticle.cshtml",
+					"file": "umbraco/Views/Partials/Page/Sidebar.cshtml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1209,
+						"buffer_size": 992,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								583,
-								591
+								307,
+								307
 							]
 						],
 						"settings":
@@ -862,30 +916,32 @@
 								"bh_single_quote_close",
 								"bh_single_quote_content"
 							],
+							"open_with_edit": true,
 							"syntax": "Packages/Razor/Razor.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 1.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "umbraco/Views/Partials/Component/Show-Navigation.cshtml",
-					"semi_transient": false,
+					"file": "umbraco/Views/Partials/Page/Sitemap.cshtml",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 501,
+						"buffer_size": 1404,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
+								144,
 								0
 							]
 						],
@@ -951,6 +1007,466 @@
 								"bh_single_quote_content"
 							],
 							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "umbraco/Views/Partials/Page/PageElements.cshtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3758,
+								3758
+							],
+							[
+								4402,
+								4402
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3022.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "umbraco/Views/Partials/Page/Navigation.cshtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								285,
+								285
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Razor/Razor.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "assets/sass/objects/page.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								897,
+								897
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 475.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/sass/components/elements.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							],
+							[
+								309,
+								309
+							],
+							[
+								354,
+								354
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "tasks/concat.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								608,
+								608
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -961,20 +1477,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "umbraco/Views/Partials/Component/Show-Blocks.cshtml",
+					"buffer": 8,
+					"file": "assets/sass/objects/buttons.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5060,
+						"buffer_size": 1658,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								881,
-								881
+								1281,
+								1281
 							]
 						],
 						"settings":
@@ -1038,555 +1554,32 @@
 								"bh_single_quote_close",
 								"bh_single_quote_content"
 							],
-							"syntax": "Packages/Razor/Razor.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1533.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"file": "umbraco/Views/TextPage.cshtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 786,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								201,
-								201
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/Razor/Razor.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "umbraco/Views/Partials/Page/PageElements.cshtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3587,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3461,
-								3461
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"open_with_edit": true,
-							"syntax": "Packages/Razor/Razor.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1756.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "assets/sass/components/elements.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 764,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								420,
-								420
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"open_with_edit": true,
 							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 64.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "assets/sass/style.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1291,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								538,
-								538
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3153,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										236,
-										255
-									],
-									[
-										467,
-										486
-									],
-									[
-										725,
-										744
-									],
-									[
-										1088,
-										1107
-									],
-									[
-										1319,
-										1338
-									],
-									[
-										1577,
-										1596
-									],
-									[
-										1917,
-										1927
-									],
-									[
-										1976,
-										1986
-									],
-									[
-										2195,
-										2205
-									],
-									[
-										2216,
-										2226
-									],
-									[
-										2348,
-										2358
-									],
-									[
-										2369,
-										2379
-									],
-									[
-										2668,
-										2678
-									],
-									[
-										2851,
-										2861
-									],
-									[
-										3059,
-										3069
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								3064,
-								3064
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content"
-							],
-							"default_dir": "/Users/User1/Sites/Projects/watford-palace",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 4,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1258.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "assets/sass/objects/media.scss",
+					"file": "assets/sass/style.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1439,
+						"buffer_size": 1312,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								673,
-								673
+								1241,
+								1241
 							]
 						],
 						"settings":
@@ -1651,31 +1644,119 @@
 								"bh_single_quote_content"
 							],
 							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 321.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 10,
-					"file": "assets/js/main.js",
+					"file": "umbraco/Web.config",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3526,
+						"buffer_size": 16130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1440,
-								1421
+								1633,
+								1633
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "assets/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3557,
+								3557
 							]
 						],
 						"settings":
@@ -1744,10 +1825,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 160.0,
+						"translation.y": 1212.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1781,7 +1862,7 @@
 		"cols":
 		[
 			0.0,
-			0.406918226523,
+			0.436519202542,
 			1.0
 		],
 		"rows":
@@ -1817,6 +1898,38 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"assets/sass/objects/page.scss"
+			],
+			[
+				"navi",
+				"umbraco/Views/Partials/Page/Navigation.cshtml"
+			],
+			[
+				"text",
+				"umbraco/Views/TextPage.cshtml"
+			],
+			[
+				"element",
+				"assets/sass/components/elements.scss"
+			],
+			[
+				"butto",
+				"assets/sass/objects/buttons.scss"
+			],
+			[
+				"conca",
+				"tasks/concat.js"
+			],
+			[
+				"web",
+				"umbraco/Web.config"
+			],
+			[
+				"eleme",
+				"umbraco/Views/Partials/Page/PageElements.cshtml"
+			],
+			[
 				"main",
 				"assets/js/main.js"
 			],
@@ -1833,20 +1946,12 @@
 				"umbraco/Views/NewsArticle.cshtml"
 			],
 			[
-				"web",
-				"umbraco/Web.config"
-			],
-			[
 				"event",
 				"umbraco/Views/Event.cshtml"
 			],
 			[
 				"card",
 				"assets/sass/objects/cards.scss"
-			],
-			[
-				"text",
-				"umbraco/Views/TextPage.cshtml"
 			],
 			[
 				"conta",
@@ -1885,23 +1990,11 @@
 				"assets/sass/objects/header.scss"
 			],
 			[
-				"page",
-				"assets/sass/objects/page.scss"
-			],
-			[
 				"wrap",
 				"assets/sass/objects/wrap.scss"
 			],
 			[
-				"butto",
-				"assets/sass/objects/buttons.scss"
-			],
-			[
 				"naviga",
-				"umbraco/Views/Partials/Page/Navigation.cshtml"
-			],
-			[
-				"navi",
 				"umbraco/Views/Partials/Page/Navigation.cshtml"
 			],
 			[
@@ -2023,10 +2116,6 @@
 			[
 				"news-",
 				"umbraco/Views/Partials/Component/News-filter.cshtml"
-			],
-			[
-				"conca",
-				"tasks/concat.js"
 			],
 			[
 				"_selc",
@@ -2319,14 +2408,6 @@
 			[
 				"feat",
 				"umbraco/Views/Partials/Component/Featured-Content.cshtml"
-			],
-			[
-				"mai",
-				"assets/js/main.js"
-			],
-			[
-				"blo",
-				"assets/sass/components/blocks.scss"
 			]
 		],
 		"width": 0.0
@@ -2339,7 +2420,7 @@
 		[
 			[
 				"",
-				"~/Sites/Projects/thespring/thepsring.sublime-project"
+				"~/Dropbox/Sublime/Sublime-settings.sublime-project"
 			]
 		],
 		"width": 380.0

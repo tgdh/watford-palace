@@ -24,6 +24,9 @@
 		case "ImageWithText":
 			@ImageWithText(item)
 		break;
+		case "TabbedContent":
+			@TabbedContent(item)
+		break;
 		default:
 			@Default(item)
 		break;
@@ -35,9 +38,17 @@
 	var quote = item.GetPropertyValue("quote");
 	var source = item.GetPropertyValue("source");
 
+	var wrap = "";
+
+	if( Model.Level == 2 )
+	{
+	    wrap = "";
+	}
+
 	if( quote != null )
 	{
-		<div class="c-page-block c-page-block--quote">
+		<div class="c-page-block c-page-block--quote @wrap">
+
 			<blockquote>
 				@quote
 				<footer>
@@ -54,11 +65,21 @@
 @helper WideImage(IPublishedContent item)
 {
     var image = item.GetPropertyValue("image");
-    var content = item.GetPropertyValue("content");
+    var title = item.GetPropertyValue("title");
+	var wrap = "";
 
-	if( image != null || content != null )
+	if( Model.Level == 2 )
 	{
-		<div class="c-page-block c-page-block--wide-image">
+	    wrap = "";
+	}
+
+	if( image != null )
+	{
+		<div class="c-page-block c-page-block--wide-image @wrap">
+			@if( title != null && title.ToString() != "" )
+			{
+			    <h2>@title</h2>
+			}
 			@if( image != null )
 			{
 				var cropUrl = Umbraco.Media(image.ToString()).GetCropUrl("umbracoFile", "image-cover");
@@ -74,12 +95,6 @@
 
 			    </figure>
 			}
-			@if( content != null )
-			{
-				<div>
-					@content
-				</div>
-			}
 		</div>
 	}
 
@@ -89,10 +104,21 @@
 {
 	var gallery = item.GetPropertyValue("gallery");
 	var galleryCaption = item.GetPropertyValue("caption");
+    var title = item.GetPropertyValue("title");
+	var wrap = "";
+
+	if( Model.Level == 2 )
+	{
+	    wrap = "";
+	}
 
 	if ( gallery != null )
 	{
-		<div class="c-page-block c-page-block--gallery js-magnific-gallery">
+		<div class="c-page-block c-page-block--gallery @wrap js-magnific-gallery">
+			@if( title != null && title.ToString() != "" )
+			{
+			    <h2>@title</h2>
+			}
 			<figure class="clearfix">
 				@foreach( var id in gallery.ToString().Split(',') )
 			    {
@@ -116,12 +142,77 @@
 
 @helper Textarea(IPublishedContent item)
 {
-	var title = item.GetPropertyValue("title");
 	var content = item.GetPropertyValue("content");
+	var wrap = "";
 
-	<div class="c-page-block c-page-block--textarea">
+	if( Model.Level == 2 )
+	{
+	    wrap = "";
+	}
+
+	<div class="c-page-block c-page-block--textarea @wrap">
 		@content
 	</div>
+}
+
+@helper TabbedContent(IPublishedContent item)
+{
+	var tabs = item.GetPropertyValue<IEnumerable<IPublishedContent>>("tabs");
+	var title = item.GetPropertyValue("title");
+	var wrap = "";
+
+	if( Model.Level == 2 )
+	{
+	    wrap = "";
+	}
+
+	if( tabs != null )
+	{
+		<div class="c-page-block c-page-block--tabs @wrap">
+			@if( title != null && title.ToString() != "" )
+			{
+			    <h2>@title</h2>
+			}
+			<div class="c-tab-controls">
+
+				@foreach( var tab in tabs )
+				{
+					var tabTitle = tab.GetPropertyValue("title");
+					var active = "";
+
+					if( tabTitle != null && title.ToString() != "" )
+					{
+						if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
+		                    active = "active";
+		                }
+				       	<button data-tab="#@tabTitle.ToString().ToLower().Replace(" ", "")" class="o-button o-button--small o-button--primary @active">
+				            @tabTitle
+				        </button>
+					}
+
+
+				}
+			</div>
+			<div class="c-tab-content">
+				@foreach( var tab in tabs )
+				{
+					var tabTitle = tab.GetPropertyValue("title");
+					var content = tab.GetPropertyValue("content");
+					var active = "";
+
+					if( tabTitle != null && title.ToString() != "" )
+					{
+						if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
+		                    active = "active";
+		                }
+						<div id="@tabTitle.ToString().ToLower().ToLower().Replace(" ", "")" class="tabs-pane c-tab clearfix @active">
+							@content
+						</div>
+					}
+				}
+			</div>
+		</div>
+	}
 }
 
 @helper ImageWithText(IPublishedContent item)
@@ -129,6 +220,13 @@
     var image = item.GetPropertyValue("image");
     var content = item.GetPropertyValue("content");
     var alignment = item.GetPropertyValue("alignment");
+    var title = item.GetPropertyValue("title");
+	var wrap = "";
+
+	if( Model.Level == 2 )
+	{
+	    wrap = "";
+	}
 
     if( alignment != null)
     {
@@ -137,15 +235,19 @@
 
 	if( image != null || content != null )
 	{
-		<div class="c-page-block c-page-block--image-text c-page-block--@alignment">
-			<div class="c-page-block__column c-page-block__column--image js-magnific-gallery">
+		<div class="c-page-block c-page-block--image-text c-page-block--@alignment @wrap clearfix">
+				@if( title != null && title.ToString() != "" )
+				{
+				    <h2 class="clearfix">@title</h2>
+				}
+
 				@if( image != null )
 				{
 					var imageUrl = Umbraco.Media(image.ToString()).Url;
 					var caption = Umbraco.Media(image.ToString()).caption;
 					var altText = Umbraco.Media(image.ToString()).altText;
 
-				    <figure>
+				    <figure class="c-float--image c-@alignment">
 				    	<a href="@imageUrl?width=1200" title="@altText">
 				        	<img src="@imageUrl?width=500" alt="@altText">
 				        </a>
@@ -156,13 +258,12 @@
 
 				    </figure>
 				}
-			</div>
-			<div class="c-page-block__column c-page-block__column--content">
+
 				@if( content != null )
 				{
 					@content
 				}
-			</div>
+
 		</div>
 	}
 }

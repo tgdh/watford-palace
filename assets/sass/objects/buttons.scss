@@ -5,81 +5,91 @@
 =========================================================== */
 
 .o-button {
-	border-radius: $border-radius;
-	border: 0.1rem solid transparent;
-	display: inline-block;
-	line-height: 1;
-	cursor: pointer;
-	font-weight: normal;
-	padding: 2rem 3.5rem;
-	transition: background $speed ease,
-				border $speed ease, 
-				box-shadow $speed ease,
-				color $speed ease;
+    border: .1rem solid transparent;
+    border-radius: $border-radius;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1;
+    padding: 2rem 3.5rem;
+    transition: background $speed ease,
+    border $speed ease,
+    box-shadow $speed ease,
+    color $speed ease;
 
-	&:hover,
-	&:focus {
-		color: $white;
-	}
+    &:hover,
+    &:focus {
+        color: $white;
+    }
 
-	&:focus {
-		box-shadow: 0 .3rem 0 0 rgba( $black, .1 );
-	}
+    &:focus {
+        box-shadow: 0 .3rem 0 0 rgba($black, .1);
+    }
 }
 
 .o-button--small {
-	padding: 1.4rem 2.2rem;
+    padding: 1.4rem 2.2rem;
 }
 
 .o-button--wide {
-	padding: 2rem 11rem;
+    padding: 2rem 11rem;
 }
+
 .o-button--blue-transparent {
-	background: transparent;
-	color: $pri;
-	border: 0.1rem solid $pri;
-	&:hover,
-	&:focus {
-		background: $pri;
-		color: $white;
-	}
+    background: transparent;
+    border: .1rem solid $pri;
+    color: $pri;
+
+    &:hover,
+    &:focus {
+        background: $pri;
+        color: $white;
+    }
 }
 
 .o-button--transparent {
-	background: transparent;
-	color: $white;
-	border: 0.1rem solid $white;
-	&:hover,
-	&:focus {
-		background: $pri;
-	}
+    background: transparent;
+    border: .1rem solid $white;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background: $pri;
+    }
 }
 
 .o-button--primary {
-	background: $pri;
-	color: $white;
-	border: 0.1rem solid $pri;
-	&:hover,
-	&:focus {
-		background: $sec;
-		border: 0.1rem solid $sec;
-	}
+    background: $pri;
+    border: .1rem solid $pri;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background: $sec;
+        border: .1rem solid $sec;
+    }
+
+    &.active {
+        background: $sec;
+        border: .1rem solid $sec;
+    }
 }
 
 .o-button--secondary {
-	background: $sec;
-	color: $white;
-	border: 0.1rem solid $pri;
-	&:hover,
-	&:focus {
-		background: $ter;
-		color: $dark-black;
-		border: 0.1rem solid $ter;
-	}
+    background: $sec;
+    border: .1rem solid $pri;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        background: $ter;
+        border: .1rem solid $ter;
+        color: $dark-black;
+    }
 }
 
 .o-button--disabled {
-	background: $main-grey;
-	color: darken($main-grey, 30) !important;
-	cursor: not-allowed;
+    background: $main-grey;
+    color: darken($main-grey, 30) !important;
+    cursor: not-allowed;
 }

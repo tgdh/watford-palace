@@ -21,6 +21,7 @@ module.exports = {
 			'<%= assetsFolder %>/_components/OwlCarousel2/dist/owl.carousel.js',
 			'<%= assetsFolder %>/_components/SelectOrDie/_src/selectordie.js',
 			'<%= assetsFolder %>/_components/magnific-popup/dist/jquery.magnific-popup.js',
+			'<%= assetsFolder %>/_components/tabby/dist/js/tabby.js',
 			'<%= assetsFolder %>/js/utils/*js',
 			'<%= assetsFolder %>/js/components/*js',
 			'<%= assetsFolder %>/js/main.js'

@@ -10,7 +10,8 @@
     "modernizr": "~2.8.3",
     "OwlCarousel2": "~2.0.0-beta.3",
     "SelectOrDie": "~0.1.8",
-    "magnific-popup": "~1.0.0"
+    "magnific-popup": "~1.0.0",
+    "tabby": "https://github.com/cferdinandi/tabby"
   },
   "moduleType": [
     "globals"

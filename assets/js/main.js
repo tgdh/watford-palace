@@ -22,7 +22,7 @@
         console.log('js fired from window IsModern');
         var setHeight = function(){
         	var coverHeight = $('.c-cover__main').height();
-        	
+
         	$('.c-cover__aside').height(coverHeight);
         };
 
@@ -48,7 +48,7 @@
                     navigateByImgClick: true,
                     preload: [0,1] // Will preload 0 - before current, and 1 after the current image
                 }
-            });            
+            });
         };
 
         var selectStyle = function(){
@@ -57,6 +57,11 @@
             $('#whoIsYourMessageFor1129').selectOrDie({
                 placeholder: "Who is your message for?"
             });
+        };
+
+        var tabbedContent = function(){
+            tabby.init();
+            console.log("familyTabs");
         };
 
         var startVideo = function(){
@@ -77,13 +82,13 @@
 
             var playVimeo = function(){
                 video.attr({
-                    src: videoSrc + "?autoplay=1" 
+                    src: videoSrc + "?autoplay=1"
                 });
             };
 
             var playYoutube = function(){
                 video.attr({
-                    src: videoSrc + "&autoplay=1" 
+                    src: videoSrc + "&autoplay=1"
                 });
             };
             var hideControls = function(){
@@ -96,17 +101,18 @@
             });
         };
 
-		$(window).ready(function(){ 
+		$(window).ready(function(){
             singleGallery();
        		setHeight();
             selectStyle();
             magnificGallery();
             startVideo();
+            tabbedContent();
 		});
-		$(window).resize(function(){ 
+		$(window).resize(function(){
        		setHeight();
 		});
-	
+
 
 
 
