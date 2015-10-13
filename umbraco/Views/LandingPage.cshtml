@@ -8,17 +8,17 @@
 }
 <div class="o-section o-wrap o-wrap--large">
 	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-	@CurrentPage.bodyText
-	<ul>
-		@foreach( var child in CurrentPage.Children() )
+	<aside class="o-sidebar">
+		@Html.Partial("Page/Sidebar")
+	</aside>
+	<div class="o-content">
+		@if( CurrentPage.HasValue("mainContent") )
 		{
-			<li><a href="@child.Url">@child.Name</a></li>
+			@Html.Partial("Page/PageElements")
 		}
-	</ul>
-@* 	<h2>Share this</h2>
-	@Html.Partial("Modules/Social-share") *@
+	</div>
 </div>
-	
+
 @section OpenGraph{
 	@*
 
@@ -34,7 +34,7 @@
 	*@
 }
 
-	
+
 @section Scripts{
 
 }

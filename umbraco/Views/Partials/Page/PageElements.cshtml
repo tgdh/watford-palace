@@ -42,21 +42,27 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "";
+	    wrap = "o-wrap o-wrap--medium";
 	}
 
 	if( quote != null )
 	{
-		<div class="c-page-block c-page-block--quote @wrap">
-
-			<blockquote>
-				@quote
-				<footer>
-					<cite>
-						<span>&mdash;</span> @source
-					</cite>
-				</footer>
-			</blockquote>
+		<div class="c-page-block c-page-block--quote">
+			<div class="@wrap clearfix">
+				<i class="mega ico-quote"></i>
+				<blockquote>
+					<span class="beta c-quote__text">
+						@quote
+					</span>
+					<footer>
+						<cite>
+							<span class="q-quote__cite">
+								@source
+							</span>
+						</cite>
+					</footer>
+				</blockquote>
+			</div>
 		</div>
 	}
 
@@ -70,7 +76,7 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "";
+	    wrap = "o-wrap o-wrap--large";
 	}
 
 	if( image != null )
@@ -106,24 +112,33 @@
 	var galleryCaption = item.GetPropertyValue("caption");
     var title = item.GetPropertyValue("title");
 	var wrap = "";
+	var galleryType = "";
+	var count = 0;
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "";
+	    wrap = "o-wrap o-wrap--medium";
 	}
-
+	foreach( var id in gallery.ToString().Split(',') )
+    {
+		count = count + 1;
+		if( count > 1)
+		{
+			galleryType = "js-single__galery";
+		}
+    }
 	if ( gallery != null )
 	{
-		<div class="c-page-block c-page-block--gallery @wrap js-magnific-gallery">
+		<div class="c-page-block c-page-block--gallery @wrap ">
 			@if( title != null && title.ToString() != "" )
 			{
 			    <h2>@title</h2>
 			}
-			<figure class="clearfix">
+			<figure class="clearfix @galleryType owl-carousel js-magnific-gallery">
 				@foreach( var id in gallery.ToString().Split(',') )
 			    {
 			    	var imageUrl = Umbraco.Media(id.ToString()).Url;
-			    	var cropUrl = Umbraco.Media(id.ToString()).GetCropUrl("umbracoFile", "gallery");
+			    	var cropUrl = Umbraco.Media(id.ToString()).GetCropUrl("umbracoFile", "gallery-slide");
 					var caption = Umbraco.Media(id.ToString()).caption;
 					var altText = Umbraco.Media(id.ToString()).altText;
 
@@ -147,7 +162,7 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "";
+	    wrap = "o-wrap o-wrap--medium";
 	}
 
 	<div class="c-page-block c-page-block--textarea @wrap">
@@ -163,7 +178,7 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "";
+	    wrap = "o-wrap o-wrap--medium";
 	}
 
 	if( tabs != null )
@@ -180,12 +195,12 @@
 					var tabTitle = tab.GetPropertyValue("title");
 					var active = "";
 
-					if( tabTitle != null && title.ToString() != "" )
+					if( tabTitle != null )
 					{
 						if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
 		                    active = "active";
 		                }
-				       	<button data-tab="#@tabTitle.ToString().ToLower().Replace(" ", "")" class="o-button o-button--small o-button--primary @active">
+				       	<button data-tab="#@tabTitle.ToString().ToLower().Replace(" ", "")" class="o-button o-button--small o-button--blue-transparent @active">
 				            @tabTitle
 				        </button>
 					}
@@ -200,7 +215,7 @@
 					var content = tab.GetPropertyValue("content");
 					var active = "";
 
-					if( tabTitle != null && title.ToString() != "" )
+					if( tabTitle != null )
 					{
 						if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
 		                    active = "active";
@@ -225,7 +240,7 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "";
+	    wrap = "o-wrap o-wrap--medium";
 	}
 
     if( alignment != null)

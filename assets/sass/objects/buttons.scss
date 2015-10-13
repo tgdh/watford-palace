@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# BUTTONS
+    # BUTTONS
 
 =========================================================== */
 
@@ -45,6 +45,12 @@
         background: $pri;
         color: $white;
     }
+
+    &.active {
+        background: $pri;
+        border: .1rem solid $pri;
+        color: $white;
+    }
 }
 
 .o-button--transparent {
@@ -65,11 +71,6 @@
 
     &:hover,
     &:focus {
-        background: $sec;
-        border: .1rem solid $sec;
-    }
-
-    &.active {
         background: $sec;
         border: .1rem solid $sec;
     }

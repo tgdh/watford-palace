@@ -44,3 +44,5 @@ $RECYCLE.BIN/
 umbraco/Views/Master.cshtml
 
 umbraco/AppSettings.config
+
+umbraco/Config/watfordpalace_run2.pfx

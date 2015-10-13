@@ -31,7 +31,8 @@
 	}
 }
 
-.o-event__gallery {
+.o-event__gallery,
+.c-page-block--gallery {
 	position: relative;
 
 	.owl-prev,
@@ -66,7 +67,7 @@
 		cursor: not-allowed;
 		&:hover {
 			background: $white;
-			color: $dark-black;			
+			color: $dark-black;
 		}
 	}
 	.owl-prev {
