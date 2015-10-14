@@ -1,7 +1,17 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     var homePage = CurrentPage.Site();
-    var menuItems = CurrentPage.Parent().Children.Where("UmbracoNaviHide == false && TemplateId > 0");
+    dynamic menuItems;
+
+    if( CurrentPage.DocumentTypeAlias == "LandingPage" )
+    {
+        menuItems = CurrentPage.Children.Where("UmbracoNaviHide == false && TemplateId > 0");
+    }
+    else
+    {
+        menuItems = CurrentPage.Parent().Children.Where("UmbracoNaviHide == false && TemplateId > 0");
+    }
+
 }
 
 <nav>

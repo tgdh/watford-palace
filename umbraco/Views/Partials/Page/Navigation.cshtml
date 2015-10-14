@@ -1,16 +1,16 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-@{    
+@{
 	var homePage = CurrentPage.Site();
 	var menuItems = homePage.Children.Where("UmbracoNaviHide == false && TemplateId > 0");
 }
 
 <nav id="mainNav" class="c-nav__main js-nav-main" role="navigation">
 	<ul class="c-nav__list clearfix">
-	
+
 @* 		<li class="c-nav__item nav__item--parent">
 			<a href="@homePage.Url" class="nav__link @homePage.IsEqual(CurrentPage, "active", "")">@homePage.Name</a>
 		</li> *@
-		
+
 		@foreach ( var item in menuItems )
 		{
 			<li class="c-nav__item c-nav__item--parent">
@@ -23,14 +23,14 @@
 				}
 			</li>
 		}
-		
+
 	</ul>
 </nav>
 
 @* Helper method to travers through all descendants *@
 @helper Traverse(dynamic node)
 {
-    var maxLevelForNav = 6;
+    var maxLevelForNav = 3;
     var items = node.Children.Where("Visible").Where("Level <= " + maxLevelForNav);
     if ( items.Any() )
     {

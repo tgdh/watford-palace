@@ -5,57 +5,59 @@
 =========================================================== */
 
 .o-section {
-	padding-bottom: $padding--small;
-	padding-top: $padding--small;
+    padding-bottom: $padding--small;
+    padding-top: $padding--small;
+}
+
+.o-section--top {
+    padding-bottom: 0 !important;
 }
 
 .o-section--window {
-	min-height: 100%;
-	position: relative;
+    min-height: 100%;
+    position: relative;
 }
 
 .o-section--grey {
-	background: $main-grey;
+    background: $main-grey;
 }
 
-.o-section--red {
-	background: $main-red;
-	color: $white !important;
+.o-section--dark-terra-cota {
+    background: $main-red;
+    color: $white !important;
 }
 
-.o-section--blue {
-	background: $main-blue;
-	color: $white !important;
+.o-section--bondi-blue {
+    background: $main-blue;
+    color: $white !important;
 }
 
-.o-section--black {
-	background: $dark-black;
-	color: $white !important;
+.o-section--dark-grey {
+    background: $dark-black;
+    color: $white !important;
 }
 
 .o-section--image {
-	background-size: cover;
+    background-size: cover;
 }
 
 .o-section--filter {
-	text-align: center;
-	margin-bottom: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 @include respond-min( $mq-small ) {
 
-	.o-section {
-		padding-bottom: $padding--medium;
-		padding-top: $padding--medium;
-	}
-
+    .o-section {
+        padding-bottom: $padding--medium;
+        padding-top: $padding--medium;
+    }
 }
 
 @include respond-min( $mq-medium ) {
 
-	.o-section {
-		padding-bottom: $padding--large;
-		padding-top: $padding--large;
-	}
-
+    .o-section {
+        padding-bottom: $padding--large;
+        padding-top: $padding--large;
+    }
 }

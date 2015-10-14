@@ -9,8 +9,8 @@
 
 	switch(docType)
 	{
-		case "Quote":
-			@Quote(item)
+		case "Quotes":
+			@Quotes(item)
 		break;
 		case "Textarea":
 			@Textarea(item)
@@ -33,35 +33,46 @@
 	}
 }
 
-@helper Quote(IPublishedContent item)
+@helper Quotes(IPublishedContent item)
 {
-	var quote = item.GetPropertyValue("quote");
-	var source = item.GetPropertyValue("source");
-
+	var quotes = item.GetPropertyValue<IEnumerable<IPublishedContent>>("quotes");
 	var wrap = "";
+
+	if( quotes != null )
+	{
+
+	}
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "o-wrap o-wrap--medium";
+	    wrap = "";
 	}
 
-	if( quote != null )
+	if( quotes != null )
 	{
 		<div class="c-page-block c-page-block--quote">
-			<div class="@wrap clearfix">
-				<i class="mega ico-quote"></i>
-				<blockquote>
-					<span class="beta c-quote__text">
-						@quote
-					</span>
-					<footer>
-						<cite>
-							<span class="q-quote__cite">
-								@source
+			<div class="o-wrap o-wrap--medium @wrap clearfix">
+				@foreach( var quote in quotes )
+				{
+				    var source = quote.GetPropertyValue("source");
+				    var quoteWords = quote.GetPropertyValue("quote");
+
+					<div class="c-quote clearfix">
+						<i class="mega ico-quote"></i>
+						<blockquote>
+							<span class="beta c-quote__text">
+								@quoteWords
 							</span>
-						</cite>
-					</footer>
-				</blockquote>
+							<footer>
+								<cite>
+									<span class="q-quote__cite">
+										@source
+									</span>
+								</cite>
+							</footer>
+						</blockquote>
+					</div>
+				}
 			</div>
 		</div>
 	}
@@ -76,7 +87,7 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "o-wrap o-wrap--large";
+	    wrap = "";
 	}
 
 	if( image != null )
@@ -117,7 +128,7 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "o-wrap o-wrap--medium";
+	    wrap = "";
 	}
 	foreach( var id in gallery.ToString().Split(',') )
     {
@@ -162,11 +173,13 @@
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "o-wrap o-wrap--medium";
+	    wrap = "";
 	}
 
-	<div class="c-page-block c-page-block--textarea @wrap">
-		@content
+	<div class="o-section c-page-block--textarea @wrap">
+		<div class="o-wrap o-wrap--medium">
+			@content
+		</div>
 	</div>
 }
 
@@ -174,57 +187,65 @@
 {
 	var tabs = item.GetPropertyValue<IEnumerable<IPublishedContent>>("tabs");
 	var title = item.GetPropertyValue("title");
+	var color = item.GetPropertyValue("colour");
+	var sectionColor = "o-section--white";
 	var wrap = "";
 
+	if( color != null )
+	{
+	    sectionColor = "o-section--" + @color.ToString().ToLower().Replace(" ", "-");
+	}
 	if( Model.Level == 2 )
 	{
-	    wrap = "o-wrap o-wrap--medium";
+	    wrap = "";
 	}
 
 	if( tabs != null )
 	{
-		<div class="c-page-block c-page-block--tabs @wrap">
-			@if( title != null && title.ToString() != "" )
-			{
-			    <h2>@title</h2>
-			}
-			<div class="c-tab-controls">
-
-				@foreach( var tab in tabs )
+		<div class="o-section @sectionColor c-page-block--tabs @wrap">
+			<div class="o-wrap o-wrap--medium">
+				@if( title != null && title.ToString() != "" )
 				{
-					var tabTitle = tab.GetPropertyValue("title");
-					var active = "";
-
-					if( tabTitle != null )
-					{
-						if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
-		                    active = "active";
-		                }
-				       	<button data-tab="#@tabTitle.ToString().ToLower().Replace(" ", "")" class="o-button o-button--small o-button--blue-transparent @active">
-				            @tabTitle
-				        </button>
-					}
-
-
+				    <h2>@title</h2>
 				}
-			</div>
-			<div class="c-tab-content">
-				@foreach( var tab in tabs )
-				{
-					var tabTitle = tab.GetPropertyValue("title");
-					var content = tab.GetPropertyValue("content");
-					var active = "";
+				<div class="c-tab-controls">
 
-					if( tabTitle != null )
+					@foreach( var tab in tabs )
 					{
-						if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
-		                    active = "active";
-		                }
-						<div id="@tabTitle.ToString().ToLower().ToLower().Replace(" ", "")" class="tabs-pane c-tab clearfix @active">
-							@content
-						</div>
+						var tabTitle = tab.GetPropertyValue("title");
+						var active = "";
+
+						if( tabTitle != null )
+						{
+							if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
+			                    active = "active";
+			                }
+					       	<button data-tab="#@tabTitle.ToString().ToLower().Replace(" ", "")" class="o-button o-button--small o-button--blue-transparent @active">
+					            @tabTitle
+					        </button>
+						}
+
+
 					}
-				}
+				</div>
+				<div class="c-tab-content">
+					@foreach( var tab in tabs )
+					{
+						var tabTitle = tab.GetPropertyValue("title");
+						var content = tab.GetPropertyValue("content");
+						var active = "";
+
+						if( tabTitle != null )
+						{
+							if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
+			                    active = "active";
+			                }
+							<div id="@tabTitle.ToString().ToLower().ToLower().Replace(" ", "")" class="tabs-pane c-tab clearfix @active">
+								@content
+							</div>
+						}
+					}
+				</div>
 			</div>
 		</div>
 	}
@@ -236,11 +257,19 @@
     var content = item.GetPropertyValue("content");
     var alignment = item.GetPropertyValue("alignment");
     var title = item.GetPropertyValue("title");
+    var color = item.GetPropertyValue("colour");
+    var sectionColor = "o-section--white";
 	var wrap = "";
+
+
+	if( color != null )
+	{
+	    sectionColor = "o-section--" + @color.ToString().ToLower().Replace(" ", "-");
+	}
 
 	if( Model.Level == 2 )
 	{
-	    wrap = "o-wrap o-wrap--medium";
+	    wrap = "";
 	}
 
     if( alignment != null)
@@ -250,7 +279,8 @@
 
 	if( image != null || content != null )
 	{
-		<div class="c-page-block c-page-block--image-text c-page-block--@alignment @wrap clearfix">
+		<div class="o-section @sectionColor c-page-block--image-text c-page-block--@alignment @wrap clearfix">
+			<div class="o-wrap o-wrap--medium">
 				@if( title != null && title.ToString() != "" )
 				{
 				    <h2 class="clearfix">@title</h2>
@@ -264,7 +294,7 @@
 
 				    <figure class="c-float--image c-@alignment">
 				    	<a href="@imageUrl?width=1200" title="@altText">
-				        	<img src="@imageUrl?width=500" alt="@altText">
+				        	<img src="@imageUrl?width=800" alt="@altText">
 				        </a>
 				        @if ( caption != "" )
 				        {
@@ -278,7 +308,7 @@
 				{
 					@content
 				}
-
+			</div>
 		</div>
 	}
 }

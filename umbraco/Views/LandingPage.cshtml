@@ -6,18 +6,19 @@
 	var settings = homePage.Settingses.First();
 
 }
-<div class="o-section o-wrap o-wrap--large">
+
+<div class="o-section o-wrap o-wrap--medium">
 	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-	<aside class="o-sidebar">
-		@Html.Partial("Page/Sidebar")
-	</aside>
-	<div class="o-content">
-		@if( CurrentPage.HasValue("mainContent") )
-		{
-			@Html.Partial("Page/PageElements")
-		}
-	</div>
+	@if( CurrentPage.HasValue("bodyText") )
+	{
+		@CurrentPage.bodyText
+	}
+	@Html.Partial("Page/Gateway")
 </div>
+@* @if( CurrentPage.HasValue("mainContent") )
+{
+	@Html.Partial("Page/PageElements")
+} *@
 
 @section OpenGraph{
 	@*

@@ -4,35 +4,41 @@
     Layout = "Master.cshtml";
 	var homePage = CurrentPage.Site();
 	var settings = homePage.FirstChild("Settings");
+	var paddingTop = "o-section--top";
+
+	if( CurrentPage.HasValue("bodyText") && CurrentPage.bodyText.ToString() != "" )
+	{
+		paddingTop = "";
+	}
 
 }
-@if ( CurrentPage.Level == 2)
+@if ( CurrentPage.Level == 2 )
 {
-	<div class="o-section">
+	<div class="o-section @paddingTop o-wrap o-wrap--medium">
 		<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-		@if( CurrentPage.HasValue("mainContent") )
+		@if( CurrentPage.HasValue("bodyText") )
 		{
-			@Html.Partial("Page/PageElements")
+			@CurrentPage.bodyText
 		}
-
 	</div>
+	if( CurrentPage.HasValue("mainContent") )
+	{
+		@Html.Partial("Page/PageElements")
+	}
 }
 else
 {
-	<div class="o-wrap o-wrap--large o-section clearfix">
+	<div class="o-section @paddingTop o-wrap o-wrap--medium">
 		<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-		<aside class="o-sidebar">
-			@Html.Partial("Page/Sidebar")
-		</aside>
-		<div class="o-content">
-			@if( CurrentPage.HasValue("mainContent") )
-			{
-				@Html.Partial("Page/PageElements")
-			}
-		</div>
-
-
+		@if( CurrentPage.HasValue("bodyText") )
+		{
+			@CurrentPage.bodyText
+		}
 	</div>
+	if( CurrentPage.HasValue("mainContent") )
+	{
+		@Html.Partial("Page/PageElements")
+	}
 }
 
 
@@ -55,3 +61,7 @@ else
 @section Scripts{
 
 }
+
+@* 		<aside class="o-sidebar">
+			@Html.Partial("Page/Sidebar")
+		</aside> *@
