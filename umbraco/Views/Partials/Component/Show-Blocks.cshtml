@@ -94,13 +94,18 @@
 	var title = item.GetPropertyValue("title");
 	var reviews = item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews");
 
+	if( title == null )
+	{
+		title = "Reviews";
+	}
+
 	<div class="o-section o-section--dark-terra-cota o-section--window">
 		<a href="#@title.ToString().ToLower()" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
 		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--small">
-			<h2 class="mega">@title</h2>
+			<h2 class="mega">Reviews</h2>
 			@if( item.HasValue("reviews") && item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews").ToString() != "" )
 			{
 				<div class="o-card-reviews-wrap">

@@ -1,7 +1,11 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
 	var homePage = CurrentPage.Site();
-	var menuItems = homePage.Children.Where("UmbracoNaviHide == false && TemplateId > 0");
+	var menuItems = homePage.Children.Where("UmbracoNaviHide == false && TemplateId > 0" +
+                    " && DocumentTypeAlias != \"Profile\" " +
+                    " && DocumentTypeAlias != \"Cart\" " +
+                    " && DocumentTypeAlias != \"BookingPage\" "
+                    );
 }
 
 <nav id="mainNav" class="c-nav__main js-nav-main" role="navigation">
@@ -17,7 +21,7 @@
 				<a href="@item.Url" class="c-nav__link  @(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
 					@item.Name
 				</a>
-				@if( item.DocumentTypeAlias != "Events" && item.DocumentTypeAlias != "News" )
+				@if( item.DocumentTypeAlias != "Events" && item.DocumentTypeAlias != "News" && item.DocumentTypeAlias != "Profile" && item.DocumentTypeAlias != "BookingPage" && item.DocumentTypeAlias != "Cart" )
 				{
 					@Traverse(item)
 				}

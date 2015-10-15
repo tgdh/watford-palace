@@ -1,5 +1,5 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-@{    
+@{
 	var homePage = CurrentPage.Site();
 	var settings = homePage.FirstChild("Settings");
 }
@@ -19,15 +19,15 @@
 	<nav id="superNav" class="c-nav--super">
 		<ul class="c-nav__list--super clearfix">
 			<li class="c-nav__item--super c-nav__item--super">
-				<a href="#profile" class="c-nav__link--super">
+				<a href="@Umbraco.Content(2418).Url" class="c-nav__link--super">
 					<i class="ico-super ico-profile"></i>
-					<span class="hide-text">Profile</span>
+					<span class="hide-text">@Umbraco.Content(2418).Name</span>
 				</a>
-			</li>		
+			</li>
 			<li class="c-nav__item--super">
-				<a href="#basket" class="c-nav__link--super">
+				<a href="@Umbraco.Content(2417).Url" class="c-nav__link--super">
 					<i class="ico-super ico-basket"></i>
-					<span class="hide-text">Basket</span>
+					<span class="hide-text">@Umbraco.Content(2417).Name</span>
 				</a>
 			</li>
 		</ul>

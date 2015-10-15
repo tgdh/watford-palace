@@ -93,7 +93,4 @@ module.exports = function ( grunt ) {
 		'copy:bitmap',
 		'imageoptim'
 	]);
-
-
-
 };

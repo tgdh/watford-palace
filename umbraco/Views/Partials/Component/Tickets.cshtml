@@ -2,7 +2,7 @@
 @{
 
     var homePage = CurrentPage.Site();
-    var bookingPage = homePage.FirstChild("Book");
+    var bookingPage = homePage.FirstChild("BookingPage");
     var settings = homePage.FirstChild("Settings");
 
     var ci = new System.Globalization.CultureInfo("en-GB");
@@ -26,7 +26,7 @@
 		{
 			<div class="c-copy t-padding">
 				@CurrentPage.content
-			</div>		
+			</div>
 		}
 
 		<div class="c-list-dates">
@@ -35,6 +35,7 @@
 					DateTime dateValue;
 					string bookingUrl = bookingPage.Url + "?id=" + item.InstanceId;
 					string dateAndTime =  item.date.value.ToString() + " " + item.time.value.ToString() + ":00 ";
+
 					if( DateTime.Parse( dateAndTime ) > now )
 					{
 						<tr class="o-table__date-row">
@@ -47,13 +48,13 @@
 							<td class="o-table__col-button">
 								<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
 							</td>
-						</tr>					
+						</tr>
 					}
 
 				}
 			</table>
 		</div>
-	</div> 
+	</div>
 </div>
 
 @* @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
@@ -74,7 +75,7 @@
 		{
 			<div class="c-copy t-padding">
 				@CurrentPage.content
-			</div>		
+			</div>
 		}
 
 		<div class="c-list-dates">
@@ -83,8 +84,8 @@
 				<div class="c-list-dates__date clearfix">
 					<span class="c-list-date__date">Sep Wed 23</span>
 					<span class="c-list-date__time">7.30pm - 9:45pm ish</span>
-					<a href="" class="o-button o-button--small o-button--primary">Buy tickets</a>			
-				</div>			
+					<a href="" class="o-button o-button--small o-button--primary">Buy tickets</a>
+				</div>
 			}
 		</div>
 	</div>

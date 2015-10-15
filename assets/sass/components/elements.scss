@@ -149,4 +149,9 @@
     //         margin-top: 2rem;
     //     }
     // }
+    .c-text-column {
+        @include column(1 / 2, $gutter: 4, $cycle: 2);
+        text-align: center;
+
+    }
 }

@@ -24,18 +24,18 @@ else {
 	var eventId = Model.Id;
 	var imageId = umbracoHelper.Content( Model.Id ).tileImage.ToString();
 
-	string imageUrl = ( imageId != "" ? umbracoHelper.Media( imageId ).GetCropUrl("umbracoFile", "Tile") : "" );
+	string imageUrl = ( imageId != "" ? umbracoHelper.Media( imageId ).GetCropUrl("umbracoFile", "gallery") : "" );
 
 	var category = @Model.Category.ToLower();
 	var catClass = "s-" + category.Replace(" ", "-") + "-category";
-	
+
 
 	string title = Model.Title;
 	var bookingUrl = "/book?eventId=" + @eventId;
 
 	<article class="o-card o-card--event o-card--image">
 		<div class="o-card__image--wrap">
-			<img class="o-card__image" src="/assets/img/_temp/1.jpg" alt=""/>
+			<img class="o-card__image" src="@imageUrl" alt=""/>
 		</div>
 		<div class="o-card__content">
 			<span class="o-card-info--category o-card-info--category--event">@Model.Category</span>
@@ -44,7 +44,7 @@ else {
                 @if( times.Count > 1){
                     if( @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") != @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM") ){
                         @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") <span>-</span>
-                        @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM")            
+                        @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM")
                     } else {
                         @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM")
                     }
@@ -58,15 +58,15 @@ else {
 		<div class="o-card__actions o-card__actions--event">
 			<a href="@Model.Url#tickets" class="o-button o-button--small o-button--transparent">Buy tickets</a>
 			<a href="@Model.Url" class="o-button o-button--small o-button--transparent">More info</a>
-		</div>					
-	</article>	
+		</div>
+	</article>
 
 @* 	<figure class="o-ratio c-ratio--tile c-tile @catClass js-lazyload" data-bg="@imageUrl" style="background-image: url(@imageUrl&amp;quality=18);">
 		<span class="c-tile__overlay"></span>
 		<p class="c-tile__date epsilon">@Model.Date.ToString("dd MMM")</p>
 
 		<div class="c-ratio__content c-tile__content">
-			<p class="c-tile__subtitle zeta">The original theatre company &amp; <br/> the theatre Royal Bury St Edmunds present</p>		
+			<p class="c-tile__subtitle zeta">The original theatre company &amp; <br/> the theatre Royal Bury St Edmunds present</p>
 			<h2 class="c-tile__title">@title</h2>
 			<div class="c-tile__cta-wrap">
 				<a href="@Model.Url" class="o-button o-button--secondary">More info</a>
@@ -78,4 +78,4 @@ else {
 	</figure> *@
 }
 
-	
+

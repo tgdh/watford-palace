@@ -56,7 +56,7 @@
 	@* WEB FONTS *@
 	<script src="https://use.typekit.net/auw0byv.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
+	@RenderSection("HeadScripts", required: false)
 	<!-- OPEN GRAPH - http://ogp.me -->
 	<meta property="og:title" content="@pageName" />
 	<meta property="og:description" content="@pageMeta" />

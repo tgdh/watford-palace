@@ -27,6 +27,9 @@
 		case "TabbedContent":
 			@TabbedContent(item)
 		break;
+		case "TwoColumnTextarea":
+			@TwoColumnTextarea(item)
+		break;
 		default:
 			@Default(item)
 		break;
@@ -312,6 +315,26 @@
 		</div>
 	}
 }
+
+@helper TwoColumnTextarea(IPublishedContent item)
+{
+	var columnOne = item.GetPropertyValue("columnOne");
+	var columnTwo = item.GetPropertyValue("columnTwo");
+	var wrap = "";
+
+	if( Model.Level == 2 )
+	{
+	    wrap = "";
+	}
+
+	<div class="o-section c-page-block--two-column-textarea @wrap">
+		<div class="o-wrap o-wrap--medium">
+			<div class="c-text-column">@columnOne</div>
+			<div class="c-text-column">@columnTwo</div>
+		</div>
+	</div>
+}
+
 @helper Default(IPublishedContent item)
 {
 

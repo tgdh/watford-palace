@@ -267,15 +267,19 @@
 		}
 	}
 }
-.o-card--event {
-	.o-card__actions--event {
-		opacity: 0;
-		transition: opacity $speed ease;
+
+.no-touch {
+	.o-card--event {
+		.o-card__actions--event {
+			opacity: 0;
+			transition: opacity $speed ease;
+		}
+	}
+	.o-card--event:hover .o-card__actions--event {
+		opacity: 1;
 	}
 }
-.o-card--event:hover .o-card__actions--event {
-	opacity: 1;
-}
+
 .o-card--fill {
 
 }

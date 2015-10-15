@@ -16,7 +16,6 @@
 
 		<select name="filter-category" class="filter filter--category filter-js js-select" id="filter-category">
 			<option value="">Choose a category</option>
-			
 			@foreach (var category in Events.EventsRoot(Umbraco).Categories) {
 				<option value="@category.Name">@category.Name</option>
 			}
