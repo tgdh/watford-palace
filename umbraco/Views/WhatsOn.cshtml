@@ -33,8 +33,9 @@
 	<h1 class="">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
 	<span class="t-center t-block t-normal gamma">Filter by</span>
 	@Html.Partial("Events/Event-Filters")
-
-	<button id="load-previous" class="o-button o-button--primary o-button--center load-prev-js" style="display: none;">Load previous<i class="ico-plus"></i></button>
+	<div class="o-paging-more">
+		<button id="load-previous" class="o-button o-button--primary o-button--wide load-prev-js" style="display: none;">Load previous<i class="ico-plus"></i></button>
+	</div>
 
 	<div class="clearfix">
 		<div id="event-target" class="o-event-list clearfix">
@@ -44,7 +45,10 @@
 
 	<div class="o-wrap o-wrap--large">
 		<div class="o-paging-more">
-			<button id="loader" class="o-button o-button--primary o-button--wide">Loading...</button>
+			<button id="loader" class="o-button o-button--primary o-button--wide">
+				Loading...
+				<div class="spinner"></div>
+			</button>
 		</div>
 		<div class="o-paging-more">
 			<button class="o-button o-button--primary o-button--wide load-more-js">Load more</button>
