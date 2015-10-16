@@ -4,14 +4,18 @@
 }
 
 <div class="c-show__navigation clearfix">
-	@foreach( var block in pageBlocks )
+	@if( Model.GetPropertyValue<string>("pageBlocks") != null )
 	{
-		var title = block.GetPropertyValue("title");
-		if( block.DocumentTypeAlias != "ImageBlock")
+		foreach( var block in pageBlocks )
 		{
-			<a href="#@title.ToString().ToLower()" class="o-button o-button--blue-transparent">@title</a>
+			var title = block.GetPropertyValue("title");
+	@* 		if( block.DocumentTypeAlias != "ImageBlock")
+			{
+
+			} *@
+			<a href="#@title.ToString().ToLower().Replace(" ","")" class="o-button o-button--blue-transparent">@title</a>
+
 		}
-		
 	}
 	<a href="#tickets" class="o-button o-button--primary">Buy tickets</a>
 </div>

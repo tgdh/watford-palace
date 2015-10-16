@@ -1,7 +1,9 @@
 @inherits Umbraco.Web.Mvc.UmbracoViewPage
 @{
 	var selection = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("mainContent");
-	}
+
+	int sectionCount = 0;
+}
 
 @foreach( var item in selection )
 {
@@ -10,33 +12,35 @@
 	switch(docType)
 	{
 		case "Quotes":
-			@Quotes(item)
+			@Quotes(item, sectionCount)
 		break;
 		case "Textarea":
-			@Textarea(item)
+			@Textarea(item, sectionCount)
 		break;
 		case "WideImage":
-			@WideImage(item)
+			@WideImage(item, sectionCount)
 		break;
 		case "Gallery":
-			@Gallery(item)
+			@Gallery(item, sectionCount)
 		break;
 		case "ImageWithText":
-			@ImageWithText(item)
+			@ImageWithText(item, sectionCount)
 		break;
 		case "TabbedContent":
-			@TabbedContent(item)
+			@TabbedContent(item, sectionCount)
 		break;
 		case "TwoColumnTextarea":
-			@TwoColumnTextarea(item)
+			@TwoColumnTextarea(item, sectionCount)
 		break;
 		default:
-			@Default(item)
+			@Default(item, sectionCount)
 		break;
 	}
+
+	sectionCount = sectionCount + 1;
 }
 
-@helper Quotes(IPublishedContent item)
+@helper Quotes(IPublishedContent item, int sectionCount)
 {
 	var quotes = item.GetPropertyValue<IEnumerable<IPublishedContent>>("quotes");
 	var wrap = "";
@@ -53,7 +57,14 @@
 
 	if( quotes != null )
 	{
-		<div class="c-page-block c-page-block--quote">
+		<div class="c-page-block o-section c-page-block--quote">
+			@if( sectionCount >= 1 )
+			{
+				<a href="#section-@sectionCount" class="link-next">
+	                <i class="ico-arrow ico-arrow--down"></i>
+	            </a>
+	            <span id="section-@sectionCount" class="anchor-offset"></span>
+			}
 			<div class="o-wrap o-wrap--medium @wrap clearfix">
 				@foreach( var quote in quotes )
 				{
@@ -82,7 +93,7 @@
 
 }
 
-@helper WideImage(IPublishedContent item)
+@helper WideImage(IPublishedContent item, int sectionCount)
 {
     var image = item.GetPropertyValue("image");
     var title = item.GetPropertyValue("title");
@@ -96,6 +107,13 @@
 	if( image != null )
 	{
 		<div class="c-page-block c-page-block--wide-image @wrap">
+			@if( sectionCount >= 1 )
+			{
+				<a href="#section-@sectionCount" class="link-next">
+	                <i class="ico-arrow ico-arrow--down"></i>
+	            </a>
+	            <span id="section-@sectionCount" class="anchor-offset"></span>
+			}
 			@if( title != null && title.ToString() != "" )
 			{
 			    <h2>@title</h2>
@@ -106,12 +124,12 @@
 				var caption = Umbraco.Media(image.ToString()).caption;
 				var altText = Umbraco.Media(image.ToString()).altText;
 
-			    <figure>
-			        <img src="@cropUrl" alt="@altText">
-			        @if ( caption != "" )
+			    <figure class="c-wide-image-wrap">
+			        <img class="c-wide-image" src="@cropUrl" alt="@altText">
+@* 			        @if ( caption != "" )
 			        {
 			            <figcaption>@caption</figcaption>
-			        }
+			        } *@
 
 			    </figure>
 			}
@@ -120,7 +138,7 @@
 
 }
 
-@helper Gallery(IPublishedContent item)
+@helper Gallery(IPublishedContent item, int sectionCount)
 {
 	var gallery = item.GetPropertyValue("gallery");
 	var galleryCaption = item.GetPropertyValue("caption");
@@ -144,6 +162,13 @@
 	if ( gallery != null )
 	{
 		<div class="c-page-block c-page-block--gallery @wrap ">
+			@if( sectionCount >= 1 )
+			{
+				<a href="#section-@sectionCount" class="link-next">
+	                <i class="ico-arrow ico-arrow--down"></i>
+	            </a>
+	            <span id="section-@sectionCount" class="anchor-offset"></span>
+			}
 			@if( title != null && title.ToString() != "" )
 			{
 			    <h2>@title</h2>
@@ -169,7 +194,7 @@
 	}
 }
 
-@helper Textarea(IPublishedContent item)
+@helper Textarea(IPublishedContent item, int sectionCount)
 {
 	var content = item.GetPropertyValue("content");
 	var wrap = "";
@@ -180,13 +205,20 @@
 	}
 
 	<div class="o-section c-page-block--textarea @wrap">
+		@if( sectionCount >= 1 )
+		{
+			<a href="#section-@sectionCount" class="link-next">
+                <i class="ico-arrow ico-arrow--down"></i>
+            </a>
+            <span id="section-@sectionCount" class="anchor-offset"></span>
+		}
 		<div class="o-wrap o-wrap--medium">
 			@content
 		</div>
 	</div>
 }
 
-@helper TabbedContent(IPublishedContent item)
+@helper TabbedContent(IPublishedContent item, int sectionCount)
 {
 	var tabs = item.GetPropertyValue<IEnumerable<IPublishedContent>>("tabs");
 	var title = item.GetPropertyValue("title");
@@ -206,6 +238,13 @@
 	if( tabs != null )
 	{
 		<div class="o-section @sectionColor c-page-block--tabs @wrap">
+			@if( sectionCount >= 1 )
+			{
+				<a href="#section-@sectionCount" class="link-next">
+	                <i class="ico-arrow ico-arrow--down"></i>
+	            </a>
+	            <span id="section-@sectionCount" class="anchor-offset"></span>
+			}
 			<div class="o-wrap o-wrap--medium">
 				@if( title != null && title.ToString() != "" )
 				{
@@ -254,7 +293,7 @@
 	}
 }
 
-@helper ImageWithText(IPublishedContent item)
+@helper ImageWithText(IPublishedContent item, int sectionCount)
 {
     var image = item.GetPropertyValue("image");
     var content = item.GetPropertyValue("content");
@@ -283,6 +322,13 @@
 	if( image != null || content != null )
 	{
 		<div class="o-section @sectionColor c-page-block--image-text c-page-block--@alignment @wrap clearfix">
+			@if( sectionCount >= 1 )
+			{
+				<a href="#section-@sectionCount" class="link-next">
+	                <i class="ico-arrow ico-arrow--down"></i>
+	            </a>
+	            <span id="section-@sectionCount" class="anchor-offset"></span>
+			}
 			<div class="o-wrap o-wrap--medium">
 				@if( title != null && title.ToString() != "" )
 				{
@@ -316,10 +362,14 @@
 	}
 }
 
-@helper TwoColumnTextarea(IPublishedContent item)
+@helper TwoColumnTextarea(IPublishedContent item, int sectionCount)
 {
+	var title = item.GetPropertyValue("title");
+	var content = item.GetPropertyValue("content");
 	var columnOne = item.GetPropertyValue("columnOne");
 	var columnTwo = item.GetPropertyValue("columnTwo");
+    var color = item.GetPropertyValue("colour");
+    var sectionColor = "o-section--white";
 	var wrap = "";
 
 	if( Model.Level == 2 )
@@ -327,15 +377,41 @@
 	    wrap = "";
 	}
 
-	<div class="o-section c-page-block--two-column-textarea @wrap">
-		<div class="o-wrap o-wrap--medium">
-			<div class="c-text-column">@columnOne</div>
-			<div class="c-text-column">@columnTwo</div>
-		</div>
+	if( color != null )
+	{
+	    sectionColor = "o-section--" + @color.ToString().ToLower().Replace(" ", "-");
+	}
+
+	<div class="o-section @sectionColor c-page-block--two-column-textarea @wrap">
+		@if( sectionCount >= 1 )
+		{
+			<a href="#section-@sectionCount" class="link-next">
+                <i class="ico-arrow ico-arrow--down"></i>
+            </a>
+            <span id="section-@sectionCount" class="anchor-offset"></span>
+		}
+		@if( title != null && title.ToString() != "" )
+		{
+		    <h2 class="clearfix">@title</h2>
+		}
+		@if( content != null && content.ToString() != "" )
+		{
+		    <div class="c-content">@content</div>
+		}
+
+		@if( columnOne.ToString() != "" && columnTwo.ToString() != "" )
+		{
+			<div class="o-wrap o-wrap--medium clearfix">
+				<div class="c-text-column">@columnOne</div>
+				<div class="c-text-column">@columnTwo</div>
+			</div>
+		}
+
+
 	</div>
 }
 
-@helper Default(IPublishedContent item)
+@helper Default(IPublishedContent item, int sectionCount)
 {
 
 }

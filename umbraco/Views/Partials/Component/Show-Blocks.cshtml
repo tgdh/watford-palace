@@ -36,10 +36,10 @@
 	var cast = item.GetPropertyValue<IEnumerable<IPublishedContent>>("cast");
 
 	<div class="o-section o-section--dark-grey o-section--window o-wrap">
-		<a href="#@title.ToString().ToLower()" class="link-next">
+		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
-		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--medium">
 			<h2 class="mega">@title</h2>
 			<div class="o-cards-wrap o-cards-cast clearfix">
@@ -52,11 +52,11 @@
 					var imageUrl = "";
 					if( person.HasValue("picture") && person.GetPropertyValue("picture").ToString() != "" )
 					{
-						imageUrl = Umbraco.Media(picture.ToString()).Url;
+						imageUrl = Umbraco.Media(picture.ToString()).GetCropUrl("umbracoFile", "profile-pic");
 					}
 					<div class="o-card-person clearfix">
 						<div class="o-card-person__image">
-							<img src="@imageUrl?width=150" alt="@name">
+							<img src="@imageUrl" alt="@name">
 						</div>
 						<div class="o-card-person__info">
 							<span class="o-card-person__title delta">@name</span>
@@ -80,10 +80,10 @@
 		backgroundUrl = Umbraco.Media(background.ToString()).GetCropUrl("umbracoFile", "image-cover");
 	}
 	<div class="o-section o-section--window o-section--image" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
-		<a href="#@title.ToString().ToLower()" class="link-next">
+		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
-		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 		<h2 class="hide-text">@title</h2>
 
 	</div>
@@ -100,10 +100,10 @@
 	}
 
 	<div class="o-section o-section--dark-terra-cota o-section--window">
-		<a href="#@title.ToString().ToLower()" class="link-next">
+		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
-		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--small">
 			<h2 class="mega">Reviews</h2>
 			@if( item.HasValue("reviews") && item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews").ToString() != "" )
@@ -146,10 +146,10 @@
 	}
 
 	<div class="o-section o-section--video o-section--window" >
-		<a href="#@title.ToString().ToLower()" class="link-next">
+		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
-		<span id="@title.ToString().ToLower()" class="anchor-offset"></span>
+		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 		<h2 class="hide-text">Video</h2>
 		<div class="o-video__controls video-controls-js" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
 			<div class="o-video__controls-wrap">

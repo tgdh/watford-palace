@@ -3,6 +3,9 @@
     # PAGE ELEMENTS
 
 =========================================================== */
+.c-page-block {
+    position: relative;
+}
 
 .c-page-block--textarea {
     margin-top: 0;
@@ -78,6 +81,13 @@
     }
 }
 
+.c-page-block--two-column-textarea {
+
+    .c-content + .o-wrap {
+        margin-top: $line-height;
+    }
+}
+
 @include respond-min($mq-small) {
     // .c-page-block--gallery {
     //     .c-gallery__thumbnail {
@@ -149,9 +159,12 @@
     //         margin-top: 2rem;
     //     }
     // }
-    .c-text-column {
-        @include column(1 / 2, $gutter: 4, $cycle: 2);
-        text-align: center;
+    .c-page-block--two-column-textarea {
 
+        .c-text-column {
+            @include column(1 / 2, $gutter: 4, $cycle: 2);
+
+            text-align: center;
+        }
     }
 }

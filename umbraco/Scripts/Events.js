@@ -57,7 +57,7 @@ var Events = (function () {
         $('#loader').show();
         //umbraco/assets/img/loading.gif
     };
-    // Fuctions add all event listeners on load, starts UI 
+    // Fuctions add all event listeners on load, starts UI
     bindUIActions = function () {
         $('.load-prev-js').hide();
         $(document).on('change', settings.selects, function () {
@@ -67,7 +67,7 @@ var Events = (function () {
             loadMore();
             if (!settings.scrollBound) {
                 $(window).scroll(bindScroll);
-            }      
+            }
         });
         $(document).ready(function () {
             $("#event-target").height('auto');
@@ -94,7 +94,7 @@ var Events = (function () {
             }
         });
     };
-    // 
+    //
     setupHistory = function() {
         // query string variables
         var qCat = "", // query category
@@ -114,10 +114,10 @@ var Events = (function () {
         }
         // sets qDate to the selected date period in the menu
         if( $(settings.timeSelect).val() !== "" && $("option:selected", settings.timeSelect).text().replace(/\ /g, '_').toLowerCase() !== "choose_a_date" ) {
-            settings.dateFilter = $("option:selected", settings.timeSelect).text().replace(/\ /g, '_').toLowerCase(); 
+            settings.dateFilter = $("option:selected", settings.timeSelect).text().replace(/\ /g, '_').toLowerCase();
             // console.log( $("option:selected", settings.timeSelect).text().replace(/\ /g, '_').toLowerCase() );
             qDate = settings.string[1] + $("option:selected", settings.timeSelect).text(); // + '&';
-            qDate = qDate.replace(/\ /g, '_').toLowerCase(); 
+            qDate = qDate.replace(/\ /g, '_').toLowerCase();
         } else if( $(settings.timeSelect).val() === "" ){
             qDate = "";
             // console.log( "date is emtpty" );
@@ -151,7 +151,7 @@ var Events = (function () {
 
         settings.activePage = 0;
     };
-    // On page load function checks the query string and sets the page view accordingly 
+    // On page load function checks the query string and sets the page view accordingly
     checkQueryString = function(){
         var vars = [],
             hash,
@@ -161,7 +161,7 @@ var Events = (function () {
                 query = query.split('&');
                 for( var i = 0; i < query.length; i++) {
                     hash = query[i].split('=');
-                    // vars.push(hash[1]); 
+                    // vars.push(hash[1]);
                     vars[hash[0]] = hash[1]
                 }
             }
@@ -171,7 +171,7 @@ var Events = (function () {
                 // console.log( "Query MATCHES a pattern");
                 settings.customFilter = true;
                 settings.customPageNumber = vars.page;
-                settings.pageNumber = settings.customPageNumber - 1; 
+                settings.pageNumber = settings.customPageNumber - 1;
             } else {
                 //  console.log( "NO query or DOESN'T match a pattern");
             }
@@ -192,9 +192,9 @@ var Events = (function () {
             if( vars.date && vars.date !== "" ){
                 vars.date =  vars.date.capitalize().replace(/\_/g, ' ');
                 $(settings.timeSelectOptions).filter(function(){
-                    return $(this).text() == vars.date; 
+                    return $(this).text() == vars.date;
                 }).prop('selected', true);
-                $(settings.timeSelect).change();  
+                $(settings.timeSelect).change();
 
             }
     };
@@ -316,7 +316,7 @@ var Events = (function () {
                         settings.customFilter = false;
                         $('.load-prev-js').hide();
 
-                    } 
+                    }
                     }, 300);
 
                 },

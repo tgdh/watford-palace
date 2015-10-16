@@ -12,12 +12,29 @@
 	System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
     var now = DateTime.Today;
 }
+
+@* <h1>List</h1>
+<ul>
+	@foreach( var kid in Model.Content.Children() )
+	{
+		<li>
+			<strong>@kid.Name</strong>
+			<ul>
+				@foreach( var subkid in kid.Children() )
+				{
+					<li>@subkid.Name</li>
+
+				}
+			</ul>
+		</li>
+	}
+</ul> *@
 <div class="o-section">
 	<h1 class="">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
 	<span class="t-center t-block t-normal gamma">Filter by</span>
-	@Html.Partial("Events/Event-Filters")	
+	@Html.Partial("Events/Event-Filters")
 
-	<button id="load-previous" class="o-button o-button--primary o-button--center load-prev-js" style="display: none;">LOAD PREVIOUS<i class="ico-plus"></i></button>
+	<button id="load-previous" class="o-button o-button--primary o-button--center load-prev-js" style="display: none;">Load previous<i class="ico-plus"></i></button>
 
 	<div class="clearfix">
 		<div id="event-target" class="o-event-list clearfix">
@@ -35,7 +52,7 @@
 	</div>
 </div>
 
-	
+
 @section Scripts {
 	<script src="/Scripts/Events.js"></script>
 	<script>

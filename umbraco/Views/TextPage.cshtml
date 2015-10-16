@@ -19,6 +19,13 @@
 		@if( CurrentPage.HasValue("bodyText") )
 		{
 			@CurrentPage.bodyText
+			<a href="#section-0" class="link-next link-bottom">
+	            <i class="ico-arrow ico-arrow--down"></i>
+	        </a>
+			if( CurrentPage.HasValue("mainContent") )
+			{
+				<span id="section-0" class="anchor-offset"></span>
+			}
 		}
 	</div>
 	if( CurrentPage.HasValue("mainContent") )
@@ -33,6 +40,13 @@ else
 		@if( CurrentPage.HasValue("bodyText") )
 		{
 			@CurrentPage.bodyText
+			<a href="#section-0" class="link-next link-bottom">
+	            <i class="ico-arrow ico-arrow--down"></i>
+	        </a>
+			if( CurrentPage.HasValue("mainContent") )
+			{
+				<span id="section-0" class="anchor-offset"></span>
+			}
 		}
 	</div>
 	if( CurrentPage.HasValue("mainContent") )

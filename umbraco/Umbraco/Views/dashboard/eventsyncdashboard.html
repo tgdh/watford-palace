@@ -21,7 +21,9 @@
         <div class="pull-right">
             <button ng-click="Refresh($event)" class="btn btn-success btn-lg"><i class="icon icon-sync"></i> Refresh</button>
             <button ng-click="Sync($event,publish)" class="btn btn-warning  btn-lg"><i class="icon icon-umb-deploy"></i> Sync</button>
-           <!--  <input type="checkbox" ng-model="publish" ng-init="publish=false"/>Publish ? -->
+            <span style="display: none;">
+                <input type="checkbox" ng-model="publish" ng-init="publish=false"/>Publish ?
+            </span>
         </div>
 
             <div class="clearfix"></div>

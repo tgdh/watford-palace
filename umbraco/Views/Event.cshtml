@@ -25,10 +25,8 @@
 			}
 
 		</p>
-		@if( CurrentPage.HasValue("pageBlocks") )
-		{
-			@Html.Partial("Component/Show-Navigation")
-		}
+
+		@Html.Partial("Component/Show-Navigation")
 
 		<div class="clearfix c-show__content">
 			@if( CurrentPage.HasValue("gallery") )
