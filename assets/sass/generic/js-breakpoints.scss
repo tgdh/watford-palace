@@ -21,10 +21,26 @@
 
 }
 
+@include respond-min( $mq-large - 50px ) {
+
+	html {
+		font-family: 'large';
+	}
+
+}
+
 @include respond-min( $mq-large ) {
 
 	html {
 		font-family: 'large';
+	}
+
+}
+
+@include respond-min( $mq-x-large - 80px ) {
+
+	html {
+		font-family: 'x-large';
 	}
 
 }

@@ -1,12 +1,11 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    var homePage = CurrentPage.Site();
-    var settings = homePage.FirstChild("Settings");
-}
-<div class="c-gateway">
-    @foreach( var page in CurrentPage.Children() )
-    {
-        <a href="@page.Url">@page.Name</a>
-    }
 
-</div>
+}
+
+@foreach( var page in CurrentPage.Children() )
+{
+
+        <a href="@page.Url"><h2>@page.Name</h2></a>
+
+}

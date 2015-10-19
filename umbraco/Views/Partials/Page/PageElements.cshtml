@@ -44,15 +44,17 @@
 {
 	var quotes = item.GetPropertyValue<IEnumerable<IPublishedContent>>("quotes");
 	var wrap = "";
+	var offset = "";
 
 	if( quotes != null )
 	{
 
 	}
 
-	if( Model.Level == 2 )
+	if( Model.Level > 2 )
 	{
 	    wrap = "";
+	    offset = "o-wrap--offset";
 	}
 
 	if( quotes != null )
@@ -60,12 +62,12 @@
 		<div class="c-page-block o-section c-page-block--quote">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next">
+				<a href="#section-@sectionCount" class="link-next link-next--offset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
 			}
-			<div class="o-wrap o-wrap--medium @wrap clearfix">
+			<div class="o-wrap o-wrap--medium @wrap @offset clearfix">
 				@foreach( var quote in quotes )
 				{
 				    var source = quote.GetPropertyValue("source");
@@ -109,7 +111,7 @@
 		<div class="c-page-block c-page-block--wide-image @wrap">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next">
+				<a href="#section-@sectionCount" class="link-next link-next--offset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset--image"></span>
@@ -126,10 +128,10 @@
 
 			    <figure class="c-wide-image-wrap">
 			        <img class="c-wide-image" src="@cropUrl" alt="@altText">
-@* 			        @if ( caption != "" )
+ 			        @if ( caption != "" )
 			        {
-			            <figcaption>@caption</figcaption>
-			        } *@
+			            <figcaption class="c-figcaption--bottom">@caption</figcaption>
+			        }
 
 			    </figure>
 			}
@@ -164,7 +166,7 @@
 		<div class="c-page-block c-page-block--gallery @wrap ">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next">
+				<a href="#section-@sectionCount" class="link-next link-next--offset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
@@ -207,7 +209,7 @@
 	<div class="o-section c-page-block--textarea @wrap">
 		@if( sectionCount >= 1 )
 		{
-			<a href="#section-@sectionCount" class="link-next">
+			<a href="#section-@sectionCount" class="link-next link-next--offset">
                 <i class="ico-arrow ico-arrow--down"></i>
             </a>
             <span id="section-@sectionCount" class="anchor-offset"></span>
@@ -225,14 +227,16 @@
 	var color = item.GetPropertyValue("colour");
 	var sectionColor = "o-section--white";
 	var wrap = "";
+	var offset = "";
 
 	if( color != null )
 	{
 	    sectionColor = "o-section--" + @color.ToString().ToLower().Replace(" ", "-");
 	}
-	if( Model.Level == 2 )
+	if( Model.Level > 2 )
 	{
 	    wrap = "";
+	    offset = "o-wrap--offset";
 	}
 
 	if( tabs != null )
@@ -240,12 +244,12 @@
 		<div class="o-section @sectionColor c-page-block--tabs @wrap">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next">
+				<a href="#section-@sectionCount" class="link-next link-next--offset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
 			}
-			<div class="o-wrap o-wrap--medium">
+			<div class="o-wrap o-wrap--medium @offset">
 				@if( title != null && title.ToString() != "" )
 				{
 				    <h2>@title</h2>
@@ -302,16 +306,17 @@
     var color = item.GetPropertyValue("colour");
     var sectionColor = "o-section--white";
 	var wrap = "";
-
+	var offset = "";
 
 	if( color != null )
 	{
 	    sectionColor = "o-section--" + @color.ToString().ToLower().Replace(" ", "-");
 	}
 
-	if( Model.Level == 2 )
+	if( Model.Level >2 )
 	{
 	    wrap = "";
+	    offset = "o-wrap--offset";
 	}
 
     if( alignment != null)
@@ -324,12 +329,12 @@
 		<div class="o-section @sectionColor c-page-block--image-text c-page-block--@alignment @wrap clearfix">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next">
+				<a href="#section-@sectionCount" class="link-next link-next--offset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
 			}
-			<div class="o-wrap o-wrap--medium">
+			<div class="o-wrap o-wrap--medium @offset clearfix">
 				@if( title != null && title.ToString() != "" )
 				{
 				    <h2 class="clearfix">@title</h2>
@@ -371,10 +376,12 @@
     var color = item.GetPropertyValue("colour");
     var sectionColor = "o-section--white";
 	var wrap = "";
+	var offset = "";
 
-	if( Model.Level == 2 )
+	if( Model.Level > 2 )
 	{
 	    wrap = "";
+	    offset = "o-wrap--offset";
 	}
 
 	if( color != null )
@@ -385,23 +392,24 @@
 	<div class="o-section @sectionColor c-page-block--two-column-textarea @wrap">
 		@if( sectionCount >= 1 )
 		{
-			<a href="#section-@sectionCount" class="link-next">
+			<a href="#section-@sectionCount" class="link-next link-next--offset">
                 <i class="ico-arrow ico-arrow--down"></i>
             </a>
             <span id="section-@sectionCount" class="anchor-offset"></span>
 		}
-		@if( title != null && title.ToString() != "" )
-		{
-		    <h2 class="clearfix">@title</h2>
-		}
-		@if( content != null && content.ToString() != "" )
-		{
-		    <div class="c-content">@content</div>
-		}
-
+		<div class="o-wrap o-wrap--medium @offset clearfix">
+			@if( title != null && title.ToString() != "" )
+			{
+			    <h2 class="clearfix">@title</h2>
+			}
+			@if( content != null && content.ToString() != "" )
+			{
+			    <div class="c-content">@content</div>
+			}
+		</div>
 		@if( columnOne.ToString() != "" && columnTwo.ToString() != "" )
 		{
-			<div class="o-wrap o-wrap--medium clearfix">
+			<div class="o-wrap o-wrap--medium @offset clearfix">
 				<div class="c-text-column">@columnOne</div>
 				<div class="c-text-column">@columnTwo</div>
 			</div>

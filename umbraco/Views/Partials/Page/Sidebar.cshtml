@@ -1,44 +1,42 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    var homePage = CurrentPage.Site();
-    dynamic menuItems;
-
-    if( CurrentPage.DocumentTypeAlias == "LandingPage" )
-    {
-        menuItems = CurrentPage.Children.Where("UmbracoNaviHide == false && TemplateId > 0");
-    }
-    else
-    {
-        menuItems = CurrentPage.Parent().Children.Where("UmbracoNaviHide == false && TemplateId > 0");
-    }
-
+    var menuItems = CurrentPage.AncestorOrSelf(2).Children().Where("UmbracoNaviHide == false && TemplateId > 0");
 }
 
-<nav>
-    <ul>
-        @foreach( var page in menuItems )
-        {
-            <li><a href="@page.Url">@page.Name</a></li>
-            @Traverse(page)
+<nav class="c-nav--sub" role="navigation">
+    <ul class="c-nav--sub__list">
+        @foreach (var item in menuItems){
+            <li class="c-nav__item nav__item--parent">
+                <a href="@item.Url" class="c-nav__link  @(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
+                    @item.Name
+                </a>
+                @if( item.IsAncestorOrSelf(CurrentPage) )
+                {
+                    @Traverse(item)
+                }
+            </li>
         }
     </ul>
 </nav>
 
 @* Helper method to travers through all descendants *@
-@helper Traverse(dynamic node)
-{
-    var maxLevelForNav = 6;
-    var items = node.Children.Where("Visible").Where("Level <= " + maxLevelForNav);
-    if ( items.Any() )
-    {
-            <ul class="c-nav__list--sub">
-                @foreach (var item in items) {
-                    <li class="c-nav__item c-nav__item--child">
+@helper Traverse(dynamic node) {
+    var maxLevelForNav = 5;
+    var items = node.Children.Where("Visible").Where(
+            "Level <= " + maxLevelForNav +
+        " && TemplateId > 0 " +
+        " && DocumentTypeAlias != \"Article\" " +
+        " && DocumentTypeAlias != \"Event\" "
+        );
+
+    if (items.Any()) {
+        <ul class="nav__list--sub">
+           @foreach (var item in items) {
+                    <li class="c-nav__item c-nav__item--child c-nav__item--child--@item.Level">
                         <a href="@item.Url" class="c-nav__link @(CurrentPage.Id == item.Id ? "active" : null)">@item.Name</a>
                         @Traverse(item)
                     </li>
-                }
-            </ul>
+           }
+        </ul>
     }
 }
-

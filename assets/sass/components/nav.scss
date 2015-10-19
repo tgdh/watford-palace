@@ -5,303 +5,338 @@
 =========================================================== */
 
 .c-nav__footer {
-	.c-nav__list--footer {
-		list-style: none;
-		.c-nav__link--footer {
-			font-size: 1.4rem;
-			color: $sec;
-			font-weight: bold;
-			transition: color $speed ease;
-			&:hover,
-			&:focus {
-				color: $pri;
-			}
-		}
-		.c-nav__item--footer {
-			display: inline-block;
-			margin: 0;
-			margin-right: 3rem;
-			position: relative;
-		}
-		.c-nav__item--footer:after {
-			content: "|";
-			color: $dark-black;
-			position: absolute;
-		    /* left: 0; */
-		    right: -2rem;
-		    top: 0.2rem;
-		}
-		.c-nav__item--footer:last-child {
-			margin-left: 0;
-		}
-		.c-nav__item--footer:last-child:after {
-			display: none;
-		}
-	}
+
+    .c-nav__list--footer {
+        list-style: none;
+
+        .c-nav__link--footer {
+            color: $sec;
+            font-size: 1.4rem;
+            font-weight: bold;
+            transition: color $speed ease;
+
+            &:hover,
+            &:focus {
+                color: $pri;
+            }
+        }
+
+        .c-nav__item--footer {
+            display: inline-block;
+            margin: 0;
+            margin-right: 3rem;
+            position: relative;
+        }
+
+        .c-nav__item--footer:after {
+            color: $dark-black;
+            content: '|';
+            position: absolute;
+            /* left: 0; */
+            right: -2rem;
+            top: .2rem;
+        }
+
+        .c-nav__item--footer:last-child {
+            margin-left: 0;
+        }
+
+        .c-nav__item--footer:last-child:after {
+            display: none;
+        }
+    }
 }
 
 
 @include respond-max( $mq-small + 150px ) {
 
-	.c-nav__main {
-		width: 100%;
-		display: block;
-		background: $ter;
-		z-index: 20;
-		position: absolute;
-		top: 14.2rem;
-		left: 0;
-		right: 0;
-		display: block;
-		padding-bottom: 2rem;
-		transform: translate3d(0,-100rem,0);			
-		.c-nav__list {
-			width: 100%;
-			display: block;
-		}
-		.c-nav__link {
-			text-align: center;
-			width: 100%;
-			padding: 0;
-			display: block;
-			color: $white;
-			font-weight: normal;
-			transition: color $speed ease,
-						background $speed ease;
-			position: relative;
-			padding: 1.2rem;
-		}
-		.c-nav__link:hover,
-		.c-nav__link.active,
-		.c-nav__link:focus {
-			background: $pri;
-			color: $white;
-		}
-		.c-nav__list--sub {
-			margin: 0;
-		}
-		.c-nav__item--child {
-			list-style: none;
-			width: 100%;
-			margin: 0;
-			.c-nav__link {
-				text-align: center;
-				color: $white;				
-			}	
-		}
-		.c-nav__item {
-			margin: 0;
-			width: 100%;
-			display: block;
-		}
+    .c-nav__main {
+        background: $ter;
+        display: block;
+        display: block;
+        left: 0;
+        padding-bottom: 2rem;
+        position: absolute;
+        right: 0;
+        top: 14.2rem;
+        transform: translate3d(0,-100rem,0);
+        width: 100%;
+        z-index: 20;
 
-	}
-	.c-nav--super {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-		.o-button {
-			display: block;
-			margin-bottom: 0.5rem;
-			span {
-				display: none;
-			}
-		}
-	}
-	.toggle--nav--main {
-		display: block;
-		position: absolute;
-		top: 3rem;
-		left: 2rem;
-		height: 3rem;
-		width: 3rem;
-		.menu-icon {
-			height: 3rem;
-		    width: 3rem;
-		    position: relative;
-		    display: block;
-			.menu-line {
-				width: 3rem;
-				height: 0.4rem;
-				background: $white;
-				position: absolute;
-				left: 0;
-			}
+        .c-nav__list {
+            display: block;
+            width: 100%;
+        }
 
-			.menu-line--1 {
-				top: 0.2rem;
-			}
-			.menu-line--2 {
-				top: 1.3rem;
-			}		
-			.menu-line--3 {
-				bottom: 0.2rem;
-			}
-		}
+        .c-nav__link {
+            color: $white;
+            display: block;
+            font-weight: normal;
+            padding: 1.2rem;
+            padding: 0;
+            position: relative;
+            text-align: center;
+            transition: color $speed ease,
+            background $speed ease;
+            width: 100%;
+        }
 
-	}
+        .c-nav__link:hover,
+        .c-nav__link.active,
+        .c-nav__link:focus {
+            background: $pri;
+            color: $white;
+        }
 
-	.js-nav-main--open {
-		.c-nav__main {
-			display: block;
-			transform: translate3d(0,0,0);	
-		}
-		.toggle--nav--main {
-			.menu-icon {
-				.menu-line {
-					background: $pri;
-				}
-			}
+        .c-nav__list--sub {
+            margin: 0;
+        }
 
-		}
-	}
+        .c-nav__item--child {
+            list-style: none;
+            margin: 0;
+            width: 100%;
+
+            .c-nav__link {
+                color: $white;
+                text-align: center;
+            }
+        }
+
+        .c-nav__item {
+            display: block;
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    .c-nav--super {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+
+        .o-button {
+            display: block;
+            margin-bottom: .5rem;
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .toggle--nav--main {
+        display: block;
+        height: 3rem;
+        left: 2rem;
+        position: absolute;
+        top: 3rem;
+        width: 3rem;
+
+        .menu-icon {
+            display: block;
+            height: 3rem;
+            position: relative;
+            width: 3rem;
+
+            .menu-line {
+                background: $white;
+                height: .4rem;
+                left: 0;
+                position: absolute;
+                width: 3rem;
+            }
+
+            .menu-line--1 {
+                top: .2rem;
+            }
+
+            .menu-line--2 {
+                top: 1.3rem;
+            }
+
+            .menu-line--3 {
+                bottom: .2rem;
+            }
+        }
+    }
+
+    .js-nav-main--open {
+
+        .c-nav__main {
+            display: block;
+            transform: translate3d(0,0,0);
+        }
+
+        .toggle--nav--main {
+
+            .menu-icon {
+
+                .menu-line {
+                    background: $pri;
+                }
+            }
+        }
+    }
 }
 
 
 @include respond-min( $mq-small + 150px ){
 
+    .c-nav__list--sub-4 {
+        display: none !important;
+    }
 
-	.c-nav--super {
-		.c-nav__item--super{
-			list-style: none;
-			display: inline-block;
-			margin: 0;
-			.c-nav__link--super {
-				color: $dark-black; 
-			}
-			
-		}
-	}
+    .c-nav--super {
 
-	.toggle--nav--main {
-		display: none;
-	}
-	.c-nav__list--sub {
-		display: none;
-	}
-	#mainNav {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		float: right;
-		clear: right;
-		z-index: 21;
-	}	
-	.c-nav__main {
-		.c-nav__list {
-			list-style: none;
-		}
-		.c-nav__link {
-			color: $sec;
-			font-weight: normal;
-			transition: color $speed ease,
-						background $speed ease;
-		}
-		.c-nav__item--parent {
-			.c-nav__link.active  {
-				color: $sec;					
-			}
+        .c-nav__item--super {
+            display: inline-block;
+            list-style: none;
+            margin: 0;
 
-		}
-			.c-nav__item:hover .c-nav__link {
-				background: $sec;
-				color: $white;
-			}	
-		// .c-nav__item:hover .c-nav__link,
-		// .c-nav__link.active,
-		// .c-nav__link:focus {
+            .c-nav__link--super {
+                color: $dark-black;
+            }
+        }
+    }
 
-		// 	// background: $white;
-		// }
-		.c-nav__item {
-			margin: 0;
-		}
+    .toggle--nav--main {
+        display: none;
+    }
 
-	}
+    .c-nav__list--sub {
+        display: none;
+    }
 
+    #mainNav {
+        bottom: 0;
+        clear: right;
+        float: right;
+        position: absolute;
+        right: 0;
+        z-index: 21;
+    }
 
-	.c-nav__main {
+    .c-nav__main {
 
-		.c-nav__item {
-			display: inline;
-			position: relative;
-		}
+        .c-nav__list {
+            list-style: none;
+        }
 
-		.c-nav__link {
-			display: inline-block;
-			padding: 1rem;
-			padding-bottom: 2.6rem;
-			color: $dark-black;
-			font-weight: bold;
-		}
+        .c-nav__link {
+            color: $sec;
+            font-weight: normal;
+            transition: color $speed ease,
+            background $speed ease;
+        }
 
-		.c-nav__list--sub {
-			visibility: hidden;
-			opacity: 0;
-			
-			position: absolute;
-			left: 0;
-			width: 20rem;
-			opacity: 1;
-			z-index: 50;
-			text-align: left;
-			padding: 0;
-			margin: 0;
-			list-style: none;
-			display: block;
-			transition: opacity $speed ease, visibility	$speed ease;
-			.c-nav__item--child {
-			    position: relative;
-			    z-index: 50;
-			    background-color: $sec;
-			    margin: 0;
-			    // padding: 1.4rem;
-			    transition: background-color $speed ease;	
-			    .c-nav__link {
-				    color: $dark-black;
-				    padding: 1.4rem;
-					width: 24rem;
-					font-size: 1.4rem;
-					display: block;
-					transition: color $speed ease, background $speed ease;
-					opacity: 0;
-			    }
-			}
-			.c-nav__item--child:hover {
-				.c-nav__link {
-				    color: $white;	
-				    background: lighten($sec, 10); 
-				    transition: background $speed ease, opacity $speed ease, visibility	$speed ease; 	
-			    }
-			}
-			.c-nav__item--child {
-				.c-nav__link.active {
-				    color: $white;
-				    background: lighten($sec, 10);     	
-			    }
-			}
+        .c-nav__item--parent {
 
+            .c-nav__link.active {
+                color: $sec;
+            }
+        }
 
-		}
-		.c-nav__item--parent:last-child {
-			.c-nav__list--sub {
-				right: 4rem;
-				left: initial;
-			}
-		}
+        .c-nav__item:hover .c-nav__link {
+            background: $sec;
+            color: $white;
+        }
+        // .c-nav__item:hover .c-nav__link,
+        // .c-nav__link.active,
+        // .c-nav__link:focus {
+        // 	// background: $white;
+        // }
+        .c-nav__item {
+            margin: 0;
+        }
+    }
 
-		.c-nav__item:hover .c-nav__list--sub {
-			opacity: 1;
-			visibility: visible;
-			transition: opacity $speed ease, visibility	$speed ease;
-			.c-nav__item--child {
-			    .c-nav__link {
-					opacity: 1;
-					transition: background $speed ease, opacity $speed ease, visibility	$speed ease;
-			    }
-			}
-		}
-	}
+    .c-nav__main {
 
+        .c-nav__item {
+            display: inline;
+            position: relative;
+        }
 
+        .c-nav__link {
+            color: $dark-black;
+            display: inline-block;
+            font-weight: bold;
+            padding: 1rem;
+            padding-bottom: 2.6rem;
+        }
+
+        .c-nav__list--sub {
+            display: block;
+            left: 0;
+            list-style: none;
+            margin: 0;
+            opacity: 1;
+            padding: 0;
+            position: absolute;
+            text-align: left;
+            transition: opacity $speed ease, visibility	$speed ease;
+            visibility: hidden;
+            width: 20rem;
+            z-index: 50;
+
+            .c-nav__item--child {
+                background-color: $sec;
+                margin: 0;
+                position: relative;
+                // padding: 1.4rem;
+                transition: background-color $speed ease;
+                z-index: 50;
+
+                .c-nav__link {
+                    color: $dark-black;
+                    display: block;
+                    font-size: 1.4rem;
+                    opacity: 0;
+                    padding: 1.4rem;
+                    transition: color $speed ease, background $speed ease;
+                    width: 24rem;
+                }
+            }
+
+            .c-nav__item--child:hover {
+
+                .c-nav__link {
+                    background: lighten($sec, 10);
+                    color: $white;
+                    transition: background $speed ease, opacity $speed ease, visibility	$speed ease;
+                }
+            }
+
+            .c-nav__item--child {
+
+                .c-nav__link.active {
+                    background: lighten($sec, 10);
+                    color: $white;
+                }
+            }
+        }
+
+        .c-nav__item--parent:last-child {
+
+            .c-nav__list--sub {
+                left: initial;
+                right: 4rem;
+            }
+        }
+
+        .c-nav__item:hover .c-nav__list--sub {
+            opacity: 1;
+            transition: opacity $speed ease, visibility	$speed ease;
+            visibility: visible;
+
+            .c-nav__item--child {
+
+                .c-nav__link {
+                    opacity: 1;
+                    transition: background $speed ease, opacity $speed ease, visibility	$speed ease;
+                }
+            }
+        }
+    }
 }

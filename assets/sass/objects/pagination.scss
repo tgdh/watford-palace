@@ -6,40 +6,48 @@
 
 .c-pagination,
 .ezsearch-pager {
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-	.o-pagination__link,
-	.o-pagination__page,
-	.o-pagination__active  {
-		padding: 1.2rem;
-		padding-left: 1.8rem;
-		padding-right: 1.8rem;
-		color: $pri;
-		background: $ter;
-		display: inline-block;
-		margin-left: 0.2rem;
-		margin-right: 0.2rem;
-		font-weight: normal;
-		transition: all $speed ease;
-		margin-bottom: 1rem;
-	}
-	.o-pagination__link:hover,
-	.o-pagination__page:hover,
-	.o-pagination__active:hover  {
-		color: $white;
-		background: $pri;
-		font-weight: normal;
-	}
-	.o-pagination__active {
-		background: $pri;
-		color: $white;
-		font-weight: normal;
-	}
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+
+    .o-pagination__link,
+    .o-pagination__page,
+    .o-pagination__active {
+        background: $ter;
+        color: $pri;
+        display: inline-block;
+        font-weight: normal;
+        margin-bottom: 1rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
+        padding: 1.2rem;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        transition: all $speed ease;
+    }
+
+    .o-pagination__link:hover,
+    .o-pagination__page:hover,
+    .o-pagination__active:hover {
+        background: $pri;
+        color: $white;
+        font-weight: normal;
+    }
+
+    .o-pagination__active {
+        background: $pri;
+        color: $white;
+        font-weight: normal;
+    }
 }
 
 .o-paging-more {
-	text-align: center;
-	margin-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.o-load-more,
+.o-load-prev {
+    display: none;
 }

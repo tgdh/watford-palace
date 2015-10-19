@@ -6,6 +6,8 @@
 	var settings = homePage.FirstChild("Settings");
 	var paddingTop = "o-section--top";
 
+	var level = CurrentPage.Level;
+
 	if( CurrentPage.HasValue("bodyText") && CurrentPage.bodyText.ToString() != "" )
 	{
 		paddingTop = "";
@@ -14,20 +16,23 @@
 }
 @if ( CurrentPage.Level == 2 )
 {
-	<div class="o-section @paddingTop o-wrap o-wrap--medium">
+	<div class="o-section o-section--main @paddingTop o-wrap o-wrap--medium">
 		<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
 		@if( CurrentPage.HasValue("bodyText") )
 		{
 			@CurrentPage.bodyText
-			<a href="#section-0" class="link-next link-bottom">
-	            <i class="ico-arrow ico-arrow--down"></i>
-	        </a>
 			if( CurrentPage.HasValue("mainContent") )
 			{
 				<span id="section-0" class="anchor-offset--padding"></span>
 			}
 		}
 	</div>
+	if( CurrentPage.HasValue("bodyText") )
+	{
+		<a href="#section-0" class="link-next link-bottom">
+            <i class="ico-arrow ico-arrow--down"></i>
+        </a>
+	}
 	if( CurrentPage.HasValue("mainContent") )
 	{
 		@Html.Partial("Page/PageElements")
@@ -35,18 +40,24 @@
 }
 else
 {
-	<div class="o-section @paddingTop o-wrap o-wrap--medium">
-		<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	<div class="o-section o-section--main @paddingTop">
+		<div class="o-wrap o-wrap--medium o-wrap--offset">
+			@Html.Partial("Page/Sidebar")
+			<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+			@if( CurrentPage.HasValue("bodyText") )
+			{
+				@CurrentPage.bodyText
+				if( CurrentPage.HasValue("mainContent") )
+				{
+					<span id="section-0" class="anchor-offset--padding"></span>
+				}
+			}
+		</div>
 		@if( CurrentPage.HasValue("bodyText") )
 		{
-			@CurrentPage.bodyText
 			<a href="#section-0" class="link-next link-bottom">
 	            <i class="ico-arrow ico-arrow--down"></i>
 	        </a>
-			if( CurrentPage.HasValue("mainContent") )
-			{
-				<span id="section-0" class="anchor-offset--padding"></span>
-			}
 		}
 	</div>
 	if( CurrentPage.HasValue("mainContent") )

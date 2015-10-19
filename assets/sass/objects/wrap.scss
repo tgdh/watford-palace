@@ -5,52 +5,85 @@
 =========================================================== */
 
 .o-wrap {
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
+.o-wrap--center {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .o-wrap--center {
-	margin-left: auto;
-	margin-right: auto;
-}
-.o-wrap--center {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .o-wrap--small {
-	max-width: 72rem;
+    max-width: 72rem;
 }
 
 .o-wrap--medium {
-	max-width: 90rem;
+    max-width: 90rem;
 }
 
 .o-wrap--large {
-	max-width: 105rem;
+    max-width: 105rem;
 }
 
 .o-wrap--x-large {
-	max-width: 138rem;
+    max-width: 138rem;
 }
 
 @include respond-min-max( $mq-small, $mq-medium ) {
-
-	// .o-wrap {
-	// 	padding-left: 2rem;
-	// 	padding-right: 2rem;
-	// }
-
+    // .o-wrap {
+    // 	padding-left: 2rem;
+    // 	padding-right: 2rem;
+    // }
 }
 
-@include respond-min( $mq-medium ) {
+@include respond-min($mq-medium) {
+    // .o-wrap {
+    // 	padding-left: 4rem;
+    // 	padding-right: 4rem;
+    // }
+}
 
-	// .o-wrap {
-	// 	padding-left: 4rem;
-	// 	padding-right: 4rem;
-	// }
 
+@include respond-min($mq-large - 50px) {
+
+    .o-wrap--offset {
+        max-width: 72rem;
+        transform: translateX(10rem);
+    }
+
+    .link-next--offset {
+        margin-left: 7.5rem;
+    }
+}
+
+@include respond-min($mq-x-large - 80px) {
+
+    .o-wrap--offset {
+        max-width: 85rem;
+        transform: translateX(12rem);
+    }
+
+    .link-next--offset {
+        margin-left: 9.5rem;
+    }
+}
+
+@include respond-min($mq-xx-large) {
+
+    .o-wrap--offset {
+        max-width: 90rem;
+        transform: translateX(15rem);
+    }
+
+    .link-next--offset {
+        margin-left: 12.5rem;
+    }
 }
