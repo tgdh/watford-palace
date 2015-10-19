@@ -7,16 +7,16 @@
 	string[] dateList = new string[100];
 	var i = 0;
 	var previous = "";
-	var current = "";	
+	var current = "";
 
 	foreach( var item in everything ){
 		i = i + 1;
 		dateList[i] = (item.ReleaseDate.ToString("MMMM yyyy"));
-		
+
 	}
 
 	var qCat = Request.QueryString["category"];
-}	
+}
 
 <div class="o-news-filters clearfix">
 	<div class="o-filter o-news-filter--category">
@@ -27,27 +27,27 @@
 				<option value="?category=general-news">General news</option>
 				<option value="?category=in-the-media">In the media</option>
 				<option value="?category=press-release">Press release</option>
-			</select>		
+			</select>
 		</div> *@
-		<nav class="c-nav--sub" role="navigation">
+		<nav class="c-nav--sub--filter" role="navigation">
 			<ul class="c-nav--sub__list">
 					<li class="c-nav__item nav__item--parent">
 						<a href="?category=general-news" class="c-nav__link @(qCat == "general-news" ? "active" : null)">
 							General news
 						</a>
-						
+
 					</li>
 					<li class="c-nav__item nav__item--parent">
 						<a href="?category=in-the-media" class="c-nav__link @(qCat == "in-the-media" ? "active" : null)">
 							In the media
 						</a>
-						
+
 					</li>
 					<li class="c-nav__item nav__item--parent">
 						<a href="?category=press-release" class="c-nav__link @(qCat == "press-release" ? "active" : null)">
 							Press release
 						</a>
-						
+
 					</li>
 			</ul>
 		</nav>
@@ -70,5 +70,5 @@
 		</div>
 	</div>
 </div>
-			
-			
+
+

@@ -100,10 +100,11 @@
 
 	<main id="main" class="o-page__content clearfix">
 		@RenderBody()
+		@if( CurrentPage.DocumentTypeAlias == "HomePage" || CurrentPage.DocumentTypeAlias == "Contact" ){
+			@Html.Partial("Component/Google-map")
+		}
 	</main>
-	@if( CurrentPage.DocumentTypeAlias == "HomePage" || CurrentPage.DocumentTypeAlias == "Contact" ){
-		@Html.Partial("Component/Google-map")
-	}
+
 	@Html.Partial("Page/Footer")
 
 
