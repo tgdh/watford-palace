@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# HEADER
+    # HEADER
 
 =========================================================== */
 
@@ -27,12 +27,22 @@
             width: 20rem;
         }
     }
+
+    .js-nav-main--open {
+
+        .o-page__header {
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: -7rem;
+        }
+    }
 }
 
 @include respond-min($mq-large - 50px) {
 
     .o-page__header {
-        background: white;
+        background: $white;
         height: 10.6rem;
         left: $frame-size--small;
         padding-top: 1.8rem;

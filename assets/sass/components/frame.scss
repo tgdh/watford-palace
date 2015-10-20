@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# FRAME
+    # FRAME
 
 =========================================================== */
 
@@ -8,27 +8,35 @@
     height: $frame-size--small * 2;
     position: fixed;
     right: $frame-size--small;
-    top: 10.6rem;
     width: $frame-size--small * 2;
     z-index: 20;
 }
 
 @include respond-max($mq-large - 50px) {
-	.c-top-corner {
-	    top: 7rem;
-	}
+
+    .c-top-corner {
+        top: 6.9rem;
+    }
+
+    .js-nav-main--open {
+
+        .c-top-corner {
+            display: none !important;
+        }
+    }
 }
 
 @include respond-min($mq-large - 50px) {
-	.c-top-corner {
-	    top: 10.6rem;
-	}
+
+    .c-top-corner {
+        top: 10.5rem;
+    }
 }
 
 .c-bottom-frame {
     background: $white;
     bottom: 0;
-    height: $frame-size--small;
+    height: $frame-size--small - .1rem;
     left: 0;
     position: fixed;
     right: 0;
@@ -39,7 +47,7 @@
 
     .c-top-corner {
         height: $frame-size--small * 3;
-        right: $frame-size--medium;
+        right: $frame-size--medium - .1rem;
         width: $frame-size--small * 3;
     }
 
@@ -52,7 +60,7 @@
 
     .c-top-corner {
         height: $frame-size--small * 4.5;
-        right: $frame-size--large;
+        right: $frame-size--large - .1rem;
         width: $frame-size--small * 4.5;
     }
 

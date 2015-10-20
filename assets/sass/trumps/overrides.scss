@@ -33,7 +33,11 @@
 }
 
 .t-white {
-    color: $white;
+    color: $white !important;
+
+    a {
+        color: $white !important;
+    }
 }
 
 .t-padding {
@@ -112,5 +116,4 @@
         margin-top: -10.6rem - $padding--large;
         padding-top: 10.6rem + $padding--large !important;
     }
-
 }

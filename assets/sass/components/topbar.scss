@@ -5,44 +5,94 @@
 =========================================================== */
 
 .c-top-bar {
-	.ico-super {
-		display: block;
-		font-size: 2.4rem;
-		margin-right: 0.5rem;
-	}
+    float: right;
 
-	float: right;
-	.o-search-bar {
-		display: inline-block;
-		.o-input,
-		.o-search-button {
-			display: inline-block;
+    .ico-super {
+        display: block;
+        font-size: 2.4rem;
+        margin-right: .5rem;
+    }
 
-		}
-		.ezsearch-form:hover input {
-			background: $main-grey;
-		}
-		.ezsearch-form {
-			input:focus {
-				background: $main-grey;
-			}
-		}
-		.o-input {
-			vertical-align: top;
-			input {
-				height: 2.3rem;				
-			}
-		}
-	}
-	.c-nav--super {
-		display: inline-block;
-		margin-right: 1rem;
-	}
-	.c-top-bar__box-office {
-		display: inline-block;
-		font-weight: bold;
-		font-size: 1.8rem;
-	    line-height: 2rem;
-	    vertical-align: middle;
-	}
+    .o-search-bar {
+        display: inline-block;
+
+        .o-input,
+        .o-search-button {
+            display: inline-block;
+        }
+
+        .ezsearch-form:hover input {
+            background: $main-grey;
+        }
+
+        .ezsearch-form {
+
+            input:focus {
+                background: $main-grey;
+            }
+        }
+
+        .o-input {
+            vertical-align: top;
+
+            input {
+                height: 2.3rem;
+            }
+        }
+    }
+
+    .c-nav--super {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    .c-top-bar__box-office {
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 2rem;
+        vertical-align: middle;
+    }
+}
+
+@include respond-max($mq-large - 50px) {
+
+    .c-nav__item--mobile {
+
+        .ezsearch-form {
+            margin: 0;
+        }
+
+        .o-input {
+            margin: 0 auto;
+            max-width: 25rem;
+            text-align: center;
+            vertical-align: middle;
+
+            input {
+                background: $white;
+                display: inline-block;
+                float: left;
+                max-width: calc(100% - 4rem);
+                vertical-align: middle;
+            }
+        }
+
+        .o-search-button {
+            color: $white;
+            display: inline-block;
+            float: right;
+            font-size: 3rem;
+            height: 4rem;
+            vertical-align: middle;
+            width: 4rem;
+        }
+    }
+}
+
+@include respond-min($mq-large - 50px) {
+
+    .c-nav__item--mobile {
+        display: none !important;
+    }
 }
