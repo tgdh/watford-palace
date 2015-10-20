@@ -5,48 +5,58 @@
 =========================================================== */
 
 .c-top-corner {
-	position: fixed;
-    top: 10.6rem;
-    right: $frame-size--small;
     height: $frame-size--small * 2;
+    position: fixed;
+    right: $frame-size--small;
+    top: 10.6rem;
     width: $frame-size--small * 2;
     z-index: 20;
 }
 
+@include respond-max($mq-large - 50px) {
+	.c-top-corner {
+	    top: 7rem;
+	}
+}
+
+@include respond-min($mq-large - 50px) {
+	.c-top-corner {
+	    top: 10.6rem;
+	}
+}
+
 .c-bottom-frame {
-	position: fixed;
-	z-index: 3;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: $white;
-	height: $frame-size--small;
+    background: $white;
+    bottom: 0;
+    height: $frame-size--small;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 3;
 }
 
-@include respond-min( $mq-x-large ) {
+@include respond-min($mq-x-large) {
 
-	.c-top-corner {
-	    right: $frame-size--medium;
-	    height: $frame-size--small * 3;
-	    width: $frame-size--small * 3;
-	}
+    .c-top-corner {
+        height: $frame-size--small * 3;
+        right: $frame-size--medium;
+        width: $frame-size--small * 3;
+    }
 
-	.c-bottom-frame {
-		height: $frame-size--medium;
-	}
-
+    .c-bottom-frame {
+        height: $frame-size--medium;
+    }
 }
 
-@include respond-min( $mq-xx-large ) {
+@include respond-min($mq-xx-large) {
 
-	.c-top-corner {
-	    right: $frame-size--large;
-	    height: $frame-size--small * 4.5;
-	    width: $frame-size--small * 4.5;
-	}
+    .c-top-corner {
+        height: $frame-size--small * 4.5;
+        right: $frame-size--large;
+        width: $frame-size--small * 4.5;
+    }
 
-	.c-bottom-frame {
-		height: $frame-size--large;
-	}
-
+    .c-bottom-frame {
+        height: $frame-size--large;
+    }
 }

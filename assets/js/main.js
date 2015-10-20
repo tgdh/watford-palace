@@ -2,6 +2,18 @@
 	'use strict';
 
 	//@todo Define the isModern function globally - Probably within head.js
+    var toggleClass = function(el, className) {
+        if(el.hasClass(className + '--open')) {
+            el.removeClass(className + '--open');
+        } else {
+            el.addClass(className + '--open');
+        }
+    };
+
+    $('[data-toggle]').on( "click", function() {
+        var $className = $( this ).data("toggle");
+        toggleClass($('html'), $className);
+    });
 
     $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
@@ -20,10 +32,11 @@
 
     if( window.IsModern ){
         console.log('js fired from window IsModern');
+
         var setHeight = function(){
         	var coverHeight = $('.c-cover__main').height();
 
-        	$('.c-cover__aside').height(coverHeight);
+        	// $('.c-cover__aside').height(coverHeight);
         };
 
         var singleGallery = function(){
@@ -101,6 +114,23 @@
             });
         };
 
+        var queries = [
+            {
+                context: 'medium-max',
+                match: function() {
+                    console.log('slide navigation');
+                    $('#mainNav').menu();
+
+                },
+                unmatch: function() {
+                    location.reload();
+                }
+
+            }
+        ];
+
+
+
 		$(window).ready(function(){
             singleGallery();
        		setHeight();
@@ -108,7 +138,13 @@
             magnificGallery();
             startVideo();
             tabbedContent();
+            MQ.init(queries);
 		});
+
+        $(window).load(function() {
+            console.log("loaded");
+
+        });
 		$(window).resize(function(){
        		setHeight();
 		});

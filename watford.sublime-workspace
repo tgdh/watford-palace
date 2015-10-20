@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"po",
+				"pos-a	position: absolute;"
+			],
+			[
+				"body",
+				"bodyText"
+			],
+			[
+				"o-wrap-",
+				"o-wrap--offset"
+			],
+			[
+				"o-wrap",
+				"o-wrap--offset"
+			],
+			[
+				"mar",
+				"mr-a	margin-right: auto;"
+			],
+			[
 				"rend",
 				"rendersection	Razor: \"@RenderSection\""
 			],
@@ -14,10 +34,6 @@
 			[
 				"gall",
 				"galleryType"
-			],
-			[
-				"mar",
-				"margin	CSS: margin: properties"
 			],
 			[
 				"ac",
@@ -228,34 +244,66 @@
 	"buffers":
 	[
 		{
-			"file": "assets/sass/components/frame.scss",
+			"file": "umbraco/Views/Partials/Component/cover.cshtml",
 			"settings":
 			{
-				"buffer_size": 895,
+				"buffer_size": 3466,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "umbraco/Views/Partials/Page/Navigation.cshtml",
+			"file": "assets/sass/components/nav.scss",
 			"settings":
 			{
-				"buffer_size": 1727,
+				"buffer_size": 7373,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "assets/sass/components/subnav.scss",
+			"file": "assets/sass/components/cover.scss",
 			"settings":
 			{
-				"buffer_size": 208,
+				"buffer_size": 3678,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "assets/sass/settings/global.scss",
+			"file": "assets/sass/objects/cards.scss",
 			"settings":
 			{
-				"buffer_size": 2085,
+				"buffer_size": 12211,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/generic/js-breakpoints.scss",
+			"settings":
+			{
+				"buffer_size": 1112,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "umbraco/Views/Partials/Page/Super-Navigation.cshtml",
+			"settings":
+			{
+				"buffer_size": 1145,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/js/main.js",
+			"settings":
+			{
+				"buffer_size": 4498,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/sass/trumps/overrides.scss",
+			"settings":
+			{
+				"buffer_size": 1588,
 				"line_ending": "Unix"
 			}
 		}
@@ -267,8 +315,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 292.0,
-		"last_filter": "install",
+		"height": 354.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -347,60 +395,86 @@
 	[
 		"/Users/User1/Sites/Projects/watford-palace",
 		"/Users/User1/Sites/Projects/watford-palace/assets",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/jquery-sliding-menu/js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/generic",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco"
 	],
 	"file_history":
 	[
+		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/cover.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Cover-Aside.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Navigation.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/headings.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/slidingmenu.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/nav.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Scripts/Events.js",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Super-Navigation.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
+		"/Users/User1/Desktop/UmbracoTraceLog.txt",
+		"/Users/User1/Sites/Projects/watford-palace/tasks/concat.js",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/generic/js-breakpoints.scss",
+		"/Users/User1/Downloads/AppSettings.config",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
+		"/Users/User1/Sites/Projects/watford-palace/bower.json",
+		"/Users/User1/Downloads/Web.config",
+		"/Users/User1/Desktop/Web.config",
+		"/Users/User1/Desktop/AppSettings.config",
+		"/Users/User1/Sites/Projects/watford-palace/assets/_components/tabby/.bower.json",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/News-filter.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/subnav.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/gallery.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings/global.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElements.cshtml",
+		"/Users/User1/Desktop/TraceLog.txt",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/media.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/LandingPage.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Gateway.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Sidebar.cshtml",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/User/Side Bar.sublime-settings",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/User/Terminal (OSX).sublime-settings",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/pagination.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Sidebar.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Gateway.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/LandingPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/WhatsOn.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElements.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/overrides.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Data/Logs/UmbracoTraceLog.txt",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Umbraco/Views/dashboard/eventsyncdashboard.html",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Blocks.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Navigation.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/buttons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/elements.scss",
 		"/Users/User1/Downloads/uBlogsy/uBlogsy/masterpages/uBlogsyLanding.master",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Web.config",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/gallery.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Scripts/Events.js",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Book.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
 		"/Users/User1/Desktop/tgdh-stylesheet.css",
-		"/Users/User1/Sites/Projects/watford-palace/tasks/concat.js",
 		"/Users/User1/Sites/Projects/watford-palace/tasks/pixrem.js",
 		"/Users/User1/Sites/Projects/watford-palace/Gruntfile.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/css/spektrix.css",
 		"/Users/User1/Desktop/tgdh-style.css",
 		"/Users/User1/Sites/Projects/watford-palace/tasks/pixrem2.js",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/spektrix.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Profile.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Cart.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/spektrix.scss",
 		"/Users/User1/Sites/Projects/watford-palace/tasks/sass.js",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Navigation.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Super-Navigation.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/cover.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Cover-Aside.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/MasterSpektrix.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Plugins/SpektrixDashboard/package.manifest",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Featured-Content.cshtml",
@@ -414,15 +488,10 @@
 		"/Users/User1/Desktop/awkward.scss ",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
-		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/headings.scss",
 		"/Volumes/Web Design/Paulius Putna/secure-details",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/fonts/style.css",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/tabs.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/tabby/dist/css/tabby.css",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/media.scss",
 		"/Users/User1/Sites/Projects/watford-palace/watford.sublime-workspace",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/NewsArticle.cshtml",
 		"/Users/User1/Sites/Projects/eric-robinson/umbraco/Views/Partials/Component/Page-Blocks.cshtml",
@@ -430,12 +499,8 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/table.scss",
 		"/Users/User1/Sites/Projects/thespring/umbraco/Views/Show.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/video.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/show.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/news.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/web.config",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Sitemap.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/EventsSurface/GetFilteredEvents.cshtml",
@@ -454,33 +519,18 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/search.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/icons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Forms/Contact-form.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings/global.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/SelectOrDie/_src/selectordie.css",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Google-map.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/Paging.cs",
 		"/Users/User1/Desktop/Old documents/connectionStrings.config",
 		"/Users/User1/Desktop/watfordpalance_run1.csr",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/News-filter.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/filters.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/forms.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/_selectordie.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/_magnific.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/BlogFolder.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/NewsCounter.cs",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/lists.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/card-fix.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/video.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/_owl.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/_components/OwlCarousel2/dist/assets/owl.carousel.css",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Plugins/NestedContent/Css/nestedcontent.css",
-		"/Users/User1/Sites/Projects/watford-palace/assets/_components/OwlCarousel2/dist/assets/owl.theme.default.css",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/generic/js-breakpoints.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/js/main.js",
-		"/Users/User1/Sites/Projects/watford-palace/tasks/watch.js",
-		"/Users/User1/Sites/Projects/watford-palace/tasks/concurrent.js",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Footer-nav.cshtml"
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/lists.scss"
 	],
 	"find":
 	{
@@ -540,6 +590,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"font",
+			"c-cover__aside",
+			"padding-bottom",
+			"corner",
+			"font-size",
+			"height",
+			".o-section--window",
+			"watford",
+			"tabbed",
+			"page__content",
+			"link-next--offset",
+			"spektrix",
+			"figcaption",
+			"link-next",
+			"class=\"link-next\"",
+			"link-next",
+			"> ",
+			"c-page-block-",
+			"c-page-block--image-left ",
 			"c-nav--sub",
 			".c-bottom-frame",
 			"o-paging-more",
@@ -648,26 +717,7 @@
 			" .link-next",
 			".link-next .",
 			", count",
-			".c-cover__content",
-			"c",
-			"o-card o-card--month-block",
-			".o-card--event:nth-of-type",
-			".o-card--event {",
-			".o-card--event",
-			"menu__entry",
-			".o-card--month-block  +",
-			"+",
-			"menu__heading",
-			"o-card--month-block",
-			"page__header",
-			"anchor",
-			"<span id=\"@title.ToString().ToLower()\" class=\"anchor-offset\"></span>",
-			"date__time",
-			".owl-carousel",
-			".form-horizontal .nested-content .controls-row",
-			"image",
-			" id=\"@title.ToString().ToLower()\"",
-			"2015-09-30"
+			".c-cover__content"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -693,24 +743,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "assets/sass/components/frame.scss",
+					"file": "umbraco/Views/Partials/Component/cover.cshtml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 895,
+						"buffer_size": 3466,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								311,
-								311
+								1167,
+								1167
 							]
 						],
 						"settings":
@@ -718,11 +768,41 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -733,73 +813,139 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_curly_content"
+							],
+							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 557.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "assets/sass/components/nav.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3328,
+								3328
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"history_list_is_closing": true,
 							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2548.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "umbraco/Views/Partials/Page/Navigation.cshtml",
+					"buffer": 2,
+					"file": "assets/sass/components/cover.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1727,
+						"buffer_size": 3678,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								380,
-								380
+								2939,
+								2939
 							]
 						],
 						"settings":
@@ -807,11 +953,41 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -822,72 +998,134 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_curly_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2453.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/sass/objects/cards.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6528,
+								6528
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Razor/Razor.tmLanguage"
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6895.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "assets/sass/components/subnav.scss",
+					"buffer": 4,
+					"file": "assets/sass/generic/js-breakpoints.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 208,
+						"buffer_size": 1112,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								154,
-								154
+								782,
+								782
 							]
 						],
 						"settings":
@@ -895,11 +1133,41 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -910,73 +1178,132 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_curly_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 379.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "umbraco/Views/Partials/Page/Super-Navigation.cshtml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1145,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"open_with_edit": true,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+							"syntax": "Packages/Razor/Razor.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "assets/sass/settings/global.scss",
+					"buffer": 6,
+					"file": "assets/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2085,
+						"buffer_size": 4498,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								4288,
+								4288
 							]
 						],
 						"settings":
@@ -984,11 +1311,41 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -999,55 +1356,118 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_curly_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2097.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "assets/sass/trumps/overrides.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1588,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								457,
+								457
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
 								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -1070,11 +1490,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.378132577573,
 			1.0
 		],
 		"rows":
@@ -1110,28 +1537,140 @@
 		"selected_items":
 		[
 			[
-				"glo",
-				"assets/sass/settings/global.scss"
+				"cover",
+				"umbraco/Views/Partials/Component/cover.cshtml"
 			],
 			[
-				"nav",
-				"assets/sass/components/nav.scss"
+				"main",
+				"assets/js/main.js"
+			],
+			[
+				"card",
+				"assets/sass/objects/cards.scss"
+			],
+			[
+				"over",
+				"assets/sass/trumps/overrides.scss"
+			],
+			[
+				"super",
+				"umbraco/Views/Partials/Page/Super-Navigation.cshtml"
 			],
 			[
 				"navi",
 				"umbraco/Views/Partials/Page/Navigation.cshtml"
 			],
 			[
-				"gate",
-				"umbraco/Views/Partials/Page/Gateway.cshtml"
+				"header",
+				"umbraco/Views/Partials/Page/Header.cshtml"
 			],
 			[
-				"ladn",
-				"umbraco/Views/LandingPage.cshtml"
+				"head",
+				"assets/sass/base/headings.scss"
+			],
+			[
+				"nav",
+				"assets/sass/components/nav.scss"
+			],
+			[
+				"slid",
+				"assets/sass/components/slidingmenu.scss"
+			],
+			[
+				"wrap",
+				"assets/sass/objects/wrap.scss"
+			],
+			[
+				"hea",
+				"assets/sass/base/headings.scss"
+			],
+			[
+				"mai",
+				"assets/js/main.js"
+			],
+			[
+				"icon",
+				"assets/sass/base/icons.scss"
+			],
+			[
+				"slidi",
+				"assets/sass/components/slidingmenu.scss"
+			],
+			[
+				"hede",
+				"umbraco/Views/Partials/Page/Header.cshtml"
+			],
+			[
+				"con",
+				"tasks/concat.js"
+			],
+			[
+				"master",
+				"umbraco/Views/Master.tpl.html"
+			],
+			[
+				"footer",
+				"umbraco/Views/Partials/Page/Footer.cshtml"
+			],
+			[
+				"conta",
+				"umbraco/Views/Contact.cshtml"
+			],
+			[
+				"subnav",
+				"assets/sass/components/subnav.scss"
+			],
+			[
+				"filter",
+				"umbraco/Views/Partials/Component/News-filter.cshtml"
+			],
+			[
+				"page",
+				"umbraco/Views/Partials/Page/PageElements.cshtml"
 			],
 			[
 				"text",
 				"umbraco/Views/TextPage.cshtml"
+			],
+			[
+				"glo",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"ticket",
+				"umbraco/Views/Partials/Component/Tickets.cshtml"
+			],
+			[
+				"event",
+				"umbraco/Views/Event.cshtml"
+			],
+			[
+				"glob",
+				"assets/sass/settings/global.scss"
+			],
+			[
+				"lan",
+				"umbraco/Views/LandingPage.cshtml"
+			],
+			[
+				"side",
+				"umbraco/Views/Partials/Page/Sidebar.cshtml"
+			],
+			[
+				"sec",
+				"assets/sass/objects/section.scss"
+			],
+			[
+				"gate",
+				"umbraco/Views/Partials/Page/Gateway.cshtml"
+			],
+			[
+				"landi",
+				"umbraco/Views/LandingPage.cshtml"
+			],
+			[
+				"ladn",
+				"umbraco/Views/LandingPage.cshtml"
 			],
 			[
 				"sidebar",
@@ -1140,10 +1679,6 @@
 			[
 				"waht",
 				"umbraco/Views/WhatsOn.cshtml"
-			],
-			[
-				"sec",
-				"assets/sass/objects/section.scss"
 			],
 			[
 				"button",
@@ -1160,10 +1695,6 @@
 			[
 				"web",
 				"umbraco/Web.config"
-			],
-			[
-				"event",
-				"umbraco/Views/Event.cshtml"
 			],
 			[
 				"show-",
@@ -1186,24 +1717,8 @@
 				"assets/sass/components/elements.scss"
 			],
 			[
-				"page",
-				"umbraco/Views/Partials/Page/PageElements.cshtml"
-			],
-			[
-				"card",
-				"assets/sass/objects/cards.scss"
-			],
-			[
 				"concat",
 				"tasks/concat.js"
-			],
-			[
-				"conta",
-				"umbraco/Views/Contact.cshtml"
-			],
-			[
-				"master",
-				"umbraco/Views/Master.tpl.html"
 			],
 			[
 				"spektri",
@@ -1216,14 +1731,6 @@
 			[
 				"navgi",
 				"umbraco/Views/Partials/Page/Navigation.cshtml"
-			],
-			[
-				"super",
-				"umbraco/Views/Partials/Page/Super-Navigation.cshtml"
-			],
-			[
-				"header",
-				"umbraco/Views/Partials/Page/Header.cshtml"
 			],
 			[
 				"tickets",
@@ -1254,10 +1761,6 @@
 				"umbraco/Views/Partials/Component/Tickets.cshtml"
 			],
 			[
-				"filter",
-				"umbraco/Views/Partials/Events/Event-Filters.cshtml"
-			],
-			[
 				"featu",
 				"umbraco/Views/Partials/Component/Featured-Content.cshtml"
 			],
@@ -1268,10 +1771,6 @@
 			[
 				"cover-as",
 				"umbraco/Views/Partials/Component/Cover-Aside.cshtml"
-			],
-			[
-				"cover",
-				"umbraco/Views/Partials/Component/cover.cshtml"
 			],
 			[
 				"blocks",
@@ -1298,24 +1797,8 @@
 				"umbraco/AppSettings.config"
 			],
 			[
-				"main",
-				"assets/js/main.js"
-			],
-			[
-				"side",
-				"umbraco/Views/Partials/Page/Sidebar.cshtml"
-			],
-			[
 				"appst",
 				"umbraco/AppSettings.config"
-			],
-			[
-				"icon",
-				"assets/sass/base/icons.scss"
-			],
-			[
-				"hea",
-				"assets/sass/base/headings.scss"
 			],
 			[
 				"pageel",
@@ -1354,20 +1837,12 @@
 				"umbraco/Views/TextPage.cshtml"
 			],
 			[
-				"ticket",
-				"umbraco/Views/Partials/Component/Tickets.cshtml"
-			],
-			[
 				"apge",
 				"assets/sass/objects/page.scss"
 			],
 			[
 				"block",
 				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
-			],
-			[
-				"wrap",
-				"assets/sass/objects/wrap.scss"
 			],
 			[
 				"naviga",
@@ -1412,10 +1887,6 @@
 			[
 				"pagi",
 				"umbraco/App_Code/PagingTemplate.cshtml"
-			],
-			[
-				"head",
-				"assets/sass/base/headings.scss"
 			],
 			[
 				"forms",
@@ -1526,10 +1997,6 @@
 				"assets/sass/components/frame.scss"
 			],
 			[
-				"over",
-				"assets/sass/trumps/overrides.scss"
-			],
-			[
 				"lists",
 				"assets/sass/components/lists.scss"
 			],
@@ -1574,52 +2041,12 @@
 				"assets/sass/generic/js-breakpoints.scss"
 			],
 			[
-				"footer",
-				"umbraco/Views/Partials/Page/Footer.cshtml"
-			],
-			[
 				"sect",
 				"assets/sass/objects/section.scss"
 			],
 			[
 				"cards",
 				"assets/sass/objects/cards.scss"
-			],
-			[
-				"grunt",
-				"Gruntfile.js"
-			],
-			[
-				"top",
-				"assets/sass/components/topbar.scss"
-			],
-			[
-				"social",
-				"umbraco/Views/Partials/Modules/Social-links.cshtml"
-			],
-			[
-				"foot",
-				"umbraco/Views/Partials/Page/Footer.cshtml"
-			],
-			[
-				"foo",
-				"umbraco/Views/Partials/Page/Footer.cshtml"
-			],
-			[
-				"socia",
-				"umbraco/Views/Partials/Modules/Social-links.cshtml"
-			],
-			[
-				"but",
-				"assets/sass/objects/buttons.scss"
-			],
-			[
-				"glob",
-				"assets/sass/settings/global.scss"
-			],
-			[
-				"section",
-				"assets/sass/objects/section.scss"
 			]
 		],
 		"width": 0.0
@@ -1632,6 +2059,14 @@
 		[
 			[
 				"",
+				"~/Dropbox/Sublime/Sublime-settings.sublime-project"
+			],
+			[
+				"asp",
+				"~/Sites/Projects/aspex/aspex.sublime-project"
+			],
+			[
+				"t",
 				"~/Sites/Projects/thespring/thepsring.sublime-project"
 			],
 			[
@@ -1650,7 +2085,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1658,7 +2093,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 248.0,
+	"side_bar_width": 315.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

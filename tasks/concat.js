@@ -18,6 +18,8 @@ module.exports = {
 	},
 	fulljs: {
 		src: [
+			'<%= assetsFolder %>/_components/OnMediaQuery/js/onmediaquery.js',
+			'<%= assetsFolder %>/_components/jquery-sliding-menu/js/jquery-sliding-menu.js',
 			'<%= assetsFolder %>/_components/OwlCarousel2/dist/owl.carousel.js',
 			'<%= assetsFolder %>/_components/SelectOrDie/_src/selectordie.js',
 			'<%= assetsFolder %>/_components/magnific-popup/dist/jquery.magnific-popup.js',

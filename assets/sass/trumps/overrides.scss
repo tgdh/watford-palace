@@ -25,11 +25,15 @@
 }
 
 .t-strong {
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
 .t-center {
     text-align: center;
+}
+
+.t-white {
+    color: $white;
 }
 
 .t-padding {
@@ -54,27 +58,27 @@
 
 .anchor-offset {
     display: inline-block; // required for webkit browsers
-    margin-top: -10.6rem;
-    padding-top: 10.6rem;
+    margin-top: -7rem;
+    padding-top: 7rem;
 }
 
 .anchor-offset--image {
     display: inline-block; // required for webkit browsers
-    margin-top: -10.6rem;
-    padding-top: 10.6rem;
+    margin-top: -7rem;
+    padding-top: 7rem;
 }
 
 .anchor-offset--padding {
     display: block;
-    margin-top: -10.6rem;
-    padding-top: 10.6rem;
+    margin-top: -7rem;
+    padding-top: 7rem;
 }
 
 @include respond-min($mq-small) {
 
     .anchor-offset {
-        margin-top: -10.6rem - $padding--medium;
-        padding-top: 10.6rem + $padding--medium !important;
+        margin-top: -7rem - $padding--medium;
+        padding-top: 7rem + $padding--medium !important;
     }
 
     .anchor-offset--padding {
@@ -86,12 +90,27 @@
 @include respond-min($mq-medium) {
 
     .anchor-offset {
-        margin-top: -10.6rem - $padding--large;
-        padding-top: 10.6rem + $padding--large !important;
+        margin-top: -7rem - $padding--large;
+        padding-top: 7rem + $padding--large !important;
     }
 
     .anchor-offset--padding {
         margin-top: -2.6rem;
         padding-top: 2.6rem;
     }
+}
+
+@include respond-min($mq-large - 50px) {
+
+    .anchor-offset--image {
+        display: inline-block; // required for webkit browsers
+        margin-top: -10.6rem;
+        padding-top: 10.6rem;
+    }
+
+    .anchor-offset {
+        margin-top: -10.6rem - $padding--large;
+        padding-top: 10.6rem + $padding--large !important;
+    }
+
 }

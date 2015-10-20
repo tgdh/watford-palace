@@ -5,58 +5,72 @@
 
 =========================================================== */
 
-@include respond-min( $mq-small ) {
+@include respond-min($mq-small) {
 
-	html {
-		font-family: 'small';
-	}
-
+    html {
+        font-family: 'small';
+    }
 }
 
-@include respond-min( $mq-medium ) {
+@include respond-min($mq-small + 50px) {
 
-	html {
-		font-family: 'medium';
-	}
-
+    html {
+        font-family: 'small';
+    }
 }
 
-@include respond-min( $mq-large - 50px ) {
+@include respond-min($mq-medium) {
 
-	html {
-		font-family: 'large';
-	}
-
+    html {
+        font-family: 'medium';
+    }
 }
 
-@include respond-min( $mq-large ) {
+@include respond-max($mq-large - 51px) {
 
-	html {
-		font-family: 'large';
-	}
-
+    html {
+        font-family: 'medium-max';
+    }
 }
 
-@include respond-min( $mq-x-large - 80px ) {
+@include respond-min($mq-large - 50px) {
 
-	html {
-		font-family: 'x-large';
-	}
-
+    html {
+        font-family: 'large';
+    }
 }
 
-@include respond-min( $mq-x-large ) {
+@include respond-min($mq-large) {
 
-	html {
-		font-family: 'x-large';
-	}
-
+    html {
+        font-family: 'large';
+    }
 }
 
-@include respond-min( $mq-xx-large ) {
+@include respond-min($mq-large + 120px) {
 
-	html {
-		font-family: 'xx-large';
-	}
+    html {
+        font-family: 'large';
+    }
+}
 
+@include respond-min($mq-x-large - 80px) {
+
+    html {
+        font-family: 'x-large';
+    }
+}
+
+@include respond-min($mq-x-large) {
+
+    html {
+        font-family: 'x-large';
+    }
+}
+
+@include respond-min($mq-xx-large) {
+
+    html {
+        font-family: 'xx-large';
+    }
 }

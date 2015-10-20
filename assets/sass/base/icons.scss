@@ -11,7 +11,9 @@
 
 [class^='ico-'],
 [class*=' ico-'],
-.sod_select:after {
+.sod_select:after,
+.sliding-menu a.nav:before,
+.sliding-menu a.back:before {
 	font-family: 'watford';
 	font-style: normal;
 	font-weight: normal;

@@ -26,9 +26,20 @@ body {
     margin-bottom: 0;
 }
 
-.o-page__content {
-    margin-top: 10.6rem;
-    min-height: 100%;
+@include respond-max($mq-large - 50px) {
+
+    .o-page__content {
+        margin-top: 7rem;
+        min-height: 100%;
+    }
+}
+
+@include respond-min($mq-large - 50px) {
+
+    .o-page__content {
+        margin-top: 10.6rem;
+        min-height: 100%;
+    }
 }
 
 .c-cover-wrap {

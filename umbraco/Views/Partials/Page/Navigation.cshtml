@@ -1,6 +1,7 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
 	var homePage = CurrentPage.Site();
+    var settings = homePage.FirstChild("Settings");
 	var menuItems = homePage.Children.Where("UmbracoNaviHide == false && TemplateId > 0" +
                     " && DocumentTypeAlias != \"Profile\" " +
                     " && DocumentTypeAlias != \"Cart\" " +
@@ -28,6 +29,38 @@
 			</li>
 		}
 
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <a href="@Umbraco.Content(2418).Url" class="c-nav__link  @(Umbraco.Content(2418).IsAncestorOrSelf(CurrentPage) ? "active" : null)">
+                <i class="ico-super ico-profile"></i>
+                @Umbraco.Content(2418).Name
+            </a>
+        </li>
+
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <a href="@Umbraco.Content(2417).Url" class="c-nav__link  @(Umbraco.Content(2417).IsAncestorOrSelf(CurrentPage) ? "active" : null)">
+                <i class="ico-super ico-basket"></i>
+                @Umbraco.Content(2417).Name
+            </a>
+        </li>
+
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <span class="c-nav__link t-strong t-center t-block t-white">
+                @settings.boxOfficeNumber
+            </span>
+        </li>
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <span class="c-nav__link">
+                <form action="/search" method="GET" class="ezsearch-form">
+                    <div class="o-input">
+                        <input type="text" name="q">
+                    </div>
+                    <button type="submit" class="o-search-button">
+                        <i class="ico-super ico-search"></i>
+                        <span class="hide-text ">Search</span>
+                    </button>
+                </form>
+            </span>
+        </li>
 	</ul>
 </nav>
 

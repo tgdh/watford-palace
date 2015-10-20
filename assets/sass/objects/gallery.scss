@@ -38,8 +38,8 @@
         a {
             color: $dark-black;
             display: block;
-            margin-top: -10.6rem;
-            padding-top: 10.6rem;
+            // margin-top: -10.6rem;
+            // padding-top: 10.6rem;
         }
     }
 
@@ -48,8 +48,52 @@
         a {
             color: $dark-black;
             display: block;
-            margin-top: -10.6rem;
-            padding-top: 10.6rem;
+            // margin-top: -10.6rem;
+            // padding-top: 10.6rem;
+        }
+    }
+}
+
+@include respond-max($mq-large - 50px) {
+
+    .link-next {
+
+        &.link-bottom {
+
+            a {
+                margin-top: -7em;
+                padding-top: 7rem;
+            }
+        }
+
+        &.link-next--offset {
+
+            a {
+                margin-top: -7rem;
+                padding-top: 7rem;
+            }
+        }
+    }
+}
+
+@include respond-min($mq-large - 50px) {
+
+    .link-next {
+
+        &.link-bottom {
+
+            a {
+                margin-top: -10.6rem;
+                padding-top: 10.6rem;
+            }
+        }
+
+        &.link-next--offset {
+
+            a {
+                margin-top: -10.6rem;
+                padding-top: 10.6rem;
+            }
         }
     }
 }

@@ -11,6 +11,10 @@
     "OwlCarousel2": "~2.0.0-beta.3",
     "SelectOrDie": "~0.1.8",
     "magnific-popup": "~1.0.0",
+    "on-media-query": "https://github.com/JoshBarr/on-media-query",
+    "jquery-sliding-menu": "https://github.com/alizahid/jquery-sliding-menu",
+    "onMediaQuery": "https://github.com/JoshBarr/on-media-query.git#~0.2.0",
+    "Tabby": "https://github.com/alanhogan/Tabby.git#~0.13.1",
     "tabby": "https://github.com/cferdinandi/tabby"
   },
   "moduleType": [

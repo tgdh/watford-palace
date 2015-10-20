@@ -5,12 +5,19 @@
 }
 
 <header class="o-page__header" role="banner">
-	<div class="">
-		<a href="/" class="o-site-logo">
-			<img class="o-site-logo__image" src="/assets/img/logo.svg" alt="Watford Palace Theatre"/>
-		</a> 
-		<button id="menuButton" class="toggle--nav--main" data-toggle="js-nav-main"><i class="icon-menu"></i>Menu</button>
-		@Html.Partial("Page/Super-Navigation")
+	<a href="/" class="o-site-logo">
+		<img class="o-site-logo__image" src="/assets/img/logo.svg" alt="Watford Palace Theatre"/>
+	</a>
+	<button id="menuButton" class="toggle--nav--main" data-toggle="js-nav-main">
+		<i class="menu-icon">
+			<span class="menu-line menu-line--1"></span>
+			<span class="menu-line menu-line--2"></span>
+			<span class="menu-line menu-line--3"></span>
+		</i>
+		<span class="hide-text">Menu</span>
+	</button>
+	@Html.Partial("Page/Super-Navigation")
+	<div class="o-page__header__nav">
 		@Html.Partial("Page/Navigation")
 	</div>
 </header>
@@ -24,4 +31,4 @@
 			<path class="st0" d="M0,0c55.2,0,100,44.8,100,100V0H0z"/>
 		</g>
 	</svg>
-</div>	
+</div>

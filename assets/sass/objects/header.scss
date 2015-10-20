@@ -4,38 +4,63 @@
 
 =========================================================== */
 
-.o-page__header {
-	padding-top: 1.8rem;
-	background: white;
-	position: fixed;
-	height: 10.6rem;
-	left: $frame-size--small;
-	right: $frame-size--small;
-	top: 0;
-	z-index: 3;
-	.o-site-logo {
-	    width: 26.8rem;
-	    display: block;
-	    float: left;
-	}
+
+
+@include respond-max($mq-large - 50px) {
+
+    .o-page__header {
+        background: $white;
+        height: 7rem;
+        left: $frame-size--small;
+        padding-top: 1.8rem;
+        position: fixed;
+        right: $frame-size--small;
+        top: 0;
+        z-index: 30;
+
+        .o-site-logo {
+            display: block;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            top: 1rem;
+            width: 20rem;
+        }
+    }
 }
 
-@include respond-min( $mq-x-large ) {
+@include respond-min($mq-large - 50px) {
 
-	.o-page__header {
-		left: $frame-size--medium;
-		right: $frame-size--medium;
-	}
+    .o-page__header {
+        background: white;
+        height: 10.6rem;
+        left: $frame-size--small;
+        padding-top: 1.8rem;
+        position: fixed;
+        right: $frame-size--small;
+        top: 0;
+        z-index: 30;
 
+        .o-site-logo {
+            display: block;
+            float: left;
+            width: 26.8rem;
+        }
+    }
+}
+@include respond-min($mq-x-large) {
+
+    .o-page__header {
+        left: $frame-size--medium;
+        right: $frame-size--medium;
+    }
 }
 
 
-@include respond-min( $mq-xx-large ) {
+@include respond-min($mq-xx-large) {
 
-	.o-page__header {
-		left: $frame-size--large;
-		right: $frame-size--large;
-	}
-
+    .o-page__header {
+        left: $frame-size--large;
+        right: $frame-size--large;
+    }
 }
-

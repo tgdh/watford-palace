@@ -33,15 +33,25 @@
 				<span class="c-cover-info--category">Fallback</span>
 				<h3 class="c-cover__heading c-cover__heading--news giga">Fallback</h3>
 				<span class="c-cover-info--date">Fallback</span>
-				<button class="o-button o-button--primary">Fallback</button>				
+				<button class="o-button o-button--primary">Fallback</button>
 			</div>
 
-		</div>		
+		</div>
 	}
 
 
 	<section class="c-cover__aside">
 		@Html.Partial("Component/Cover-Aside")
+
+		<article class="o-card o-card o-card--fill o-card--extra">
+			<div class="o-card__image--wrap">
+			</div>
+			<div class="o-card__content">
+				<h2>
+					<a href="@Umbraco.Content(2225).Url">See all listings</a>
+				</h2>
+			</div>
+		</article>
 	</section>
 </div>
 
@@ -53,7 +63,7 @@
 		<div class="c-cover__image--wrap">
 			@if( slide.HasValue("backgroundImage") )
 			{
-				<img class="c-cover__image" src="@Umbraco.Media(slide.backgroundImage).GetCropUrl("umbracoFile", "square")" alt=""/>				
+				<img class="c-cover__image" src="@Umbraco.Media(slide.backgroundImage).GetCropUrl("umbracoFile", "square")" alt=""/>
 			}
 
 		</div>
@@ -84,11 +94,11 @@
 							<span>@slide.link.name</span>
 						}
 
-					</a>		
+					</a>
 				}
 			</div>
 		</div>
-	</section>	
+	</section>
 }
 
 @helper Event(dynamic node)
@@ -101,7 +111,7 @@
 		<div class="c-cover__image--wrap">
 			@if( slide.HasValue("coverImage") )
 			{
-				<img class="c-cover__image" src="@Umbraco.Media(slide.coverImage).GetCropUrl("umbracoFile", "square")" alt=""/>				
+				<img class="c-cover__image" src="@Umbraco.Media(slide.coverImage).GetCropUrl("umbracoFile", "square")" alt=""/>
 			}
 
 		</div>
@@ -112,13 +122,13 @@
 				<span class="c-cover-info--date">@date</span>
 				<a href="@slide.Url" class="c-cover-link"></a>
 				<a href="@slide.Url#tickets" class="o-button o-button--primary">
-					Buy tickets 
-				</a>		
-		
+					Buy tickets
+				</a>
+
 			</div>
 
-		</div>	
-	</section>	
+		</div>
+	</section>
 }
 
 @helper Default(dynamic node)

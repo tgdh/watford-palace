@@ -20,7 +20,8 @@
 }
 
 .o-section--window {
-    height: 100%;
+    display: block;
+    height: auto;
     min-height: 100%;
     position: relative;
 }
