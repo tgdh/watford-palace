@@ -11,7 +11,13 @@
             font-weight: bold;
         }
 
+        .Separator {
+            display: none;
+        }
+
         .DateAndTime {
+            clear: both;
+            // display: block;
         }
     }
 

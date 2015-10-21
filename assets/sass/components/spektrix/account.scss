@@ -72,6 +72,10 @@
 .AddressOptions {
     margin-bottom: $line-height;
 
+    .Option {
+        padding: 1.2rem 1.6rem;
+    }
+
     .DefaultBilling {
 
         input {

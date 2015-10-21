@@ -27,14 +27,20 @@ select {
 .Error,
 .EditAddress,
 .Basket2,
-.Checkout {
+.Checkout,
+.EditTickets {
     margin: 0 auto;
-    max-width: 60rem;
+    max-width: 70rem;
+}
+
+.ChooseSeats {
+    margin: 0 auto;
+    max-width: 100rem;
 }
 
 .OptionalMessage {
-    margin-bottom: $line-height;
     clear: both;
+    margin-bottom: $line-height;
 }
 
 .ErrorMessage, {
@@ -57,7 +63,9 @@ select {
 // .LoginForm {
 
 .Container {
+    float: none;
     margin-bottom: $line-height;
+    position: relative;
 
     label.left {
         font-weight: bold;
@@ -69,9 +77,14 @@ select {
         //     margin-left: 1rem;
         // }
     }
-    // label.right {
-    //     display: none;
-    // }
+
+    label.right {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
     input {
         border: .1rem solid $border-colour;
         width: 100% !important;
@@ -120,13 +133,11 @@ select {
         // padding: 2rem 3.5rem;
         // transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
         // width: auto;
-
         // &:hover,
         // &:focus {
         //     background: $sec;
         //     border: .1rem solid $sec;
         // }
-
         // &:focus {
         //     box-shadow: 0 .3rem 0 0 rgba($black, .1);
         // }
@@ -140,11 +151,11 @@ select {
         font-weight: bold;
         line-height: 1;
         margin: 0 auto;
+        margin-bottom: $line-height;
         max-width: auto !important;
         padding: 1rem 2.5rem;
         transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
         width: auto;
-        margin-bottom: $line-height;
 
         &:hover,
         &:focus {
@@ -197,4 +208,25 @@ select {
 }
 
 .Account_Link {
+}
+
+.SpektrixPage {
+    padding-bottom: $padding--small;
+    padding-top: $padding--small;
+}
+
+@include respond-min($mq-small) {
+
+    .SpektrixPage {
+        padding-bottom: $padding--medium;
+        padding-top: $padding--medium;
+    }
+}
+
+@include respond-min($mq-medium) {
+
+    .SpektrixPage {
+        padding-bottom: $padding--large;
+        padding-top: $padding--large;
+    }
 }
