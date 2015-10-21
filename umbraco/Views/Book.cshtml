@@ -16,12 +16,10 @@
 	  name="SpektrixIFrame"
 	  id="SpektrixIFrame"
 	  frameborder="0"
+      onload="scroll(0,0);"
 	  src="http://system.spektrix.com/watfordpalace_run1/website/chooseseats.aspx?resize=true&EventInstanceId=@instanceId"
 	  style="width: 100%; max-width: 100rem; margin: 0 auto; display: block; height: 1000px;">
 	</iframe>
-}
-@if( eventId != null ) {
-	@Html.Partial("Component/book-tickets")
 }
 
 

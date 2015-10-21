@@ -1,0 +1,200 @@
+// SPEKTRIX PAGES
+
+.SpektrixPage {
+}
+
+select {
+    -webkit-appearance: none !important;
+       -moz-appearance: none !important;
+    border: 1px solid $dark-black !important;
+    border-radius: 0 !important;
+    margin-bottom: 1rem !important;
+    min-height: 2.5rem !important;
+    position: relative !important;
+
+    &:after {
+        content: '\25b4';
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
+
+.LoginLogout,
+.ForgotPassword,
+.NewAccount,
+.MyAccount,
+.Error,
+.EditAddress,
+.Basket2,
+.Checkout {
+    margin: 0 auto;
+    max-width: 60rem;
+}
+
+.OptionalMessage {
+    margin-bottom: $line-height;
+    clear: both;
+}
+
+.ErrorMessage, {
+    color: $sec !important;
+    font-weight: bold;
+    margin-bottom: $line-height;
+
+    span {
+        color: $sec !important;
+        display: block;
+        font-weight: bold;
+        margin-bottom: $line-height;
+        margin-top: $line-height;
+    }
+}
+
+.View {
+}
+
+// .LoginForm {
+
+.Container {
+    margin-bottom: $line-height;
+
+    label.left {
+        font-weight: bold;
+        // &:after {
+        //     content: '(required)';
+        //     display: inline-block;
+        //     font-size: 1.4rem;
+        //     font-weight: normal;
+        //     margin-left: 1rem;
+        // }
+    }
+    // label.right {
+    //     display: none;
+    // }
+    input {
+        border: .1rem solid $border-colour;
+        width: 100% !important;
+
+        + input {
+            margin-top: $line-height;
+        }
+    }
+
+    input[type='submit'] {
+        background: darken($main-grey, 2);
+        cursoir: pointer;
+    }
+}
+
+.Comment {
+    display: block;
+    margin-top: .5rem;
+}
+
+.ValidationError,
+#ctl00_ContentPlaceHolder_AccountDetailsEditor_EmailValidator {
+    color: $sec !important;
+    display: block;
+    font-size: 1.4rem !important;
+    line-height: 1.4rem;
+}
+
+// }
+
+.Buttons {
+    clear: both;
+    margin-bottom: $line-height;
+    text-align: right;
+
+    input {
+        // background: $pri;
+        // border: .1rem solid $pri;
+        // border-radius: $border-radius;
+        // color: $white;
+        // cursor: pointer;
+        // display: inline-block;
+        // font-weight: bold;
+        // line-height: 1;
+        // margin: 0 auto;
+        // padding: 2rem 3.5rem;
+        // transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+        // width: auto;
+
+        // &:hover,
+        // &:focus {
+        //     background: $sec;
+        //     border: .1rem solid $sec;
+        // }
+
+        // &:focus {
+        //     box-shadow: 0 .3rem 0 0 rgba($black, .1);
+        // }
+        background: $main-grey;
+        border: .1rem solid $dark-black;
+        border-radius: $border-radius;
+        color: $dark-black;
+        cursor: pointer;
+        display: inline-block;
+        // float: right;
+        font-weight: bold;
+        line-height: 1;
+        margin: 0 auto;
+        max-width: auto !important;
+        padding: 1rem 2.5rem;
+        transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+        width: auto;
+        margin-bottom: $line-height;
+
+        &:hover,
+        &:focus {
+            background: darken($main-grey, 5);
+            border: .1rem solid $dark-black;
+        }
+
+        &:focus {
+            box-shadow: 0 .3rem 0 0 rgba($black, .1);
+        }
+    }
+
+    .ItemEditButton {
+        background: $main-grey;
+        border: .1rem solid $dark-black;
+        color: $dark-black;
+        max-width: auto !important;
+        padding: 1rem 2.5rem;
+
+        &:hover
+        &:focus {
+            background: darken($main-grey, 5);
+            border: .1rem solid $dark-black;
+        }
+    }
+
+    .ItemDeleteButton {
+        background: $main-grey;
+        border: .1rem solid $dark-black;
+        color: $dark-black;
+        max-width: auto !important;
+        padding: 1rem 2.5rem;
+
+        &:hover
+        &:focus {
+            background: darken($main-grey, 5);
+            border: .1rem solid $dark-black;
+        }
+    }
+}
+
+@include respond-min($mq-small) {
+
+    .Buttons {
+
+        input {
+            min-width: 18rem;
+        }
+    }
+}
+
+.Account_Link {
+}

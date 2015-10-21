@@ -1,0 +1,114 @@
+// Account
+
+.Options {
+    margin-bottom: $line-height;
+
+    ul {
+    }
+
+    li {
+        float: left;
+        list-style: none;
+        margin: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 50%;
+    }
+
+    &:before {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    &:before {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        content: '';
+        display: table;
+    }
+}
+
+.Addresses {
+
+    .Address {
+        margin-bottom: $line-height;
+        padding: 1rem;
+
+        .AddressType {
+            font-weight: bold;
+        }
+
+        .Account_Detail {
+            display: block;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        a {
+            margin-right: 1rem;
+        }
+    }
+
+    .Address:nth-child(odd) {
+        background: $main-grey;
+    }
+
+    .Address:nth-child(even) {
+    }
+}
+
+.AddressOptions {
+    margin-bottom: $line-height;
+
+    .DefaultBilling {
+
+        input {
+            -webkit-appearance: radio;
+               -moz-appearance: radio;
+                    appearance: radio;
+            display: inline-block;
+            width: auto;
+        }
+
+        label {
+            display: inline-block;
+            margin: 0;
+            margin-left: 1rem;
+            padding: 0;
+        }
+    }
+
+    .DefaultDelivery {
+
+        input {
+            -webkit-appearance: radio;
+               -moz-appearance: radio;
+                    appearance: radio;
+            display: inline-block;
+            width: auto;
+        }
+
+        label {
+            display: inline-block;
+            margin: 0;
+            margin-left: 1rem;
+            padding: 0;
+        }
+    }
+}
+
+.ChangePassword {
+    margin-bottom: $line-height;
+}

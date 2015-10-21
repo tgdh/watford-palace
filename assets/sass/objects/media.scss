@@ -5,6 +5,7 @@
 =========================================================== */
 
 img {
+    height: auto;
     max-width: 100%;
     vertical-align: top;
 }
@@ -20,8 +21,7 @@ figure {
     position: relative;
 
     .c-figcaption--bottom {
-        background: rgba(22, 22, 22, .8);
-        background: $dark-black;
+        background: $dark-black, rgba(22, 22, 22, .8);
         bottom: 0;
         color: $white;
         position: absolute;

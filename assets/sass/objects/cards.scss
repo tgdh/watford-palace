@@ -372,19 +372,22 @@
     transition: opacity $speed ease;
 }
 
-.no-touch {
+// .no-touch {
 
     .o-card--event:hover {
 
         .o-card-info--category {
+            background: $dark-black;
             background: rgba(34, 34, 34, 0);
         }
 
         .o-card__heading {
+            background: $dark-black;
             background: rgba(34, 34, 34, 0);
         }
 
         .o-card-info--date {
+            background: $dark-black;
             background: rgba(34, 34, 34, 0);
         }
 
@@ -392,7 +395,7 @@
             opacity: .75;
         }
     }
-}
+// }
 
 .o-card--news:nth-child(odd) {
     background: $pri !important;

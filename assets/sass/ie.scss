@@ -1,2 +1,25 @@
 $old-ie: true;
-@import "style.scss";
+@import 'style';
+
+.o-page {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.o-card__image--wrap:after {
+    background: none !important;
+    display: none;
+}
+
+.o-button--transparent {
+    background: $pri !important;
+}
+
+.c-cover {
+
+    .c-cover__content {
+        max-width: 100% !important;
+        padding: 0 3rem;
+        padding-top: 20%;
+    }
+}

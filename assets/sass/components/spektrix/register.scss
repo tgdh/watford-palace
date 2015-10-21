@@ -1,0 +1,97 @@
+// Register view
+
+.YourDetailsMessage {
+    margin-bottom: $line-height;
+}
+
+.SelectMessage {
+    font-weight: bold;
+}
+
+#ctl00_ContentPlaceHolder_AddressEditor_PostcodeLookupTop {
+    cursor: pointer;
+}
+
+.Addresses {
+    margin-bottom: $line-height * 1.5;
+
+    .AddressOption {
+        padding: 1.2rem 1.6rem;
+
+        input {
+            -webkit-appearance: radio;
+               -moz-appearance: radio;
+                    appearance: radio;
+            display: inline-block;
+            width: auto;
+        }
+
+        label {
+            display: inline-block;
+            margin: 0;
+            margin-left: 1rem;
+            padding: 0;
+        }
+
+        span {
+        }
+    }
+
+    .AddressOption:nth-child(odd) {
+    }
+
+    .AddressOption:nth-child(even) {
+        background: $main-grey;
+    }
+}
+
+.Preferences {
+    margin-bottom: $line-height;
+
+    &:before {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    &:before {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    .Container {
+        float: left;
+        width: 50%;
+
+        .Input_Checkbox {
+
+            input {
+                -webkit-appearance: radio;
+                   -moz-appearance: radio;
+                        appearance: radio;
+                display: inline-block;
+                width: auto !important;
+            }
+
+            label {
+                display: inline-block;
+                margin: 0;
+                margin-left: 1rem;
+                padding: 0;
+            }
+        }
+    }
+}

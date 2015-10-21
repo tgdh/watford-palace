@@ -5,74 +5,84 @@
 =========================================================== */
 
 .o-input + .o-button {
-	margin-top: $line-height;
+    margin-top: $line-height;
 }
 
 .c-form-thank-you {
-	text-align: center;
+    text-align: center;
 }
 
-
 .o-input {
-	input {
-		border: none;
-	}
+
+    input {
+        border: none;
+    }
 }
 
 .ezsearch-form,
 .ezsearch-result-count {
-	margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .ezsearch-result {
-	margin-bottom: 4rem;
-	strong {
-		background: lighten($sec, 25);
-		padding-left: 0.2rem;
-		padding-right: 0.2rem;
-	}
+    margin-bottom: 4rem;
+
+    strong {
+        background: lighten($sec, 25);
+        padding-left: .2rem;
+        padding-right: .2rem;
+    }
 }
 
 .ezsearch-results {
-	h2 {
-		text-align: left;
-	}
+
+    h2 {
+        text-align: left;
+    }
 }
 
 .c-form--newsletter,
 .form--contactform,
 .ezsearch-form--search {
-	label {
-		display: none;
-	}
-	.o-input {
-		border: 0.1rem solid $border-colour;
-		border-bottom: 0;
-	}
-	.o-input:nth-last-child(2) {
-		border-bottom: 0.1rem solid $border-colour;
-	}
-	.o-button {
-		width: 100%;
-	}
+
+    label {
+        display: none;
+    }
+
+    .o-input {
+        border: .1rem solid $border-colour;
+        border-bottom: 0;
+    }
+
+    .o-input:nth-last-child(2) {
+        border-bottom: .1rem solid $border-colour;
+    }
+
+    .o-button {
+        width: 100%;
+    }
 }
 
 .form--contactform {
-	.sod_select {
-		background: $white;
-		color: $placeholder-colour;
-		font-size: 1.6rem;
-		font-weight: normal;
-		padding-left: 1.5rem;
-	}
-	.sod_select:before {
-		background: $white;
-	}
-	.sod_select:after {
-		color: $dark-black;
-		top: 1.2rem;
-	}
-	.sod_select .sod_list {
-	    outline: 0.1rem solid $dark-black;
-	}
+
+    .sod_select {
+        background: $white;
+        color: $placeholder-colour;
+        font-size: 1.6rem;
+        font-weight: normal;
+        padding-left: 1.5rem;
+    }
+
+    .sod_select:before {
+        background: $white;
+    }
+
+    .sod_select:after {
+        color: $dark-black;
+        top: 1.2rem;
+    }
+
+    .sod_select .sod_list {
+        outline: .1rem solid $dark-black;
+    }
 }

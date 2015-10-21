@@ -14,6 +14,13 @@
         'tools/jeet/functions',
         'tools/jeet/grid';
 
+@import 'components/spektrix/base',
+        'components/spektrix/register',
+        'components/spektrix/account',
+        'components/spektrix/seats',
+        'components/spektrix/tickets',
+        'components/spektrix/basket2',
+        'components/spektrix/checkout';
 
 @import 'generic/reset',
         'generic/js-breakpoints';
