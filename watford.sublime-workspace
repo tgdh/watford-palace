@@ -4,12 +4,16 @@
 		"selected_items":
 		[
 			[
-				"m",
-				"m-a	margin: auto;"
+				"ov",
+				"ov	overflow: ${1:hidden};"
 			],
 			[
 				"mar",
-				"margin-bottom: "
+				"margin	CSS: margin: properties"
+			],
+			[
+				"m",
+				"m-a	margin: auto;"
 			],
 			[
 				"v",
@@ -172,10 +176,6 @@
 				"font-size: "
 			],
 			[
-				"ov",
-				"overflow: "
-			],
-			[
 				"active",
 				"activePage"
 			],
@@ -255,96 +255,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "assets/sass/components/spektrix/base.scss",
-			"settings":
-			{
-				"buffer_size": 4116,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "umbraco/Views/Book.cshtml",
-			"settings":
-			{
-				"buffer_size": 643,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/components/spektrix/seats.scss",
-			"settings":
-			{
-				"buffer_size": 1473,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/components/spektrix/account.scss",
-			"settings":
-			{
-				"buffer_size": 2069,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/components/spektrix/newaccount.scss",
-			"settings":
-			{
-				"buffer_size": 773,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/components/spektrix/register.scss",
-			"settings":
-			{
-				"buffer_size": 2213,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 9 files for \"radio\"\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/account.scss:\n   80  \n   81          input {\n   82:             -webkit-appearance: radio;\n   83:                -moz-appearance: radio;\n   84:                     appearance: radio;\n   85              display: inline-block;\n   86              width: auto;\n   ..\n   98  \n   99          input {\n  100:             -webkit-appearance: radio;\n  101:                -moz-appearance: radio;\n  102:                     appearance: radio;\n  103              display: inline-block;\n  104              width: auto;\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/checkout.scss:\n    7  \n    8          input {\n    9:             -webkit-appearance: radio;\n   10:                -moz-appearance: radio;\n   11:                     appearance: radio;\n   12              display: inline-block;\n   13              width: auto;\n   ..\n   40          vertical-align: top;\n   41  \n   42:         input[type='radio'] {\n   43:             -webkit-appearance: radio;\n   44:                -moz-appearance: radio;\n   45:                     appearance: radio;\n   46              display: inline-block;\n   47              float: left;\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/register.scss:\n   20  \n   21          input {\n   22:             -webkit-appearance: radio;\n   23:                -moz-appearance: radio;\n   24:                     appearance: radio;\n   25              display: inline-block;\n   26              width: auto;\n   ..\n   80  \n   81              input {\n   82:                 -webkit-appearance: radio;\n   83:                    -moz-appearance: radio;\n   84:                         appearance: radio;\n   85                  display: inline-block;\n   86                  width: auto !important;\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/tickets.scss:\n   45  \n   46                  input {\n   47:                     -webkit-appearance: radio;\n   48:                        -moz-appearance: radio;\n   49:                             appearance: radio;\n   50                      display: inline-block;\n   51                      width: auto;\n\n22 matches across 4 files\n\n\nSearching 9 files for \"preferences\"\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/register.scss:\n   46  }\n   47  \n   48: .Preferences {\n   49      margin-bottom: $line-height;\n   50  \n   ..\n  125      }\n  126  \n  127:     .YourPreferences {\n  128      }\n  129  \n\n2 matches in 1 file\n\n\nSearching 9 files for \"MyAccount\"\n\n/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/base.scss:\n   24  .ForgotPassword,\n   25  .NewAccount,\n   26: .MyAccount,\n   27  .Error,\n   28  .EditAddress,\n\n1 match in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 2827,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "assets/sass/components/spektrix/checkout.scss",
-			"settings":
-			{
-				"buffer_size": 3910,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/components/spektrix/loginlogout.scss",
-			"settings":
-			{
-				"buffer_size": 770,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/components/spektrix/basket2.scss",
-			"settings":
-			{
-				"buffer_size": 3047,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/sass/spektrix.scss",
-			"settings":
-			{
-				"buffer_size": 953,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -354,9 +264,13 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "",
+		"last_filter": "git com",
 		"selected_items":
 		[
+			[
+				"git com",
+				"Git: Commit"
+			],
 			[
 				"git add",
 				"Git: Add..."
@@ -479,25 +393,38 @@
 	],
 	"file_history":
 	[
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/overrides.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/News.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Newsletter.cshtml",
+		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/User/CSScomb.sublime-settings",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
+		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/CSScomb/CSScomb.sublime-settings",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/base.scss",
+		"/Users/User1/Sites/Projects/watford-palace/tasks/modernizr.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Book.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/seats.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/account.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/newaccount.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/register.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/tickets.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/checkout.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/loginlogout.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/basket2.scss",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/spektrix.scss",
 		"/Users/User1/Sites/Projects/watford-palace/Gruntfile.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Cart.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Profile.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Book.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
 		"/Users/User1/Sites/Projects/watford-palace/package.json",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/base.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/basket2.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/ie.scss",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/spektrix.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/tickets.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/account.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/register.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/seats.scss",
 		"/Users/User1/Desktop/Trace Log - extra info.txt",
 		"/Users/User1/Downloads/UmbracoTraceLog - new attempt.txt",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/buttons.scss",
@@ -505,17 +432,13 @@
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml",
 		"/Users/User1/Downloads/UmbracoTraceLog - updated path.txt",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/settings/global.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/media.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/img/logo.svg",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/elements.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/forms.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/jquery-sliding-menu/js/jquery-sliding-menu.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/nav.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/overrides.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/page.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Navigation.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/topbar.scss",
@@ -545,7 +468,6 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/subnav.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
 		"/Users/User1/Desktop/TraceLog.txt",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/LandingPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Gateway.cshtml",
@@ -598,15 +520,7 @@
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Sitemap.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/EventsSurface/GetFilteredEvents.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/watford.sublime-project",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/_WhatsOn-Backup.cshtml",
-		"/Users/User1/Sites/Projects/thespring/umbraco/Views/WhatsOn.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/News.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/PagingTemplate.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/ezSearch.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleEvent.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SampleWhatsOn.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Home.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/MacroPartials/ezSearch.cshtml"
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/_WhatsOn-Backup.cshtml"
 	],
 	"find":
 	{
@@ -617,6 +531,7 @@
 		"height": 235.0,
 		"where_history":
 		[
+			"/Users/User1/Sites/Projects/watford-palace/assets/sass",
 			"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix",
 			"/Users/User1/Sites/Projects/watford-palace/assets/sass",
 			"/Users/User1/Sites/Projects/watford-palace/umbraco/Views",
@@ -667,6 +582,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"footer",
+			"aside",
+			"o-card__actions--event",
+			".c-cover",
+			"no-touch",
+			"touch",
+			"error",
+			"AddressOptions",
+			".EditTickets ",
+			"a",
+			"address",
+			"SummarySection",
 			"MyAccount",
 			"preferences",
 			"radio",
@@ -782,19 +709,7 @@
 			"c-top-corner",
 			"cover-wrap",
 			"crop",
-			"cropurl",
-			"getcrop",
-			"o-event__column",
-			".c-news__article",
-			"c-top-corner",
-			"corner",
-			"timeout",
-			".o-page__content",
-			".c-cover-wrap",
-			"o-card__heading--news",
-			"o-card__actions",
-			"SampleEvent",
-			"o-card__actions"
+			"cropurl"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -820,1113 +735,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "assets/sass/components/spektrix/base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4116,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								476,
-								476
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "umbraco/Views/Book.cshtml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 643,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								640,
-								640
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"syntax": "Packages/Razor/Razor.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "assets/sass/components/spektrix/seats.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1473,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1079,
-								1079
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "assets/sass/components/spektrix/account.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2069,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								347,
-								347
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "assets/sass/components/spektrix/newaccount.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 773,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								770,
-								770
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"open_with_edit": true,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "assets/sass/components/spektrix/register.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1361,
-								1361
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 873.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2827,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										190,
-										195
-									],
-									[
-										236,
-										241
-									],
-									[
-										282,
-										287
-									],
-									[
-										439,
-										444
-									],
-									[
-										485,
-										490
-									],
-									[
-										531,
-										536
-									],
-									[
-										773,
-										778
-									],
-									[
-										819,
-										824
-									],
-									[
-										865,
-										870
-									],
-									[
-										1023,
-										1028
-									],
-									[
-										1072,
-										1077
-									],
-									[
-										1118,
-										1123
-									],
-									[
-										1164,
-										1169
-									],
-									[
-										1406,
-										1411
-									],
-									[
-										1452,
-										1457
-									],
-									[
-										1498,
-										1503
-									],
-									[
-										1663,
-										1668
-									],
-									[
-										1713,
-										1718
-									],
-									[
-										1763,
-										1768
-									],
-									[
-										2039,
-										2044
-									],
-									[
-										2093,
-										2098
-									],
-									[
-										2147,
-										2152
-									],
-									[
-										2425,
-										2436
-									],
-									[
-										2530,
-										2541
-									],
-									[
-										2761,
-										2770
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								2765,
-								2765
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"default_dir": "/Users/User1/Sites/Projects/watford-palace",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 3,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1411.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "assets/sass/components/spektrix/checkout.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3910,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								699,
-								699
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"open_with_edit": true,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "assets/sass/components/spektrix/loginlogout.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 770,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								750,
-								67
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"open_with_edit": true,
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "assets/sass/components/spektrix/basket2.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3047,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								600,
-								600
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "assets/sass/spektrix.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 953,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								547,
-								547
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 8,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -1963,7 +773,7 @@
 		"cols":
 		[
 			0.0,
-			0.692206361355,
+			0.599374664663,
 			1.0
 		],
 		"rows":
@@ -2003,16 +813,52 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"assets/sass/objects/page.scss"
+			],
+			[
+				"header",
+				"assets/sass/objects/header.scss"
+			],
+			[
+				"over",
+				"assets/sass/trumps/overrides.scss"
+			],
+			[
+				"newsl",
+				"umbraco/Views/Partials/Modules/Newsletter.cshtml"
+			],
+			[
+				"news",
+				"umbraco/Views/News.cshtml"
+			],
+			[
+				"footer",
+				"umbraco/Views/Partials/Page/Footer.cshtml"
+			],
+			[
+				"mas",
+				"umbraco/Views/Master.tpl.html"
+			],
+			[
+				"cover",
+				"assets/sass/components/cover.scss"
+			],
+			[
+				"moderni",
+				"tasks/modernizr.js"
+			],
+			[
 				"book",
 				"umbraco/Views/Book.cshtml"
 			],
 			[
-				"grunt",
-				"Gruntfile.js"
-			],
-			[
 				"master",
 				"umbraco/Views/Master.tpl.html"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
 			],
 			[
 				"secto",
@@ -2071,28 +917,12 @@
 				"assets/sass/settings/global.scss"
 			],
 			[
-				"header",
-				"umbraco/Views/Partials/Page/Header.cshtml"
-			],
-			[
 				"form",
 				"assets/sass/base/forms.scss"
 			],
 			[
-				"cover",
-				"assets/sass/components/cover.scss"
-			],
-			[
-				"over",
-				"assets/sass/trumps/overrides.scss"
-			],
-			[
 				"navi",
 				"umbraco/Views/Partials/Page/Navigation.cshtml"
-			],
-			[
-				"page",
-				"assets/sass/objects/page.scss"
 			],
 			[
 				"nav",
@@ -2141,10 +971,6 @@
 			[
 				"con",
 				"tasks/concat.js"
-			],
-			[
-				"footer",
-				"umbraco/Views/Partials/Page/Footer.cshtml"
 			],
 			[
 				"conta",
@@ -2379,10 +1205,6 @@
 				"umbraco/Views/Partials/Events/Event-Filters.cshtml"
 			],
 			[
-				"news",
-				"umbraco/Views/News.cshtml"
-			],
-			[
 				"searc",
 				"umbraco/Views/ezSearch.cshtml"
 			],
@@ -2483,10 +1305,6 @@
 				"umbraco/Views/Partials/Component/Cover-Aside.cshtml"
 			],
 			[
-				"mas",
-				"umbraco/Views/Master.tpl.html"
-			],
-			[
 				"cardf",
 				"assets/sass/trumps/cardfix.scss"
 			],
@@ -2505,14 +1323,6 @@
 			[
 				"globa",
 				"assets/sass/settings/global.scss"
-			],
-			[
-				"galler",
-				"assets/sass/objects/gallery.scss"
-			],
-			[
-				"ovr",
-				"assets/sass/trumps/overrides.scss"
 			]
 		],
 		"width": 0.0
@@ -2525,7 +1335,7 @@
 		[
 			[
 				"",
-				"~/Dropbox/Sublime/Sublime-settings.sublime-project"
+				"~/Sites/Projects/thespring/thepsring.sublime-project"
 			],
 			[
 				"asp",

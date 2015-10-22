@@ -33,11 +33,27 @@
 .o-section--dark-terra-cota {
     background: $main-red;
     color: $white !important;
+
+    a {
+        color: $white;
+        &:hover,
+        &:focus {
+            color: $pri;
+        }
+    }
 }
 
 .o-section--bondi-blue {
     background: $main-blue;
     color: $white !important;
+
+    a {
+        color: $white;
+        &:hover,
+        &:focus {
+            color: $sec;
+        }
+    }
 }
 
 .o-section--dark-grey {

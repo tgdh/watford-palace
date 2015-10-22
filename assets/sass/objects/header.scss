@@ -29,12 +29,16 @@
     }
 
     .js-nav-main--open {
+        // .o-page__header {
+        //     left: 0;
+        //     position: absolute;
+        //     right: 0;
+        //     top: -7rem;
+        // }
+        overflow: hidden;
 
-        .o-page__header {
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: -7rem;
+        .o-page__header__nav {
+            overflow-y: scroll;
         }
     }
 }

@@ -67,6 +67,10 @@
         var selectStyle = function(){
             $('.js-select').selectOrDie();
 
+            $('.js-select--5').selectOrDie({
+                size: 5
+            });
+
             $('#whoIsYourMessageFor1129').selectOrDie({
                 placeholder: "Who is your message for?"
             });

@@ -1,14 +1,20 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
 	var homePage = CurrentPage.Site();
+
+    var siteUrl = "http://" +  Request.Url.Host.ToString();
 }
 
-<form class="c-form c-form--newsletter">
+<form class="c-form c-form--newsletter" action="https://system.spektrix.com/watfordpalace/website/secure/signup.aspx" method="POST">
+    <input type="hidden" name="ReturnUrl" value="@siteUrl" />
 	<div class="o-input">
-		<input type="text" placeholder="First name">
+        <label for="FirstName" class="hide-text">First name</label>
+		<input name="FirstName" type="text" placeholder="First name"/>
 	</div>
 	<div class="o-input">
-		<input type="text" placeholder="Email">
+        <label for="Email" lass="hide-text">Email</label>
+		<input name="Email" type="text" placeholder="Email"/>
 	</div>
-	<button class="o-button o-button--primary">Sign up</button>
+    <input class="o-button o-button--primary" type="submit" value="Sign up" />
 </form>
+

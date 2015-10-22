@@ -1,7 +1,7 @@
 var Events = (function () {
 
     var settings = {
-        numEvents: 20,
+        numEvents: 5,
         selects: ".filter-js",
         categorySelect: "#filter-category",
         timeSelect: "#filter-time",
@@ -253,6 +253,8 @@ var Events = (function () {
                         settings.scrollBound = false;
                         // $(window).unbind('scroll');
                         $('.load-more-js').hide();
+                    } else {
+                        $('.load-more-js').show();
                     }
                     setTimeout(function () {
                         var tempItem = 1;

@@ -1,33 +1,30 @@
 'use strict';
 module.exports = {
-	dist: {
+    dist: {
+        'cache' : true,
         'devFile' : '<%= assetsFolder %>/_components/modernizr/modernizr.js',
-        'outputFile' : '<%= assetsBuildFolder %>/js/lib/modernizr.js',
-        'extra' : {
-            'printshiv' : false,
-            'shiv' : true,
-            'load' : false,
-            'mq' : false,
-            'cssclasses' : true
-        },
-        extensibility : {
-            'addtest' : false,
-            'prefixed' : false,
-            'teststyles' : false,
-            'testprops' : false,
-            'testallprops' : false,
-            'hasevents' : false,
-            'prefixes' : false,
-            'domprefixes' : false,
-            'cssclassprefix' : ''
-        },
+        'dest' : '<%= assetsBuildFolder %>/js/lib/modernizr.js',
+
+        // Based on default settings on http://modernizr.com/download/
+        'options' : [
+            'setClasses',
+            'addTest',
+            'html5printshiv',
+            'testProp',
+            'fnBind'
+        ],
+        'enableJSClass': true,
         'uglify' : false,
         'tests' : [],
-        'parseFiles' : true,
+        'excludeTests': [],
+        'crawl' : true,
+        'useBuffers' : false,
         'files' : {
-        	'src' : ['<%= assetsFolder %>/js/**/*.js','<%= assetsFolder %>/sass/**/*.scss']
+            'src': [
+                '<%= assetsFolder %>/js/**/*.js',
+                '<%= assetsFolder %>/sass/**/*.scss'
+            ]
         },
-        'matchCommunityTests' : false,
         'customTests' : []
     }
 };

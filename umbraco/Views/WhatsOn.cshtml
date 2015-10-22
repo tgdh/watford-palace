@@ -33,7 +33,7 @@
 	<h1 class="">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
 	<span class="t-center t-block t-normal gamma">Filter by</span>
 	@Html.Partial("Events/Event-Filters")
-	<div class="o-paging-more">
+	<div class="o-paging-more o-paging-prev">
 		<button id="load-previous" class="o-button o-button--primary o-button--wide o-load-prev load-prev-js">Load previous<i class="ico-plus"></i></button>
 	</div>
 
