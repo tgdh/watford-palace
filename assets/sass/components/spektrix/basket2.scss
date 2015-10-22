@@ -5,7 +5,6 @@
     .Header {
         background: darken($main-grey, 5);
         float: left;
-        font-size: 2rem;
         font-weight: bold;
         padding: 1rem;
         width: 50%;
@@ -34,6 +33,10 @@
         }
     }
 
+    .Items {
+        margin-bottom: $line-height;
+    }
+
     .Item {
         border-bottom: .1rem solid $main-grey;
         clear: both;
@@ -46,9 +49,9 @@
         #ctl00_ContentPlaceHolder_InstanceRepeater_ctl04_EventNameLabel,
         #ctl00_ContentPlaceHolder_InstanceRepeater_ctl05_EventNameLabel,
         #ctl00_ContentPlaceHolder_InstanceRepeater_ctl06_EventNameLabe {
+            display: block;
             font-size: 2rem;
             padding-top: 2rem;
-            display: block;
         }
 
         .Details {
@@ -88,18 +91,17 @@
     }
 
     .Footer {
+        clear: both;
         float: right;
         width: 50%;
-        clear: both;
 
         .Breakdown {
             display: block;
             margin: 2rem 0;
 
-
             .GrandTotal {
-                margin: 0;
                 list-style: none;
+                margin: 0;
 
                 .Label {
                     font-weight: bold;
@@ -120,10 +122,10 @@
     color: $white;
     cursor: pointer;
     display: inline-block;
+    font-weight: bold;
     line-height: 1;
     margin: 0 auto;
     padding: 2rem 5rem;
-    font-weight: bold;
     transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
     width: auto;
 

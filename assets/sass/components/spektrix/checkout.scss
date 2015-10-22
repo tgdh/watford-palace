@@ -62,7 +62,6 @@
             color: $dark-black;
             cursor: pointer;
             display: inline-block;
-            display: block;
             float: right;
             font-weight: bold;
             line-height: 1;
@@ -128,11 +127,13 @@
     padding: 2rem 3.5rem;
     transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
     width: auto;
+
     &:hover,
     &:focus {
         background: $sec;
         border: .1rem solid $sec;
     }
+
     &:focus {
         box-shadow: 0 .3rem 0 0 rgba($black, .1);
     }
@@ -149,6 +150,7 @@
 
         span {
             font-size: 1.8rem;
+            font-weight: bold;
         }
 
         + .Ticket_Summary {
@@ -163,8 +165,24 @@
 .SummarySection {
     margin-bottom: $line-height;
 
-    .Summary {
-        font-weight: bold;
+    .Info {
+        margin-bottom: $line-height;
+    }
+
+    table {
+        float: right;
+        margin-bottom: $line-height;
+        width: 50%;
+
+        .Summary {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .Total,
+        .Grand_Total {
+            font-size: 2rem;
+        }
     }
 }
 

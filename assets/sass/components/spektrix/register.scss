@@ -79,9 +79,9 @@
         .Input_Checkbox {
 
             input {
-                -webkit-appearance: radio;
-                   -moz-appearance: radio;
-                        appearance: radio;
+                -webkit-appearance: checkbox;
+                   -moz-appearance: checkbox;
+                        appearance: checkbox;
                 display: inline-block;
                 width: auto !important;
             }
@@ -93,5 +93,47 @@
                 padding: 0;
             }
         }
+    }
+}
+
+@include respond-min($mq-small) {
+
+    .Container.DateOfBirth {
+
+        select,
+        input {
+            width: 30% !important;
+        }
+
+        select {
+            cursor: pointer;
+            margin-right: 4.3%;
+        }
+
+        input {
+            margin-right: 0;
+        }
+    }
+}
+
+.Progress {
+
+    .YourDetails {
+    }
+
+    .YourAddress {
+    }
+
+    .YourPreferences {
+    }
+
+    .Done {
+        color: $sec;
+        font-weight: bold;
+    }
+
+    .Current {
+        color: $pri;
+        font-weight: bold;
     }
 }

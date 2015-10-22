@@ -1,6 +1,12 @@
 // SPEKTRIX PAGES
 
 .SpektrixPage {
+    margin: 0 auto;
+    max-width: 70rem;
+}
+
+.SpektrixPage.ChooseSeats {
+    max-width: 100rem;
 }
 
 select {
@@ -20,18 +26,18 @@ select {
     }
 }
 
-.LoginLogout,
-.ForgotPassword,
-.NewAccount,
-.MyAccount,
-.Error,
-.EditAddress,
-.Basket2,
-.Checkout,
-.EditTickets {
-    margin: 0 auto;
-    max-width: 70rem;
-}
+// .LoginLogout,
+// .ForgotPassword,
+// .NewAccount,
+// .MyAccount,
+// .Error,
+// .EditAddress,
+// .Basket2,
+// .Checkout,
+// .EditTickets {
+//     margin: 0 auto;
+//     max-width: 70rem;
+// }
 
 .ChooseSeats {
     margin: 0 auto;
@@ -43,8 +49,10 @@ select {
     margin-bottom: $line-height;
 }
 
-.ErrorMessage, {
+.ErrorMessage,
+.Error {
     color: $sec !important;
+    display: block;
     font-weight: bold;
     margin-bottom: $line-height;
 
@@ -115,32 +123,13 @@ select {
 
 // }
 
-.Buttons {
+.Buttons,
+#Buttons {
     clear: both;
     margin-bottom: $line-height;
     text-align: right;
 
     input {
-        // background: $pri;
-        // border: .1rem solid $pri;
-        // border-radius: $border-radius;
-        // color: $white;
-        // cursor: pointer;
-        // display: inline-block;
-        // font-weight: bold;
-        // line-height: 1;
-        // margin: 0 auto;
-        // padding: 2rem 3.5rem;
-        // transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
-        // width: auto;
-        // &:hover,
-        // &:focus {
-        //     background: $sec;
-        //     border: .1rem solid $sec;
-        // }
-        // &:focus {
-        //     box-shadow: 0 .3rem 0 0 rgba($black, .1);
-        // }
         background: $main-grey;
         border: .1rem solid $dark-black;
         border-radius: $border-radius;
@@ -168,33 +157,33 @@ select {
         }
     }
 
-    .ItemEditButton {
-        background: $main-grey;
-        border: .1rem solid $dark-black;
-        color: $dark-black;
-        max-width: auto !important;
-        padding: 1rem 2.5rem;
+    // .ItemEditButton {
+    //     background: $main-grey;
+    //     border: .1rem solid $dark-black;
+    //     color: $dark-black;
+    //     max-width: auto !important;
+    //     padding: 1rem 2.5rem;
 
-        &:hover
-        &:focus {
-            background: darken($main-grey, 5);
-            border: .1rem solid $dark-black;
-        }
-    }
+    //     &:hover
+    //     &:focus {
+    //         background: darken($main-grey, 5);
+    //         border: .1rem solid $dark-black;
+    //     }
+    // }
 
-    .ItemDeleteButton {
-        background: $main-grey;
-        border: .1rem solid $dark-black;
-        color: $dark-black;
-        max-width: auto !important;
-        padding: 1rem 2.5rem;
+    // .ItemDeleteButton {
+    //     background: $main-grey;
+    //     border: .1rem solid $dark-black;
+    //     color: $dark-black;
+    //     max-width: auto !important;
+    //     padding: 1rem 2.5rem;
 
-        &:hover
-        &:focus {
-            background: darken($main-grey, 5);
-            border: .1rem solid $dark-black;
-        }
-    }
+    //     &:hover
+    //     &:focus {
+    //         background: darken($main-grey, 5);
+    //         border: .1rem solid $dark-black;
+    //     }
+    // }
 }
 
 @include respond-min($mq-small) {

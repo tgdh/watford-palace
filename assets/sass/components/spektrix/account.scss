@@ -7,12 +7,20 @@
     }
 
     li {
+        background: $main-grey;
+        border: .1rem solid $dark-black;
+        cursor: pointer;
         float: left;
         list-style: none;
         margin: 0;
         margin-bottom: 1rem;
+        padding: 1rem;
         text-align: center;
         width: 50%;
+
+        a {
+            color: $dark-black;
+        }
     }
 
     &:before {
@@ -42,9 +50,9 @@
 
 .Addresses {
 
-    .Address {
-        margin-bottom: $line-height;
-        padding: 1rem;
+    .Container.Address {
+        border-bottom: .1rem solid $main-grey;
+        padding: 2rem 0;
 
         .AddressType {
             font-weight: bold;
@@ -57,16 +65,38 @@
         }
 
         a {
-            margin-right: 1rem;
+            background: $main-grey;
+            border: .1rem solid $dark-black;
+            border-radius: $border-radius;
+            color: $dark-black;
+            cursor: pointer;
+            display: inline-block;
+            // float: right;
+            font-weight: bold;
+            line-height: 1;
+            margin: 0 auto;
+            margin-bottom: $line-height;
+            max-width: auto !important;
+            padding: 1rem 2.5rem;
+            transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+            width: auto;
+
+            &:hover,
+            &:focus {
+                background: darken($main-grey, 5);
+                border: .1rem solid $dark-black;
+            }
+
+            &:focus {
+                box-shadow: 0 .3rem 0 0 rgba($black, .1);
+            }
         }
     }
-
-    .Address:nth-child(odd) {
-        background: $main-grey;
-    }
-
-    .Address:nth-child(even) {
-    }
+    // .Address:nth-child(odd) {
+    //     background: $main-grey;
+    // }
+    // .Address:nth-child(even) {
+    // }
 }
 
 .AddressOptions {
@@ -79,9 +109,9 @@
     .DefaultBilling {
 
         input {
-            -webkit-appearance: radio;
-               -moz-appearance: radio;
-                    appearance: radio;
+            -webkit-appearance: checkbox;
+               -moz-appearance: checkbox;
+                    appearance: checkbox;
             display: inline-block;
             width: auto;
         }
@@ -97,9 +127,9 @@
     .DefaultDelivery {
 
         input {
-            -webkit-appearance: radio;
-               -moz-appearance: radio;
-                    appearance: radio;
+            -webkit-appearance: checkbox;
+               -moz-appearance: checkbox;
+                    appearance: checkbox;
             display: inline-block;
             width: auto;
         }
@@ -115,4 +145,33 @@
 
 .ChangePassword {
     margin-bottom: $line-height;
+}
+
+a.NewAddress,
+a.ChangePassword {
+    background: $main-grey;
+    border: .1rem solid $dark-black;
+    border-radius: $border-radius;
+    color: $dark-black;
+    cursor: pointer;
+    display: inline-block;
+    // float: right;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 auto;
+    margin-bottom: $line-height;
+    max-width: auto !important;
+    padding: 1rem 2.5rem;
+    transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+    width: auto;
+
+    &:hover,
+    &:focus {
+        background: darken($main-grey, 5);
+        border: .1rem solid $dark-black;
+    }
+
+    &:focus {
+        box-shadow: 0 .3rem 0 0 rgba($black, .1);
+    }
 }
