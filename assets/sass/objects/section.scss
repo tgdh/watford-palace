@@ -30,15 +30,38 @@
     background: $main-grey;
 }
 
+.o-section--light-grey {
+    background: $main-grey;
+}
+
 .o-section--dark-terra-cota {
     background: $main-red;
     color: $white !important;
 
     a {
         color: $white;
+
         &:hover,
         &:focus {
             color: $pri;
+        }
+    }
+
+    .o-button--blue-transparent {
+        background: transparent;
+        border: .1rem solid $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background: $white;
+            color: $dark-black;
+        }
+
+        &.active {
+            background: $white;
+            border: .1rem solid $white;
+            color: $dark-black;
         }
     }
 }
@@ -49,9 +72,28 @@
 
     a {
         color: $white;
+
         &:hover,
         &:focus {
             color: $sec;
+        }
+    }
+
+    .o-button--blue-transparent {
+        background: transparent;
+        border: .1rem solid $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background: $white;
+            color: $dark-black;
+        }
+
+        &.active {
+            background: $white;
+            border: .1rem solid $white;
+            color: $dark-black;
         }
     }
 }

@@ -28,32 +28,34 @@
 				@CurrentPage.content
 			</div>
 		}
+		@if( !CurrentPage.hideDates )
+		{
+			<div class="c-list-dates">
+				<table class="o-table o-table--stacked">
+					@foreach( var item in CurrentPage.multidate ) {
+						DateTime dateValue;
+						string bookingUrl = bookingPage.Url + "?id=" + item.InstanceId;
+						string dateAndTime =  item.date.value.ToString() + " " + item.time.value.ToString() + ":00 ";
 
-		<div class="c-list-dates">
-			<table class="o-table o-table--stacked">
-				@foreach( var item in CurrentPage.multidate ) {
-					DateTime dateValue;
-					string bookingUrl = bookingPage.Url + "?id=" + item.InstanceId;
-					string dateAndTime =  item.date.value.ToString() + " " + item.time.value.ToString() + ":00 ";
+						if( DateTime.Parse( dateAndTime ) > now )
+						{
+							<tr class="o-table__date-row">
+								<td class="o-table__date">
+									@if (DateTime.TryParse(item.date.value.ToString(), out dateValue) == true) {
+										@dateValue.ToString("dddd dd MMM yyyy")
+									}
+								</td>
+								<td class="o-table__time">@item.time.value</td>
+								<td class="o-table__col-button">
+									<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
+								</td>
+							</tr>
+						}
 
-					if( DateTime.Parse( dateAndTime ) > now )
-					{
-						<tr class="o-table__date-row">
-							<td class="o-table__date">
-								@if (DateTime.TryParse(item.date.value.ToString(), out dateValue) == true) {
-									@dateValue.ToString("dddd dd MMM yyyy")
-								}
-							</td>
-							<td class="o-table__time">@item.time.value</td>
-							<td class="o-table__col-button">
-								<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
-							</td>
-						</tr>
 					}
-
-				}
-			</table>
-		</div>
+				</table>
+			</div>
+		}
 	</div>
 </div>
 

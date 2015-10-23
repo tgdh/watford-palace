@@ -10,7 +10,7 @@
                 .load([
                     "/App_Plugins/MultipleDatePicker/jquery.maskedinput.min.js"
                 ]).then(function () {
-                    //this function will execute when all dependencies have loaded   
+                    //this function will execute when all dependencies have loaded
                     $.datepicker.setDefaults({
                         // When a date is selected from the picker
                         onSelect: function (newValue) {
@@ -20,7 +20,14 @@
                         }
                     });
                 });
-            $('.dp').datepicker({ dateFormat: 'dd/mm/yy' });
+            // $('.dp').datepicker({ dateFormat: 'dd/mm/yy' });
+            $('.dp').on('mousedown', function(){
+                $(this).removeClass('hasDatepicker');
+                $(this).datepicker({
+                    dateFormat: 'dd/mm/yy'
+                });
+            });
+
         });
 
     //load the separate css for the datepicker to avoid it blocking our js loading
@@ -89,7 +96,13 @@ md.directive('jqdatepicker', function () {
                     }
                 });
 
-                $('.dp').datepicker({ dateFormat: 'dd/mm/yy' });
+                // $('.dp').datepicker({ dateFormat: 'dd/mm/yy' });
+                $('.dp').on('mousedown', function(){
+                    $(this).removeClass('hasDatepicker');
+                    $(this).datepicker({
+                        dateFormat: 'dd/mm/yy'
+                    });
+                });
             }
             catch (e) {
                 //console.log(e);

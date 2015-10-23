@@ -13,7 +13,7 @@ img {
 figure figcaption {
     font-size: 1.4rem;
     font-style: italic;
-    padding-top: .4rem;
+    padding: .4rem 1rem;
     text-align: right;
 }
 
@@ -21,7 +21,8 @@ figure {
     position: relative;
 
     .c-figcaption--bottom {
-        background: $dark-black, rgba(22, 22, 22, .8);
+        background: $dark-black;
+        background: rgba(22, 22, 22, .8);
         bottom: 0;
         color: $white;
         position: absolute;

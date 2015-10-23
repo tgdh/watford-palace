@@ -1,7 +1,7 @@
 var Events = (function () {
 
     var settings = {
-        numEvents: 5,
+        numEvents: 20,
         selects: ".filter-js",
         categorySelect: "#filter-category",
         timeSelect: "#filter-time",

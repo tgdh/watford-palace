@@ -7,6 +7,7 @@
     background: $white;
     border-radius: 100%;
     cursor: pointer;
+    color: $sec !important;
     font-size: 3rem;
     height: 5rem;
     left: 50%;
@@ -19,7 +20,7 @@
 
     &:hover {
         background: $pri;
-        color: $white;
+        color: $white !important;
     }
 
     .ico-arrow {

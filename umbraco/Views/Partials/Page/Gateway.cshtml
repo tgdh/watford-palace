@@ -3,9 +3,24 @@
 
 }
 
-@foreach( var page in CurrentPage.Children() )
-{
-
-        <a href="@page.Url"><h2>@page.Name</h2></a>
-
-}
+<div class="clearfix">
+    @foreach( var page in CurrentPage.Children.Where("Visible") )
+    {
+        <article class="o-card o-card--event o-card--image">
+            <div class="o-card__image--wrap">
+                @if( page.HasValue("thumbnail") )
+                {
+                    <img class="o-card__image" src="@Umbraco.Media(page.thumbnail).GetCropUrl("umbracoFile", "gallery")" alt="@page.Name"/>
+                }
+            </div>
+            <div class="o-card__content">
+                <span class="o-card-info--category "></span>
+                <h3 class="o-card__heading o-card__heading--event">@page.Name</h3>
+                <span class="o-card-info--date o-card-info--date--event">
+                    @page.Summary
+                </span>
+            </div>
+            <a href="@page.Url" class="o-card-link"></a>
+        </article>
+    }
+</div>

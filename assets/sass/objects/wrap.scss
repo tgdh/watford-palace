@@ -57,11 +57,12 @@
     .o-wrap--offset {
         max-width: 72rem;
         transform: translateX(10rem);
-        +.link-next--offset {
-            margin-left: 7.5rem;
-        }
+
     }
 
+    .link-next--offset {
+        margin-left: 7.5rem;
+    }
 
 }
 
@@ -70,9 +71,10 @@
     .o-wrap--offset {
         max-width: 85rem;
         transform: translateX(12rem);
-        +.link-next--offset {
-            margin-left: 9.5rem;
-        }
+    }
+
+    .link-next--offset {
+        margin-left: 9.5rem;
     }
 
 
@@ -83,8 +85,10 @@
     .o-wrap--offset {
         max-width: 90rem;
         transform: translateX(15rem);
-        +.link-next--offset {
-            margin-left: 12.5rem;
-        }
     }
+
+    .link-next--offset {
+        margin-left: 12.5rem;
+    }
+
 }

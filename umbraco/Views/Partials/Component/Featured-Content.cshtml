@@ -87,11 +87,11 @@
 	}
 	if( announcement.Name != "" )
 	{
-		<article class="o-card o-card--announcement @cardType">
+		<article class="o-card o-card--event @cardType">
 			<div class="o-card__image--wrap @color">
 			@if( announcement.HasValue("backgroundImage") )
 			{
-				<img class="o-card__image" src="@Umbraco.Media(announcement.backgroundImage).Url" alt="@announcement.title"/>
+				<img class="o-card__image" src="@Umbraco.Media(announcement.backgroundImage).GetCropUrl("umbracoFile", "gallery")" alt="@announcement.title"/>
 			}
 			</div>
 			<div class="o-card__content">

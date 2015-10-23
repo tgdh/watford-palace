@@ -374,7 +374,8 @@
 
 // .no-touchevents {
 
-    .o-card--event:hover {
+    .o-card--event:hover,
+    .o-card--news:hover {
 
         .o-card-info--category {
             background: $dark-black;
@@ -397,21 +398,21 @@
     }
 // }
 
-.o-card--news:nth-child(odd) {
-    background: $pri !important;
+// .o-card--news:nth-child(odd) {
+//     background: $pri !important;
 
-    .o-card__image--wrap {
-        background: none;
-    }
-}
+//     .o-card__image--wrap {
+//         background: none;
+//     }
+// }
 
-.o-card--news:nth-child(even) {
-    background: $sec !important;
+// .o-card--news:nth-child(even) {
+//     background: $sec !important;
 
-    .o-card__image--wrap {
-        background: none;
-    }
-}
+//     .o-card__image--wrap {
+//         background: none;
+//     }
+// }
 
 @include respond-min($mq-small + 50px) {
 

@@ -1,7 +1,13 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Newtonsoft.Json;
 @{
 	var homePage = CurrentPage.Site();
 	var settings = homePage.FirstChild("Settings");
+
+	var ci = new System.Globalization.CultureInfo("en-GB");
+	System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+	System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Today;
 }
 
 <div class="c-cover-wrap clearfix">
@@ -107,6 +113,9 @@
 	var category = slide.Parent().Name;
 	var title = slide.title;
 	var date = "23 Sep - 3 Oct";
+
+	dynamic times = JsonConvert.DeserializeObject( node.multidate.ToString() );
+
 	<section class="c-cover__main c-cover">
 		<div class="c-cover__image--wrap">
 			@if( slide.HasValue("coverImage") )
@@ -119,7 +128,19 @@
 			<div class="c-cover__content">
 				<span class="c-cover-info--category">@category</span>
 				<h3 class="c-cover__heading c-cover__heading--news giga">@title</h3>
-				<span class="c-cover-info--date">@date</span>
+				<span class="c-cover-info--date">
+	                @if( times.Count > 1){
+	                    if( @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") != @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM") ){
+	                        @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") <span>-</span>
+	                        @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM")
+	                    } else {
+	                        @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM")
+	                    }
+
+	                } else {
+	                    @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM")
+	                }
+				</span>
 				<a href="@slide.Url" class="c-cover-link"></a>
 				<a href="@slide.Url#tickets" class="o-button o-button--primary">
 					Buy tickets

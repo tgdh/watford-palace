@@ -43,8 +43,16 @@
 @helper Quotes(IPublishedContent item, int sectionCount)
 {
 	var quotes = item.GetPropertyValue<IEnumerable<IPublishedContent>>("quotes");
+	var color = item.GetPropertyValue("colour");
+	var sectionColor = "o-section--dark-terra-cota";
 	var wrap = "";
 	var offset = "";
+	var linkOffset = "";
+
+	if( color != null )
+	{
+	    sectionColor = "o-section--" + @color.ToString().ToLower().Replace(" ", "-");
+	}
 
 	if( quotes != null )
 	{
@@ -55,14 +63,16 @@
 	{
 	    wrap = "";
 	    offset = "o-wrap--offset";
+	    linkOffset = "link-next--offset";
+
 	}
 
 	if( quotes != null )
 	{
-		<div class="c-page-block o-section c-page-block--quote">
+		<div class="c-page-block o-section @sectionColor c-page-block--quote">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next link-next--offset">
+				<a href="#section-@sectionCount" class="link-next @linkOffset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
@@ -100,10 +110,12 @@
     var image = item.GetPropertyValue("image");
     var title = item.GetPropertyValue("title");
 	var wrap = "";
+	var linkOffset = "";
 
-	if( Model.Level == 2 )
+	if( Model.Level > 2 )
 	{
 	    wrap = "";
+	    linkOffset = "link-next--offset";
 	}
 
 	if( image != null )
@@ -111,15 +123,16 @@
 		<div class="c-page-block c-page-block--wide-image @wrap">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next link-next--offset">
+				<a href="#section-@sectionCount" class="link-next @linkOffset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset--image"></span>
 			}
-			@if( title != null && title.ToString() != "" )
+@* 			@if( title != null && title.ToString() != "" )
 			{
+				<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 			    <h2>@title</h2>
-			}
+			} *@
 			@if( image != null )
 			{
 				var cropUrl = Umbraco.Media(image.ToString()).GetCropUrl("umbracoFile", "image-cover");
@@ -142,16 +155,20 @@
 
 @helper Gallery(IPublishedContent item, int sectionCount)
 {
-	var gallery = item.GetPropertyValue("gallery");
+	var gallery = item.GetPropertyValue<string>("gallery");
 	var galleryCaption = item.GetPropertyValue("caption");
     var title = item.GetPropertyValue("title");
 	var wrap = "";
 	var galleryType = "";
 	var count = 0;
+	var offset = "";
+	var linkOffset = "";
 
-	if( Model.Level == 2 )
+	if( Model.Level > 2 )
 	{
 	    wrap = "";
+	    offset = "o-wrap--offset";
+	    linkOffset = "link-next--offset";
 	}
 	foreach( var id in gallery.ToString().Split(',') )
     {
@@ -161,37 +178,42 @@
 			galleryType = "js-single__galery";
 		}
     }
-	if ( gallery != null )
+	if ( !String.IsNullOrEmpty(gallery) )
 	{
-		<div class="c-page-block c-page-block--gallery @wrap ">
+		<div class="o-section c-page-block c-page-block--gallery @wrap ">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next link-next--offset">
+				<a href="#section-@sectionCount" class="link-next @linkOffset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
 			}
-			@if( title != null && title.ToString() != "" )
-			{
-			    <h2>@title</h2>
-			}
-			<figure class="clearfix @galleryType owl-carousel js-magnific-gallery">
-				@foreach( var id in gallery.ToString().Split(',') )
-			    {
-			    	var imageUrl = Umbraco.Media(id.ToString()).Url;
-			    	var cropUrl = Umbraco.Media(id.ToString()).GetCropUrl("umbracoFile", "gallery-slide");
-					var caption = Umbraco.Media(id.ToString()).caption;
-					var altText = Umbraco.Media(id.ToString()).altText;
+			<div class="o-wrap o-wrap--medium @offset">
+				@if( title != null && title.ToString() != "" )
+				{
+					<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
+				    <h2>@title</h2>
+				}
+				<figure class="clearfix">
+					<div class="@galleryType owl-carousel js-magnific-gallery">
+						@foreach( var id in gallery.ToString().Split(',') )
+					    {
+					    	var imageUrl = Umbraco.Media(id.ToString()).Url;
+					    	var cropUrl = Umbraco.Media(id.ToString()).GetCropUrl("umbracoFile", "gallery-slide");
+							var caption = Umbraco.Media(id.ToString()).caption;
+							var altText = Umbraco.Media(id.ToString()).altText;
 
-			        <a class="c-gallery__thumbnail" href="@imageUrl?width=1200" title="@altText">
-			        	<img src="@cropUrl" alt="@altText">
-			        </a>
-			    }
-		        @if ( galleryCaption != "" )
-		        {
-		            <figcaption>@galleryCaption</figcaption>
-		        }
-		    </figure>
+					        <a class="c-gallery__thumbnail" href="@imageUrl?width=1200" title="@altText">
+					        	<img src="@cropUrl" alt="@altText">
+					        </a>
+					    }
+				    </div>
+			        @if ( galleryCaption != "" )
+			        {
+			            <figcaption>@galleryCaption</figcaption>
+			        }
+			    </figure>
+			</div>
 		</div>
 	}
 }
@@ -200,21 +222,38 @@
 {
 	var content = item.GetPropertyValue("content");
 	var wrap = "";
+    var color = item.GetPropertyValue("colour");
+    var sectionColor = "o-section--white";
+    var offset = "";
+    var linkOffset = "";
+    var title = item.GetPropertyValue("title");
 
-	if( Model.Level == 2 )
+	if( color != null )
 	{
-	    wrap = "";
+	    sectionColor = "o-section--" + @color.ToString().ToLower().Replace(" ", "-");
 	}
 
-	<div class="o-section c-page-block--textarea @wrap">
+	if( Model.Level > 2 )
+	{
+	    wrap = "";
+	    offset = "o-wrap--offset";
+	    linkOffset = "link-next--offset";
+	}
+
+	<div class="o-section @sectionColor c-page-block--textarea @wrap">
 		@if( sectionCount >= 1 )
 		{
-			<a href="#section-@sectionCount" class="link-next link-next--offset">
+			<a href="#section-@sectionCount" class="link-next @linkOffset">
                 <i class="ico-arrow ico-arrow--down"></i>
             </a>
             <span id="section-@sectionCount" class="anchor-offset"></span>
 		}
-		<div class="o-wrap o-wrap--medium">
+		<div class="o-wrap o-wrap--medium @offset">
+			@if( title != null && title.ToString() != "" )
+			{
+				<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
+			    <h2>@title</h2>
+			}
 			@content
 		</div>
 	</div>
@@ -224,10 +263,12 @@
 {
 	var tabs = item.GetPropertyValue<IEnumerable<IPublishedContent>>("tabs");
 	var title = item.GetPropertyValue("title");
+	var mainContent = item.GetPropertyValue("content");
 	var color = item.GetPropertyValue("colour");
 	var sectionColor = "o-section--white";
 	var wrap = "";
 	var offset = "";
+	var linkOffset = "";
 
 	if( color != null )
 	{
@@ -237,6 +278,7 @@
 	{
 	    wrap = "";
 	    offset = "o-wrap--offset";
+	    linkOffset = "link-next--offset";
 	}
 
 	if( tabs != null )
@@ -244,7 +286,7 @@
 		<div class="o-section @sectionColor c-page-block--tabs @wrap">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next link-next--offset">
+				<a href="#section-@sectionCount" class="link-next @linkOffset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
@@ -252,7 +294,12 @@
 			<div class="o-wrap o-wrap--medium @offset">
 				@if( title != null && title.ToString() != "" )
 				{
+					<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 				    <h2>@title</h2>
+				}
+				@if( mainContent != null && mainContent.ToString() != "" )
+				{
+				    <div class="c-content">@mainContent</div>
 				}
 				<div class="c-tab-controls">
 
@@ -278,6 +325,7 @@
 					@foreach( var tab in tabs )
 					{
 						var tabTitle = tab.GetPropertyValue("title");
+						var image = tab.GetPropertyValue("image");
 						var content = tab.GetPropertyValue("content");
 						var active = "";
 
@@ -287,6 +335,25 @@
 			                    active = "active";
 			                }
 							<div id="@tabTitle.ToString().ToLower().ToLower().Replace(" ", "")" class="tabs-pane c-tab clearfix @active">
+								@if( image != null )
+								{
+									var theImage = Umbraco.Media(image.ToString());
+									var imageUrl = theImage.Url;
+									var cropUrl  = theImage.GetCropUrl("umbracoFile", "gallery-slide");
+									var caption = Umbraco.Media(image.ToString()).caption;
+									var altText = Umbraco.Media(image.ToString()).altText;
+
+								    <figure class="t-padding t-center js-magnific-gallery">
+								    	<a href="@imageUrl?width=1200&upscale=false" title="@altText">
+								        	<img src="@cropUrl" alt="@altText">
+								        </a>
+								        @if ( caption != "" )
+								        {
+								            <figcaption>@caption</figcaption>
+								        }
+
+								    </figure>
+								}
 								@content
 							</div>
 						}
@@ -307,6 +374,7 @@
     var sectionColor = "o-section--white";
 	var wrap = "";
 	var offset = "";
+	var linkOffset = "";
 
 	if( color != null )
 	{
@@ -317,6 +385,7 @@
 	{
 	    wrap = "";
 	    offset = "o-wrap--offset";
+	    linkOffset = "link-next--offset";
 	}
 
     if( alignment != null)
@@ -329,7 +398,7 @@
 		<div class="o-section @sectionColor c-page-block--image-text c-page-block--@alignment @wrap clearfix">
 			@if( sectionCount >= 1 )
 			{
-				<a href="#section-@sectionCount" class="link-next link-next--offset">
+				<a href="#section-@sectionCount" class="link-next @linkOffset">
 	                <i class="ico-arrow ico-arrow--down"></i>
 	            </a>
 	            <span id="section-@sectionCount" class="anchor-offset"></span>
@@ -337,7 +406,8 @@
 			<div class="o-wrap o-wrap--medium @offset clearfix">
 				@if( title != null && title.ToString() != "" )
 				{
-				    <h2 class="clearfix">@title</h2>
+					<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
+				    <h2>@title</h2>
 				}
 
 				@if( image != null )
@@ -346,7 +416,7 @@
 					var caption = Umbraco.Media(image.ToString()).caption;
 					var altText = Umbraco.Media(image.ToString()).altText;
 
-				    <figure class="c-float--image c-@alignment">
+				    <figure class="c-float--image c-@alignment js-magnific-gallery">
 				    	<a href="@imageUrl?width=1200" title="@altText">
 				        	<img src="@imageUrl?width=800" alt="@altText">
 				        </a>
@@ -377,11 +447,13 @@
     var sectionColor = "o-section--white";
 	var wrap = "";
 	var offset = "";
+	var linkOffset = "";
 
 	if( Model.Level > 2 )
 	{
 	    wrap = "";
 	    offset = "o-wrap--offset";
+	    linkOffset = "link-next--offset";
 	}
 
 	if( color != null )
@@ -392,7 +464,7 @@
 	<div class="o-section @sectionColor c-page-block--two-column-textarea @wrap">
 		@if( sectionCount >= 1 )
 		{
-			<a href="#section-@sectionCount" class="link-next link-next--offset">
+			<a href="#section-@sectionCount" class="link-next @linkOffset">
                 <i class="ico-arrow ico-arrow--down"></i>
             </a>
             <span id="section-@sectionCount" class="anchor-offset"></span>
@@ -400,7 +472,8 @@
 		<div class="o-wrap o-wrap--medium @offset clearfix">
 			@if( title != null && title.ToString() != "" )
 			{
-			    <h2 class="clearfix">@title</h2>
+				<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
+			    <h2>@title</h2>
 			}
 			@if( content != null && content.ToString() != "" )
 			{
