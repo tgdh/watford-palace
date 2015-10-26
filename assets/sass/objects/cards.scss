@@ -294,6 +294,19 @@
     }
 }
 
+
+.o-card--bottom {
+
+    .o-card__content {
+        top: auto;
+        margin-bottom: 0;
+
+        .o-card-info--date--event {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .no-touchevents {
 
     .o-card--event {
@@ -307,6 +320,16 @@
     .o-card--event:hover .o-card__actions--event {
         opacity: 1;
     }
+}
+
+.touchevents {
+
+   .o-card__actions--event {
+        a {
+            background: $dark-black;
+            background: rgba(22, 22, 22, 0.5);
+        }
+   }
 }
 
 .o-card--fill {

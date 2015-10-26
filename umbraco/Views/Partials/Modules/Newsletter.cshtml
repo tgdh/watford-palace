@@ -3,18 +3,30 @@
 	var homePage = CurrentPage.Site();
 
     var siteUrl = "http://" +  Request.Url.Host.ToString();
+    var query = Request.QueryString["newsletter"];
 }
 
-<form class="c-form c-form--newsletter" action="https://system.spektrix.com/watfordpalace/website/secure/signup.aspx" method="POST">
-    <input type="hidden" name="ReturnUrl" value="@siteUrl" />
-	<div class="o-input">
-        <label for="FirstName" class="hide-text">First name</label>
-		<input name="FirstName" type="text" placeholder="First name"/>
-	</div>
-	<div class="o-input">
-        <label for="Email" lass="hide-text">Email</label>
-		<input name="Email" type="text" placeholder="Email"/>
-	</div>
-    <input class="o-button o-button--primary" type="submit" value="Sign up" />
-</form>
+@if( query == "subscribed" ){
+    <span id="subscribed" class="delta">Thank you for subscribing!</span>
+}
+else
+{
+    <form class="c-form c-form--newsletter" action="https://system.spektrix.com/watfordpalace/website/secure/signup.aspx" method="POST">
+        <input type="hidden" name="ReturnUrl" value="@siteUrl:1061?newsletter=subscribed#subscribed" />
+        <div class="o-input">
+            <label for="FirstName" class="hide-text">First name</label>
+            <input name="FirstName" type="text" placeholder="First name"/>
+        </div>
+        <div class="o-input">
+            <label for="LastName" class="hide-text">First name</label>
+            <input name="LastName" type="text" placeholder="Last name"/>
+        </div>
+        <div class="o-input">
+            <label for="Email" lass="hide-text">Email</label>
+            <input name="Email" type="text" placeholder="Email"/>
+        </div>
+        <input class="o-button o-button--primary" type="submit" value="Sign up" />
+    </form>
+}
+
 

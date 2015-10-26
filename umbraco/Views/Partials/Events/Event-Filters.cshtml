@@ -38,3 +38,6 @@
 		</select>
 	</div>
 </div>
+
+<p>@now.FirstDayOfWeek().ToString("D") @now.LastDayOfWeek().ToString("D")</p>
+<p>NEXT WEEK: @now.AddDays(7).FirstDayOfWeek().ToString("D") @now.AddDays(7).LastDayOfWeek().ToString("D")</p>

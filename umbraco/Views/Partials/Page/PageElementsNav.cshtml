@@ -5,41 +5,38 @@
 	int sectionCount = 0;
 }
 
-<span class="t-strong">
-	Quick links:
-</span>
-
-<ul>
-	@foreach( var item in selection )
-	{
-		string docType = item.DocumentTypeAlias;
-
-		switch(docType)
+<div class="c-page-nav o-section--bondi-blue">
+	<ul class="c-page-nav__list">
+		@foreach( var item in selection )
 		{
-			case "Gallery":
-				@Gallery(item, sectionCount)
-			break;
-			case "Textarea":
-				@Textarea(item, sectionCount)
-			break;
-			case "ImageWithText":
-				@ImageWithText(item, sectionCount)
-			break;
-			case "TabbedContent":
-				@TabbedContent(item, sectionCount)
-			break;
-			case "TwoColumnTextarea":
-				@TwoColumnTextarea(item, sectionCount)
-			break;
-			default:
-				@Default(item, sectionCount)
-			break;
+			string docType = item.DocumentTypeAlias;
+
+			switch(docType)
+			{
+				case "Gallery":
+					@Gallery(item, sectionCount)
+				break;
+				case "Textarea":
+					@Textarea(item, sectionCount)
+				break;
+				case "ImageWithText":
+					@ImageWithText(item, sectionCount)
+				break;
+				case "TabbedContent":
+					@TabbedContent(item, sectionCount)
+				break;
+				case "TwoColumnTextarea":
+					@TwoColumnTextarea(item, sectionCount)
+				break;
+				default:
+					@Default(item, sectionCount)
+				break;
+			}
+
+			sectionCount = sectionCount + 1;
 		}
-
-		sectionCount = sectionCount + 1;
-	}
-</ul>
-
+	</ul>
+</div>
 @helper Gallery(IPublishedContent item, int sectionCount)
 {
 	var gallery = item.GetPropertyValue<string>("gallery");
@@ -53,7 +50,7 @@
 	{
 		if( title != null && title.ToString() != "" )
 		{
-		    <li><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
+		    <li class="c-page-nav__item delta"><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
 		}
 	}
 }
@@ -67,7 +64,7 @@
 	{
 		if( title != null && title.ToString() != "" )
 		{
-		    <li><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
+		    <li class="c-page-nav__item delta"><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
 		}
 	}
 }
@@ -82,7 +79,7 @@
 	{
 		if( title != null && title.ToString() != "" )
 		{
-		    <li><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
+		    <li class="c-page-nav__item delta"><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
 		}
 	}
 }
@@ -93,7 +90,7 @@
 
 	if( title != null && title.ToString() != "" )
 	{
-	    <li><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
+	    <li class="c-page-nav__item delta"><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
 	}
 }
 
@@ -103,7 +100,7 @@
 
 	if( title != null && title.ToString() != "" )
 	{
-	    <li><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
+	    <li class="c-page-nav__item delta"><a href="#@title.ToString().ToLower().Replace(" ", "")">@title</a></li>
 	}
 }
 

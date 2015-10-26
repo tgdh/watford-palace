@@ -35,9 +35,10 @@
 					@foreach( var item in CurrentPage.multidate ) {
 						DateTime dateValue;
 						string bookingUrl = bookingPage.Url + "?id=" + item.InstanceId;
-						string dateAndTime =  item.date.value.ToString() + " " + item.time.value.ToString() + ":00 ";
+						DateTime dateAndTime =  DateTime.Parse( item.date.value.ToString() + " " + item.time.value.ToString() + ":00 " );
+						int runTime = CurrentPage.runningTime;
 
-						if( DateTime.Parse( dateAndTime ) > now )
+						if( dateAndTime > now )
 						{
 							<tr class="o-table__date-row">
 								<td class="o-table__date">
@@ -45,7 +46,13 @@
 										@dateValue.ToString("dddd dd MMM yyyy")
 									}
 								</td>
-								<td class="o-table__time">@item.time.value</td>
+								<td class="o-table__time">
+									@item.time.value
+									@if( runTime > 0)
+									{
+										<span>&ndash; @dateAndTime.AddMinutes(runTime).ToString("H:mm") ish</span>
+									}
+								</td>
 								<td class="o-table__col-button">
 									<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
 								</td>

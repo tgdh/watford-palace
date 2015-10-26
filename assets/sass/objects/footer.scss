@@ -27,6 +27,16 @@
 	}
 	.o-page__footer__column--right {
 		@include column(4.75/13, $gutter: 5, $cycle: 2);
-	}	
+	}
 
+}
+
+.o-logo-wrap {
+	text-align: center;
+
+	.o-logo__item {
+		display: inline-block;
+		margin: 0 1.5rem;
+		margin-bottom: 1.5rem;
+	}
 }

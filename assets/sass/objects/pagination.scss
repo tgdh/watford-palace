@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# PAGINATION
+    # PAGINATION
 
 =========================================================== */
 
@@ -54,4 +54,17 @@
 .o-load-more,
 .o-load-prev {
     display: none;
+}
+
+
+@include respond-max($mq-small) {
+
+    #loader {
+        bottom: $frame-size--small;
+        left: $frame-size--small;
+        position: fixed;
+        right: $frame-size--small;
+        width: calc(100% - 4rem);
+        z-index: 5;
+    }
 }

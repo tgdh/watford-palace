@@ -6,7 +6,13 @@
 <div class="clearfix">
     @foreach( var page in CurrentPage.Children.Where("Visible") )
     {
-        <article class="o-card o-card--event o-card--image">
+        string bottom = "";
+
+        if( page.displayAtBottom == true )
+        {
+            bottom = "o-card--bottom";
+        }
+        <article class="o-card o-card--event o-card--image @bottom">
             <div class="o-card__image--wrap">
                 @if( page.HasValue("thumbnail") )
                 {

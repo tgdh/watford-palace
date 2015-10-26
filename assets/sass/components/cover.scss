@@ -207,7 +207,7 @@
 @include respond-min($mq-large + 120px) {
 
     .c-cover__main {
-        max-height: initial;
+        max-height: none;
         @include column(6 / 8, $gutter: 2);
         // padding-top: 100%;
         // background: $sec;

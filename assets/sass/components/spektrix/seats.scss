@@ -80,4 +80,27 @@
             }
         }
     }
+
+    .SeatingSelector {
+
+        .Unreserved {
+
+            margin-bottom: $line-height;
+
+            label {
+                display: inline-block;
+                width: 33%;
+            }
+
+            .Input_Text {
+                display: inline-block;
+                width: 33%;
+            }
+
+            .Price {
+                display: inline-block;
+                width: 33%;
+            }
+        }
+    }
 }

@@ -4,7 +4,22 @@
 
 =========================================================== */
 
+.c-page-nav {
+    padding: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    margin-top: 2rem;
+
+    .c-page-nav__item {
+        list-style: none;
+    }
+}
+
+
+
+
 .c-nav__footer {
+    margin-bottom: $line-height;
 
     .c-nav__list--footer {
         list-style: none;
@@ -161,6 +176,8 @@
         .o-page__header__nav {
             display: block;
             transform: translate3d(0, 0, 0);
+            overflow-y: scroll;
+            height: 52rem;
         }
 
         .toggle--nav--main {
