@@ -86,3 +86,16 @@
         outline: .1rem solid $dark-black;
     }
 }
+
+.lt-ie10 {
+
+    .c-form--newsletter,
+    .form--contactform,
+    .ezsearch-form--search {
+
+        label {
+            display: block !important;
+            padding: 1.5rem;
+        }
+    }
+}
