@@ -44,9 +44,9 @@
     .PricesContainer {
 
         .PriceListTable {
-            margin: 0 auto;
+            // margin: 0 auto;
             margin-bottom: $line-height;
-            width: auto !important;
+            // width: auto !important;
 
             thead {
                 background: darken($main-grey, 5);

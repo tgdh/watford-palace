@@ -1,0 +1,63 @@
+.Donations {
+
+    .FundDescription {
+        margin-bottom: $line-height;
+    }
+
+    label {
+        width: 50%;
+        display: inline-block;
+    }
+
+    input {
+       width: 45%;
+       display: inline-block;
+    }
+}
+
+.FoxIFrameControl iframe {
+    width: 100%;
+    border: 0;
+    height: 800px;
+}
+
+
+.RedeemVoucher {
+
+    .RedeemVoucherInformation {
+        margin-bottom: $line-height;
+    }
+
+    input.VoucherCodeInput {
+        border: 1px solid $dark-black;
+        margin-bottom: $line-height;
+    }
+
+    input.Button {
+        background: $main-grey;
+        border: .1rem solid $dark-black;
+        border-radius: $border-radius;
+        color: $dark-black;
+        cursor: pointer;
+        display: inline-block;
+        // float: right;
+        font-weight: bold;
+        line-height: 1;
+        margin: 0 auto;
+        margin-bottom: $line-height;
+        max-width: auto !important;
+        padding: 1rem 2.5rem;
+        transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+        width: auto;
+
+        &:hover,
+        &:focus {
+            background: darken($main-grey, 5);
+            border: .1rem solid $dark-black;
+        }
+
+        &:focus {
+            box-shadow: 0 .3rem 0 0 rgba($black, .1);
+        }
+    }
+}

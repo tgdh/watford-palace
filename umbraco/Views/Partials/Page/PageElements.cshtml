@@ -417,7 +417,7 @@
 					var altText = Umbraco.Media(image.ToString()).altText;
 
 				    <figure class="c-float--image c-@alignment js-magnific-gallery">
-				    	<a href="@imageUrl?width=1200" title="@altText">
+				    	<a href="@imageUrl?width=1200&upscale=false" title="@altText">
 				        	<img src="@imageUrl?width=800" alt="@altText">
 				        </a>
 				        @if ( caption != "" )

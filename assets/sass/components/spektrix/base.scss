@@ -156,28 +156,24 @@ select {
             box-shadow: 0 .3rem 0 0 rgba($black, .1);
         }
     }
-
     // .ItemEditButton {
     //     background: $main-grey;
     //     border: .1rem solid $dark-black;
     //     color: $dark-black;
     //     max-width: auto !important;
     //     padding: 1rem 2.5rem;
-
     //     &:hover
     //     &:focus {
     //         background: darken($main-grey, 5);
     //         border: .1rem solid $dark-black;
     //     }
     // }
-
     // .ItemDeleteButton {
     //     background: $main-grey;
     //     border: .1rem solid $dark-black;
     //     color: $dark-black;
     //     max-width: auto !important;
     //     padding: 1rem 2.5rem;
-
     //     &:hover
     //     &:focus {
     //         background: darken($main-grey, 5);
@@ -217,5 +213,60 @@ select {
     .SpektrixPage {
         padding-bottom: $padding--large;
         padding-top: $padding--large;
+    }
+}
+
+.Checkout .BillingView .AddressPicker {
+    margin-left: 0;
+}
+
+.MyOrders {
+
+    .NoItems {
+        display: block;
+        margin-bottom: $line-height;
+    }
+
+    .Pager {
+
+        a {
+            background: $main-grey;
+            border: .1rem solid $dark-black;
+            border-radius: $border-radius;
+            color: $dark-black;
+            cursor: pointer;
+            display: inline-block;
+            // float: right;
+            font-weight: bold;
+            line-height: 1;
+            margin: 0 auto;
+            margin-bottom: $line-height;
+            max-width: auto !important;
+            padding: 1rem 2.5rem;
+            transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+            width: auto;
+
+            &:hover,
+            &:focus {
+                background: darken($main-grey, 5);
+                border: .1rem solid $dark-black;
+            }
+
+            &:focus {
+                box-shadow: 0 .3rem 0 0 rgba($black, .1);
+            }
+        }
+    }
+}
+
+.PricesContainer {
+
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+
+    .PriceListTable {
     }
 }

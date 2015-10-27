@@ -1,8 +1,11 @@
 // Buttons
 
 .Buttons,
-#Buttons {
+#Buttons,
+.AddCard {
 
+
+    input,
     input.NextButton,
     input.PreviousButton,
     input.CreateButton,
@@ -16,6 +19,7 @@
         border: .1rem solid $pri;
         color: $white;
         padding: 2rem 3.5rem;
+        transition: all $speed ease;
 
         &:hover,
         &:focus {

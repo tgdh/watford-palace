@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+
+}
+
+@*
+    secure url:
+    https://system.spektrix.com/hulltruck/website/secure/myaccount.aspx
+*@
+
+@if( instanceId != null ) {
+    <iframe
+      name="SpektrixIFrame"
+      id="SpektrixIFrame"
+      frameborder="0"
+      onload="scroll(0,0);"
+      src="https://system.spektrix.com/watfordpalace/website/secure/checkout.aspx?resize=true"
+      style="width: 100%; max-width: 100rem; margin: 0 auto; display: block; height: 1300px;">
+    </iframe>
+}
