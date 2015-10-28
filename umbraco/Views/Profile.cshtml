@@ -1,6 +1,11 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "MasterSpektrix.cshtml";
+
+    if( !Request.IsSecureConnection && CurrentPage.DocumentTypeAlias == "Profile" )
+    {
+        Response.Redirect(siteUrl);
+    }
 }
 
 @*

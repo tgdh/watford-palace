@@ -20,6 +20,18 @@
 	var meta = Model.Content.GetPropertyValue<SEOChecker.MVC.MetaData>("seo");
 
 	string docType = CurrentPage.DocumentTypeAlias;
+
+	var unsecureUrl = "http://" +  Request.Url.Host.ToString() + Request.RawUrl.ToString();
+	bool rightDoctype = false;
+
+	if( docType != "Checkout" && docType != "Profile" )
+	{
+		rightDoctype = true;
+	}
+	if( Request.IsSecureConnection && rightDoctype )
+	{
+		Response.Redirect(unsecureUrl);
+	}
 }
 
 <!doctype html class="no-js @pageType">
@@ -109,7 +121,7 @@
 
 	@Html.Partial("Page/Footer")
 
-	@if( docType != "Profile" && docType != "Cart" && docType != "BookingPage" )
+	@if( docType != "Profile" && docType != "Cart" && docType != "BookingPage" && docType != "Checkout" )
 	{
 		<iframe
 			name="SpektrixIFrame"

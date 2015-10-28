@@ -28,8 +28,8 @@
 				@CurrentPage.content
 			</div>
 		}
-		@if( !CurrentPage.hideDates )
-		{
+@* 		@if( !CurrentPage.hideDates )
+		{ *@
 			<div class="c-list-dates">
 				<table class="o-table o-table--stacked">
 					@foreach( var item in CurrentPage.multidate ) {
@@ -54,7 +54,9 @@
 									}
 								</td>
 								<td class="o-table__col-button">
-									<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
+									@if( !CurrentPage.hideDates ){
+										<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
+									}
 								</td>
 							</tr>
 						}
@@ -62,7 +64,7 @@
 					}
 				</table>
 			</div>
-		}
+		@* } *@
 	</div>
 </div>
 

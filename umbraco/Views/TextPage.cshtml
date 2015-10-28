@@ -4,16 +4,34 @@
     Layout = "Master.cshtml";
 	var homePage = CurrentPage.Site();
 	var settings = homePage.FirstChild("Settings");
-	var paddingTop = "o-section--top";
+	var paddingTop = "";
 
 	var level = CurrentPage.Level;
 
-	if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") )
+	var selection = CurrentPage.mainContent;
+	bool addNav = false;
+
+	foreach( var item in selection )
 	{
-		paddingTop = "o-section--top";
+		var tempTitle = Umbraco.Field(item,"title");
+
+		if( tempTitle != null && tempTitle.ToString() != "" )
+		{
+		    addNav = true;
+
+		}
+	}
+	if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") && addNav != false )
+	{
+		if( addNav )
+		{
+		    paddingTop = "o-section--top";
+		}
+
 	}
 
 }
+
 @if ( CurrentPage.Level == 2 )
 {
 	<div class="o-section o-section--main @paddingTop">

@@ -3,40 +3,54 @@
 	var selection = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("mainContent");
 
 	int sectionCount = 0;
+	bool addNav = false;
+	foreach( var item in selection )
+	{
+		var tempTitle = item.GetPropertyValue("title");
+
+		if( tempTitle != null && tempTitle.ToString() != "" )
+		{
+		    addNav = true;
+		}
+	}
 }
 
-<div class="c-page-nav o-section--bondi-blue">
-	<ul class="c-page-nav__list">
-		@foreach( var item in selection )
-		{
-			string docType = item.DocumentTypeAlias;
-
-			switch(docType)
+@if( addNav )
+{
+	<div class="c-page-nav o-section--bondi-blue">
+		<ul class="c-page-nav__list">
+			@foreach( var item in selection )
 			{
-				case "Gallery":
-					@Gallery(item, sectionCount)
-				break;
-				case "Textarea":
-					@Textarea(item, sectionCount)
-				break;
-				case "ImageWithText":
-					@ImageWithText(item, sectionCount)
-				break;
-				case "TabbedContent":
-					@TabbedContent(item, sectionCount)
-				break;
-				case "TwoColumnTextarea":
-					@TwoColumnTextarea(item, sectionCount)
-				break;
-				default:
-					@Default(item, sectionCount)
-				break;
-			}
+				string docType = item.DocumentTypeAlias;
 
-			sectionCount = sectionCount + 1;
-		}
-	</ul>
-</div>
+				switch(docType)
+				{
+					case "Gallery":
+						@Gallery(item, sectionCount)
+					break;
+					case "Textarea":
+						@Textarea(item, sectionCount)
+					break;
+					case "ImageWithText":
+						@ImageWithText(item, sectionCount)
+					break;
+					case "TabbedContent":
+						@TabbedContent(item, sectionCount)
+					break;
+					case "TwoColumnTextarea":
+						@TwoColumnTextarea(item, sectionCount)
+					break;
+					default:
+						@Default(item, sectionCount)
+					break;
+				}
+
+				sectionCount = sectionCount + 1;
+			}
+		</ul>
+	</div>
+}
+
 @helper Gallery(IPublishedContent item, int sectionCount)
 {
 	var gallery = item.GetPropertyValue<string>("gallery");
