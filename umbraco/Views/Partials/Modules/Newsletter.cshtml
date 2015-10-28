@@ -1,13 +1,26 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	var homePage = CurrentPage.Site();
+    var homePage = CurrentPage.Site();
 
     var siteUrl = "http://" +  Request.Url.Host.ToString();
     var query = Request.QueryString["newsletter"];
+    var errorQuery = Request.QueryString["error"];
 }
 
 @if( query == "subscribed" ){
-    <span id="subscribed" class="delta">Thank you for subscribing!</span>
+    if( errorQuery == "EmailExists" )
+    {
+        <span id="subscribed" class="delta">Email is already in use.</span>
+    }
+    else if( errorQuery == "NoLastName" )
+    {
+        <span id="subscribed" class="delta">Please enter your last name.</span>
+    }
+    else
+    {
+        <span id="subscribed" class="delta" data-error="@errorQuery">Thank you for subscribing!</span>
+    }
+
 }
 else
 {

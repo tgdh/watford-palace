@@ -1,0 +1,120 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+    Layout = "Master.cshtml";
+    var homePage = CurrentPage.Site();
+    var settings = homePage.FirstChild("Settings");
+    var paddingTop = "";
+
+    var level = CurrentPage.Level;
+
+    var selection = CurrentPage.mainContent;
+    bool addNav = false;
+
+    foreach( var item in selection )
+    {
+        var tempTitle = Umbraco.Field(item,"title");
+
+        if( tempTitle != null && tempTitle.ToString() != "" )
+        {
+            addNav = true;
+
+        }
+    }
+    if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") && addNav != false )
+    {
+        if( addNav )
+        {
+            paddingTop = "o-section--top";
+        }
+
+    }
+
+}
+
+@if ( CurrentPage.Level == 2 )
+{
+    <div class="o-section o-section--main @paddingTop">
+        <div class="o-wrap o-wrap--medium">
+            <h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+            @if( CurrentPage.HasValue("bodyText") )
+            {
+                <div class="c-content">
+                    @CurrentPage.bodyText
+                </div>
+                if( CurrentPage.HasValue("mainContent") )
+                {
+                    <span id="section-0" class="anchor-offset--padding"></span>
+                }
+            }
+        </div>
+        @if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") )
+        {
+            @Html.Partial("Page/PageElementsNav")
+        }
+        @if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") )
+        {
+            <a href="#section-0" class="link-next link-bottom">
+                <i class="ico-arrow ico-arrow--down"></i>
+            </a>
+        }
+    </div>
+    if( CurrentPage.HasValue("mainContent") )
+    {
+        @Html.Partial("Page/PageElements")
+    }
+}
+else
+{
+    <div class="o-section o-section--main @paddingTop">
+        <div class="o-wrap o-wrap--medium o-wrap--offset">
+            @Html.Partial("Page/Sidebar")
+            <h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+            @if( CurrentPage.HasValue("bodyText") )
+            {
+                <div class="c-content">
+                    @CurrentPage.bodyText
+                </div>
+                if( CurrentPage.HasValue("mainContent") )
+                {
+                    <span id="section-0" class="anchor-offset--padding"></span>
+                }
+            }
+        </div>
+        @if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") )
+        {
+            <a href="#section-0" class="link-next link-next--offset link-bottom">
+                <i class="ico-arrow ico-arrow--down"></i>
+            </a>
+        }
+    </div>
+    if( CurrentPage.HasValue("mainContent") )
+    {
+        @Html.Partial("Page/PageElements")
+    }
+}
+
+
+@section OpenGraph{
+    @*
+
+    For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:label1" content="">
+    <meta name="twitter:data1" content="">
+    <meta name="twitter:label2" content="">
+    <meta name="twitter:data2" content="">
+
+    *@
+}
+
+
+@section Scripts{
+
+}
+
+@*      <aside class="o-sidebar">
+            @Html.Partial("Page/Sidebar")
+        </aside> *@
