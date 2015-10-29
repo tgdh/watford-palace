@@ -8,24 +8,59 @@
 }
 
 @if( query == "subscribed" ){
-    if( errorQuery == "EmailExists" )
+
+    if( errorQuery != "" )
     {
-        <span id="subscribed" class="delta">Email is already in use.</span>
-    }
-    else if( errorQuery == "NoLastName" )
-    {
-        <span id="subscribed" class="delta">Please enter your last name.</span>
+        if( errorQuery == "EmailExists" )
+        {
+            <span id="subscribed" class="delta t-block">Email is already in use.</span>
+        }
+        else if( errorQuery == "NoLastName" )
+        {
+            <span id="subscribed" class="delta t-block">Please enter your last name.</span>
+        }
+        else if( errorQuery == "InvalidEmail" )
+        {
+            <span id="subscribed" class="delta t-block">Please enter a valid email address.</span>
+        }
+        else if( errorQuery == "NoEmail" )
+        {
+            <span id="subscribed" class="delta t-block">Please enter your email address.</span>
+        }
+        <form class="c-form c-form--newsletter" action="https://system.spektrix.com/watfordpalace/website/secure/signup.aspx" method="POST">
+            <input type="hidden" name="ReturnUrl" value="@siteUrl?newsletter=subscribed" />
+            <div class="o-input">
+                <label for="FirstName" class="">First name</label>
+                <input name="FirstName" type="text" placeholder="First name"/>
+            </div>
+            <div class="o-input">
+                <label for="LastName" class="">First name</label>
+                <input name="LastName" type="text" placeholder="Last name"/>
+            </div>
+            <div class="o-input">
+                <label for="Email" lass="">Email</label>
+                <input name="Email" type="text" placeholder="Email"/>
+            </div>
+            <input class="o-button o-button--primary" type="submit" value="Sign up" />
+        </form>
+        <script>
+            window.onload=toBottom;
+
+            function toBottom()
+            {
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+        </script>
     }
     else
     {
         <span id="subscribed" class="delta" data-error="@errorQuery">Thank you for subscribing!</span>
     }
-
 }
 else
 {
     <form class="c-form c-form--newsletter" action="https://system.spektrix.com/watfordpalace/website/secure/signup.aspx" method="POST">
-        <input type="hidden" name="ReturnUrl" value="@siteUrl?newsletter=subscribed#subscribed" />
+        <input type="hidden" name="ReturnUrl" value="@siteUrl?newsletter=subscribed" />
         <div class="o-input">
             <label for="FirstName" class="">First name</label>
             <input name="FirstName" type="text" placeholder="First name"/>
