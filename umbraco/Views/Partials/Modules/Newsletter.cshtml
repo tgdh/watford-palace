@@ -13,19 +13,19 @@
     {
         if( errorQuery == "EmailExists" )
         {
-            <span id="subscribed" class="delta t-block">Email is already in use.</span>
+            <p id="subscribed" class="delta t-block">Email is already in use.</p>
         }
         else if( errorQuery == "NoLastName" )
         {
-            <span id="subscribed" class="delta t-block">Please enter your last name.</span>
+            <p id="subscribed" class="delta t-block">Please enter your last name.</p>
         }
         else if( errorQuery == "InvalidEmail" )
         {
-            <span id="subscribed" class="delta t-block">Please enter a valid email address.</span>
+            <p id="subscribed" class="delta t-block">Please enter a valid email address.</p>
         }
         else if( errorQuery == "NoEmail" )
         {
-            <span id="subscribed" class="delta t-block">Please enter your email address.</span>
+            <p id="subscribed" class="delta t-block">Please enter your email address.</p>
         }
         <form class="c-form c-form--newsletter" action="https://system.spektrix.com/watfordpalace/website/secure/signup.aspx" method="POST">
             <input type="hidden" name="ReturnUrl" value="@siteUrl?newsletter=subscribed" />
@@ -43,19 +43,19 @@
             </div>
             <input class="o-button o-button--primary" type="submit" value="Sign up" />
         </form>
-        <script>
-            window.onload=toBottom;
-
-            function toBottom()
-            {
-                window.scrollTo(0, document.body.scrollHeight);
-            }
-        </script>
     }
     else
     {
-        <span id="subscribed" class="delta" data-error="@errorQuery">Thank you for subscribing!</span>
+        <p id="subscribed" class="delta" data-error="@errorQuery">Thank you for subscribing!</p>
     }
+    <script>
+        window.onload = toBottom;
+
+        function toBottom()
+        {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
 }
 else
 {
