@@ -131,7 +131,13 @@
 
         }];
 
+        var fitVid = function() {
 
+            console.log("FitVid");
+            $(".o-page__content").fitVids({
+                customSelector: "iframe[src*='youtube.com/'], iframe[src*='vimeo.com/']"
+            });
+        };
 
         $(window).ready(function() {
             singleGallery();
@@ -141,6 +147,7 @@
             startVideo();
             tabbedContent();
             MQ.init(queries);
+            fitVid();
         });
 
         $(window).load(function() {
@@ -150,10 +157,6 @@
         $(window).resize(function() {
             setHeight();
         });
-
-
-
-
 
     }
 
