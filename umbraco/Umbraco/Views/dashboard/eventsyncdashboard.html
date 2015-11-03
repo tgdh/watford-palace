@@ -9,6 +9,19 @@
         line-height: 1.5;
         border-radius: 3px;
     }
+    .c-event {
+        position: relative;
+        transition: background 0.3s ease;
+    }
+    .c-event:hover {
+        background: #f6f6f6;
+    }
+
+    .c-event__number {
+        display: inline-block;
+        width: 28px;
+    }
+
 </style>
 
 <div ng-controller="SpektrixDashboardController">
@@ -20,7 +33,7 @@
     <div class="box" ng-show="Events.length">
         <div class="pull-right">
             <button ng-click="Refresh($event)" class="btn btn-success btn-lg"><i class="icon icon-sync"></i> Refresh</button>
-            <button ng-click="Sync($event,publish)" class="btn btn-warning  btn-lg"><i class="icon icon-umb-deploy"></i> Sync</button>
+            <button style="display: none;" ng-click="Sync($event,publish)" class="btn btn-warning  btn-lg"><i class="icon icon-umb-deploy"></i> Sync</button>
             <span style="display: none;">
                 <input type="checkbox" ng-model="publish" ng-init="publish=false"/>Publish ?
             </span>
@@ -37,8 +50,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="event in Events">
-                    <td><b>{{event.Name}}</b>&nbsp;({{event.id}})</td>
+                <tr ng-repeat="event in Events" class="c-event">
+                    <td><span class="c-event__number">{{$index + 1}}</span><b>{{event.Name}}</b>&nbsp;({{event.id}})</td>
                     <td>
                         {{event.Instances.length}}
                     </td>

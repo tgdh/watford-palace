@@ -1,25 +1,25 @@
-(function($){
-	'use strict';
+(function($) {
+    'use strict';
 
-	//@todo Define the isModern function globally - Probably within head.js
+    //@todo Define the isModern function globally - Probably within head.js
     var toggleClass = function(el, className) {
-        if(el.hasClass(className + '--open')) {
+        if (el.hasClass(className + '--open')) {
             el.removeClass(className + '--open');
         } else {
             el.addClass(className + '--open');
         }
     };
 
-    $('[data-toggle]').on( "click", function() {
-        var $className = $( this ).data("toggle");
+    $('[data-toggle]').on("click", function() {
+        var $className = $(this).data("toggle");
         toggleClass($('html'), $className);
     });
 
     $(function() {
         $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html,body').animate({
                         scrollTop: target.offset().top
@@ -30,16 +30,16 @@
         });
     });
 
-    if( window.IsModern ){
+    if (window.IsModern) {
         console.log('js fired from window IsModern');
 
-        var setHeight = function(){
-        	var coverHeight = $('.c-cover__main').height();
+        var setHeight = function() {
+            var coverHeight = $('.c-cover__main').height();
 
-        	// $('.c-cover__aside').height(coverHeight);
+            // $('.c-cover__aside').height(coverHeight);
         };
 
-        var singleGallery = function(){
+        var singleGallery = function() {
             $('.js-single__galery').owlCarousel({
                 loop: false,
                 margin: 10,
@@ -47,10 +47,10 @@
                 items: 1,
                 dots: true,
                 navContainer: ".js-single__galery",
-                navText: ["<i class='ico-arrow ico-arrow--left'></i>","<i class='ico-arrow ico-arrow--right'></i>"]
+                navText: ["<i class='ico-arrow ico-arrow--left'></i>", "<i class='ico-arrow ico-arrow--right'></i>"]
             })
         };
-        var magnificGallery = function(){
+        var magnificGallery = function() {
             $('.js-magnific-gallery').magnificPopup({
                 delegate: 'a',
                 type: 'image',
@@ -59,12 +59,12 @@
                 gallery: {
                     enabled: true,
                     navigateByImgClick: true,
-                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
                 }
             });
         };
 
-        var selectStyle = function(){
+        var selectStyle = function() {
             $('.js-select').selectOrDie();
 
             $('.js-select--5').selectOrDie({
@@ -76,82 +76,80 @@
             });
         };
 
-        var tabbedContent = function(){
+        var tabbedContent = function() {
             tabby.init();
             console.log("familyTabs");
         };
 
-        var startVideo = function(){
-            var elem = $( ".video-controls-js" ),
-                video = elem.next( "iframe" ),
-                videoSrc = elem.next( "iframe" ).attr( "src" ),
+        var startVideo = function() {
+            var elem = $(".video-controls-js"),
+                video = elem.next("iframe"),
+                videoSrc = elem.next("iframe").attr("src"),
                 videoChannel = "";
 
-            var getChannel = function(url){
-                if( url.toLowerCase().indexOf( "youtube" ) >= 0 ){
+            var getChannel = function(url) {
+                if (url.toLowerCase().indexOf("youtube") >= 0) {
                     videoChannel = "youtube";
                     playYoutube();
-                } else if( url.toLowerCase().indexOf( "vimeo" ) ){
+                } else if (url.toLowerCase().indexOf("vimeo")) {
                     videoChannel = "vimeo";
                     playVimeo();
                 }
             }
 
-            var playVimeo = function(){
+            var playVimeo = function() {
                 video.attr({
                     src: videoSrc + "?autoplay=1"
                 });
             };
 
-            var playYoutube = function(){
+            var playYoutube = function() {
                 video.attr({
                     src: videoSrc + "&autoplay=1"
                 });
             };
-            var hideControls = function(){
+            var hideControls = function() {
                 elem.css("display", "none");
             };
 
-            elem.on('click', function(){
-                getChannel( videoSrc );
+            elem.on('click', function() {
+                getChannel(videoSrc);
                 hideControls();
             });
         };
 
-        var queries = [
-            {
-                context: 'medium-max',
-                match: function() {
-                    console.log('slide navigation');
-                    $('#mainNav').menu();
+        var queries = [{
+            context: 'medium-max',
+            match: function() {
+                console.log('slide navigation');
+                $('#mainNav').menu();
 
-                },
-                unmatch: function() {
-                    location.reload();
-                }
-
+            },
+            unmatch: function() {
+                location.reload();
             }
-        ];
+
+        }];
 
 
 
-		$(window).ready(function(){
+        $(window).ready(function() {
             singleGallery();
-       		setHeight();
+            setHeight();
             selectStyle();
             magnificGallery();
             startVideo();
             tabbedContent();
             MQ.init(queries);
-		});
+        });
 
         $(window).load(function() {
             console.log("loaded");
 
         });
-		$(window).resize(function(){
-       		setHeight();
-		});
+        $(window).resize(function() {
+            setHeight();
+        });
 
 
 
