@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+
+@foreach( var category in CurrentPage.Children() )
+{
+	<h2>@category.Name</h2>
+	<ul>
+		@foreach( var categoryEvent in category.Children() )
+		{
+			<li>@categoryEvent.Name - <strong>@categoryEvent.spektrixID</strong></li>
+		}
+	</ul>
+}

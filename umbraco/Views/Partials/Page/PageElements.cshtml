@@ -1,4 +1,4 @@
-@inherits Umbraco.Web.Mvc.UmbracoViewPage
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
 @{
 	var selection = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("mainContent");
 
@@ -313,7 +313,7 @@
 							if( tabTitle.ToString().ToLower().Replace(" ", "") == tabs.First().GetPropertyValue("title").ToString().ToLower().Replace(" ", "") ){
 			                    active = "active";
 			                }
-					       	<button data-tab="#@tabTitle.ToString().ToLower().Replace(" ", "")" class="o-button o-button--small o-button--blue-transparent @active">
+					       	<button style="margin-bottom: 10px;" data-tab="#@tabTitle.ToString().ToLower().Replace(" ", "")" class="o-button o-button--small o-button--blue-transparent @active">
 					            @tabTitle
 					        </button>
 						}

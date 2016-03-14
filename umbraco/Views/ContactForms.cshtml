@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+	var formEntries = CurrentPage.Children();
+}
+
+<h1>Contact form</h1>
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Name</th>
+		<th>Email</th>
+		<hReasons</th>
+		<th>Message</th>
+	</tr>	
+	@foreach( var formEntry in formEntries )
+	{
+		<tr>
+			<td>@formEntry.CreateDate.ToString("D")</td>
+			<td>@formEntry.name @formEntry.surname</td>
+			<td>@formEntry.emailAddress</td>
+			<td>@formEntry.whoIsYourMessageFor</td>			
+			<td>@formEntry.message</td>
+		</tr>
+	}
+</table>

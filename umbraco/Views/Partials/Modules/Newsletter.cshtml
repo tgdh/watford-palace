@@ -1,4 +1,4 @@
-@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     var homePage = CurrentPage.Site();
 
@@ -7,25 +7,25 @@
     var errorQuery = Request.QueryString["error"];
 }
 
-@if( query == "subscribed" ){
+@if( query == "subscribed" ){ 
 
     if( errorQuery != "" )
     {
         if( errorQuery == "EmailExists" )
         {
-            <p id="subscribed" class="delta t-block">Email is already in use.</p>
+            <span id="subscribed" class="delta t-block">Email is already in use.</span>
         }
         else if( errorQuery == "NoLastName" )
         {
-            <p id="subscribed" class="delta t-block">Please enter your last name.</p>
+            <span id="subscribed" class="delta t-block">Please enter your last name.</span>
         }
         else if( errorQuery == "InvalidEmail" )
         {
-            <p id="subscribed" class="delta t-block">Please enter a valid email address.</p>
+            <span id="subscribed" class="delta t-block">Please enter a valid email address.</span>
         }
         else if( errorQuery == "NoEmail" )
         {
-            <p id="subscribed" class="delta t-block">Please enter your email address.</p>
+            <span id="subscribed" class="delta t-block">Please enter your email address.</span>
         }
         <form class="c-form c-form--newsletter" action="https://system.spektrix.com/watfordpalace/website/secure/signup.aspx" method="POST">
             <input type="hidden" name="ReturnUrl" value="@siteUrl?newsletter=subscribed" />
@@ -43,19 +43,19 @@
             </div>
             <input class="o-button o-button--primary" type="submit" value="Sign up" />
         </form>
+        <script>
+            window.onload=toBottom;
+
+            function toBottom()
+            {
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+        </script>
     }
     else
     {
-        <p id="subscribed" class="delta" data-error="@errorQuery">Thank you for subscribing!</p>
+        <span id="subscribed" class="delta" data-error="@errorQuery">Thank you for subscribing!</span>
     }
-    <script>
-        window.onload = toBottom;
-
-        function toBottom()
-        {
-            window.scrollTo(0, document.body.scrollHeight);
-        }
-    </script>
 }
 else
 {

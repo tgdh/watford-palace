@@ -118,7 +118,7 @@
 				
 				@* send an email *@
 				if( !string.IsNullOrEmpty(contactEmail) ){
-					@* @SendEmail(contactEmail, doctype, title, sbFormData.ToString()) *@
+					@SendEmail(contactEmail, doctype, title, sbFormData.ToString())
 				}
 				@* redirect or show thank you message as fallback *@
 				if( !string.IsNullOrEmpty(redirectPage) ){

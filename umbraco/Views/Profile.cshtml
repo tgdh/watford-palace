@@ -1,11 +1,13 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "MasterSpektrix.cshtml";
-
-    if( !Request.IsSecureConnection && CurrentPage.DocumentTypeAlias == "Profile" )
-    {
-        Response.Redirect(siteUrl);
-    }
+	
+	var siteUrl = "https://" +  Request.Url.Host.ToString() + Request.RawUrl.ToString();
+	
+	if( !Request.IsSecureConnection && CurrentPage.DocumentTypeAlias == "Profile" )
+	{
+		Response.Redirect(siteUrl);
+	} 	
 }
 
 @*
@@ -21,4 +23,3 @@
   src="https://system.spektrix.com/watfordpalace/website/secure/myaccount.aspx?resize=true"
   style="width: 100%; height: 1000px;">
 </iframe>
-
