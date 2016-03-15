@@ -4,6 +4,10 @@
 
 =========================================================== */
 
+.o-page__footer {
+	z-index: 50;
+}
+
 // @include edit(pink);
 .o-page__footer__column {
 	margin-bottom: $line-height;

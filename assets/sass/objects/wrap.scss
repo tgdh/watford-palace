@@ -58,6 +58,13 @@
         max-width: 72rem;
         transform: translateX(10rem);
 
+        + .c-page-nav {
+            .c-page-nav__list {
+                // padding-left: 10rem;
+                transform: translateX(10rem)
+            }
+        }
+
     }
 
     .link-next--offset {
@@ -71,6 +78,13 @@
     .o-wrap--offset {
         max-width: 85rem;
         transform: translateX(12rem);
+
+        + .c-page-nav {
+            .c-page-nav__list {
+                // padding-left: 12rem;
+                transform: translateX(12rem)
+            }
+        }
     }
 
     .link-next--offset {
@@ -85,6 +99,13 @@
     .o-wrap--offset {
         max-width: 90rem;
         transform: translateX(15rem);
+
+        + .c-page-nav {
+            .c-page-nav__list {
+                // padding-left: 15rem;
+                transform: translateX(15rem)
+            }
+        }
     }
 
     .link-next--offset {

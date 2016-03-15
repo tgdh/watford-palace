@@ -151,16 +151,19 @@
 		</a>
 		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 		<h2 class="hide-text">Video</h2>
-		<div class="o-video__controls video-controls-js" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
-			<div class="o-video__controls-wrap">
-				<span class="o-video__controls__title">
-					<span>Play video</span>
-				</span>
-				<span class="o-video__controls__button o-button o-button--primary">
-					<i class="ico-arrow--right"></i>
-				</span>
+		@if( item.HasValue("backgroundImage") )
+			{
+			<div class="o-video__controls video-controls-js" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
+				<div class="o-video__controls-wrap">
+					<span class="o-video__controls__title">
+						<span>Play video</span>
+					</span>
+					<span class="o-video__controls__button o-button o-button--primary">
+						<i class="ico-arrow--right"></i>
+					</span>
+				</div>
 			</div>
-		</div>
+		}
 		@video
 	</div>
 }

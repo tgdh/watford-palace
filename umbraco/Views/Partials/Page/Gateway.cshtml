@@ -22,9 +22,13 @@
             <div class="o-card__content">
                 <span class="o-card-info--category "></span>
                 <h3 class="o-card__heading o-card__heading--event">@page.Name</h3>
-                <span class="o-card-info--date o-card-info--date--event">
-                    @page.Summary
-                </span>
+                @if( page.HasValue("Summary") )
+                {
+                    <span class="o-card-info--date o-card-info--date--event">
+                        @page.Summary
+                    </span>
+                }
+
             </div>
             <a href="@page.Url" class="o-card-link"></a>
         </article>

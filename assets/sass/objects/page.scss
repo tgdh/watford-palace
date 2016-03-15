@@ -7,7 +7,7 @@
 body {
     height: calc(100% - 12.6rem);
     margin: 0 auto;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     position: relative;
     width: calc(100% - 4rem);
 }
@@ -30,6 +30,10 @@ body {
 
 .o-page-column-1-2:last-child {
     margin-bottom: 0;
+}
+
+.o-page__content {
+    overflow: hidden;
 }
 
 @include respond-max($mq-large - 50px) {

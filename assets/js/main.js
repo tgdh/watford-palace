@@ -1,6 +1,6 @@
 (function($) {
     'use strict';
-
+    console.log("jquery");
     //@todo Define the isModern function globally - Probably within head.js
     var toggleClass = function(el, className) {
         if (el.hasClass(className + '--open')) {
@@ -139,7 +139,38 @@
             });
         };
 
-        $(window).ready(function() {
+        var fixedSidebar = function() {
+
+            // $('.c-nav--sub').fixedsticky();
+
+            function checkScrollTop() {
+                var scrollTop = $(window).scrollTop();
+
+                function doTheMagic() {
+                    console.log(scrollTop);
+                    if (scrollTop > 106) {
+                        // console.log("change position absolute");
+                        // setTimeout(function() {
+                        //     $('.c-nav--sub').css("top", scrollTop - 30);
+                        // }, 500);
+                        $('.c-nav--sub').css("top", scrollTop - 30);
+                        // $('.c-nav--sub').css({
+                        //     'transform': 'translate3D( -385px, ' + ((scrollTop - 30)) + 'px, 0)'
+                        // });
+                    } else {
+                        $('.c-nav--sub').css("top", 0);
+                    }
+                    // else if (scrollTop < 300 && coverBackground.hasClass('t-opacity')) {
+                    //     coverBackground.removeClass('t-opacity');
+                    // }
+                };
+                requestAnimationFrame(doTheMagic);
+            }
+
+            window.FrameEvents.on(window, "scroll", checkScrollTop);
+        };
+
+        $(document).ready(function() {
             singleGallery();
             setHeight();
             selectStyle();
@@ -148,6 +179,8 @@
             tabbedContent();
             MQ.init(queries);
             fitVid();
+            fixedSidebar();
+            // stickySidebar();
         });
 
         $(window).load(function() {

@@ -48,7 +48,7 @@
 				}
 			}
 		</div>
-		@if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") )
+		@if( CurrentPage.HasValue("mainContent") )
 		{
 			@Html.Partial("Page/PageElementsNav")
 		}
@@ -65,25 +65,33 @@
 	}
 }
 else
-{	
+{
 	{
 		paddingTop = "o-section--top";
 	}
 	<div class="o-section o-section--main @paddingTop">
 		<div class="o-wrap o-wrap--medium o-wrap--offset">
-			@Html.Partial("Page/Sidebar")
-			<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
-			@if( CurrentPage.HasValue("bodyText") )
-			{
-				<div class="c-content">
-					@CurrentPage.bodyText
-				</div>
-				if( CurrentPage.HasValue("mainContent") )
+			<div class="clearfix c-sidebar">
+				@Html.Partial("Page/Sidebar")
+			</div>
+			<div class="clearfix c-main__content">
+				<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+				@if( CurrentPage.HasValue("bodyText") )
 				{
-					<span id="section-0" class="anchor-offset--padding"></span>
+					<div class="c-content">
+						@CurrentPage.bodyText
+					</div>
+					if( CurrentPage.HasValue("mainContent") )
+					{
+						<span id="section-0" class="anchor-offset--padding"></span>
+					}
 				}
-			}
+			</div>
 		</div>
+		@if( CurrentPage.HasValue("mainContent") )
+		{
+			@Html.Partial("Page/PageElementsNav")
+		}
 		@if( CurrentPage.HasValue("mainContent") && CurrentPage.HasValue("bodyText") )
 		{
 			<a href="#section-0" class="link-next link-next--offset link-bottom">
