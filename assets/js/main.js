@@ -170,6 +170,46 @@
             window.FrameEvents.on(window, "scroll", checkScrollTop);
         };
 
+
+        var safeAjaxUrl = function() {
+
+            console.log("safeajax()");
+            $('#event-target').on('click', '.safe-ajax-js', function(e) {
+                e.preventDefault();
+
+                var self = $(this);
+
+                // console.log(self.attr("href") + "?altTemplate=" + self.data("template"));
+
+                self.magnificPopup({
+                    items: {
+                        src: self.attr("href") + "?altTemplate=" + self.data("template")
+                    },
+                    type: "ajax",
+                    ajax: {
+                        tError: 'The content could not be loaded. <a href="/">Return to homepage.</a>'
+                    },
+                    callbacks: {
+                        beforeOpen: function() {
+                            $('body').css("bottom", "0px");
+                        },
+                        ajaxContentAdded: function(item) {
+                            $('body').css("bottom", "0px");
+                            singleGallery();
+                            magnificGallery();
+                        },
+                        open: function() {
+                            $('body').css("bottom", "0px");
+                            // $('')
+                        },
+                        close: function() {
+                            $('body').css("bottom", "0px");
+                        }
+                    }
+                }).magnificPopup('open');
+            });
+        };
+
         $(document).ready(function() {
             singleGallery();
             setHeight();
@@ -180,6 +220,7 @@
             MQ.init(queries);
             fitVid();
             fixedSidebar();
+            // safeAjaxUrl();
             // stickySidebar();
         });
 

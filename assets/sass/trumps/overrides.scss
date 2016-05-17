@@ -117,3 +117,30 @@
         padding-top: 10.6rem + $padding--large !important;
     }
 }
+
+.t-white-bg {
+    background: white;
+    background: rgba(255, 255, 255, .95);
+}
+
+.o-rgba {
+    .o-section--dark-terra-cota {
+        background: rgba($sec, .95);
+    }
+
+    .o-section--grey {
+        background: rgba($main-grey, .95);
+    }
+
+    .o-section--light-grey {
+        background: rgba($main-grey, .95);
+    }
+
+    .o-section--dark-terra-cota {
+        background: rgba($main-red, .95);
+    }
+
+    .o-section--bondi-blue {
+        background: rgba($main-blue, .95);
+    }
+}

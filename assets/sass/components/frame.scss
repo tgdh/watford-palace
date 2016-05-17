@@ -9,7 +9,7 @@
     position: fixed;
     right: $frame-size--small;
     width: $frame-size--small * 2;
-    z-index: 20;
+    z-index: 5000;
 }
 
 @include respond-max($mq-large - 50px) {

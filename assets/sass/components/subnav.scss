@@ -26,9 +26,10 @@
 .c-nav--sub {
     /* margin-right: -36rem; */
     // transform: translateX(-32rem);
-    display: none;
-    position: absolute;
-    top: $padding--large;
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
     z-index: 2;
     transition: top .3s ease;
     // float: left;
@@ -82,19 +83,36 @@
             padding-top: 0;
         }
     }
-
-    &:after {
-        content: '';
-        display: block;
-        height: 100%;
-        width: 5rem;
-    }
 }
+
+@include respond-max($mq-large - 50px) {
+
+    .c-nav--sub {
+        top: 0 !important;
+    }
+
+}
+
 
 @include respond-min($mq-large - 50px) {
 
     .c-nav--sub {
+
+        &:after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 5rem;
+        }
+    }
+
+}
+@include respond-min($mq-large - 50px) {
+
+    .c-nav--sub {
         display: block;
+        position: absolute;
+        width: auto;
         top: 0;
         transform: translateX(-20.5rem);
         min-width: 18rem;
