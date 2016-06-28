@@ -174,7 +174,7 @@
         var safeAjaxUrl = function() {
 
             // console.log("safeajax()");
-            $('#event-target').on('click', '.safe-ajax-js', function(e) {
+            $('.o-page').on('click', '.safe-ajax-js', function(e) {
                 e.preventDefault();
 
                 var self = $(this);
@@ -182,6 +182,7 @@
                 // console.log(self.attr("href") + "?altTemplate=" + self.data("template"));
 
                 self.magnificPopup({
+                    mainClass: "event--jax js-event--ajax",
                     items: {
                         src: self.attr("href") + "?altTemplate=" + self.data("template")
                     },
@@ -220,7 +221,7 @@
             MQ.init(queries);
             fitVid();
             fixedSidebar();
-            // safeAjaxUrl();
+            safeAjaxUrl();
             // stickySidebar();
         });
 

@@ -5,12 +5,12 @@
 =========================================================== */
 
 body {
-    height: calc(100% - 12.6rem);
+    // height: calc(100% - 12.6rem);
     margin: 0 auto;
     overflow-x: hidden;
     position: relative;
     width: calc(100% - 4rem);
-    bottom: 0;
+    bottom: 0 !important;
 }
 
 // .js-nav-main--open {
@@ -88,7 +88,7 @@ body {
     //  padding-right: $frame-size--medium;
     // }
     body {
-        height: calc(100% - 13.6rem);
+        // height: calc(100% - 13.6rem);
         width: calc(100% - 6rem);
     }
 }
@@ -101,7 +101,7 @@ body {
     //  padding-right: $frame-size--large;
     // }
     body {
-        height: calc(100% - 15.6rem);
+        // height: calc(100% - 15.6rem);
         width: calc(100% - 10rem);
     }
 }

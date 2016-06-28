@@ -6,7 +6,7 @@
 
 <div class="c-top-bar">
 	<div class="o-search-bar">
-		<form action="/search" method="GET" class="ezsearch-form">
+@* 		<form action="/search" method="GET" class="ezsearch-form">
 			<div class="o-input">
 				<input type="text" name="q">
 			</div>
@@ -14,7 +14,11 @@
 				<i class="ico-super ico-search"></i>
 				<span class="hide-text ">Search</span>
 			</button>
-		</form>
+		</form> *@
+		<a href="/search" class="o-search-button safe-ajax-js" data-template="SearchAJAX">
+			<i class="ico-super ico-search"></i>
+			<span class="hide-text ">Search</span>
+		</a>
 	</div>
 	<nav id="superNav" class="c-nav--super">
 		<ul class="c-nav__list--super clearfix">

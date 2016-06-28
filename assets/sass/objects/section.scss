@@ -18,6 +18,10 @@
     padding-bottom: 0 !important;
 }
 
+.o-section--white {
+    background: $white;
+}
+
 .o-section--window {
     display: block;
     height: auto;
@@ -31,6 +35,7 @@
 
 .o-section--grey {
     background: $main-grey;
+    background: rgba($main-grey, .95);
 }
 
 .o-section--grey--rgba {

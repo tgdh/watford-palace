@@ -38,15 +38,23 @@
 
     .mfp-wrap,
     .mfp-ready {
-        left: 5rem;
-        right: 5rem;
+        left: 3rem;
+        right: 3rem;
         top: 10.6rem;
         bottom: 5rem;
     }
 
 }
 
+@include respond-min($mq-xx-large) {
 
+    .mfp-wrap,
+    .mfp-ready {
+        left: 5rem;
+        right: 5rem;
+    }
+
+}
 
 
 .mfp-container {
@@ -191,6 +199,45 @@ button::-moz-focus-inner {
     text-decoration: none;
     top: 0;
     width: 44px;
+}
+
+.event--jax {
+    .mfp-close {
+        right: 2rem;
+        top: 4rem;
+        background: $pri;
+        color: white !important;
+        opacity: 1;
+        border-radius: 100%;
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+}
+
+@include respond-min($mq-medium) {
+
+    .event--jax {
+        .mfp-close {
+            right: 5rem;
+            top: 5rem;
+            width: 4.4rem;
+            height: 4.4rem;
+            line-height: 4.4rem;
+        }
+    }
+
+}
+
+@include respond-min($mq-x-large) {
+
+    .event--jax {
+        .mfp-close {
+            right: 9rem;
+            top: 9rem;
+        }
+    }
+
 }
 
 .mfp-close:hover,

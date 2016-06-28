@@ -4,6 +4,16 @@
 
 =========================================================== */
 
+.o-search-button {
+    color: $dark-black;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $dark-black;
+    }
+}
+
 .c-top-bar {
     float: right;
 
