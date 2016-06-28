@@ -1,6 +1,6 @@
 (function($) {
     'use strict';
-    console.log("jquery");
+    // console.log("jquery");
     //@todo Define the isModern function globally - Probably within head.js
     var toggleClass = function(el, className) {
         if (el.hasClass(className + '--open')) {
@@ -31,7 +31,7 @@
     });
 
     if (window.IsModern) {
-        console.log('js fired from window IsModern');
+        // console.log('js fired from window IsModern');
 
         var setHeight = function() {
             var coverHeight = $('.c-cover__main').height();
@@ -78,7 +78,7 @@
 
         var tabbedContent = function() {
             tabby.init();
-            console.log("familyTabs");
+            // console.log("familyTabs");
         };
 
         var startVideo = function() {
@@ -121,7 +121,7 @@
         var queries = [{
             context: 'medium-max',
             match: function() {
-                console.log('slide navigation');
+                // console.log('slide navigation');
                 $('#mainNav').menu();
 
             },
@@ -133,7 +133,7 @@
 
         var fitVid = function() {
 
-            console.log("FitVid");
+            // console.log("FitVid");
             $(".o-page__content").fitVids({
                 customSelector: "iframe[src*='youtube.com/'], iframe[src*='vimeo.com/']"
             });
@@ -147,7 +147,7 @@
                 var scrollTop = $(window).scrollTop();
 
                 function doTheMagic() {
-                    console.log(scrollTop);
+                    // console.log(scrollTop);
                     if (scrollTop > 106) {
                         // console.log("change position absolute");
                         // setTimeout(function() {
@@ -173,7 +173,7 @@
 
         var safeAjaxUrl = function() {
 
-            console.log("safeajax()");
+            // console.log("safeajax()");
             $('#event-target').on('click', '.safe-ajax-js', function(e) {
                 e.preventDefault();
 
@@ -225,7 +225,7 @@
         });
 
         $(window).load(function() {
-            console.log("loaded");
+            // console.log("loaded");
 
         });
         $(window).resize(function() {
