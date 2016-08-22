@@ -9,7 +9,7 @@
 			    "umbraco/App_Browsers",
 			    "umbraco/App_Data",
 			    "umbraco/bin",
-			    "umbraco/Config",
+			    // "umbraco/Config",
 			    "umbraco/Css",
 			    "umbraco/Masterpages",
 			    "umbraco/media",

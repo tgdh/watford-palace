@@ -414,14 +414,39 @@
 	"expanded_folders":
 	[
 		"/Users/User1/Sites/Projects/watford-palace",
-		"/Users/User1/Sites/Projects/watford-palace/assets",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials"
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Plugins",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Umbraco",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Umbraco/Views",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Umbraco/Views/dashboard"
 	],
 	"file_history":
 	[
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Blocks.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/EventAJAX.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Newsletter.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/WhatsOn.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Scripts/Events.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Forms/Contact-form.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Events/Event-Filters.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
+		"/Users/User1/Desktop/eventsyncdashboard.html",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/AppSettings.config",
+		"/Users/User1/Sites/Projects/watford-palace/tasks/concat.js",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Web.config",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/ContactForms.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/watford.sublime-project",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Super-Navigation.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/MasterSpektrix.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Profile.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/basket2.scss",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
+		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Checkout.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/section.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/topbar.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/EventBlock.cshtml",
@@ -431,18 +456,13 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/magnific.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Featured-Content.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Cover-Aside.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Web.config",
-		"/Users/User1/Sites/Projects/watford-palace/assets/js/main.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/selectordie.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/cards.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Home.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/frame.scss",
-		"/Users/User1/Sites/Projects/watford-palace/watford.sublime-project",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Plugins/SpektrixDashboard/SpektrixDashboard.Controller.js",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Umbraco/Views/dashboard/eventsyncdashboard.html",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Event.cshtml",
 		"/Users/User1/Desktop/Hulltruck logtrace.txt",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Tickets.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Book.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.tpl.html",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/header.scss",
@@ -450,37 +470,24 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/ie.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/nav.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/subnav.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/EventAJAX.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/ContactForms.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Forms/Contact-form.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/table.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/trumps/overrides.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/TextPage.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/tasks/concat.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/filament-sticky/fixedsticky.css",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Sidebar.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/bower.json",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/sticky-sidebar.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/footer.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/style.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Master.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Footer.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Contact.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Blocks.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/wrap.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/MasterSpektrix.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/tasks/pixrem.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/seats.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/generic/js-breakpoints.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/icons.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Code/PagingTemplate.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElements.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Modules/Newsletter.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/News.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Checkout.cshtml",
 		"/Users/User1/Desktop/UmbracoTraceLog - not syncing.txt",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/AppSettings.config",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Profile.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/SecurePage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/UnsecurePage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/blank.html",
@@ -489,7 +496,6 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/donations.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Data/Logs/UmbracoTraceLog.txt",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/PageElementsNav.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/WhatsOn.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/base.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/table.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/checkout.scss",
@@ -498,14 +504,12 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/newaccount.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/forms.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Blog/Filters.cshtml",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Events/Event-Filters.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/Gruntfile.js",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/css/spektrix.css",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/gallery.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/cover.scss",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/BlogListing.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/objects/pagination.scss",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Scripts/Events.js",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/LandingPage.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/App_Plugins/MultipleDatePicker/MultipleDatePicker.controller.js",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/jquery/src/ajax/script.js",
@@ -522,13 +526,11 @@
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/register.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/tickets.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/loginlogout.scss",
-		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/spektrix/basket2.scss",
 		"/Users/User1/Sites/Projects/watford-palace/package.json",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
 		"/Users/User1/Desktop/Trace Log - extra info.txt",
 		"/Users/User1/Downloads/UmbracoTraceLog - new attempt.txt",
 		"/Users/User1/Downloads/UmbracoTraceLog - updated path.txt",
-		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Page/Header.cshtml",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/assets/img/logo.svg",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/base/forms.scss",
 		"/Users/User1/Sites/Projects/watford-palace/assets/_components/jquery-sliding-menu/js/jquery-sliding-menu.js",
@@ -547,8 +549,7 @@
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/User/Terminal.sublime-settings",
 		"/Users/User1/Sites/Projects/watford-palace/umbraco/Views/Partials/Component/Show-Navigation.cshtml",
-		"/Users/User1/Downloads/uBlogsy/uBlogsy/masterpages/uBlogsyLanding.master",
-		"/Users/User1/Desktop/tgdh-stylesheet.css"
+		"/Users/User1/Downloads/uBlogsy/uBlogsy/masterpages/uBlogsyLanding.master"
 	],
 	"find":
 	{
@@ -626,6 +627,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"http",
 			"o-search-button",
 			"o-search-bar",
 			"height",
@@ -752,8 +754,7 @@
 			"no-touch",
 			"touch",
 			"error",
-			"AddressOptions",
-			".EditTickets "
+			"AddressOptions"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -850,6 +851,126 @@
 		"selected_items":
 		[
 			[
+				"event",
+				"umbraco/Views/EventAJAX.cshtml"
+			],
+			[
+				"showblo",
+				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
+			],
+			[
+				"mas",
+				"umbraco/Views/Master.cshtml"
+			],
+			[
+				"newslett",
+				"umbraco/Views/Partials/Modules/Newsletter.cshtml"
+			],
+			[
+				"foo",
+				"umbraco/Views/Partials/Page/Footer.cshtml"
+			],
+			[
+				"contac",
+				"umbraco/Views/Contact.cshtml"
+			],
+			[
+				"evnets",
+				"umbraco/Scripts/Events.js"
+			],
+			[
+				"what",
+				"umbraco/Views/WhatsOn.cshtml"
+			],
+			[
+				"maste",
+				"umbraco/Views/Master.cshtml"
+			],
+			[
+				"main",
+				"assets/js/main.js"
+			],
+			[
+				"events.js",
+				"umbraco/Scripts/Events.js"
+			],
+			[
+				"contact-form",
+				"umbraco/Views/Partials/Forms/Contact-form.cshtml"
+			],
+			[
+				"conta",
+				"umbraco/Views/Contact.cshtml"
+			],
+			[
+				"event-fi",
+				"umbraco/Views/Partials/Events/Event-Filters.cshtml"
+			],
+			[
+				"whato",
+				"umbraco/Views/WhatsOn.cshtml"
+			],
+			[
+				"events",
+				"umbraco/Scripts/Events.js"
+			],
+			[
+				"tickett",
+				"umbraco/Views/Partials/Component/Tickets.cshtml"
+			],
+			[
+				"even",
+				"umbraco/Views/Event.cshtml"
+			],
+			[
+				"apps",
+				"umbraco/AppSettings.config"
+			],
+			[
+				"conca",
+				"tasks/concat.js"
+			],
+			[
+				"whats",
+				"umbraco/Views/WhatsOn.cshtml"
+			],
+			[
+				"contactfor",
+				"umbraco/Views/Partials/Forms/Contact-form.cshtml"
+			],
+			[
+				"web.co",
+				"umbraco/Web.config"
+			],
+			[
+				"contact-fo",
+				"umbraco/Views/Partials/Forms/Contact-form.cshtml"
+			],
+			[
+				"super-n",
+				"umbraco/Views/Partials/Page/Super-Navigation.cshtml"
+			],
+			[
+				"mastersp",
+				"umbraco/Views/MasterSpektrix.cshtml"
+			],
+			[
+				"prof",
+				"umbraco/Views/Profile.cshtml"
+			],
+			[
+				"bask",
+				"assets/sass/components/spektrix/basket2.scss"
+			],
+			[
+				"check",
+				"umbraco/Views/Checkout.cshtml"
+			],
+			[
+				"hea",
+				"umbraco/Views/Partials/Page/Header.cshtml"
+			],
+			[
 				"sect",
 				"assets/sass/objects/section.scss"
 			],
@@ -898,20 +1019,12 @@
 				"umbraco/Views/Home.cshtml"
 			],
 			[
-				"main",
-				"assets/js/main.js"
-			],
-			[
 				"eventsdah",
 				"umbraco/Umbraco/Views/dashboard/eventsyncdashboard.html"
 			],
 			[
 				"ticke",
 				"umbraco/Views/Partials/Component/Tickets.cshtml"
-			],
-			[
-				"event",
-				"umbraco/Views/Event.cshtml"
 			],
 			[
 				"book",
@@ -976,10 +1089,6 @@
 			[
 				"sidebar",
 				"umbraco/Views/Partials/Page/Sidebar.cshtml"
-			],
-			[
-				"conca",
-				"tasks/concat.js"
 			],
 			[
 				"bower",
@@ -1058,14 +1167,6 @@
 				"umbraco/Views/Partials/Modules/Newsletter.cshtml"
 			],
 			[
-				"mas",
-				"umbraco/Views/Master.tpl.html"
-			],
-			[
-				"check",
-				"umbraco/Views/Checkout.cshtml"
-			],
-			[
 				"news",
 				"umbraco/Views/News.cshtml"
 			],
@@ -1090,20 +1191,12 @@
 				"tasks/pixrem.js"
 			],
 			[
-				"what",
-				"umbraco/Views/WhatsOn.cshtml"
-			],
-			[
 				"tabel",
 				"assets/sass/base/table.scss"
 			],
 			[
 				"base",
 				"assets/sass/components/spektrix/base.scss"
-			],
-			[
-				"prof",
-				"umbraco/Views/Profile.cshtml"
 			],
 			[
 				"spektri",
@@ -1262,104 +1355,12 @@
 				"assets/sass/objects/wrap.scss"
 			],
 			[
-				"hea",
-				"assets/sass/base/headings.scss"
-			],
-			[
 				"slidi",
 				"assets/sass/components/slidingmenu.scss"
 			],
 			[
 				"hede",
 				"umbraco/Views/Partials/Page/Header.cshtml"
-			],
-			[
-				"conta",
-				"umbraco/Views/Contact.cshtml"
-			],
-			[
-				"subnav",
-				"assets/sass/components/subnav.scss"
-			],
-			[
-				"glob",
-				"assets/sass/settings/global.scss"
-			],
-			[
-				"lan",
-				"umbraco/Views/LandingPage.cshtml"
-			],
-			[
-				"side",
-				"umbraco/Views/Partials/Page/Sidebar.cshtml"
-			],
-			[
-				"landi",
-				"umbraco/Views/LandingPage.cshtml"
-			],
-			[
-				"ladn",
-				"umbraco/Views/LandingPage.cshtml"
-			],
-			[
-				"waht",
-				"umbraco/Views/WhatsOn.cshtml"
-			],
-			[
-				"button",
-				"assets/sass/objects/buttons.scss"
-			],
-			[
-				"show-",
-				"umbraco/Views/Partials/Component/Show-Navigation.cshtml"
-			],
-			[
-				"show",
-				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
-			],
-			[
-				"wha",
-				"umbraco/Views/WhatsOn.cshtml"
-			],
-			[
-				"tex",
-				"umbraco/Views/TextPage.cshtml"
-			],
-			[
-				"elemen",
-				"assets/sass/components/elements.scss"
-			],
-			[
-				"navgi",
-				"umbraco/Views/Partials/Page/Navigation.cshtml"
-			],
-			[
-				"tickets",
-				"umbraco/Views/Partials/Component/Tickets.cshtml"
-			],
-			[
-				"car",
-				"assets/sass/objects/cards.scss"
-			],
-			[
-				"pro",
-				"umbraco/Views/Profile.cshtml"
-			],
-			[
-				"boo",
-				"umbraco/Views/Book.cshtml"
-			],
-			[
-				"mast",
-				"umbraco/Views/Master.tpl.html"
-			],
-			[
-				"cover-as",
-				"umbraco/Views/Partials/Component/Cover-Aside.cshtml"
-			],
-			[
-				"blocks",
-				"umbraco/Views/Partials/Component/Show-Blocks.cshtml"
 			]
 		],
 		"width": 0.0
@@ -1367,11 +1368,39 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "mayer",
+		"last_filter": "oc",
 		"selected_items":
 		[
 			[
+				"oc",
+				"~/Sites/Projects/octagon-theatre/octagon-theatre.sublime-project"
+			],
+			[
+				"oct",
+				"~/Sites/Projects/octagon-theatre/octagon-theatre.sublime-project"
+			],
+			[
+				"opc",
+				"~/Sites/Projects/octagon-theatre/octagon-theatre.sublime-project"
+			],
+			[
+				"co",
+				"~/Sites/Projects/clearlead/clearlead.sublime-project"
+			],
+			[
+				"octa",
+				"~/Sites/Projects/octagon-theatre/octagon-theatre.sublime-project"
+			],
+			[
+				"octag",
+				"~/Sites/Projects/octagon-theatre/octagon-theatre.sublime-project"
+			],
+			[
 				"mayer",
+				"~/Sites/Projects/mayerbrown/mayerbrown.sublime-project"
+			],
+			[
+				"may",
 				"~/Sites/Projects/mayerbrown/mayerbrown.sublime-project"
 			],
 			[

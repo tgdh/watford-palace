@@ -140,31 +140,53 @@
 
 	var background = item.GetPropertyValue("backgroundImage");
 	var backgroundUrl = "";
+
 	if( item.HasValue("backgroundImage") && item.GetPropertyValue("backgroundImage").ToString() != "" )
 	{
 		backgroundUrl = Umbraco.Media(background.ToString()).GetCropUrl("umbracoFile", "image-cover");
 	}
 
 	<div class="o-section o-section--video o-section--window" >
+		<style>
+			.fluid-width-video-wrapper {
+				position: absolute;
+				padding: 0;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+
+			.o-section--video--modified {
+			    overflow: hidden;
+			    position: absolute;
+			    text-align: 0;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			}
+		</style>
 		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
-		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
-		<h2 class="hide-text">Video</h2>
-		@if( item.HasValue("backgroundImage") )
-			{
-			<div class="o-video__controls video-controls-js" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
-				<div class="o-video__controls-wrap">
-					<span class="o-video__controls__title">
-						<span>Play video</span>
-					</span>
-					<span class="o-video__controls__button o-button o-button--primary">
-						<i class="ico-arrow--right"></i>
-					</span>
+		<div class="o-section--video o-section--video--modified" style="overflow: hidden;">
+			<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
+			<h2 class="hide-text">Video</h2>
+			@if( item.HasValue("backgroundImage") && item.GetPropertyValue("backgroundImage").ToString() != "" )
+				{
+				<div class="o-video__controls video-controls-js" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
+					<div class="o-video__controls-wrap">
+						<span class="o-video__controls__title">
+							<span>Play video</span>
+						</span>
+						<span class="o-video__controls__button o-button o-button--primary">
+							<i class="ico-arrow--right"></i>
+						</span>
+					</div>
 				</div>
-			</div>
-		}
-		@video
+			}
+			@video
+		</div>
 	</div>
 }
 
