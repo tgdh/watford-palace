@@ -146,17 +146,17 @@
 		backgroundUrl = Umbraco.Media(background.ToString()).GetCropUrl("umbracoFile", "image-cover");
 	}
 
-	<div class="o-section o-section--video o-section--window" >
+	<div class="o-section--video" >
 		<style>
 			.fluid-width-video-wrapper {
-				position: absolute;
-				padding: 0;
+				position: relative;
+/*				padding: 0;
 				top: 0;
 				left: 0;
-				right: 0;
+				right: 0;*/
 			}
 
-			.o-section--video--modified {
+/*			.o-section--video--modified {
 			    overflow: hidden;
 			    position: absolute;
 			    text-align: 0;
@@ -164,7 +164,7 @@
 			    right: 0;
 			    bottom: 0;
 			    left: 0;
-			}
+			}*/
 		</style>
 		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
