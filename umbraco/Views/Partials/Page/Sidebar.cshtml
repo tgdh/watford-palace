@@ -3,7 +3,7 @@
     var menuItems = CurrentPage.AncestorOrSelf(2).Children().Where("UmbracoNaviHide == false && TemplateId > 0");
 }
 
-<nav class="c-nav--sub fixedsticky" role="navigation">
+<nav class="c-nav--sub" role="navigation">
     <ul class="c-nav--sub__list">
         @foreach (var item in menuItems){
             <li class="c-nav__item nav__item--parent">

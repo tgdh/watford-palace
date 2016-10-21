@@ -1,20 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "MasterSpektrix.cshtml";
-	
-	var siteUrl = "https://" +  Request.Url.Host.ToString() + Request.RawUrl.ToString();
-	
-	if( !Request.IsSecureConnection && CurrentPage.DocumentTypeAlias == "Checkout" )
-	{
-		Response.Redirect(siteUrl);
-	} 
 }
-
-@*
-    secure url:
-    https://system.spektrix.com/hulltruck/website/secure/myaccount.aspx
-*@
-
 
 <iframe
   name="SpektrixIFrame"
