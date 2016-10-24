@@ -416,11 +416,15 @@
 		"/C/Users/Paulius Putna/Projects/Client/watford-palace",
 		"/C/Users/Paulius Putna/Projects/Client/watford-palace/assets",
 		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco",
-		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/assets",
-		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/assets/css"
+		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/Views"
 	],
 	"file_history":
 	[
+		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/Views/Master.tpl.html",
+		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/Views/Book.cshtml",
+		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/Views/Cart.cshtml",
+		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/Views/Master.cshtml",
+		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/Views/Master.html.tmp",
 		"/C/Users/Paulius Putna/Projects/Client/watford-palace/watford.sublime-project",
 		"/C/Users/Paulius Putna/Projects/Client/watford-palace/package.json",
 		"/C/Users/Paulius Putna/Projects/Client/watford-palace/umbraco/assets/css/spektrix.css",
@@ -543,12 +547,7 @@
 		"/Users/User1/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/User1/Sites/Projects/watford-palace/assets/sass/components/slidingmenu.scss",
 		"/Users/User1/Desktop/UmbracoTraceLog.txt",
-		"/Users/User1/Downloads/AppSettings.config",
-		"/Users/User1/Downloads/Web.config",
-		"/Users/User1/Desktop/Web.config",
-		"/Users/User1/Desktop/AppSettings.config",
-		"/Users/User1/Sites/Projects/watford-palace/assets/_components/tabby/.bower.json",
-		"/Users/User1/Desktop/TraceLog.txt"
+		"/Users/User1/Downloads/AppSettings.config"
 	],
 	"find":
 	{
@@ -559,6 +558,7 @@
 		"height": 235.0,
 		"where_history":
 		[
+			"C:\\Users\\Paulius Putna\\Projects\\Client\\watford-palace\\umbraco\\Views",
 			"C:\\Users\\Paulius Putna\\Projects\\Client\\watford-palace\\assets\\sass",
 			"C:\\Users\\Paulius Putna\\Projects\\Client\\watford-palace\\assets\\sass\\components",
 			"/Users/User1/Sites/Projects/watford-palace/assets",
@@ -628,6 +628,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"http://",
+			"system.spektrix.com/",
 			"-webkit-appearanc",
 			"VideoBlock",
 			"http",
@@ -753,9 +755,7 @@
 			"footer",
 			"aside",
 			"o-card__actions--event",
-			".c-cover",
-			"no-touch",
-			"touch"
+			".c-cover"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1368,17 +1368,17 @@
 	},
 	"select_project":
 	{
-		"height": 500.0,
-		"last_filter": "army",
+		"height": 875.0,
+		"last_filter": "adc",
 		"selected_items":
 		[
 			[
-				"army",
-				"~/Sites/Projects/armyflying/armyflying.sublime-project"
+				"adc",
+				"C:\\Users\\Paulius Putna\\Projects\\Client\\adc-theatre\\adc-theatre.sublime-project"
 			],
 			[
-				"adc",
-				"~/Sites/Projects/adc-theatre/adc-theatre.sublime-project"
+				"army",
+				"~/Sites/Projects/armyflying/armyflying.sublime-project"
 			],
 			[
 				"oc",
@@ -1445,7 +1445,7 @@
 				"~/Sites/Projects/thespring/thepsring.sublime-project"
 			]
 		],
-		"width": 380.0
+		"width": 665.0
 	},
 	"select_symbol":
 	{
