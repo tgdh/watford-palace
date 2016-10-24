@@ -5,7 +5,7 @@
             "path": ".",
             "folder_exclude_patterns": [
 			    ".sass-cache",
-			    "node_modules",
+			    // "node_modules",
 			    "umbraco/App_Browsers",
 			    "umbraco/App_Data",
 			    "umbraco/bin",
