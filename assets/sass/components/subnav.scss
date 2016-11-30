@@ -110,12 +110,13 @@
 @include respond-min($mq-large - 50px) {
 
     .c-nav--sub {
+        width: 100%;
         display: block;
         position: absolute;
         width: auto;
         top: 0;
         transform: translateX(-20.5rem);
-        min-width: 18rem;
+        max-width: 18rem;
 
         &:after {
             content: "";
@@ -132,7 +133,7 @@
 
     .c-nav--sub {
         transform: translateX(-24.5rem);
-        min-width: 22rem;
+        max-width: 22rem;
     }
 }
 
@@ -144,7 +145,7 @@
         .c-nav__link {
             padding: .8rem 2rem;
         }
-        min-width: 24rem;
+        max-width: 24rem;
     }
 }
 
@@ -159,6 +160,6 @@
             padding: 1rem 3rem;
         }
 
-        min-width: 31rem;
+        max-width: 31rem;
     }
 }
