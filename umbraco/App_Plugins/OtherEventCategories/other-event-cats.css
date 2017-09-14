@@ -1,0 +1,10 @@
+.multiselect-wrap {
+    position: relative;
+    width: 206px;
+}
+.ms-options-wrap > button:focus, .ms-options-wrap > button {
+    color: #555;
+    border: 1px solid #ccc !important;    
+    font-family: inherit;
+    font-size: inherit;
+}

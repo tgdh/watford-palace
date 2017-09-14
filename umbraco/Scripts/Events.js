@@ -282,7 +282,7 @@ var Events = (function () {
                     } else {
 
                     }
-                    console.log( settings.pageNumber );
+                    // console.log( settings.pageNumber );
                     // console.log( "next: " + settings.activePage );
                     setupHistory();
                     getStats();
