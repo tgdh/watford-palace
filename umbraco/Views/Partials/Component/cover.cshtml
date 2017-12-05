@@ -1,0 +1,158 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Newtonsoft.Json;
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+
+	var ci = new System.Globalization.CultureInfo("en-GB");
+	System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+	System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Today;
+}
+
+<div class="c-cover-wrap clearfix">
+
+	@if( CurrentPage.HasValue("coverPicker") && CurrentPage.coverPicker.ToString() != "" && Umbraco.Content(CurrentPage.coverPicker).Name.ToString() != "" )
+	{
+		var slide = Umbraco.Content(CurrentPage.coverPicker);
+		string docType = slide.DocumentTypeAlias;
+
+		switch(docType)
+		{
+			case "CoverAnnouncement":
+				@CoverAnnouncement(slide)
+			break;
+			case "Event":
+				@Event(slide)
+			break;
+			default:
+				@Default(slide)
+			break;
+		}
+
+	} else {
+		<div class="c-cover__image--wrap">
+			<img class="c-cover__image" src="/assets/img/_temp/cover.jpg" alt=""/>
+		</div>
+		<div class="c-cover__content-wrap">
+			<div class="c-cover__content">
+				<span class="c-cover-info--category">Fallback</span>
+				<h3 class="c-cover__heading c-cover__heading--news giga">Fallback</h3>
+				<span class="c-cover-info--date">Fallback</span>
+				<button class="o-button o-button--primary">Fallback</button>
+			</div>
+
+		</div>
+	}
+
+
+	<section class="c-cover__aside">
+		@Html.Partial("Component/Cover-Aside")
+
+		<article class="o-card o-card o-card--fill o-card--extra">
+			<div class="o-card__image--wrap">
+			</div>
+			<div class="o-card__content">
+				<h2>
+					<a href="@Umbraco.Content(2225).Url">See all listings</a>
+				</h2>
+			</div>
+		</article>
+	</section>
+</div>
+
+
+@helper CoverAnnouncement(dynamic node)
+{
+	var slide = node;
+	<section class="c-cover__main c-cover">
+		<div class="c-cover__image--wrap">
+			@if( slide.HasValue("backgroundImage") )
+			{
+				<img class="c-cover__image" src="@Umbraco.Media(slide.backgroundImage).GetCropUrl("umbracoFile", "square")" alt=""/>
+			}
+
+		</div>
+		<div class="c-cover__content-wrap">
+			<div class="c-cover__content">
+				@if( slide.HasValue("mainLabel") )
+				{
+					<span class="c-cover-info--category">@slide.mainLabel</span>
+				}
+				@if( slide.HasValue("title") )
+				{
+					<h3 class="c-cover__heading c-cover__heading--news giga">@slide.title</h3>
+				}
+				@if( slide.HasValue("secondaryLabel") )
+				{
+					<span class="c-cover-info--date">@slide.secondaryLabel</span>
+				}
+				@if( slide.HasValue("link") )
+				{
+					<a href="@slide.link.url" class="c-cover-link"></a>
+					<a href="@slide.link.url" class="o-button o-button--primary" target="@slide.link.target">
+						@if( slide.HasValue("buttonText") )
+						{
+							<span>@slide.buttonText</span>
+						}
+						else
+						{
+							<span>@slide.link.name</span>
+						}
+
+					</a>
+				}
+			</div>
+		</div>
+	</section>
+}
+
+@helper Event(dynamic node)
+{
+	var slide = node;
+	var category = slide.Parent().Name;
+	var title = slide.title;
+	var date = "23 Sep - 3 Oct";
+
+	dynamic times = JsonConvert.DeserializeObject( node.multidate.ToString() );
+
+	<section class="c-cover__main c-cover">
+		<div class="c-cover__image--wrap">
+			@if( slide.HasValue("coverImage") )
+			{
+				<img class="c-cover__image" src="@Umbraco.Media(slide.coverImage).GetCropUrl("umbracoFile", "square")" alt=""/>
+			}
+
+		</div>
+		<div class="c-cover__content-wrap">
+			<div class="c-cover__content">
+				<span class="c-cover-info--category">@category</span>
+				<h3 class="c-cover__heading c-cover__heading--news giga">@title</h3>
+				<span class="c-cover-info--date">
+	                @if( times.Count > 1){
+	                    if( @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") != @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM") ){
+	                        @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") <span>-</span>
+	                        @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM")
+	                    } else {
+	                        @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM")
+	                    }
+
+	                } else {
+	                    @DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM")
+	                }
+				</span>
+				<a href="@slide.Url" class="c-cover-link"></a>
+				<a href="@slide.Url#tickets" class="o-button o-button--primary">
+					Buy tickets
+				</a>
+
+			</div>
+
+		</div>
+	</section>
+}
+
+@helper Default(dynamic node)
+{
+
+}

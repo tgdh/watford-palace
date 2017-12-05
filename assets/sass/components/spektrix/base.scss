@@ -1,0 +1,280 @@
+// SPEKTRIX PAGES
+
+.SpektrixPage {
+    margin: 0 auto;
+    max-width: 70rem;
+}
+
+.SpektrixPage.ChooseSeats {
+    max-width: 100rem;
+}
+
+#ctl00_ContentPlaceHolder_MembershipsRepeater_ctl00_AutoRenewCheckbox {
+    // -webkit-appearance: initial;?
+    display: inline-block;
+    float: left;
+    width: auto;
+    margin-right: 1rem;
+}
+
+select {
+    -webkit-appearance: none !important;
+       -moz-appearance: none !important;
+    border: 1px solid $dark-black !important;
+    border-radius: 0 !important;
+    margin-bottom: 1rem !important;
+    min-height: 2.5rem !important;
+    position: relative !important;
+
+    &:after {
+        content: '\25b4';
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+}
+
+// .LoginLogout,
+// .ForgotPassword,
+// .NewAccount,
+// .MyAccount,
+// .Error,
+// .EditAddress,
+// .Basket2,
+// .Checkout,
+// .EditTickets {
+//     margin: 0 auto;
+//     max-width: 70rem;
+// }
+
+.ChooseSeats {
+    margin: 0 auto;
+    max-width: 100rem;
+}
+
+.OptionalMessage {
+    clear: both;
+    margin-bottom: $line-height;
+}
+
+.ErrorMessage,
+.Error {
+    color: $sec !important;
+    display: block;
+    font-weight: bold;
+    margin-bottom: $line-height;
+
+    span {
+        color: $sec !important;
+        display: block;
+        font-weight: bold;
+        margin-bottom: $line-height;
+        margin-top: $line-height;
+    }
+}
+
+.View {
+}
+
+// .LoginForm {
+
+.Container {
+    float: none;
+    margin-bottom: $line-height;
+    position: relative;
+
+    label.left {
+        font-weight: bold;
+        // &:after {
+        //     content: '(required)';
+        //     display: inline-block;
+        //     font-size: 1.4rem;
+        //     font-weight: normal;
+        //     margin-left: 1rem;
+        // }
+    }
+
+    label.right {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    input {
+        border: .1rem solid $border-colour;
+        width: 100% !important;
+
+        + input {
+            margin-top: $line-height;
+        }
+    }
+
+    input[type='submit'] {
+        background: darken($main-grey, 2);
+        cursoir: pointer;
+    }
+}
+
+.Comment {
+    display: block;
+    margin-top: .5rem;
+}
+
+.ValidationError,
+#ctl00_ContentPlaceHolder_AccountDetailsEditor_EmailValidator {
+    color: $sec !important;
+    display: block;
+    font-size: 1.4rem !important;
+    line-height: 1.4rem;
+}
+
+// }
+
+.Buttons,
+#Buttons {
+    clear: both;
+    margin-bottom: $line-height;
+    text-align: right;
+
+    input {
+        background: $main-grey;
+        border: .1rem solid $dark-black;
+        border-radius: $border-radius;
+        color: $dark-black;
+        cursor: pointer;
+        display: inline-block;
+        // float: right;
+        font-weight: bold;
+        line-height: 1;
+        margin: 0 auto;
+        margin-bottom: $line-height;
+        max-width: auto !important;
+        padding: 1rem 2.5rem;
+        transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+        width: auto;
+
+        &:hover,
+        &:focus {
+            background: darken($main-grey, 5);
+            border: .1rem solid $dark-black;
+        }
+
+        &:focus {
+            box-shadow: 0 .3rem 0 0 rgba($black, .1);
+        }
+    }
+    // .ItemEditButton {
+    //     background: $main-grey;
+    //     border: .1rem solid $dark-black;
+    //     color: $dark-black;
+    //     max-width: auto !important;
+    //     padding: 1rem 2.5rem;
+    //     &:hover
+    //     &:focus {
+    //         background: darken($main-grey, 5);
+    //         border: .1rem solid $dark-black;
+    //     }
+    // }
+    // .ItemDeleteButton {
+    //     background: $main-grey;
+    //     border: .1rem solid $dark-black;
+    //     color: $dark-black;
+    //     max-width: auto !important;
+    //     padding: 1rem 2.5rem;
+    //     &:hover
+    //     &:focus {
+    //         background: darken($main-grey, 5);
+    //         border: .1rem solid $dark-black;
+    //     }
+    // }
+}
+
+@include respond-min($mq-small) {
+
+    .Buttons {
+
+        input {
+            min-width: 18rem;
+        }
+    }
+}
+
+.Account_Link {
+}
+
+.SpektrixPage {
+    padding-bottom: $padding--small;
+    padding-top: $padding--small;
+}
+
+@include respond-min($mq-small) {
+
+    .SpektrixPage {
+        padding-bottom: $padding--medium;
+        padding-top: $padding--medium;
+    }
+}
+
+@include respond-min($mq-medium) {
+
+    .SpektrixPage {
+        padding-bottom: $padding--large;
+        padding-top: $padding--large;
+    }
+}
+
+.Checkout .BillingView .AddressPicker {
+    margin-left: 0;
+}
+
+.MyOrders {
+
+    .NoItems {
+        display: block;
+        margin-bottom: $line-height;
+    }
+
+    .Pager {
+
+        a {
+            background: $main-grey;
+            border: .1rem solid $dark-black;
+            border-radius: $border-radius;
+            color: $dark-black;
+            cursor: pointer;
+            display: inline-block;
+            // float: right;
+            font-weight: bold;
+            line-height: 1;
+            margin: 0 auto;
+            margin-bottom: $line-height;
+            max-width: auto !important;
+            padding: 1rem 2.5rem;
+            transition: background $speed ease, border $speed ease, box-shadow $speed ease, color $speed ease;
+            width: auto;
+
+            &:hover,
+            &:focus {
+                background: darken($main-grey, 5);
+                border: .1rem solid $dark-black;
+            }
+
+            &:focus {
+                box-shadow: 0 .3rem 0 0 rgba($black, .1);
+            }
+        }
+    }
+}
+
+.PricesContainer {
+
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+
+    .PriceListTable {
+    }
+}

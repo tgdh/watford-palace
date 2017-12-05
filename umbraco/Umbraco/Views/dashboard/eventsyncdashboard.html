@@ -1,0 +1,71 @@
+<style>
+    .label-success, .badge-success {
+        background-color: #5cb85c;
+    }
+
+    .btn-xs {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+    .c-event {
+        position: relative;
+        transition: background 0.3s ease;
+    }
+    .c-event:hover {
+        background: #f6f6f6;
+    }
+
+    .c-event__number {
+        display: inline-block;
+        width: 28px;
+    }
+
+</style>
+
+<div ng-controller="SpektrixDashboardController">
+    <h3>Spektrix events</h3>
+    <div ng-hide="Events.length">
+        <img src="/Umbraco/assets/img/loader.gif" />
+        Fetching,comparing and doing clever stuff...
+    </div>
+    <div class="box" ng-show="Events.length">
+        <div class="pull-right">
+            <button ng-click="Refresh($event)" class="btn btn-success btn-lg"><i class="icon icon-sync"></i> Refresh</button>
+            <button style="display: none;" ng-click="Sync($event,publish)" class="btn btn-warning  btn-lg"><i class="icon icon-umb-deploy"></i> Sync</button>
+            <span style="display: none;">
+                <input type="checkbox" ng-model="publish" ng-init="publish=false"/>Publish ?
+            </span>
+        </div>
+
+            <div class="clearfix"></div>
+        <table class="table table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Showtimes</th>
+                    <th>Status</th>
+                    <th>Sync</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="event in Events" class="c-event">
+                    <td><span class="c-event__number">{{$index + 1}}</span><b>{{event.Name}}</b>&nbsp;({{event.id}})</td>
+                    <td>
+                        {{event.Instances.length}}
+                    </td>
+                    <td>
+                        <span ng-show="event.New" class="label label-success">New</span>
+                        <span ng-show="!event.Published && !event.New" class="label label-warning">UnPublished</span>
+                        <span ng-show="event.Dirty" class="label label-inverse">Out of sync</span>
+                    </td>
+                    <td>
+                        <button ng-show="event.New" class="btn btn-xs btn-success pull-right" ng-click="CreateSingle(event.id)">Create</button>
+                        <button ng-show="!event.New&&(event.Dirty||!event.Published)" class="btn btn-xs btn-warning pull-right" ng-click="SyncSingle(event.id)">Sync</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

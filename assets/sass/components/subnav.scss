@@ -1,0 +1,165 @@
+// SUBNAV
+
+.fixedsticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+}
+/* When position: sticky is supported but native behavior is ignored */
+.fixedsticky-withoutfixedfixed .fixedsticky-off,
+.fixed-supported .fixedsticky-off {
+    position: static;
+}
+.fixedsticky-withoutfixedfixed .fixedsticky-on,
+.fixed-supported .fixedsticky-on {
+    position: fixed;
+}
+.fixedsticky-dummy {
+    display: none;
+}
+.fixedsticky-on + .fixedsticky-dummy {
+    display: block;
+}
+
+.c-nav--sub {
+    /* margin-right: -36rem; */
+    // transform: translateX(-32rem);
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+    z-index: 2;
+    transition: top .3s ease;
+    // float: left;
+
+    .c-nav__item {
+        list-style: none;
+        margin: 0;
+    }
+
+    .c-nav__link {
+        background: $main-grey;
+        color: $dark-black;
+        display: block;
+        font-weight: bold;
+        padding: .8rem;
+        transition: color $speed ease, background $speed ease;
+
+        &.active {
+            background: $sec;
+            color: $white;
+        }
+
+        &:hover {
+            background: $sec;
+            color: $white;
+        }
+    }
+
+    .nav__list--sub {
+        margin: 0;
+
+        .c-nav__link {
+            background: lighten($sec, 15);
+            transition: color $speed ease, background $speed ease;
+
+            &.active {
+                color: $sec;
+            }
+
+            &:hover {
+                color: $sec;
+            }
+        }
+    }
+
+    .c-nav__item--child--5 {
+        font-size: 1.4rem;
+
+        .c-nav__link {
+            padding-left: 4rem;
+            padding-top: 0;
+        }
+    }
+}
+
+@include respond-max($mq-large - 50px) {
+
+    .c-nav--sub {
+        top: 0 !important;
+    }
+
+}
+
+
+@include respond-min($mq-large - 50px) {
+
+    .c-nav--sub {
+
+        &:after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 5rem;
+        }
+    }
+
+}
+@include respond-min($mq-large - 50px) {
+
+    .c-nav--sub {
+        width: 100%;
+        display: block;
+        position: absolute;
+        width: auto;
+        top: 0;
+        transform: translateX(-20.5rem);
+        max-width: 18rem;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1000rem;
+            background: $white;
+            background: rgba($white, .3);
+        }
+    }
+}
+
+@include respond-min($mq-large) {
+
+    .c-nav--sub {
+        transform: translateX(-24.5rem);
+        max-width: 22rem;
+    }
+}
+
+@include respond-min($mq-x-large - 80px) {
+
+    .c-nav--sub {
+        transform: translateX(-28.5rem);
+
+        .c-nav__link {
+            padding: .8rem 2rem;
+        }
+        max-width: 24rem;
+    }
+}
+
+
+@include respond-min($mq-xx-large) {
+
+    .c-nav--sub {
+        font-size: 1.8rem;
+        transform: translateX(-38.5rem);
+
+        .c-nav__link {
+            padding: 1rem 3rem;
+        }
+
+        max-width: 31rem;
+    }
+}

@@ -1,0 +1,146 @@
+/* ===========================================================
+
+  # OVERRIDES
+
+=========================================================== */
+
+.no-mustard * {
+    transition: none !important;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.hide-text {
+    @include hide-text;
+}
+
+.t-upper {
+    text-transform: uppercase;
+}
+
+.t-block {
+    display: block;
+}
+
+.t-strong {
+    font-weight: 700 !important;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-white {
+    color: $white !important;
+
+    a {
+        color: $white !important;
+    }
+}
+
+.t-padding {
+    margin-bottom: 2rem;
+}
+
+.t-normal {
+    font-weight: normal;
+}
+
+.t-small {
+    font-size: 75%;
+}
+
+.bondi-blue {
+    background: $pri !important;
+}
+
+.dark-terra-cotta {
+    background: $sec !important;
+}
+
+.anchor-offset {
+    display: inline-block; // required for webkit browsers
+    margin-top: -7rem;
+    padding-top: 7rem;
+}
+
+.anchor-offset--image {
+    display: inline-block; // required for webkit browsers
+    margin-top: -7rem;
+    padding-top: 7rem;
+}
+
+.anchor-offset--padding {
+    display: block;
+    margin-top: -7rem;
+    padding-top: 7rem;
+}
+
+@include respond-min($mq-small) {
+
+    .anchor-offset {
+        margin-top: -7rem - $padding--medium;
+        padding-top: 7rem + $padding--medium !important;
+    }
+
+    .anchor-offset--padding {
+        margin-top: -2.6rem;
+        padding-top: 2.6rem;
+    }
+}
+
+@include respond-min($mq-medium) {
+
+    .anchor-offset {
+        margin-top: -7rem - $padding--large;
+        padding-top: 7rem + $padding--large !important;
+    }
+
+    .anchor-offset--padding {
+        margin-top: -2.6rem;
+        padding-top: 2.6rem;
+    }
+}
+
+@include respond-min($mq-large - 50px) {
+
+    .anchor-offset--image {
+        display: inline-block; // required for webkit browsers
+        margin-top: -10.6rem;
+        padding-top: 10.6rem;
+    }
+
+    .anchor-offset {
+        margin-top: -10.6rem - $padding--large;
+        padding-top: 10.6rem + $padding--large !important;
+    }
+}
+
+.t-white-bg {
+    background: white;
+    background: rgba(255, 255, 255, .95);
+}
+
+.o-rgba {
+    .o-section--dark-terra-cota {
+        background: rgba($sec, .95);
+    }
+
+    .o-section--grey {
+        background: rgba($main-grey, .95);
+    }
+
+    .o-section--light-grey {
+        background: rgba($main-grey, .95);
+    }
+
+    .o-section--dark-terra-cota {
+        background: rgba($main-red, .95);
+    }
+
+    .o-section--bondi-blue {
+        background: rgba($main-blue, .95);
+    }
+}

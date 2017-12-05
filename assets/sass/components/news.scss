@@ -1,0 +1,47 @@
+/* ===========================================================
+
+	# NEWS
+
+=========================================================== */
+
+.c-news__article {
+	margin-bottom: 4rem;
+	border-bottom: 0.1rem solid #f4f2f2;
+    padding-bottom: 3rem;
+	.c-news__article__heading {
+		text-align: left;
+		a {
+			color: $dark-black;	
+			&:hover {
+				color: $pri;
+			}		
+		}
+	}
+	.o-news-thumbnail  {
+		display: none;
+	}
+
+}
+.c-news__release-date {
+	font-size: 1.4rem;
+}
+.o-news-header {
+	margin-bottom: 2rem;
+}
+
+.o-news-date {
+	margin-bottom: 1rem;
+	display: block;
+}
+
+@include respond-min( $mq-small ){
+	.c-news__article {
+		.o-news-thumbnail {
+			display: block;
+			@include column(1/5, $gutter: 3);
+		}
+		.o-news-details {
+			@include column(4/5, $gutter: 3, $cycle: 2);
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}
+
+<div class="c-top-bar">
+	<div class="o-search-bar">
+		<form action="/search" method="GET" class="ezsearch-form">
+			<div class="o-input">
+				<input type="text" name="q">
+			</div>
+			<button type="submit" class="o-search-button">
+				<i class="ico-super ico-search"></i>
+				<span class="hide-text ">Search</span>
+			</button>
+		</form>
+	</div>
+	<nav id="superNav" class="c-nav--super">
+		<ul class="c-nav__list--super clearfix">
+			<li class="c-nav__item--super c-nav__item--super">
+				<a href="@Umbraco.Content(2418).Url" class="c-nav__link--super">
+					<i class="ico-super ico-profile"></i>
+					<span class="hide-text">@Umbraco.Content(2418).Name</span>
+				</a>
+			</li>
+			<li class="c-nav__item--super">
+				<a href="@Umbraco.Content(2417).Url" class="c-nav__link--super">
+					<i class="ico-super ico-basket"></i>
+					<span class="hide-text">@Umbraco.Content(2417).Name</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<span class="c-top-bar__box-office zeta">@settings.boxOfficeNumber</span>
+</div>
+
+
+

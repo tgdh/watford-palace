@@ -1,0 +1,56 @@
+// EditTickets
+
+.EditTicketsHeading {
+
+    .InstanceTime {
+        font-weight: normal;
+    }
+}
+
+.EditTickets {
+
+    .Details {
+        margin-bottom: $line-height;
+
+        .Details {
+            margin-top: $line-height;
+        }
+
+        table {
+
+            th {
+                background: darken($main-grey, 5);
+                font-weight: bold;
+            }
+
+            tr {
+                border-bottom: .1rem solid $main-grey;
+                transition: background $speed ease;
+
+                &:hover {
+                    background: lighten($main-grey, 2);
+                }
+            }
+
+            .Area {
+            }
+
+            .SeatName {
+            }
+
+            .Type {
+            }
+
+            .Delete {
+
+                input {
+                    -webkit-appearance: checkbox;
+                       -moz-appearance: checkbox;
+                            appearance: checkbox;
+                    display: inline-block;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

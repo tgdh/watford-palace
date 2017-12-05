@@ -1,0 +1,68 @@
+@charset 'UTF-8';
+
+/* ===========================================================
+*
+* Version: 	2.0.0
+* Authors: 	Kev Simpson & Paulius Putna
+* Company:  The Graphic Design House
+*
+=========================================================== */
+
+@import 'settings/global';
+
+@import 'tools/mixins',
+		'tools/jeet/functions',
+		'tools/jeet/grid';
+
+
+@import 'generic/reset',
+		'generic/js-breakpoints';
+
+@import 'base/text',
+		'base/headings',
+		'base/anchor',
+		'base/button',
+		'base/lists',
+		'base/table',
+		'base/forms',
+		'base/icons';
+
+@import 'objects/page',
+		'objects/header',
+		'objects/footer',
+		'objects/cards',
+		'objects/wrap',
+		'objects/section',
+		'objects/buttons',
+		'objects/table',
+		'objects/forms',
+		'objects/media',
+		'objects/gallery',
+		'objects/pagination',
+		'objects/search',
+		'objects/video';
+
+@import 'components/owl',
+		'components/selectordie',
+		'components/slidingmenu',
+		'components/magnific',
+		'components/elements',
+		'components/nav',
+		'components/subnav',
+		'components/forms',
+		'components/icons',
+		'components/cover',
+		'components/aspect-ratio',
+		'components/sitemap',
+		'components/frame',
+		'components/map',
+		'components/topbar',
+		'components/show',
+		'components/lists',
+		'components/news',
+		'components/video',
+		'components/filters',
+		'components/tabs';
+
+@import 'trumps/overrides',
+		'trumps/cardfix';

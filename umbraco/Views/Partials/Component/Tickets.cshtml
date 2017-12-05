@@ -1,0 +1,103 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+    var homePage = CurrentPage.Site();
+    var bookingPage = homePage.FirstChild("BookingPage");
+    var settings = homePage.FirstChild("Settings");
+
+    var ci = new System.Globalization.CultureInfo("en-GB");
+    System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+    System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Now;
+    var category = CurrentPage.Parent().Name().ToLower();
+
+
+}
+
+<div class="o-section o-section--window">
+	<a href="#tickets" class="link-next">
+		<i class="ico-arrow ico-arrow--down"></i>
+	</a>
+	<span id="tickets" class="anchor-offset"></span>
+	<div class="o-wrap o-wrap--small clearfix">
+		<h2 class="mega">Tickets</h2>
+		<span class="t-center t-padding t-block beta">@settings.boxOfficeNumber</span>
+		@if( CurrentPage.HasValue("content") )
+		{
+			<div class="c-copy t-padding">
+				@CurrentPage.content
+			</div>
+		}
+@* 		@if( !CurrentPage.hideDates )
+		{ *@
+			<div class="c-list-dates">
+				<table class="o-table o-table--stacked">
+					@foreach( var item in CurrentPage.multidate ) {
+						DateTime dateValue;
+						string bookingUrl = bookingPage.Url + "?id=" + item.InstanceId;
+						DateTime dateAndTime =  DateTime.Parse( item.date.value.ToString() + " " + item.time.value.ToString() + ":00 " );
+						int runTime = CurrentPage.runningTime;
+
+						if( dateAndTime > now )
+						{
+							<tr class="o-table__date-row">
+								<td class="o-table__date">
+									@if (DateTime.TryParse(item.date.value.ToString(), out dateValue) == true) {
+										@dateValue.ToString("dddd dd MMM yyyy")
+									}
+								</td>
+								<td class="o-table__time">
+									@item.time.value
+									@if( runTime > 0)
+									{
+										<span>&ndash; @dateAndTime.AddMinutes(runTime).ToString("H:mm") ish</span>
+									}
+								</td>
+								<td class="o-table__col-button">
+									@if( !CurrentPage.hideDates ){
+										<a href="@bookingUrl" class="o-button o-button--primary">Buy tickets</a>
+									}
+								</td>
+							</tr>
+						}
+
+					}
+				</table>
+			</div>
+		@* } *@
+	</div>
+</div>
+
+@* @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+}
+
+<div class="o-section o-section--window">
+	<a href="#tickets" class="link-next">
+		<i class="ico-arrow ico-arrow--down"></i>
+	</a>
+	<span id="tickets" class="anchor-offset"></span>
+	<div class="o-wrap o-wrap--small clearfix">
+		<h2 class="mega">Tickets</h2>
+		<span class="t-center t-padding t-block beta">@settings.boxOfficeNumber</span>
+		@if( CurrentPage.HasValue("content") )
+		{
+			<div class="c-copy t-padding">
+				@CurrentPage.content
+			</div>
+		}
+
+		<div class="c-list-dates">
+			@for( var ii = 0; ii < 12; ii++ )
+			{
+				<div class="c-list-dates__date clearfix">
+					<span class="c-list-date__date">Sep Wed 23</span>
+					<span class="c-list-date__time">7.30pm - 9:45pm ish</span>
+					<a href="" class="o-button o-button--small o-button--primary">Buy tickets</a>
+				</div>
+			}
+		</div>
+	</div>
+</div> *@

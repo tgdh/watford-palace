@@ -1,0 +1,51 @@
+// Buttons
+
+.Buttons,
+#Buttons,
+.AddCard {
+
+
+    input,
+    input.NextButton,
+    input.PreviousButton,
+    input.CreateButton,
+    input.ResetPasswordButton,
+    input.SaveDetailsButton,
+    input.Change_Password,
+    input.UpdateButton,
+    input.Continue,
+    input.ContinueButton {
+        background: $pri;
+        border: .1rem solid $pri;
+        color: $white;
+        padding: 2rem 3.5rem;
+        transition: all $speed ease;
+
+        &:hover,
+        &:focus {
+            background: $sec;
+            border: .1rem solid $sec;
+        }
+
+        &:focus {
+            box-shadow: 0 .3rem 0 0 rgba($black, .1);
+        }
+    }
+
+    input.RefreshButton {
+        background: $main-grey;
+        border: .1rem solid $main-grey;
+        color: $dark-black;
+        padding: 2rem 3.5rem;
+
+        &:hover,
+        &:focus {
+            background: darken($main-grey, 5);
+            border: .1rem solid darken($main-grey, 5);
+        }
+
+        &:focus {
+            box-shadow: 0 .3rem 0 0 rgba($black, .1);
+        }
+    }
+}

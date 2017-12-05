@@ -1,0 +1,74 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+	var homePage = CurrentPage.Site();
+	var news = homePage.FirstChild("News");
+	var everything = news.Children().OrderBy("ReleaseDate desc");
+	string[] dateList = new string[100];
+	var i = 0;
+	var previous = "";
+	var current = "";
+
+	foreach( var item in everything ){
+		i = i + 1;
+		dateList[i] = (item.ReleaseDate.ToString("MMMM yyyy"));
+
+	}
+
+	var qCat = Request.QueryString["category"];
+}
+
+<div class="o-news-filters clearfix">
+	<div class="o-filter o-news-filter--category">
+		<h3 class="delta">Categories</h3>
+@* 		<div class="o-input">
+			<select id="catFilter" class="o-filter o-filter--category js-filter" onchange="location = this.options[this.selectedIndex].value;">
+				<option value="">Choose category</option>
+				<option value="?category=general-news">General news</option>
+				<option value="?category=in-the-media">In the media</option>
+				<option value="?category=press-release">Press release</option>
+			</select>
+		</div> *@
+		<nav class="c-nav--sub--filter" role="navigation">
+			<ul class="c-nav--sub__list">
+					<li class="c-nav__item nav__item--parent">
+						<a href="?category=general-news" class="c-nav__link @(qCat == "general-news" ? "active" : null)">
+							General news
+						</a>
+
+					</li>
+					<li class="c-nav__item nav__item--parent">
+						<a href="?category=in-the-media" class="c-nav__link @(qCat == "in-the-media" ? "active" : null)">
+							In the media
+						</a>
+
+					</li>
+					<li class="c-nav__item nav__item--parent">
+						<a href="?category=press-release" class="c-nav__link @(qCat == "press-release" ? "active" : null)">
+							Press release
+						</a>
+
+					</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="o-filter o-news-filter--archive">
+		<h3 class="delta">Archive</h3>
+		<div class="o-input">
+			<select id="dateFilter" class="o-filter o-filter--date js-filter js-select--5" onchange="location = this.options[this.selectedIndex].value;">
+				<option value="">Choose date</option>
+				@foreach(var date in dateList){
+					current = date;
+					if( current != previous && date != null){
+						foreach( var part in date.Split(',') ){
+							<option value="/news/?year=@date.Split(' ')[1].ToString().ToLower()&month=@date.Split(' ')[0].ToString().ToLower()">@date</option>
+						}
+					}
+					previous = date;
+				}
+			</select>
+		</div>
+	</div>
+</div>
+
+

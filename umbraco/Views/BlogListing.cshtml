@@ -1,0 +1,136 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "MasterBlog.cshtml";
+	
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+	var blog = homePage.FirstChild("BlogFolder");
+	
+	var qTags = Request.QueryString["tags"];
+	var qYear = Request.QueryString["year"];
+	var qMonth = Request.QueryString["month"];
+	
+	var validDate = false;
+	string month = "";
+	string year = "";
+	
+	if( qYear != null ){
+		year = qYear.ToString();
+
+		if( qMonth != null ){
+			month = qMonth.ToString();
+			switch( month ){
+				case "january":		month = "1"; 	break;
+				case "february":	month = "2"; 	break;
+				case "march": 		month = "3";	break;
+				case "april":		month = "4";	break;
+				case "may":			month = "5";	break;
+				case "june":		month = "6";	break;
+				case "july":		month = "7";	break;
+				case "august":		month = "8";	break;
+				case "september":	month = "9";	break;
+				case "october":		month = "10";	break;
+				case "november":	month = "11";	break;
+				case "december":	month = "12";	break;
+				default:			month = "";		break;
+			}
+		}
+		validDate = true;
+	}
+	
+	var tags = String.IsNullOrEmpty(qTags) ? "all" : qTags;
+	var allArticles = new Umbraco.Web.Models.DynamicPublishedContentList();
+	var selection = new Umbraco.Web.Models.DynamicPublishedContentList();
+	string docType = CurrentPage.DocumentTypeAlias;
+	
+	switch( docType ) {
+		case "Author":
+			allArticles = blog.FirstChild("PostsFolder").Children("Post")
+				.Where("Visible && author.Contains(@0) && ReleaseDate.Year.Contains(@1) && ReleaseDate.Month.Contains(@2)", CurrentPage.Id.ToString(), year, month )
+				.OrderBy("ReleaseDate desc");
+			break;
+		case "Category":
+			allArticles = blog.FirstChild("PostsFolder").Children("Post")
+				.Where("Visible && category.Contains(@0) && ReleaseDate.Year.Contains(@1) && ReleaseDate.Month.Contains(@2)", CurrentPage.Id.ToString(), year, month )
+				.OrderBy("ReleaseDate desc");
+			break;
+		default:
+			allArticles = blog.FirstChild("PostsFolder")
+				.Children("Post")
+				.Where("Visible && ReleaseDate.Year.Contains(@0) && ReleaseDate.Month.Contains(@1)", year, month)
+				.OrderBy("ReleaseDate desc");
+			break;
+	}
+
+	if( tags == "all" ){
+		selection = allArticles;
+	} else {
+		foreach( dynamic item in allArticles ) {
+			@* include item in selection *@
+			bool includeFromTags = true;
+	
+			if( tags != "all" ) {
+				includeFromTags = false;
+				string itemTags = item.blogTags.Replace(" ","_");
+	
+				if( itemTags != null ) {
+	
+					foreach( var tagTerm in tags.Split(',') ) {
+	
+						if( itemTags.ToLower().Contains( tagTerm ) ) {
+							includeFromTags = true;
+							break;
+						}
+	
+					}
+	
+				}
+	
+			}
+		
+			if( includeFromTags ) {
+				selection.Add(item);
+			}
+		}
+	}
+	
+	var paging = Paging.GetPages(selection.Count(), 5); 
+	var selectedArticles = selection.Skip(paging.Skip).Take(paging.Take).ToList();
+}
+
+<div class="section wrap wrap--large">
+	<h1>@CurrentPage.Name</h1>
+	@RenderBody()
+	@if( selectedArticles.Any() ) {
+		<div class="listing--article">
+			@foreach(var result in selectedArticles) {
+				var item = Umbraco.Content(result.Id);
+					<article class="listing__item">
+						<div class="listing__content">
+							<a href="@item.Url" class="listing__link">
+								<h3 class="listing__title delta">@item.Name</h3>
+							</a>
+							<p class="listing__date"><strong>@item.ReleaseDate.ToString("d MMMM yyyy")</strong></p>
+							@if( item.HasValue("author") ){
+								<p class="listing__author">@Umbraco.Content(item.author).Name</p>
+							}
+							@if( item.HasValue("category") ){
+								<p class="listing__category">@Umbraco.Content(item.category).Name</p>
+							}
+							<p class="listing__copy">@item.postExcerpt</p>
+						</div>
+					</article>
+
+			}
+		</div>
+	} else {
+		<div class="listing wrap wrap--large cleafix">
+			<p class="delta" style="text-align: center;">Sorry, there are no posts available</p>
+		</div>
+	}
+	
+	<nav class="pagination text--center clearfix">
+		@PagingTemplate.RenderPaging(paging, CurrentPage.Id)
+	</nav>
+	@Html.Partial("Blog/Filters")
+</div>

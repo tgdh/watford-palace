@@ -1,0 +1,142 @@
+/* ===========================================================
+
+    # SECTION
+
+=========================================================== */
+
+.o-section {
+    padding-bottom: $padding--small;
+    padding-top: $padding--small;
+    position: relative;
+}
+
+.o-section--main {
+    z-index: 2;
+}
+
+.o-section--top {
+    padding-bottom: 0 !important;
+}
+
+.o-section--white {
+    background: $white;
+}
+
+.o-section--window {
+    display: block;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+}
+
+.o-section--video {
+    height: auto;
+    position: relative;
+}
+
+.o-section--grey {
+    background: $main-grey;
+    background: rgba($main-grey, .95);
+}
+
+.o-section--grey--rgba {
+    background: rgba($main-grey, .95);
+}
+
+.o-section--light-grey {
+    background: $main-grey;
+}
+
+.o-section--dark-terra-cota {
+    background: $main-red;
+    color: $white !important;
+
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $pri;
+        }
+    }
+
+    .o-button--blue-transparent {
+        background: transparent;
+        border: .1rem solid $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background: $white;
+            color: $dark-black;
+        }
+
+        &.active {
+            background: $white;
+            border: .1rem solid $white;
+            color: $dark-black;
+        }
+    }
+}
+
+.o-section--bondi-blue {
+    background: $main-blue;
+    color: $white !important;
+
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $sec;
+        }
+    }
+
+    .o-button--blue-transparent {
+        background: transparent;
+        border: .1rem solid $white;
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background: $white;
+            color: $dark-black;
+        }
+
+        &.active {
+            background: $white;
+            border: .1rem solid $white;
+            color: $dark-black;
+        }
+    }
+}
+
+.o-section--dark-grey {
+    background: $dark-black;
+    color: $white !important;
+}
+
+.o-section--image {
+    background-size: cover;
+}
+
+.o-section--filter {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@include respond-min( $mq-small ) {
+
+    .o-section {
+        padding-bottom: $padding--medium;
+        padding-top: $padding--medium;
+    }
+}
+
+@include respond-min( $mq-medium ) {
+
+    .o-section {
+        padding-bottom: $padding--large;
+        padding-top: $padding--large;
+    }
+}

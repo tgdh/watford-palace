@@ -1,0 +1,107 @@
+// Seats
+
+.ChooseSeats {
+
+    .Event {
+        font-size: 3rem;
+        margin-bottom: $line-height;
+        text-align: center;
+        line-height: 1.1;
+
+        .EventName {
+            font-weight: bold;
+        }
+
+        .Separator {
+            display: none;
+        }
+
+        .DateAndTime {
+            clear: both;
+            // display: block;
+        }
+    }
+
+    .InstanceCalendar {
+        display: block;
+        margin: 0 auto;
+        max-width: 28rem;
+        text-align: center;
+    }
+
+    .SeatingAreaHeading {
+    }
+
+    .SeatingAreaInstructions {
+        text-align: center;
+    }
+
+    .SeatingAreaOptionalInstructions {
+    }
+
+    .ErrorMessage {
+    }
+
+    .PricesContainer {
+
+        .PriceListTable {
+            // margin: 0 auto;
+            margin-bottom: $line-height;
+            // width: auto !important;
+
+            thead {
+                background: darken($main-grey, 5);
+                font-weight: bold;
+            }
+
+            tbody {
+
+                tr {
+                    border-bottom: .1rem solid $main-grey;
+                }
+
+                tr.UnavailableLegend {
+                    background: $white !important;
+                }
+
+                td.Money {
+                    text-align: center;
+                }
+            }
+
+            .TicketType {
+                font-weight: bold;
+            }
+
+            .PriceBand {
+
+                span {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .SeatingSelector {
+
+        .Unreserved {
+
+            margin-bottom: $line-height;
+
+            label {
+                display: inline-block;
+                width: 33%;
+            }
+
+            .Input_Text {
+                display: inline-block;
+                width: 33%;
+            }
+
+            .Price {
+                display: inline-block;
+                width: 33%;
+            }
+        }
+    }
+}

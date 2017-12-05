@@ -1,0 +1,15 @@
+﻿@using Logic.Model
+@model IEnumerable<Logic.Model.Interfaces.IEvent>
+@foreach (var evt in Model)
+{
+    if (evt.MonthBreaker == "theEnd")
+    {
+		<div class="o-card o-card--month-block gamma theEnd">
+			<h2>The End</h2>
+		</div>
+    }
+    else
+    {
+        Html.RenderPartial("EventBlock", evt);
+    }
+}

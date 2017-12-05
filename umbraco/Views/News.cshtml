@@ -1,0 +1,143 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "MasterNews.cshtml";
+    var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+
+	var qCat = Request.QueryString["category"];
+	var qYear = Request.QueryString["year"];
+	var qMonth = Request.QueryString["month"];
+	
+	var validDate = false;
+	string month = "";
+	string year = "";
+	
+	if( qYear != null ){
+		year = qYear.ToString();
+
+		if( qMonth != null ){
+			month = qMonth.ToString();
+			switch( month ){
+				case "january":		month = "1"; 	break;
+				case "february":	month = "2"; 	break;
+				case "march": 		month = "3";	break;
+				case "april":		month = "4";	break;
+				case "may":			month = "5";	break;
+				case "june":		month = "6";	break;
+				case "july":		month = "7";	break;
+				case "august":		month = "8";	break;
+				case "september":	month = "9";	break;
+				case "october":		month = "10";	break;
+				case "november":	month = "11";	break;
+				case "december":	month = "12";	break;
+				default:			month = "";		break;
+			}
+		}
+		validDate = true;
+	}
+	
+
+	var allArticles = new Umbraco.Web.Models.DynamicPublishedContentList();
+	string docType = qCat;
+
+	switch( docType ) {
+		case "in-the-media":
+			allArticles = CurrentPage.Children("InTheMedia")
+				.Where("Visible && ReleaseDate.Year.Contains(@0) && ReleaseDate.Month.Contains(@1)", year, month )
+				.OrderBy("ReleaseDate desc");
+			break;
+		case "press-release":
+			allArticles = CurrentPage.Children("PressRelease")
+				.Where("Visible && ReleaseDate.Year.Contains(@0) && ReleaseDate.Month.Contains(@1)", year, month )
+				.OrderBy("ReleaseDate desc");
+			break;
+		case "general-news":
+			allArticles = CurrentPage.Children("GeneralNews")
+				.Where("Visible && ReleaseDate.Year.Contains(@0) && ReleaseDate.Month.Contains(@1)", year, month )
+				.OrderBy("ReleaseDate desc");
+			break;			
+		default:
+			allArticles = CurrentPage
+				.Children()
+				.Where("Visible && ReleaseDate.Year.Contains(@0) && ReleaseDate.Month.Contains(@1)", year, month )
+				.OrderBy("ReleaseDate desc");
+			break;
+	}
+	var paging = Paging.GetPages(allArticles.Count(), 8); 
+	var selectedArticles = allArticles.Skip(paging.Skip).Take(paging.Take).ToList();
+}
+
+<section class="o-wrap o-section o-wrap--small">
+	<h1>@CurrentPage.Name</h1>
+
+	@if( selectedArticles.Any() ){
+		foreach( var result in selectedArticles ){
+			var article = Umbraco.Content(result.Id);
+			string newsType = article.DocumentTypeAlias;
+			switch( newsType ) {
+				case "InTheMedia":
+					@ShortArticle( article );
+					break;	
+				default:
+					@FullArticle( article );
+					break;		
+			}
+		}
+	} else {
+		<div class="o-listing o-wrap o-wrap--small cleafix">
+			<p class="delta" style="text-align: center;">Sorry, there are no posts available</p>
+		</div>
+	}
+
+	<nav class="c-pagination text--center clearfix">
+		@PagingTemplate.RenderPaging(paging, CurrentPage.Id)
+	</nav>
+	@Html.Partial("Component/News-filter")
+</section>
+
+
+@helper FullArticle( dynamic node ) {
+	<article class="c-news__article clearfix">
+		<div class="o-news-thumbnail">
+			@if( node.HasValue("thumbnail") )
+			{
+				<a href="@node.Url">
+					<img class="o-news-thumbnail__image" src="@Umbraco.Media(node.thumbnail.ToString()).Url" alt="@CurrentPage.Name"/>
+				</a>
+			}
+		</div>
+		<div class="o-news-details">
+			<h2 class="c-news__article__heading delta">
+				<a href="@node.Url">
+					@node.Name
+				</a>
+			</h2>
+			<p class="c-news__release-date">@node.releaseDate.ToString("d MMMM yyyy")</p>
+			<p class="c-news__summary">@node.postExcerpt</p>
+			<p><a href="@node.Url">Read more</a></p>				
+		</div>		
+	</article> 
+}
+
+@helper ShortArticle( dynamic node ) {
+	<article class="c-news__article clearfix">
+		<div class="o-news-thumbnail">
+			@if( node.HasValue("thumbnail") )
+			{
+				<a href="@node.articleUrl">
+					<img class="o-news-thumbnail__image" src="@Umbraco.Media(node.thumbnail.ToString()).Url" alt="@CurrentPage.Name"/>
+				</a>
+			}
+		</div>
+		<div class="o-news-details">
+			<h2 class="c-news__article__heading delta">
+				<a href="@node.articleUrl" target="_blank">
+					@node.Name
+				</a>
+			</h2>
+			<p class="c-news__release-date">@node.releaseDate.ToString("d MMMM yyyy")</p>
+			<p class="c-news__summary">@node.postExcerpt</p>
+			<p><a href="@node.articleUrl" target="_blank">Read article</a></p>	
+		</div>	
+	</article> 
+}

@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "MasterBlog.cshtml";
+	
+	var pageName = (CurrentPage.HasValue("postTitle") ? CurrentPage.postTitle : CurrentPage.Name);
+}
+
+<article class="wrap wrap--large section" role="main" itemscope itemtype="https://schema.org/BlogPosting" >
+	@if( CurrentPage.HasValue("coverImage") ) {
+		var cover = Umbraco.Media(CurrentPage.coverImage);
+		<img src="@cover.Url" alt="@pageName" itemprop="image"/>
+	}	
+	<h1 itemprop="headline">@pageName</h1>
+	<p class="post__date" itemprop="dateCreated">
+		<strong>@CurrentPage.ReleaseDate.ToString("d MMMM yyyy")</strong>
+	</p>
+	@if( CurrentPage.HasValue("author") ) {
+		var author = Umbraco.Content(CurrentPage.Author);
+		<span>-</span> <a href="@author.Url" class="strong"><span itemprop="author">@author.Name</span></a>
+	}
+	@if( CurrentPage.HasValue("category") ) {
+		var category = Umbraco.Content(CurrentPage.Category);
+		<span>-</span> <a href="@category.Url" class="strong"><span itemprop="genre">@category.Name</span></a>
+	}	
+	
+	@if(CurrentPage.HasValue("postExcerpt")) {
+		<p class="intro">@CurrentPage.postExcerpt</p>
+	}
+
+	<div class="" itemprop="articleBody">
+		@CurrentPage.bodyText
+	</div>
+</article>
+@Html.Partial("Blog/Related-Posts")
+@Html.Partial("Modules/Social-share")
+@Html.Partial("Blog/Comments")

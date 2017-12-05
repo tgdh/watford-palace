@@ -1,0 +1,73 @@
+/* ===========================================================
+
+  # TABLES
+
+=========================================================== */
+
+.o-table {
+	width: 100%;
+
+	.o-button {
+		font-size: 1.4rem;
+	}
+
+	.o-table__date,
+	.o-table__time {
+		padding: 1rem;
+		padding-left: 0;
+		font-size: 1.4rem;
+	}
+	.o-table__col-button {
+		text-align: center;
+		padding-right: 0;
+	}
+	.o-table__date-row {
+		border-bottom: 0.1rem solid $main-grey;
+		padding-left: 1rem;
+	}
+	.o-table__date-row:last-child {
+		border-bottom: none;
+	}
+}
+
+.o-table--scroll {
+	overflow-y: hidden;
+	overflow-x: auto;
+	position: relative;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	-webkit-overflow-scrolling: touch;
+}
+
+table .o-button {
+	display: block !important;
+}
+
+@include respond-min( $mq-small ) {
+
+	.o-table {
+
+		.o-table__date,
+		.o-table__time {
+			font-size: 1.8rem;
+		}
+
+	}
+
+}
+
+@include respond-min( $mq-medium ) {
+
+	.o-table {
+
+		.o-table__col-button {
+			width: 14.5rem;
+			// background-color: $white;
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+	}
+
+
+
+}

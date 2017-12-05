@@ -1,0 +1,16 @@
+{   
+    propertyEditors: [      
+        {
+            alias: "Thamesconsulting.MultipleDatePicker",
+            name: "Multiple date/time",
+            editor: {
+                view: "~/App_Plugins/MultipleDatePicker/MultipleDatePicker.html",
+				valueType: "JSON"
+            }
+        }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/MultipleDatePicker/MultipleDatePicker.controller.js'
+    ]
+}

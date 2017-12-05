@@ -1,0 +1,21 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	var pageBlocks = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("pageBlocks");
+}
+
+<div class="c-show__navigation clearfix">
+	@if( Model.GetPropertyValue<string>("pageBlocks") != null )
+	{
+		foreach( var block in pageBlocks )
+		{
+			var title = block.GetPropertyValue("title");
+	@* 		if( block.DocumentTypeAlias != "ImageBlock")
+			{
+
+			} *@
+			<a href="#@title.ToString().ToLower().Replace(" ","")" class="o-button o-button--blue-transparent">@title</a>
+
+		}
+	}
+	<a href="#tickets" class="o-button o-button--primary">Buy tickets</a>
+</div>

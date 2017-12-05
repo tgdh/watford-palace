@@ -1,0 +1,81 @@
+/* ===========================================================
+
+    # HEADER
+
+=========================================================== */
+
+
+
+@include respond-max($mq-large - 50px) {
+
+    .o-page__header {
+        background: $white;
+        height: 7rem;
+        left: $frame-size--small;
+        padding-top: 1.8rem;
+        position: fixed;
+        right: $frame-size--small;
+        top: 0;
+        z-index: 51;
+
+        .o-site-logo {
+            display: block;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            top: 1rem;
+            width: 20rem;
+        }
+    }
+
+    .js-nav-main--open {
+        // .o-page__header {
+        //     left: 0;
+        //     position: absolute;
+        //     right: 0;
+        //     top: -7rem;
+        // }
+        overflow: hidden;
+
+        .o-page__header__nav {
+            overflow-y: scroll;
+        }
+    }
+}
+
+@include respond-min($mq-large - 50px) {
+
+    .o-page__header {
+        background: $white;
+        height: 10.6rem;
+        left: $frame-size--small;
+        padding-top: 1.8rem;
+        position: fixed;
+        right: $frame-size--small;
+        top: 0;
+        z-index: 51;
+
+        .o-site-logo {
+            display: block;
+            float: left;
+            width: 26.8rem;
+        }
+    }
+}
+
+@include respond-min($mq-x-large) {
+
+    .o-page__header {
+        left: $frame-size--medium;
+        right: $frame-size--medium;
+    }
+}
+
+
+@include respond-min($mq-xx-large) {
+
+    .o-page__header {
+        left: $frame-size--large;
+        right: $frame-size--large;
+    }
+}

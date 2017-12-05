@@ -1,0 +1,156 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Core.Services
+@using System.Text
+@{
+    Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+	var link = settings.directionsLink;
+	var zoomLevel = settings.map.Zoom;
+}
+
+<div class="o-section">
+	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	<div class="clearfix">
+		<div class="o-page-column o-page-column-1-2">
+			@CurrentPage.bodyText
+		</div>
+		<div class="o-page-column o-page-column-1-2">
+			@Html.Partial("Forms/Contact-form")
+		</div>
+	</div>
+</div>
+	
+@section OpenGraph{
+	@*
+
+	For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:label1" content="">
+	<meta name="twitter:data1" content="">
+	<meta name="twitter:label2" content="">
+	<meta name="twitter:data2" content="">
+
+	*@
+}
+
+	
+@section Scripts{
+	@* 
+
+		Update map both on home and contact pages!
+
+	*@
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+	<script type="text/javascript">
+		
+		function initialize() {
+			var mapOptions = {
+				center: new google.maps.LatLng(@settings.map),
+	   			panControl: true,
+	    		zoomControl: true,
+	    		scaleControl: true,
+				zoom: @zoomLevel,
+				disableDefaultUI: true,
+				scrollwheel: false,
+				draggable: false
+			};
+				
+			var map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
+			var contentString = '<p><strong>Watford Palace Theatre</strong><br/>20 Clarendon Road,<br/>Watford,<br/>WD17 1JZ</p><p><a href="@link" target="_blank">Click here direction</a></p>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+			
+			var image = '/assets/img/map-marker.png';
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(@settings.map),
+				map: map,
+				title: 'Pompey Centre',
+				icon: image
+			});	
+			
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map,marker);
+			});
+			
+				
+			google.maps.event.addDomListener(window, "resize", function() {
+				var center = map.getCenter();
+				google.maps.event.trigger(map, "resize");
+				map.setCenter(center); 
+			});
+		}
+				
+		//Google maps listener
+		google.maps.event.addDomListener(window, 'load', initialize);
+				
+		
+	</script>
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js" type="text/javascript"></script>
+	@executeCode()
+}
+
+@helper executeCode(){
+	string doctype = "ContactForm";
+	IContentService contentService = ApplicationContext.Current.Services.ContentService;
+	IContentTypeService contentTypeService = ApplicationContext.Current.Services.ContentTypeService;
+	IContentType dt = contentTypeService.GetContentType(doctype);
+	IEnumerable<PropertyGroup> tabs = dt.PropertyGroups;
+	IEnumerable<PropertyType> properties = dt.CompositionPropertyTypes.OrderBy(x => x.SortOrder);
+	StringBuilder sbRules = new StringBuilder();
+	bool bNotFirst = false;
+	
+	foreach( PropertyGroup pg in tabs ){
+		foreach (PropertyType pt in pg.PropertyTypes.OrderBy(x => x.SortOrder)){
+			var fieldName = pt.Alias + pt.Id;
+			// javascript validation
+	
+			if( pt.Mandatory || !string.IsNullOrEmpty(pt.ValidationRegExp) ){
+				if (bNotFirst){
+				   sbRules.Append(",");
+				}
+				bNotFirst = true;
+	
+				sbRules.Append(fieldName + ":{"); 
+				if( pt.Mandatory ){
+				  sbRules.Append("required: true");
+				}
+				if( pt.Mandatory && !string.IsNullOrEmpty(pt.ValidationRegExp) ){
+				  sbRules.Append(", "); 
+				}
+				if( !string.IsNullOrEmpty(pt.ValidationRegExp) ){
+					if( pt.ValidationRegExp == "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}$" ){
+						sbRules.Append(Html.Raw("email: true")); 
+					} else {
+						sbRules.Append(Html.Raw("regex: \"" + pt.ValidationRegExp + "\"")); 
+					}
+	
+				}
+				sbRules.Append("}");
+	
+			}
+		}  
+	}
+    <script>
+		$("#@doctype.ToLower()").validate({
+			errorElement: "div", 
+			errorPlacement: function(error, element) {
+				error.insertAfter(element.closest('.input-wrap'))
+			},
+		    onfocusout: function(element) {$(element).valid()},
+			onclick: function(element) {$(element).valid()},
+			focusInvalid: false,
+			rules: {
+				@Html.Raw(sbRules.ToString()) 
+			}
+		});
+	</script>
+}

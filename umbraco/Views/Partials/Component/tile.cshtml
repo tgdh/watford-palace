@@ -1,0 +1,58 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+
+	var imgUrl = "/media/1003/pgs-cover.jpg";
+	var low = imgUrl + "?width=400*quality=60&upscale=false";
+	var high = imgUrl + "?width=1800&quality=80&upscale=false";
+
+	var image2 = Umbraco.Media(1110).Url;
+	var low2 = image2 + "?width=400*quality=18&upscale=false";
+	var high2 = image2 + "?width=1800&quality=80&upscale=false";
+
+	var image3 = Umbraco.Media(1111).Url;
+	var low3 = image3 + "?width=400*quality=30&upscale=false";
+	var high3 = image3 + "?width=1800&quality=80&upscale=false";
+}
+
+<style>
+	.c-ratio--tile {
+		display: inline-block;
+		width: 30%;
+		margin-right: 3%;
+		background-color: #f4f4f4;
+	}
+
+	.c-ratio__content h2{
+		position: relative;
+		color: #fff;
+		background: rgba(0,0,0,.7);
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		padding: 1rem;
+	}
+</style>
+
+<section class="o-wrap o-wrap--x-large">
+	
+	<article class="c-ratio c-ratio--tile js-lazyload" data-bg="@low" style="background-image: url(@low);">
+		<div class="c-ratio__content">
+			<h2>Content here</h2>
+		</div>
+	</article>
+
+	<article class="c-ratio c-ratio--tile js-lazyload" data-bg="@high2" style="background-image: url(@low2);">
+		<div class="c-ratio__content">
+			<h2>Content here</h2>
+		</div>
+	</article>
+
+	<article class="c-ratio c-ratio--tile js-lazyload" data-bg="@high3" style="background-image: url(@low3);">
+		<div class="c-ratio__content">
+			<h2>Content here</h2>
+		</div>
+	</article>
+
+</section>

@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "MasterSpektrix.cshtml";
+	
+	var siteUrl = "http://" +  Request.Url.Host.ToString() + Request.RawUrl.ToString();	
+}
+
+<div class="o-section o-wrap o-wrap--medium">
+	<h1>@CurrentPage.Name</h1>
+	<p class="delta">@Request.IsSecureConnection</p>
+		
+	if( Request.IsSecureConnection && CurrentPage.DocumentTypeAlias != "Checkout" )
+	{
+		Response.Redirect(siteUrl);
+	} 
+</div>

@@ -1,0 +1,46 @@
+/* ===========================================================
+
+	# FOOTER
+
+=========================================================== */
+
+.o-page__footer {
+	z-index: 50;
+}
+
+// @include edit(pink);
+.o-page__footer__column {
+	margin-bottom: $line-height;
+}
+
+.o-page__footer__heading {
+	text-align: left;
+}
+
+.o-page__footer__copy {
+	font-size: 1.4rem;
+}
+
+@include respond-min( $mq-medium ){
+	.o-page__footer__column {
+		margin-bottom: 0;
+	}
+	.o-page__footer__column--left {
+		@include column(6.5/13, $gutter: 5);
+		margin-bottom: $line-height;
+	}
+	.o-page__footer__column--right {
+		@include column(4.75/13, $gutter: 5, $cycle: 2);
+	}
+
+}
+
+.o-logo-wrap {
+	text-align: center;
+
+	.o-logo__item {
+		display: inline-block;
+		margin: 0 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+}

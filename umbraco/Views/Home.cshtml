@@ -1,0 +1,83 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+	var link = settings.directionsLink;
+	var zoomLevel = settings.map.Zoom;
+}
+
+<section>
+	<h2 class="hide-text">What's new</h2>
+	<div class="o-card-block clearfix">
+		@Html.Partial("Component/Featured-Content")
+	</div>
+</section>
+
+@helper Truncate (string input, int length)
+{
+    if( input.Length<=length )
+    {
+        @Html.Raw(input)
+    }
+    else{
+        @Html.Raw( input.Substring( 0,length ) )<text>...</text>
+    }
+}
+
+@section Scripts{
+	@* 
+
+		Update map both on home and contact pages!
+
+	*@
+	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+	<script type="text/javascript">
+		
+		function initialize() {
+			var mapOptions = {
+				center: new google.maps.LatLng(@settings.map),
+	   			panControl: true,
+	    		zoomControl: true,
+	    		scaleControl: true,
+				zoom: @zoomLevel,
+				disableDefaultUI: true,
+				scrollwheel: false,
+				draggable: false
+			};
+				
+			var map = new google.maps.Map(document.getElementById("google-map"), mapOptions);
+			var contentString = '<p><strong>Watford Palace Theatre</strong><br/>20 Clarendon Road,<br/>Watford,<br/>WD17 1JZ</p><p><a href="@link" target="_blank">Click here direction</a></p>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString
+			});
+			
+			var image = '/assets/img/map-marker.png';
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(@settings.map),
+				map: map,
+				title: 'Pompey Centre',
+				icon: image
+			});	
+			
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map,marker);
+			});
+			
+				
+			google.maps.event.addDomListener(window, "resize", function() {
+				var center = map.getCenter();
+				google.maps.event.trigger(map, "resize");
+				map.setCenter(center); 
+			});
+		}
+				
+		//Google maps listener
+		google.maps.event.addDomListener(window, 'load', initialize);
+				
+		
+	</script>
+}

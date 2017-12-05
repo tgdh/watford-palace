@@ -1,0 +1,97 @@
+/* ===========================================================
+
+	# VARIABLES
+
+=========================================================== */
+
+$old-ie: false !default;
+
+
+/* ===========================================================
+
+	# COLOURS
+
+=========================================================== */
+
+$white: 			#FFFFFF;
+$black:				#000000;
+
+$dark-black:		#222222;
+$twitter-blue:		#55acee;
+$facebook-blue:		#3b5998;
+$youtube-red:		#e52d27;
+$foursquare-blue:	#0072b1;
+
+$main-blue:			#00a6bd;
+$main-red:			#cf5167;
+$main-grey:			#f4f2f2;
+$dark-grey:			#7d6f6c;
+
+$pri: 				$main-blue;
+$sec: 				$main-red;
+$ter: 				$main-grey;
+
+
+
+/* ===========================================================
+
+	# BASE VALUES
+
+=========================================================== */
+
+$font-family:			"proxima-nova", Helvetica, Arial, Geneva, sans-serif;
+$font-size--small:		1.6rem;
+$font-size--large:		1.6rem;
+$line-height:			1.3em;
+$type-scale--small:		1.135; // 1.135
+$type-scale--medium:	1.175; // 1.175
+$type-scale--large:		1.25;
+
+$text-colour:			$dark-black;
+$background-colour:		$white;
+$border-colour:			$dark-black;
+$link-colour:			$sec;
+$link-colour-hover:		$pri;
+$placeholder-colour:	#ccc;
+$highlight-colour:		lighten( $pri, 50 );
+
+$padding--small:		4rem;
+$padding--medium:		6rem;
+$padding--large:		8rem;
+
+$frame-size--small:		2rem;
+$frame-size--medium:	3rem;
+$frame-size--large:		5rem;
+
+$card-radius--small:	4rem;
+$card-radius--medium:	7rem;
+
+$border-width: 			0;
+$border-radius: 		0;
+$speed: 				.3s;
+
+
+
+/* ===========================================================
+
+	# MEDIA QUERIES
+
+=========================================================== */
+
+$mq-small: 				600px;
+$mq-medium: 			800px;
+$mq-large: 				1000px;
+$mq-x-large: 			1280px;
+$mq-xx-large: 			1500px;
+
+/* ===========================================================
+
+	# GRID SETTINGS
+
+=========================================================== */
+
+$jeet-gutter:           3      !default;
+$jeet-parent-first:     false  !default;
+$jeet-layout-direction: "LTR"  !default;
+$jeet-max-width:        1410px !default;
+

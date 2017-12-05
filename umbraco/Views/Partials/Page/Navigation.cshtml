@@ -1,0 +1,85 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var homePage = CurrentPage.Site();
+    var settings = homePage.FirstChild("Settings");
+	var menuItems = homePage.Children.Where("UmbracoNaviHide == false && TemplateId > 0" +
+                    " && DocumentTypeAlias != \"Profile\" " +
+                    " && DocumentTypeAlias != \"Cart\" " +
+                    " && DocumentTypeAlias != \"BookingPage\" "
+                    );
+}
+
+<nav id="mainNav" class="c-nav__main js-nav-main" role="navigation">
+	<ul class="c-nav__list clearfix">
+
+@* 		<li class="c-nav__item nav__item--parent">
+			<a href="@homePage.Url" class="nav__link @homePage.IsEqual(CurrentPage, "active", "")">@homePage.Name</a>
+		</li> *@
+
+		@foreach ( var item in menuItems )
+		{
+			<li class="c-nav__item c-nav__item--parent">
+				<a href="@item.Url" class="c-nav__link  @(item.IsAncestorOrSelf(CurrentPage) ? "active" : null)">
+					@item.Name
+				</a>
+				@if( item.DocumentTypeAlias != "Events" && item.DocumentTypeAlias != "News" && item.DocumentTypeAlias != "Profile" && item.DocumentTypeAlias != "BookingPage" && item.DocumentTypeAlias != "Cart" )
+				{
+					@Traverse(item)
+				}
+			</li>
+		}
+
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <a href="@Umbraco.Content(2418).Url" class="c-nav__link  @(Umbraco.Content(2418).IsAncestorOrSelf(CurrentPage) ? "active" : null)">
+                <i class="ico-super ico-profile"></i>
+                @Umbraco.Content(2418).Name
+            </a>
+        </li>
+
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <a href="@Umbraco.Content(2417).Url" class="c-nav__link  @(Umbraco.Content(2417).IsAncestorOrSelf(CurrentPage) ? "active" : null)">
+                <i class="ico-super ico-basket"></i>
+                @Umbraco.Content(2417).Name
+            </a>
+        </li>
+
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <span class="c-nav__link t-strong t-center t-block t-white">
+                @settings.boxOfficeNumber
+            </span>
+        </li>
+        <li class="c-nav__item c-nav__item--parent c-nav__item--mobile">
+            <span class="c-nav__link">
+                <form action="/search" method="GET" class="ezsearch-form">
+                    <div class="o-input clearfix">
+                        <input type="text" name="q">
+                        <button type="submit" class="o-search-button">
+                            <i class="ico-super ico-search"></i>
+                            <span class="hide-text ">Search</span>
+                        </button>
+                    </div>
+
+                </form>
+            </span>
+        </li>
+	</ul>
+</nav>
+
+@* Helper method to travers through all descendants *@
+@helper Traverse(dynamic node)
+{
+    var maxLevelForNav = 4;
+    var items = node.Children.Where("Visible").Where("Level <= " + maxLevelForNav);
+    if ( items.Any() )
+    {
+	        <ul class="c-nav__list--sub c-nav__list--sub-@items.First().Level">
+    	        @foreach (var item in items) {
+					<li class="c-nav__item c-nav__item--child">
+						<a href="@item.Url" class="c-nav__link @(CurrentPage.Id == item.Id ? "active" : null)">@item.Name</a>
+						@Traverse(item)
+	                </li>
+    	        }
+        	</ul>
+    }
+}
+

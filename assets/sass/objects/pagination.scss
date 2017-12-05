@@ -1,0 +1,70 @@
+/* ===========================================================
+
+    # PAGINATION
+
+=========================================================== */
+
+.c-pagination,
+.ezsearch-pager {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+
+    .o-pagination__link,
+    .o-pagination__page,
+    .o-pagination__active {
+        background: $ter;
+        color: $pri;
+        display: inline-block;
+        font-weight: normal;
+        margin-bottom: 1rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
+        padding: 1.2rem;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        transition: all $speed ease;
+    }
+
+    .o-pagination__link:hover,
+    .o-pagination__page:hover,
+    .o-pagination__active:hover {
+        background: $pri;
+        color: $white;
+        font-weight: normal;
+    }
+
+    .o-pagination__active {
+        background: $pri;
+        color: $white;
+        font-weight: normal;
+    }
+}
+
+.o-paging-more {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.o-paging-prev {
+    margin-bottom: $line-height;
+}
+
+.o-load-more,
+.o-load-prev {
+    display: none;
+}
+
+
+@include respond-max($mq-small) {
+
+    #loader {
+        bottom: $frame-size--small;
+        left: $frame-size--small;
+        position: fixed;
+        right: $frame-size--small;
+        width: calc(100% - 4rem);
+        z-index: 5;
+    }
+}

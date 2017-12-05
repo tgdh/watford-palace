@@ -1,0 +1,40 @@
+{
+  "name": "Watford-Palace-Theatre",
+  "version": "0.0.1",
+  "description": "Watford Palace Theatre",
+  "devDependencies": {
+    "fastclick": "~1.0.3",
+    "html5shiv": "~3.7.2",
+    "lazysizes": "~1.1.3",
+    "picturefill": "~2.3.1",
+    "modernizr": "~2.8.3",
+    "OwlCarousel2": "~2.0.0-beta.3",
+    "SelectOrDie": "~0.1.8",
+    "magnific-popup": "~1.0.0",
+    "on-media-query": "https://github.com/JoshBarr/on-media-query",
+    "jquery-sliding-menu": "https://github.com/alizahid/jquery-sliding-menu",
+    "onMediaQuery": "https://github.com/JoshBarr/on-media-query.git#~0.2.0",
+    "Tabby": "https://github.com/cferdinandi/tabby.git",
+    "grunt-modernizr": "~1.0.0"
+  },
+  "moduleType": [
+    "globals"
+  ],
+  "authors": [
+    "Paulius Putna paulius@tgdh.co.uk @PauliusPutna"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.fitvids": "https://github.com/davatron5000/FitVids.js.git#~1.1.0",
+    "stickymojo": "https://github.com/mojotech/stickymojo.git#~1.0.2",
+    "frame-events": "https://github.com/jtangelder/frame-events.git",
+    "filament-sticky": "https://github.com/filamentgroup/fixed-sticky.git#~0.1.6"
+  }
+}

@@ -1,0 +1,22 @@
+/* ===========================================================
+
+	# LISTS
+
+=========================================================== */
+
+.c-list-dates {
+	.c-list-dates__date {
+		padding: 1rem;
+		border-bottom: 0.1rem solid $main-grey;
+		.c-list-date__date {
+			font-size: 1.8rem;
+		}
+		.c-list-date__time {
+			font-size: 1.8rem;			
+		}
+		.o-button {
+			float: right;
+		}
+	}
+}
+

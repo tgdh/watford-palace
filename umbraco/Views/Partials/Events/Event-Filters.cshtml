@@ -1,0 +1,43 @@
+@using Logic.Controllers
+@using Logic.ExtensionMethods
+@using Logic.Model
+@using umbraco.cms.helpers
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+    var ci = new System.Globalization.CultureInfo("en-GB");
+    System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+    System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Today;
+}
+
+<div class="o-section--highlight o-section--filter">
+	<div class="o-wrap o-wrap--x-large">
+
+		<select name="filter-category" class="filter filter--category filter-js js-select" id="filter-category">
+			<option value="">Choose a category</option>
+			@foreach (var category in Events.EventsRoot(Umbraco).Categories) {
+				<option value="@category.Name">@category.Name</option>
+			}
+		</select>
+
+		<select name="filter-time" class="filter filter--category filter-js js-select" id="filter-time">
+			<option value="">Choose a date</option>
+			<option value="@now~@now">Today</option>
+			<option value="@now.AddDays(1)~@now.AddDays(1)">Tomorrow</option>
+			<option value="@now~@now.LastDayOfWeek()">This week</option>
+			<option value="@now.AddDays(7).FirstDayOfWeek()~@now.AddDays(7).LastDayOfWeek()">Next week</option>
+			<option value="@now.FirstDayOfMonth()~@now.LastDayOfMonth()">This month</option>
+			<option value="@now.AddMonths(1).FirstDayOfMonth()~@now.AddMonths(1).LastDayOfMonth()">@now.AddMonths(1).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(2).FirstDayOfMonth()~@now.AddMonths(2).LastDayOfMonth()">@now.AddMonths(2).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(3).FirstDayOfMonth()~@now.AddMonths(3).LastDayOfMonth()">@now.AddMonths(3).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(4).FirstDayOfMonth()~@now.AddMonths(4).LastDayOfMonth()">@now.AddMonths(4).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(5).FirstDayOfMonth()~@now.AddMonths(5).LastDayOfMonth()">@now.AddMonths(5).ToString("MMMM yyyy")</option>
+			<option value="@now.AddMonths(6).FirstDayOfMonth()~@now.AddMonths(6).LastDayOfMonth()">@now.AddMonths(6).ToString("MMMM yyyy")</option>
+            <option value="@now.AddMonths(7).FirstDayOfMonth()~-1">Further ahead</option>
+		</select>
+	</div>
+</div>
+@*
+<p>@now.FirstDayOfWeek().ToString("D") @now.LastDayOfWeek().ToString("D")</p>
+<p>NEXT WEEK: @now.AddDays(7).FirstDayOfWeek().ToString("D") @now.AddDays(7).LastDayOfWeek().ToString("D")</p> *@

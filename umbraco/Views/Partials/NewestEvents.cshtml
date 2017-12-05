@@ -1,0 +1,28 @@
+﻿@model List<Logic.Model.Interfaces.IEvent>
+
+@*Render the events we get from the main view. We check if the event is present and render it
+You can also get access to the original ipublishedcontent by calling
+fx. Model[0].PublishedContent
+*@
+
+@if (Model.Count > 0){Html.RenderPartial("EventBlock", Model[0]);}
+@if (Model.Count > 1){Html.RenderPartial("EventBlock", Model[1]);}
+@if (Model.Count > 2){Html.RenderPartial("EventBlock", Model[2]);}
+
+<div class="event-block-wrapper">
+    <div class="twitter-block event-block">Here is a twitter block</div>
+</div>
+
+@if (Model.Count > 3){Html.RenderPartial("EventBlock", Model[3]);}
+
+<div class="event-block-wrapper">
+<div class="promo-block event-block">Use our venue</div>
+</div>
+
+@if (Model.Count > 4) { Html.RenderPartial("EventBlock", Model[4]); }
+<div class="event-block-wrapper">
+<div class="promo-block event-block">Get married</div>
+</div>
+
+@if (Model.Count > 5){Html.RenderPartial("EventBlock", Model[5]);}
+

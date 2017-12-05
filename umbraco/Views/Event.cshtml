@@ -1,0 +1,117 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+    Layout = "Master.cshtml";
+	var homePage = CurrentPage.Site();
+	var settings = homePage.FirstChild("Settings");
+
+}
+
+<div class="o-section o-section--grey o-section--window">
+	<div class="c-show o-wrap o-wrap--large">
+		@if( CurrentPage.theatreCompany.ToString() != "" )
+		{
+			<span class="c-show__production-house">
+				@Html.Raw(Html.Encode(CurrentPage.theatreCompany).Replace("\n", "<br />"))
+			</span>
+		}
+
+		@if( CurrentPage.subtitle.ToString() != "" )
+		{
+			<p class="c-show__subtitle delta"><strong>@CurrentPage.subTitle</strong></p>
+		}
+		<h1 class="c-show__title giga">@(CurrentPage.HasValue("title") ? CurrentPage.title : CurrentPage.Name)</h1>
+		<p class="c-show__credits">
+			@foreach( var credit in CurrentPage.credits )
+			{
+				<span class="c-show__credit">
+					<strong class="t-upper">@credit.boldText</strong>
+					<span>@credit.normalText</span>
+				</span>
+
+			}
+
+		</p>
+
+		@Html.Partial("Component/Show-Navigation")
+
+		<div class="clearfix c-show__content">
+			@if( CurrentPage.HasValue("gallery") )
+			{
+				var count = 0;
+
+				foreach( var id in CurrentPage.gallery.Split(',') )
+				{
+					count = count + 1;
+				}
+
+				<div class="o-event__column o-event__column--copy">
+					@CurrentPage.bodyText
+				</div>
+
+				if( count > 1)
+				{
+					@*
+						ADD IMAGE CROPS
+					*@
+					<div class="o-event__column o-event__gallery js-single__galery js-magnific-gallery owl-carousel">
+						@foreach( var id in CurrentPage.gallery.Split(',') )
+						{
+
+							var image = Umbraco.Media(id);
+							var imageUrl = image.Url;
+							<a href="@imageUrl?width=1200">
+								<img @image src="@image.GetCropUrl("umbracoFile", "slide")" alt="@CurrentPage.Name"/>
+							</a>
+						}
+					</div>
+				} else {
+					<div class="o-event__column o-event__gallery owl-carousel js-magnific-gallery">
+						@foreach( var id in CurrentPage.gallery.Split(',') )
+						{
+							var image = Umbraco.Media(id);
+							var imageUrl = image.Url;
+							<a href="@imageUrl?width=1200">
+								<img src="@image.GetCropUrl("umbracoFile", "slide")" alt="@CurrentPage.Name"/>
+							</a>
+						}
+					</div>
+				}
+
+			} else {
+				<div class="o-event__column--copy">
+					@CurrentPage.bodyText
+				</div>
+			}
+
+		</div>
+	</div>
+</div>
+@if( CurrentPage.HasValue("pageBlocks") )
+{
+	@Html.Partial("Component/Show-Blocks")
+}
+
+@Html.Partial("Component/Tickets")
+
+
+
+@section OpenGraph{
+	@*
+
+	For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:label1" content="">
+	<meta name="twitter:data1" content="">
+	<meta name="twitter:label2" content="">
+	<meta name="twitter:data2" content="">
+
+	*@
+}
+
+
+@section Scripts{
+
+}

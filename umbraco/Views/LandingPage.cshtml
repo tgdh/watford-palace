@@ -1,0 +1,42 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "Master.cshtml";
+
+	var homePage = CurrentPage.AncestorsOrSelf(1).First();
+	var settings = homePage.Settingses.First();
+
+}
+
+<div class="o-section o-section--main">
+	<h1>@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	@if( CurrentPage.HasValue("bodyText") )
+	{
+		@CurrentPage.bodyText
+	}
+	@* @Html.Partial("Page/Sidebar") *@
+	@Html.Partial("Page/Gateway")
+</div>
+@if( CurrentPage.HasValue("mainContent") )
+{
+	@Html.Partial("Page/PageElements")
+}
+
+@section OpenGraph{
+	@*
+
+	For a custom page like Event, Product, Post add cards to make sharing better experience;
+
+	<meta name="twitter:card" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:label1" content="">
+	<meta name="twitter:data1" content="">
+	<meta name="twitter:label2" content="">
+	<meta name="twitter:data2" content="">
+
+	*@
+}
+
+
+@section Scripts{
+
+}

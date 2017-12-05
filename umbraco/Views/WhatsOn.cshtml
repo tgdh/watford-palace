@@ -1,0 +1,68 @@
+﻿@using Logic.Controllers
+@using Logic.ExtensionMethods
+@using Logic.Model
+@using umbraco.cms.helpers
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+	var homePage = CurrentPage.AncestorsOrSelf(1).First();
+
+	var ci = new System.Globalization.CultureInfo("en-GB");
+	System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+	System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Today;
+}
+
+@* <h1>List</h1>
+<ul>
+	@foreach( var kid in Model.Content.Children() )
+	{
+		<li>
+			<strong>@kid.Name</strong>
+			<ul>
+				@foreach( var subkid in kid.Children() )
+				{
+					<li>@subkid.Name - @subkid.GetPropertyValue("spektrixID")</li>
+
+				}
+			</ul>
+		</li>
+	}
+</ul> *@
+<div class="o-section">
+	<h1 class="">@(CurrentPage.HasValue("pageTitle") ? CurrentPage.pageTitle : CurrentPage.Name)</h1>
+	<span class="t-center t-block t-normal gamma">Filter by</span>
+	@Html.Partial("Events/Event-Filters")
+	<div class="o-paging-more o-paging-prev">
+		<button id="load-previous" class="o-button o-button--primary o-button--wide o-load-prev load-prev-js">Load previous<i class="ico-plus"></i></button>
+	</div>
+
+	<div class="clearfix">
+		<div id="event-target" class="o-event-list clearfix">
+
+		</div>
+	</div>
+
+	<div class="o-wrap o-wrap--large">
+		<div class="o-paging-more">
+			<button id="loader" class="o-button o-button--primary o-button--wide">
+				Loading...
+				<div class="spinner"></div>
+			</button>
+		</div>
+		<div class="o-paging-more">
+			<button class="o-button o-button--primary o-button--wide o-load-more load-more-js">Load more</button>
+		</div>
+	</div>
+</div>
+
+
+@section Scripts {
+	<script src="/Scripts/Events.js"></script>
+	<script>
+		$(document).ready(function (parameters) {
+			var target = '#event-target';
+			Events.init('@Url.Action("GetFilteredEvents", "EventsSurface")', target, true);
+		});
+	</script>
+}

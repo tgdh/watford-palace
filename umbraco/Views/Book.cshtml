@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "MasterSpektrix.cshtml";
+
+    string instanceId = Request.QueryString["id"];
+    @* string eventId = Request.QueryString["eventId"]; *@
+}
+
+@if( instanceId != null ) {
+	<iframe
+	  name="SpektrixIFrame"
+	  id="SpektrixIFrame"
+	  frameborder="0"
+      onload="scroll(0,0);"
+	  src="https://system.spektrix.com/watfordpalace/website/chooseseats.aspx?resize=true&EventInstanceId=@instanceId"
+	  style="width: 100%; max-width: 100rem; margin: 0 auto; display: block; height: 1300px;">
+	</iframe>
+}

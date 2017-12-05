@@ -1,0 +1,29 @@
+/* ===========================================================
+
+	# FILTERS
+
+=========================================================== */
+
+.o-news-filters {
+	.o-filter {
+		margin-bottom: 3rem;
+	}
+
+	.o-filter:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@include respond-min( $mq-small ){
+
+	.o-news-filters {
+		.o-filter {
+			@include column(1/2, $gutter: 3, $cycle: 2);
+		}
+
+		.o-filter {
+			margin-bottom: 0;
+		}
+	}
+
+}
