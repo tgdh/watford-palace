@@ -24,7 +24,7 @@
             margin: 0 auto;
             position: absolute;
             top: 1rem;
-            width: 20rem;
+            width: 16rem;
         }
     }
 
@@ -58,7 +58,8 @@
         .o-site-logo {
             display: block;
             float: left;
-            width: 26.8rem;
+			width: 23.8rem;
+			transform: translateY(-1rem);
         }
     }
 }
