@@ -17,9 +17,6 @@
     }
 }
 
-
-
-
 .c-nav__footer {
     margin-bottom: $line-height;
 
@@ -64,7 +61,21 @@
     }
 }
 
+@include respond-max($mq-medium) {
 
+	.c-nav__list--sub-3 {
+		display: none;
+	}
+
+	.sliding-menu {
+
+		.c-nav__list--sub-3 {
+			display: inherit;
+		}
+
+	}
+
+}
 
 @include respond-max($mq-large - 50px) {
 
@@ -165,21 +176,22 @@
         background: $sec;
         display: block;
         left: 0;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
         padding-top: 2.5rem;
         position: absolute;
         right: 0;
         top: 7rem;
         transform: translate3d(0, -200rem, 0);
-    }
+	}
 
     .js-nav-main--open {
 
         .o-page__header__nav {
             display: block;
             transform: translate3d(0, 0, 0);
-            overflow-y: scroll;
-            height: 52rem;
+			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+			max-height: 80vh;
         }
 
         .toggle--nav--main {
@@ -192,7 +204,7 @@
                 }
             }
         }
-    }
+	}
 }
 
 

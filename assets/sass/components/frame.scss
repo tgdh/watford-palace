@@ -59,9 +59,9 @@
 @include respond-min($mq-xx-large) {
 
     .c-top-corner {
-        height: $frame-size--small * 4.5;
-        right: $frame-size--large - .1rem;
-        width: $frame-size--small * 4.5;
+        height: 4rem;
+        width: 4rem;
+        right: 4.9rem;
     }
 
     .c-bottom-frame {

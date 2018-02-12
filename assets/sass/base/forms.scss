@@ -43,7 +43,9 @@ label[for] {
 	cursor: pointer;
 }
 
-
+input[type="submit"] {
+	-webkit-appearance: none;
+}
 
 //= PLACEHOLDER ==============================================
 
