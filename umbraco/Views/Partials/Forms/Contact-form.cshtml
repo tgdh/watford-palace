@@ -7,7 +7,7 @@
 @using Umbraco.Core.Services
 @using System.Text
 @using System.Text.RegularExpressions
-	
+
 @using System.Net;
 @using System.Net.Mail;
 
@@ -18,7 +18,7 @@
 	var form = Umbraco.Content(1104);
 	string contactEmail = (string)form.contactEmail;
 	string title = form.Name;
-	
+
 	@* Set the DocType of the form we are using to build and store this form *@
 	string doctype = "ContactForm";
 	string submissionMessage = form.submissionMessage;
@@ -28,7 +28,7 @@
 	}
 	@* Form submission storage folder *@
 	var folderId = form.Id;
-	
+
 	@*  Umbraco content API - get the content type of the form *@
 	IContentService contentService = ApplicationContext.Current.Services.ContentService;
 	IContentTypeService contentTypeService = ApplicationContext.Current.Services.ContentTypeService;
@@ -38,13 +38,13 @@
 		@Html.Raw("Your form cannot be created as no document type has been selected.")
 		return;
 	}
-	
+
 	IEnumerable<PropertyGroup> tabs = dt.PropertyGroups;
 	IEnumerable<PropertyType> properties = dt.CompositionPropertyTypes.OrderBy(x => x.SortOrder);
 
 	@* javascript validation rules text *@
 	StringBuilder sbFormData = new StringBuilder();
-					
+
 	@* POSTBACK *@
 
 	@* if we have a document type *@
@@ -69,14 +69,14 @@
 				foreach( PropertyType pt in pg.PropertyTypes.OrderBy(x => x.SortOrder) ){
 					var fieldName = pt.Alias + pt.Id;
 					fieldName = Server.HtmlEncode(fieldName);
-					
+
 					if( pt.Mandatory && string.IsNullOrEmpty(Request.Form[fieldName]) ){
 						@* <p>@pt.Name : a value is required</p> *@
 						bValid = false;
 					}
 					if( !string.IsNullOrEmpty(pt.ValidationRegExp) ){
 						Regex regex = new Regex(pt.ValidationRegExp, RegexOptions.IgnoreCase);
-	
+
 						if( !regex.IsMatch(Request.Form[fieldName].ToString()) ){
 							@* <p>@pt.Name : a correct value is required</p> *@
 							bValid = false;
@@ -92,7 +92,7 @@
 				@SaveContentItem(contentService, properties, doctype, folderId, title)
 
 				@*  show the information entered and compile message for email *@
-					
+
 				@* create table with data *@
 				@* open table for email data *@
 				sbFormData.Append("<table style='font-style: Arial, sans-serif; color: black; font-size: 16px; width: 600px; color: #444;' align='center'>");
@@ -100,22 +100,22 @@
 				sbFormData.Append("<td><th><h1>" + title + "</h1></th><td>");
 				foreach( PropertyGroup pg in tabs ){
 					foreach( PropertyType pt in pg.PropertyTypes.OrderBy(x => x.SortOrder) ){
-						// get the name and value 
+						// get the name and value
 						var fieldName = pt.Alias + pt.Id;
 						string fieldValue = FieldValue(pt.PropertyEditorAlias, fieldName);
-					
+
 						// override on/off check box values
 						if (pt.PropertyEditorAlias == "Umbraco.TrueFalse") { fieldValue = (fieldValue == "1" ? "True" : "False"); }
- 
+
 						// save it for the email
 						sbFormData.Append("<tr style='margin-bottom: 10px;'><td valign='top' style='font-weight: bold; width: 120px;'>" + pt.Name + ":" + "</td><td>" + Html.Raw(umbraco.library.ReplaceLineBreaks(fieldValue)) + "</td></tr>");
 						sbFormData.Append("<tr height='15'><td ></td><td></td></tr>");
 					}
 				}
-				
+
 				@* close table for email data *@
 				sbFormData.Append("</table>");
-				
+
 				@* send an email *@
 				if( !string.IsNullOrEmpty(contactEmail) ){
 					@SendEmail(contactEmail, doctype, title, sbFormData.ToString())
@@ -202,12 +202,12 @@
 								}
 								if( !string.IsNullOrEmpty(pt.ValidationRegExp) ){
 									Regex regex = new Regex(pt.ValidationRegExp, RegexOptions.IgnoreCase);
-									
+
 									if( !regex.IsMatch(Request.Form[fieldName].ToString()) ){
 										<p style="color: red;">@pt.Name : a correct value is required</p>
 									}
 								}
-								@* Form validation moved *@	
+								@* Form validation moved *@
 							}
 						}
 					</div>
@@ -216,10 +216,10 @@
 			}
 
 		}
-		
+
 			<button type="submit" class="o-button o-button--primary o-button--submit">Submit</button>
-		
-	
+
+
 	</form>
 }
 
@@ -249,7 +249,7 @@
 		<div class="checkbox">
 			<label for="@(fieldName + preValue)"><input type="checkbox" id="@(fieldName + preValue)" name="@fieldName" value="@preValueId" />@preValue</label>
 		</div>
-		
+
 	}
 }
 
@@ -300,19 +300,18 @@
 
 	MailMessage mail = new MailMessage();
 	SmtpClient SmtpServer = new SmtpClient("");
-	 
+
 	mail.From = new MailAddress(fromMail);
 	mail.To.Add(to);
 	mail.Subject = subj;
 	mail.Body = formData;
 	mail.IsBodyHtml = true;
-	 
-	SmtpServer.Port = 25; 
+
+	SmtpServer.Port = 25;
 	SmtpServer.Credentials = new System.Net.NetworkCredential("", "");
 	SmtpServer.EnableSsl = false;
-	 
+
 	SmtpServer.Send(mail);
-	
 }
 
 @functions{
@@ -325,7 +324,7 @@
 	public string FieldValue( string propertyEditorAlias, string fieldName ){
 		string fieldValue = Request.Form[fieldName];
 
-		// get the values fro prevalue based fields 
+		// get the values fro prevalue based fields
 		if( propertyEditorAlias == "Umbraco.RadioButtonList"
 				|| propertyEditorAlias == "Umbraco.DropDown"
 				|| propertyEditorAlias == "Umbraco.DropDownMultiple"
@@ -333,7 +332,7 @@
 			){
 			fieldValue = "";
 			string preValues = Request.Form[fieldName];
-			
+
 			if( preValues != null ){
 					string[] preValueIds = preValues.Split(',');
 					foreach( string preValueId in preValueIds ){

@@ -19,7 +19,7 @@ module.exports = {
     fulljs: {
         src: [
             '<%= assetsFolder %>/_components/OnMediaQuery/js/onmediaquery.js',
-            '<%= assetsFolder %>/_components/jquery-sliding-menu/js/jquery-sliding-menu.js',
+			// '<%= assetsFolder %>/_components/jquery-sliding-menu/js/jquery-sliding-menu.js',
             '<%= assetsFolder %>/_components/OwlCarousel2/dist/owl.carousel.js',
             '<%= assetsFolder %>/_components/SelectOrDie/_src/selectordie.js',
             '<%= assetsFolder %>/_components/magnific-popup/dist/jquery.magnific-popup.js',
@@ -28,6 +28,7 @@ module.exports = {
             '<%= assetsFolder %>/_components/stickymojo/stickyMojo.js',
             '<%= assetsFolder %>/_components/frame-events/frame-events.js',
             '<%= assetsFolder %>/_components/filament-sticky/fixedsticky.js',
+			'<%= assetsFolder %>/js/lib/jquery-sliding-menu.js',
             '<%= assetsFolder %>/js/utils/*js',
             '<%= assetsFolder %>/js/components/*js',
             '<%= assetsFolder %>/js/main.js'
