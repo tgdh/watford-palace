@@ -4,7 +4,7 @@
       height: 1.5rem;
       display: inline-block;
       margin: 0 0.5rem;
-      border: 0.3rem solid $white;
+      border: 0.1rem solid $white;
       background-color: transparent;
       border-radius: 100%;
   }
@@ -12,7 +12,7 @@
     background: $white;
   }
 
-/* 
+/*
  *  Owl Carousel - Animate Plugin
  */
 .owl-carousel .animated {
@@ -42,7 +42,7 @@
   100% {
     opacity: 0; } }
 
-/* 
+/*
  * 	Owl Carousel - Auto Height Plugin
  */
 .owl-height {
@@ -52,7 +52,7 @@
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
-/* 
+/*
  *  Core Owl Carousel CSS File
  */
 .owl-carousel {
@@ -127,7 +127,7 @@
 .no-js .owl-carousel {
   display: block; }
 
-/* 
+/*
  * 	Owl Carousel - Lazy Load Plugin
  */
 .owl-carousel .owl-item .owl-lazy {
@@ -140,7 +140,7 @@
 .owl-carousel .owl-item img {
   transform-style: preserve-3d; }
 
-/* 
+/*
  * 	Owl Carousel - Video Plugin
  */
 .owl-carousel .owl-video-wrapper {
@@ -192,7 +192,7 @@
   height: 100%;
   width: 100%; }
 
-  /* 
+  /*
  * 	Default theme - Owl Carousel CSS File
  */
 .owl-theme .owl-nav {

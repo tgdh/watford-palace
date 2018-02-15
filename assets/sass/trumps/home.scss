@@ -1,0 +1,142 @@
+/* ===========================================================
+
+	# Home
+
+=========================================================== */
+
+// carousel
+
+.t-home-carousel {
+	position: relative;
+}
+
+@include respond-max($mq-medium) {
+
+	.t-home-carousel {
+
+		.owl-dots {
+			display: none;
+		}
+
+	}
+
+}
+
+@include respond-min($mq-medium) {
+
+	.t-home-carousel {
+
+		.owl-dots {
+			position: absolute;
+			bottom: 4rem;
+			left: 2rem;
+			right: 2rem;
+			z-index: 3;
+			text-align: center;
+		}
+	}
+
+}
+
+.t-home-carousel__nav {
+
+	.owl-prev {
+		left: 2rem;
+		padding: 0.8rem 1.1rem 0.9rem .7rem;
+	}
+
+	.owl-next {
+		right: 2rem;
+		padding: 0.8rem .7rem 0.9rem 1.1rem;
+	}
+
+	.owl-prev,
+	.owl-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 3;
+		color: $sec;
+		background-color: $white;
+		border-radius: 50%;
+		line-height: 1;
+		cursor: pointer;
+		transition: color $speed ease-out,
+					background-color $speed ease-out;
+
+		i {
+			font-size: 3.2rem;
+		}
+
+		&:hover,
+		&:focus {
+			color: $white;
+			background-color: $sec;
+		}
+	}
+}
+
+//
+
+.t-home__cover-aside__placer {
+	display: none;
+
+	@include respond-min-max($mq-small + 50px, $mq-large) {
+		display: block;
+
+		.c-card__image-wrap {
+			background-color: $pri;
+		}
+
+		.c-card__content {
+			background-color: transparent;
+		}
+	}
+}
+
+@include respond-min-max($mq-small + 50px, $mq-large) {
+
+	.doc--homepage {
+
+		.c-cover__aside {
+
+			.c-card {
+				@include column(1/2, $gutter: 5, $cycle: 2);
+			}
+		}
+
+	}
+
+}
+
+@include respond-min-max($mq-large, $mq-large + 120px) {
+
+	.doc--homepage {
+
+		.c-cover__aside {
+
+			.c-card {
+				@include column(1/3, $gutter: 2, $cycle: 3);
+			}
+		}
+
+	}
+
+}
+
+@include respond-min($mq-large + 120px) {
+
+	.doc--homepage {
+
+		.c-cover__aside {
+
+			.c-card {
+				margin-bottom: 2.7rem;
+				margin-bottom: 8.6%;
+			}
+
+		}
+
+	}
+
+}

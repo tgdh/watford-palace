@@ -1,0 +1,13 @@
+@inherits UmbracoViewPage<IPublishedContent>
+@{
+	var image = Umbraco.TypedMedia(Model.GetPropertyValue<int>("coverImage"));
+	if (image == null) {
+		return;
+	}
+
+	var imageUrl = image.GetCropUrl("umbracoFile", "image-cover");
+}
+
+<section class="c-hero" style="background-image: url(@imageUrl);">
+	@Html.Partial("~/Views/Partials/Events/EventHeading.cshtml")
+</section>

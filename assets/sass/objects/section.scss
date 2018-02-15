@@ -18,6 +18,10 @@
     padding-bottom: 0 !important;
 }
 
+.o-section--bottom {
+	padding-top: 0 !important;
+}
+
 .o-section--white {
     background: $white;
 }
@@ -25,13 +29,15 @@
 .o-section--window {
     display: block;
     height: auto;
-    min-height: 100%;
+	min-height: 100%;
+	min-height: 100vh;
     position: relative;
 }
 
 .o-section--video {
     height: auto;
-    position: relative;
+	position: relative;
+	background-color: $black;
 }
 
 .o-section--grey {
@@ -116,8 +122,9 @@
     color: $white !important;
 }
 
-.o-section--image {
-    background-size: cover;
+.o-section--image.o-section--image {
+	background-size: cover;
+	@include pad-top(1920,1080);
 }
 
 .o-section--filter {

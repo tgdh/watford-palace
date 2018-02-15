@@ -23,6 +23,12 @@
 		case "VideoBlock":
 			@VideoBlock(item, count)
 		break;
+		case "TextBlock":
+			@TextBlock(item)
+		break;
+		case "GalleryBlock":
+			@GalleryBlock(item)
+			break;
 		default:
 			@Default(item, count)
 		break;
@@ -30,18 +36,53 @@
 	count = count + 1;
 }
 
+@helper GalleryBlock(IPublishedContent item)
+{
+	var title = item.GetPropertyValue<string>("linkName");
+
+	<div class="o-section--light-grey" style="position: relative;">
+		@if (!String.IsNullOrWhiteSpace(title)) {
+			<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
+				<i class="ico-arrow ico-arrow--down"></i>
+			</a>
+			<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset" style="position: absolute; margin-top: -10.6rem;"></span>
+		}
+
+		@Html.Partial("~/Views/Partials/Component/Gallery.cshtml", new GalleryViewModel {
+			ImageIds = item.GetPropertyValue<string>("images")
+		})
+
+	</div>
+}
+
+@helper TextBlock(IPublishedContent item)
+{
+	var title = item.GetPropertyValue("linkName");
+
+	<div class="o-section o-section--light-grey">
+		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
+			<i class="ico-arrow ico-arrow--down"></i>
+		</a>
+		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
+		<div class="o-wrap o-wrap--small">
+			<h2 class="beta">@item.GetPropertyValue("title")</h2>
+			@item.GetPropertyValue("textarea")
+		</div>
+	</div>
+}
+
 @helper CastBlock(IPublishedContent item, int count)
 {
-	var title = item.GetPropertyValue("title");
+	var title = item.GetPropertyValue("linkName");
 	var cast = item.GetPropertyValue<IEnumerable<IPublishedContent>>("cast");
 
-	<div class="o-section o-section--dark-grey o-section--window o-wrap">
+	<div class="o-section o-section--dark-grey o-wrap">
 		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
 		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--medium">
-			<h2 class="mega">@title</h2>
+			<h2 class="mega">@item.GetPropertyValue("title")</h2>
 			<div class="o-cards-wrap o-cards-cast clearfix">
 				@foreach( var person in cast )
 				{
@@ -72,26 +113,26 @@
 
 @helper ImageBlock(IPublishedContent item, int count)
 {
-	var title = item.GetPropertyValue("title");
+	var title = item.GetPropertyValue("linkName");
 	var background = item.GetPropertyValue("image");
 	var backgroundUrl = "";
 	if( item.HasValue("image") && item.GetPropertyValue("image").ToString() != "" )
 	{
 		backgroundUrl = Umbraco.Media(background.ToString()).GetCropUrl("umbracoFile", "image-cover");
 	}
-	<div class="o-section o-section--window o-section--image" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
-		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
-			<i class="ico-arrow ico-arrow--down"></i>
-		</a>
+	<div class="o-section o-section--image" style="background: url(@backgroundUrl) no-repeat center center; background-size: cover;">
+		@if (!String.IsNullOrWhiteSpace(title.ToString())) {
+			<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
+				<i class="ico-arrow ico-arrow--down"></i>
+			</a>
+		}
 		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
-		<h2 class="hide-text">@title</h2>
-
 	</div>
 }
 
 @helper ReviewsBlock(IPublishedContent item, int count)
 {
-	var title = item.GetPropertyValue("title");
+	var title = item.GetPropertyValue("linkName");
 	var reviews = item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews");
 
 	if( title == null )
@@ -99,13 +140,13 @@
 		title = "Reviews";
 	}
 
-	<div class="o-section o-section--dark-terra-cota o-section--window">
+	<div class="o-section o-section--dark-terra-cota">
 		<a href="#@title.ToString().ToLower().Replace(" ", "")" class="link-next">
 			<i class="ico-arrow ico-arrow--down"></i>
 		</a>
 		<span id="@title.ToString().ToLower().Replace(" ", "")" class="anchor-offset"></span>
 		<div class="o-wrap o-wrap--small">
-			<h2 class="mega">Reviews</h2>
+			<h2 class="mega">@item.GetPropertyValue("title", "Reviews")</h2>
 			@if( item.HasValue("reviews") && item.GetPropertyValue<IEnumerable<IPublishedContent>>("reviews").ToString() != "" )
 			{
 				<div class="o-card-reviews-wrap">
@@ -135,7 +176,7 @@
 @helper VideoBlock(IPublishedContent item, int count)
 {
 
-	var title = item.GetPropertyValue("title");
+	var title = item.GetPropertyValue("linkName", "Video");
 	var video = item.GetPropertyValue<MvcHtmlString>("video");
 
 	var background = item.GetPropertyValue("backgroundImage");

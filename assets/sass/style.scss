@@ -53,16 +53,25 @@
 		'components/icons',
 		'components/cover',
 		'components/aspect-ratio',
+		'components/card',
+		'components/card-grid',
 		'components/sitemap',
 		'components/frame',
 		'components/map',
 		'components/topbar',
 		'components/show',
+		'components/show-nav',
 		'components/lists',
 		'components/news',
 		'components/video',
+		'components/carousel',
+		'components/slide',
 		'components/filters',
+		'components/hero',
 		'components/tabs';
 
 @import 'trumps/overrides',
-		'trumps/cardfix';
+		'trumps/event-list',
+		'trumps/home',
+		'trumps/event',
+		'trumps/border-radius';

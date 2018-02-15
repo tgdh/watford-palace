@@ -19,7 +19,35 @@
 	</div>
 }
 else {
+	var imageId = umbracoHelper.Content( Model.Id ).tileImage;
 
+	var subtitle = "";
+	dynamic times = JsonConvert.DeserializeObject( Model.PublishedContent.GetProperty("multidate").Value.ToString() );
+	if( times.Count > 1){
+		if( DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") != @DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM") ){
+			subtitle = DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM") + "-" + DateTime.Parse( times[times.Count - 1].date.value.ToString() ).ToString("d MMM");
+		} else {
+			subtitle = DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM");
+		}
+
+	} else {
+		subtitle = DateTime.Parse( times[0].date.value.ToString() ).ToString("d MMM");
+	}
+
+	@Html.Partial("~/Views/Partials/Component/Card.cshtml", new CardViewModel {
+		Suptitle = Model.Category,
+		Headline = Model.Title,
+		Subtitle = subtitle,
+		ImageId = imageId,
+		Url = Model.Url,
+		PrimaryButtonUrl = Model.Url + "#tickets",
+		PrimaryButtonText = "Buy tickets",
+		SecondaryButtonUrl = Model.Url,
+		SecondaryButtonText = "More info",
+		ModifierClass = "c-card-grid__item"
+	})
+
+@*
 	dynamic times = JsonConvert.DeserializeObject( Model.PublishedContent.GetProperty("multidate").Value.ToString() );
 	var eventId = Model.Id;
 	var imageId = umbracoHelper.Content( Model.Id ).tileImage.ToString();
@@ -60,6 +88,7 @@ else {
 			<a href="@Model.Url" class="o-button o-button--small o-button--transparent">More info</a>
 		</div>
 	</article>
+*@
 
 @* 	<figure class="o-ratio c-ratio--tile c-tile @catClass js-lazyload" data-bg="@imageUrl" style="background-image: url(@imageUrl&amp;quality=18);">
 		<span class="c-tile__overlay"></span>

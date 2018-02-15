@@ -44,32 +44,132 @@
 {
 	var homePage = item.Site();
 	var news = homePage.FirstChild("News");
-	var article = news.Children().OrderBy("ReleaseDate desc").Skip(count).Take(1);
+	var article = news.Children().OrderBy("ReleaseDate desc").Skip(count).Take(1).FirstOrDefault();
+
+	if (article == null) {
+		return;
+	}
+
+	@Html.Partial("~/Views/Partials/Component/Card.cshtml", new CardViewModel {
+		Suptitle = "News",
+		Headline = article.HasValue("postTitle") ? article.postTitle : article.Name,
+		Subtitle = article.releaseDate.ToString("dd MMM"),
+		ImageId = article.thumbnail,
+		Url =  article.Url,
+		PrimaryButtonUrl = article.Url,
+		PrimaryButtonText = "Read more"
+	})
+}
+
+@helper Announcement(dynamic item)
+{
+	@Html.Partial("~/Views/Partials/Component/Card.cshtml", new CardViewModel {
+		Suptitle = item.mainlabel,
+		Headline = item.title,
+		Subtitle = item.secondaryLabel,
+		ImageId = item.backgroundImage,
+		Url = item.link.url,
+		PrimaryButtonUrl = item.link.url,
+		PrimaryButtonText = item.buttonText
+	})
+}
+
+@helper Event(dynamic item) {
+	var ci = new System.Globalization.CultureInfo("en-GB");
+	System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+	System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Today;
+
+	var count = 0;
+	var multidate = item.multidate;
+	foreach( var date in multidate ){
+	    count = count + 1;
+	}
+	int last = count - 1;
+
+	var subtitle = "";
+	if( multidate.ToString() != "" ){
+		if( count > 1 ){
+			if( DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM") != DateTime.Parse( multidate[last].date.value.ToString()  ).ToString("d MMM") ){
+				subtitle = DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM") + "-" + DateTime.Parse( multidate[last].date.value.ToString()  ).ToString("d MMM");
+			} else {
+				subtitle = DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM");
+			}
+		} else {
+			subtitle = DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM");
+		}
+	}
+
+	@Html.Partial("~/Views/Partials/Component/Card.cshtml", new CardViewModel {
+		Suptitle = item.Parent().Name,
+		Headline = item.title,
+		Subtitle = subtitle,
+		ImageId = item.tileImage,
+		Url = item.Url,
+		PrimaryButtonUrl = item.Url + "#tickets",
+		PrimaryButtonText = "Buy tickets",
+		SecondaryButtonUrl = item.Url,
+		SecondaryButtonText = "More info",
+		ModifierClass = "c-card-grid__item"
+	})
+}
+
+@helper NewsArticle(dynamic item)
+{
+	var isInTheMedia = item.DocumentTypeAlias == "InTheMedia";
+
+	@Html.Partial("~/Views/Partials/Component/Card.cshtml", new CardViewModel {
+		Suptitle = "News",
+		Headline = item.HasValue("postTitle") ? item.postTitle : item.Name,
+		Subtitle = item.releaseDate.ToString("dd MMM"),
+		ImageId = item.thumbnail,
+		Url = isInTheMedia ? item.articleUrl : item.Url,
+		PrimaryButtonUrl = isInTheMedia ? item.articleUrl : item.Url,
+		PrimaryButtonText = "Read more",
+		IsPrimaryButtonUrlExternal = isInTheMedia ? true : false,
+		ModifierClass = "c-card-grid__item"
+	})
+
+}
+
+@*
+
+@helper LatestNews(dynamic item, int count)
+{
+	var homePage = item.Site();
+	var news = homePage.FirstChild("News");
+	var article = news.Children().OrderBy("ReleaseDate desc").Skip(count).Take(1).FirstOrDefault();
 	var color = "bondi-blue";
 
-	if( article[0].HasValue("color") )
-	{
-		color = article[0].color.ToLower().Replace(" ","-");
+	if (article == null) {
+		return;
 	}
 
-	if( article[0].Name != "" )
+	if( article.HasValue("color") )
 	{
-		<article class="o-card o-card--news o-card--fill">
-			<div class="o-card__image--wrap @color">
-			</div>
-			<div class="o-card__content">
-				<span class="o-card-info--category o-card-info--category--news">News</span>
-				<h3 class="o-card__heading o-card__heading--news delta">@(article[0].HasValue("postTitle") ? article[0].postTitle : article[0].Name)</h3>
-				<span class="o-card-info--date o-card-info--date--news">@article[0].releaseDate.ToString("dd MMM")</span>
-			</div>
-			<a href="@article[0].Url" class="o-card-link"></a>
-			<div class="o-card__actions">
-				<a href="@article[0].Url" class="o-button o-button--small o-button--transparent">Read more</a>
-			</div>
-
-		</article>
+		color = article.color.ToLower().Replace(" ","-");
 	}
 
+	var imageId = article.thumbnail.ToString();
+	string imageUrl = ( imageId != "" ? Umbraco.Media( imageId ).GetCropUrl("umbracoFile", "gallery") : "" );
+
+	<article class="o-card o-card--news o-card--fill">
+		<div class="o-card__image--wrap @color">
+			@if( article.HasValue("thumbnail") )
+			{
+				<img class="o-card__image" src="@imageUrl" alt="@item.Name"/>
+			}
+		</div>
+		<div class="o-card__content">
+			<span class="o-card-info--category o-card-info--category--news">News</span>
+			<h3 class="o-card__heading o-card__heading--news delta">@(article.HasValue("postTitle") ? article.postTitle : article.Name)</h3>
+			<span class="o-card-info--date o-card-info--date--news">@article.releaseDate.ToString("dd MMM")</span>
+		</div>
+		<a href="@article.Url" class="o-card-link"></a>
+		<div class="o-card__actions">
+			<a href="@article.Url" class="o-button o-button--small o-button--transparent">Read more</a>
+		</div>
+	</article>
 }
 
 @helper Announcement(dynamic item)
@@ -172,6 +272,9 @@
 {
 	var color = "bondi-blue";
 
+	var imageId = item.thumbnail.ToString();
+	string imageUrl = ( imageId != "" ? Umbraco.Media( imageId ).GetCropUrl("umbracoFile", "gallery") : "" );
+
 	if( item.HasValue("color") )
 	{
 		color = item.color.ToLower().Replace(" ","-");
@@ -181,6 +284,10 @@
 	{
 		<article class="o-card o-card--news o-card--fill">
 			<div class="o-card__image--wrap @color">
+			@if( item.HasValue("thumbnail") )
+			{
+				<img class="o-card__image" src="@imageUrl" alt="@item.Name"/>
+			}
 			</div>
 			<div class="o-card__content">
 				<span class="o-card-info--category o-card-info--category--news">News</span>
@@ -204,6 +311,8 @@
 		</article>
 	}
 }
+
+*@
 
 @helper Default(dynamic item)
 {

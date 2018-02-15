@@ -32,32 +32,40 @@
 
 .c-social__link--twitter {
 	background: $twitter-blue;
+
+	&:hover {
+		background: darken($twitter-blue, 10);
+	}
 }
 
 .c-social__link--facebook {
 	background: $facebook-blue;
+
+	&:hover {
+		background: darken($facebook-blue, 10);
+	}
 }
 
 .c-social__link--youtube {
 	background: $youtube-red;
+
+	&:hover {
+		background: darken($youtube-red, 10);
+	}
 }
 
 .c-social__link--foursquare {
 	background: $foursquare-blue;
+
+	&:hover {
+		background: darken($foursquare-blue, 10);
+	}
 }
 
-.c-social__link--twitter:hover {
-	background: darken($twitter-blue, 10);
-}
+.c-social__link--instagram {
+	background-color: $instagram;
 
-.c-social__link--facebook:hover {
-	background: darken($facebook-blue, 10);
-}
-
-.c-social__link--youtube:hover {
-	background: darken($youtube-red, 10);
-}
-
-.c-social__link--foursquare:hover {
-	background: darken($foursquare-blue, 10);
+	&:hover {
+		background-color: darken($instagram, 10);
+	}
 }

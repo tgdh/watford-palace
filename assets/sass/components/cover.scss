@@ -4,9 +4,9 @@
 
 =========================================================== */
 
-.c-cover-wrap {
-    margin-bottom: 3rem;
-}
+// .c-cover-wrap {
+//     margin-bottom: 3rem;
+// }
 
 .c-cover {
     background: $pri;
@@ -100,10 +100,6 @@
         position: relative;
         z-index: 2;
     }
-}
-
-.c-cover__main {
-    max-height: 72rem;
 }
 
 @include respond-min($mq-small) {
@@ -211,7 +207,7 @@
         @include column(6 / 8, $gutter: 2);
         // padding-top: 100%;
         // background: $sec;
-        margin-bottom: 3rem;
+        // margin-bottom: 3rem;
     }
 
     .c-cover__aside {

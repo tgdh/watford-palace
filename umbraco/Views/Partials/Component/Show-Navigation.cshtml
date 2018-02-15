@@ -3,19 +3,31 @@
 	var pageBlocks = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("pageBlocks");
 }
 
+<div class="c-show-nav clearfix">
+	@if (pageBlocks != null) {
+		foreach (var item in pageBlocks) {
+			var title = item.GetPropertyValue<string>("linkName");
+			if (!String.IsNullOrWhiteSpace(title)) {
+				var link = "#" + title.ToString().ToLower().Replace(" ","");
+
+				<a href="@link" class="c-show-nav__link">@title</a>
+			}
+		}
+	}
+	<a href="#tickets" class="c-show-nav__link c-show-nav__link--cta">Buy tickets</a>
+</div>
+
+@*
 <div class="c-show__navigation clearfix">
 	@if( Model.GetPropertyValue<string>("pageBlocks") != null )
 	{
 		foreach( var block in pageBlocks )
 		{
 			var title = block.GetPropertyValue("title");
-	@* 		if( block.DocumentTypeAlias != "ImageBlock")
-			{
-
-			} *@
 			<a href="#@title.ToString().ToLower().Replace(" ","")" class="o-button o-button--blue-transparent">@title</a>
 
 		}
 	}
 	<a href="#tickets" class="o-button o-button--primary">Buy tickets</a>
 </div>
+*@

@@ -34,7 +34,7 @@ body {
 }
 
 .o-page__content {
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 @include respond-max($mq-large - 50px) {

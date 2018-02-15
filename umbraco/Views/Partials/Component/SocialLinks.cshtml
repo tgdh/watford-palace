@@ -1,0 +1,23 @@
+@inherits UmbracoViewPage<IPublishedContent>
+@{
+	var selection = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("socialLinks");
+
+	if (selection == null || !selection.Any()) {
+		return;
+	}
+}
+
+<div class="c-social">
+	@foreach (var item in selection) {
+		var url = item.GetPropertyValue<string>("url");
+		var channel = item.GetPropertyValue<string>("icon");
+
+		var cssClass = channel.ToLower();
+
+		if (!string.IsNullOrEmpty(url)) {
+			<a href="@url" class="c-social__link c-social__link--@cssClass" target="_blank" rel="nofollow">
+				<i class="ico-social ico-@cssClass.ToLower()"></i><span class="hide-text">@channel</span>
+			</a>
+		}
+	}
+</div>

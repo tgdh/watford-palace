@@ -1,0 +1,21 @@
+/* ===========================================================
+
+	# Border radius
+
+=========================================================== */
+
+.u-border-radius--top-left {
+	border-top-left-radius: $card-radius--small;
+}
+
+.u-border-radius--top-right {
+	border-top-right-radius: $card-radius--small;
+}
+
+.u-border-radius--bottom-right {
+	border-bottom-right-radius: $card-radius--small;
+}
+
+.u-border-radius--left-right {
+	border-bottom-left-radius: $card-radius--small;
+}

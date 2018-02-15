@@ -1,0 +1,82 @@
+/* ===========================================================
+
+	# Hero
+
+=========================================================== */
+
+.c-hero {
+	color: $white;
+	background-color: $pri;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+
+	.c-event-heading {
+		background-color: rgba($dark-black, 0.7);
+		padding: 2rem;
+	}
+
+	.c-show__production-house,
+	.c-show__subtitle {
+		padding-bottom: 0;
+	}
+
+	.c-show__production-house,
+	.c-show__subtitle {
+		font-size: 1.4rem;
+	}
+
+	.c-show__title {
+		padding-bottom: 1.4rem;
+	}
+
+	.c-show__credits {
+		margin-bottom: 0;
+	}
+
+	& + .c-show-nav {
+		margin-top: 0;
+	}
+}
+
+@include respond-max($mq-small) {
+
+	.c-hero {
+		&:before {
+			content: "";
+			display: block;
+			@include pad-top(40,30);
+		}
+	}
+
+}
+
+@include respond-min-max($mq-small, $mq-large) {
+
+	.c-hero {
+		&:before {
+			content: "";
+			display: block;
+			@include pad-top(160,90);
+		}
+	}
+
+}
+
+@include respond-min( $mq-large ) {
+
+	.c-hero {
+		min-height: 68rem;
+		height: 85vh;
+		max-height: 160rem;
+
+		.c-event-heading {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+	}
+
+}

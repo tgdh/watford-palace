@@ -1,0 +1,73 @@
+/* ===========================================================
+
+	# Event
+
+=========================================================== */
+
+.doc--event {
+
+	.t-event__col__media__image-link {
+		display: block;
+	}
+
+	.t-event__col__media__image {
+		width: 100%;
+	}
+
+	.c-social {
+		margin-top: $line-height * 2;
+
+		.c-social__link {
+			width: 4rem;
+			height: 4rem;
+			background-color: $dark-black;
+			margin-right: 2rem;
+
+			&:hover {
+				background-color: $pri;
+			}
+		}
+
+		.ico-social {
+			line-height: 4rem;
+		}
+
+	}
+
+}
+
+@include respond-max( $mq-small + 100px ){
+
+	.t-event__col {
+
+		.c-social {
+			display: flex;
+			justify-content: space-around;
+
+			.c-social__link {
+				margin: 0;
+			}
+		}
+
+
+	}
+
+}
+
+@include respond-min($mq-medium) {
+
+	.doc--event {
+
+		.t-event__col__media {
+			max-width: 68rem;
+			margin-right: calc(100% - 45vw);
+
+			.owl-stage-outer {
+				border-top-right-radius: $card-radius--small;
+			}
+
+		}
+
+	}
+
+}

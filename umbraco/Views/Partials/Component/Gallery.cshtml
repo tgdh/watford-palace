@@ -1,0 +1,66 @@
+@inherits UmbracoViewPage<GalleryViewModel>
+@{
+	var images = Model.ImageIds.Split(',').Select(x => Umbraco.TypedMedia(x));
+
+    if (images == null || !images.Any())
+    {
+        return;
+    }
+
+	@* aspect ratio *@
+	if( string.IsNullOrWhiteSpace(Model.Crop) ) {
+		Model.Crop = "image-cover";
+	}
+
+	if( images.Count() == 1 ) {
+		<div>
+			@RenderImage(images.First(), Model.Crop)
+		</div>
+		return;
+	}
+
+}
+
+<figure class="c-carousel @Model.ModifierClass">
+    <div class="c-carousel__inner js-carousel owl-carousel js-magnific-gallery" data-nav="true" data-loop="true" data-modal-type="gallery" data-dots="true" data-autoplay="true">
+		@foreach (var media in images)
+		{
+			if (media != null)
+			{
+				if (media.DocumentTypeAlias == "Image")
+				{
+					@RenderImage(media, Model.Crop)
+				}
+
+				if (media.Descendants("Image").Any())
+				{
+					foreach (var image in media.Descendants("Image"))
+					{
+						@RenderImage(image, Model.Crop)
+					}
+				}
+			}
+		}
+	</div>
+</figure>
+
+@helper RenderImage(IPublishedContent image, string crop)
+{
+	var cropClass = "o-aspect--" + crop.Replace(":", "-");
+    var imageUrl = image.Url + "?width=1200&upscale=false";
+	var imageCropUrl = image.GetCropUrl("umbracoFile", crop);
+
+    var caption = image.GetPropertyValue<string>("caption");
+    var altText = image.GetPropertyValue<string>("altText");
+
+    <a href="@imageUrl" target="_blank" class="c-carousel__item @cropClass">
+        <img src="@imageCropUrl" class="c-carousel__image" alt="@altText" />
+
+        @if (!string.IsNullOrEmpty(caption))
+        {
+            <figcaption class="c-caption clearfix">
+                @caption
+            </figcaption>
+        }
+    </a>
+}

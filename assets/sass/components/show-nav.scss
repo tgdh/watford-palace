@@ -1,0 +1,51 @@
+/* ===========================================================
+
+	# Show navigation
+
+=========================================================== */
+
+.c-show-nav {
+	color: $white;
+	background-color: $pri;
+	// margin-top: 2rem;
+	// margin-bottom: 4rem;
+}
+
+.c-show-nav__link {
+	color: $white;
+	padding: 1.3rem 1rem;
+	display: inline-block;
+	font-weight: 500;
+	transition: color $speed ease-out,
+				background-color $speed ease-out;
+
+	&:hover,
+	&:focus {
+		color: $white;
+		background-color: $sec;
+	}
+}
+
+.c-show-nav__link--cta {
+	font-weight: 900;
+}
+
+@include respond-min( $mq-medium ) {
+
+	.c-show-nav {
+		text-align: center;
+		// margin-top: 6rem;
+		// margin-bottom: 8rem;
+	}
+}
+
+@include respond-min($mq-large - 50px) {
+
+	.c-show-nav {
+		position: sticky;
+		z-index: 11;
+		top: 10.6rem;
+	}
+
+}
+

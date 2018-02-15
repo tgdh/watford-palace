@@ -1,0 +1,32 @@
+@using Newtonsoft.Json
+@inherits UmbracoViewPage<IPublishedContent>
+@{
+	var theatreCompany = Model.GetPropertyValue<string>("theatreCompany");
+	var subtitle = Model.GetPropertyValue<string>("subTitle");
+	var headline = Model.GetPropertyValue<string>("title", Model.Name);
+
+	dynamic credits = JsonConvert.DeserializeObject(Model.GetPropertyValue<string>("credits"));
+}
+
+<div class="c-event-heading">
+	@if (!String.IsNullOrWhiteSpace(theatreCompany)) {
+		<span class="c-show__production-house">
+			@Html.Raw(Html.Encode(theatreCompany).Replace("\n", "<br />"))
+		</span>
+	}
+
+	@if (!String.IsNullOrWhiteSpace(subtitle)) {
+		<p class="c-show__subtitle delta"><strong>@subtitle</strong></p>
+	}
+	<h1 class="c-show__title giga">@headline</h1>
+	@if (credits != null && credits.Count > 0) {
+		<p class="c-show__credits">
+			@foreach (var credit in credits) {
+				<span class="c-show__credit">
+					<strong class="t-upper">@credit.boldText</strong>
+					<span>@credit.normalText</span>
+				</span>
+			}
+		</p>
+	}
+</div>

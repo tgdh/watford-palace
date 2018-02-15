@@ -20,6 +20,13 @@
 	var meta = Model.Content.GetPropertyValue<SEOChecker.MVC.MetaData>("seo");
 
 	string docType = CurrentPage.DocumentTypeAlias;
+
+    var siteUrl2 = "https://" +  Request.Url.Host.ToString() + Request.RawUrl.ToString();
+	
+	if(!Request.IsSecureConnection)
+	{
+		Response.Redirect(siteUrl2);
+	} 
 }
 
 <!doctype html>
@@ -35,7 +42,7 @@
 
 	<link rel="author" href="/humants.txt">
 
-	<meta name="robots" content="NOINDEX, NOFOLLOW">
+	<meta name="robots" content="INDEX, FOLLOW">
 	<link rel="canonical" href="@canonical" />
 
 	<!-- build:remove:dev -->
@@ -92,6 +99,14 @@
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/brand-icons/watford-palace.png?width=114">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/brand-icons/watford-palace.png?width=72">
 	<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/brand-icons/watford-palace.png?width=57">
+		
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MBJN2Q');</script>
+	<!-- End Google Tag Manager -->
 </head>
 <body class="o-page">
 	@Html.Partial("Page/Header")
@@ -137,7 +152,12 @@
 		2. Add this line here
 			@Umbraco.RenderMacro("umbracoforms.RenderScripts")
 	*@
-
+	
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBJN2Q"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

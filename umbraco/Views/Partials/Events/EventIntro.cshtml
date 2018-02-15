@@ -1,0 +1,60 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	var count = 0;
+	foreach (var id in CurrentPage.gallery.Split(','))
+	{
+		count = count + 1;
+	}
+	var hasGallery = CurrentPage.HasValue("gallery");
+}
+
+<div class="o-section o-section--grey">
+	<div class='clearfix c-show__content o-wrap @( hasGallery ? "o-wrap--large" : "o-wrap--small" )'>
+		@if (hasGallery)
+		{
+			<div class="o-event__column o-event__column--copy t-event__col t-event__col--content">
+				@CurrentPage.bodyText
+				@Html.Partial("~/Views/Partials/Component/SocialLinks.cshtml")
+			</div>
+
+			if( count > 1)
+			{
+				<div class="o-event__column o-event__gallery">
+					<div class="t-event__col__media">
+						<div class="t-event__col--media js-single__galery js-magnific-gallery owl-carousel u-border-radius--top-right">
+							@foreach( var id in CurrentPage.gallery.Split(',') )
+							{
+								var image = Umbraco.Media(id);
+								var imageUrl = image.Url;
+								<a href="@imageUrl?width=1200" class="t-event__col__media__image-link">
+									<img @image src="@image.GetCropUrl("umbracoFile", "slide")" alt="@CurrentPage.Name" class="t-event__col__media__image"/>
+								</a>
+							}
+						</div>
+					</div>
+				</div>
+			} else {
+				<div class="o-event__column o-event__gallery">
+					<div class="t-event__col__media">
+						<div class="owl-carousel js-magnific-gallery">
+							@foreach( var id in CurrentPage.gallery.Split(',') )
+							{
+								var image = Umbraco.Media(id);
+								var imageUrl = image.Url;
+								<a href="@imageUrl?width=1200" class="t-event__col__media__image-link">
+									<img src="@image.GetCropUrl("umbracoFile", "slide")" alt="@CurrentPage.Name" class="t-event__col__media__image u-border-radius--top-right"/>
+								</a>
+							}
+						</div>
+					</div>
+				</div>
+			}
+
+		} else {
+			<div class="o-event__column--copy">
+				@CurrentPage.bodyText
+			</div>
+		}
+
+	</div>
+</div>

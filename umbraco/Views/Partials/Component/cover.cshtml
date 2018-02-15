@@ -11,7 +11,10 @@
 }
 
 <div class="c-cover-wrap clearfix">
-
+	<div class="c-cover__main">
+		@Html.Partial("~/Views/Partials/Page/CardCarousel.cshtml")
+	</div>
+	@*
 	@if( CurrentPage.HasValue("coverPicker") && CurrentPage.coverPicker.ToString() != "" && Umbraco.Content(CurrentPage.coverPicker).Name.ToString() != "" )
 	{
 		var slide = Umbraco.Content(CurrentPage.coverPicker);
@@ -44,20 +47,33 @@
 
 		</div>
 	}
+	*@
 
 
 	<section class="c-cover__aside">
 		@Html.Partial("Component/Cover-Aside")
+		@{
+			var url = Umbraco.Content(2225).Url;
+		}
 
-		<article class="o-card o-card o-card--fill o-card--extra">
-			<div class="o-card__image--wrap">
+		@Html.Partial("~/Views/Partials/Component/Card.cshtml", new CardViewModel {
+			Headline = "See all events",
+			Url = url,
+			PrimaryButtonUrl = url,
+			IsSimpleCard = true,
+			ModifierClass = "t-home__cover-aside__placer"
+		})
+@*
+		<article class="c-card o-card o-card--fill o-card--extra">
+			<div class="c-card__image-wrap">
 			</div>
-			<div class="o-card__content">
+			<div class="c-card__content">
 				<h2>
 					<a href="@Umbraco.Content(2225).Url">See all listings</a>
 				</h2>
 			</div>
 		</article>
+*@
 	</section>
 </div>
 

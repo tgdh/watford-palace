@@ -1,0 +1,125 @@
+@using Newtonsoft.Json;
+@inherits UmbracoViewPage<IPublishedContent>
+@{
+	var selection = Model.GetPropertyValue<string>("slides").Split(',').Select(x => Umbraco.TypedContent(x));
+	var hasCards = selection != null && selection.Any();
+}
+
+@if (hasCards) {
+	var slideCount = selection.Count();
+	var modifierClass = slideCount > 1 ? "owl-carousel" : "";
+
+	<div class="t-home-carousel">
+		<div class="js-home-carousel @modifierClass">
+			@foreach (var item in selection) {
+				switch(item.DocumentTypeAlias)
+				{
+					case "CoverAnnouncement":
+						@RenderAnnouncement(item)
+					break;
+					case "Event":
+						@RenderEvent(item)
+					break;
+					default:
+						<strong>No render for this doctype</strong>
+					break;
+				}
+			}
+		</div>
+		<div class="js-home-carousel-nav t-home-carousel__nav"></div>
+	</div>
+
+} else {
+
+}
+
+@helper RenderAnnouncement(IPublishedContent item) {
+	var linkString = item.GetPropertyValue<string>("link");
+	dynamic link = JsonConvert.DeserializeObject(linkString);
+	var hasLink = link != null;
+
+	@Html.Partial("~/Views/Partials/Component/Slide.cshtml", new CardViewModel {
+		Suptitle = item.GetPropertyValue<string>("mainLabel"),
+		Headline = item.GetPropertyValue<string>("title", item.Name),
+		Subtitle = item.GetPropertyValue<string>("secondaryLabel"),
+		ImageId = item.GetPropertyValue<int>("backgroundImage"),
+		Url = hasLink ? link.url : "",
+		PrimaryButtonUrl = hasLink ? link.url : "",
+		PrimaryButtonText = item.GetPropertyValue<string>("buttonText", "Find out more")
+	})
+
+}
+
+@helper RenderEvent(IPublishedContent item) {
+	var ci = new System.Globalization.CultureInfo("en-GB");
+	System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+	System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+    var now = DateTime.Today;
+
+	var count = 0;
+	dynamic multidate = JsonConvert.DeserializeObject(item.GetPropertyValue<string>("multidate"));
+	foreach( var date in multidate ){
+	    count = count + 1;
+	}
+	int last = count - 1;
+
+	var subtitle = "";
+	if( multidate.ToString() != "" ){
+		if( count > 1 ){
+			if( DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM") != DateTime.Parse( multidate[last].date.value.ToString()  ).ToString("d MMM") ){
+				subtitle = DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM") + "-" + DateTime.Parse( multidate[last].date.value.ToString()  ).ToString("d MMM");
+			} else {
+				subtitle = DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM");
+			}
+		} else {
+			subtitle = DateTime.Parse( multidate[0].date.value.ToString()  ).ToString("d MMM");
+		}
+	}
+
+	@Html.Partial("~/Views/Partials/Component/Slide.cshtml", new CardViewModel {
+		Suptitle = item.Ancestor().Name,
+		Headline = item.GetPropertyValue<string>("title", item.Name),
+		Subtitle = subtitle,
+		ImageId = item.GetPropertyValue<int>("tileImage"),
+		Url = item.Url,
+		PrimaryButtonUrl = item.Url + "#tickets",
+		PrimaryButtonText = "Buy tickets",
+		SecondaryButtonUrl = item.Url,
+		SecondaryButtonText = "More info"
+	})
+}
+
+@*
+@if( CurrentPage.HasValue("coverPicker") && CurrentPage.coverPicker.ToString() != "" && Umbraco.Content(CurrentPage.coverPicker).Name.ToString() != "" )
+	{
+		var slide = Umbraco.Content(CurrentPage.coverPicker);
+		string docType = slide.DocumentTypeAlias;
+
+		switch(docType)
+		{
+			case "CoverAnnouncement":
+				@CoverAnnouncement(slide)
+			break;
+			case "Event":
+				@Event(slide)
+			break;
+			default:
+				@Default(slide)
+			break;
+		}
+
+	} else {
+		<div class="c-cover__image--wrap">
+			<img class="c-cover__image" src="/assets/img/_temp/cover.jpg" alt=""/>
+		</div>
+		<div class="c-cover__content-wrap">
+			<div class="c-cover__content">
+				<span class="c-cover-info--category">Fallback</span>
+				<h3 class="c-cover__heading c-cover__heading--news giga">Fallback</h3>
+				<span class="c-cover-info--date">Fallback</span>
+				<button class="o-button o-button--primary">Fallback</button>
+			</div>
+
+		</div>
+	}
+	*@

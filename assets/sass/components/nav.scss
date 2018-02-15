@@ -61,7 +61,7 @@
     }
 }
 
-@include respond-max($mq-medium) {
+@include respond-max($mq-large - 50px) {
 
 	.c-nav__list--sub-3 {
 		display: none;
@@ -75,9 +75,13 @@
 
 	}
 
-}
+	.no-js {
 
-@include respond-max($mq-large - 50px) {
+		.c-nav__list--sub-3 {
+			display: none;
+		}
+
+	}
 
     .c-top-bar {
         display: none;
@@ -302,7 +306,8 @@
             opacity: 1;
             padding: 0;
             position: absolute;
-            text-align: left;
+			text-align: left;
+			top: 4.4rem;
             transition: opacity $speed ease, visibility $speed ease;
             visibility: hidden;
             width: 20rem;
